@@ -1,0 +1,1340 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pet Adoption - All 4 Pets </title>
+    <link rel="icon" href="/images/Logo_All4Pet.png" type="image/x-icon">
+    <!-- "Get Bootstrap" CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <!-- Link to Navigation Bar CSS -->
+    <link rel="stylesheet" href="css/petAdoption.css">
+    <link rel="stylesheet" href="css/navbarFooter.css">
+    <!-- Icon CDN-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <!-- Animation CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.compat.css" />
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+        crossorigin="anonymous"></script>
+    <!-- Slick.js CSS -->
+    <!-- <link rel="stylesheet" type="text/css" href="//cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css"> -->
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+</head>
+
+<body>
+      <!-- Navigation Bar -->
+      <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-12 secNavBar">
+                <div class="navigationBarInnerContent">
+                    <a class="Logo_All4Pet" href="homepage.html">
+                        <img src="images/Logo_All4Pet.png" alt="Very Important Pet" title="Very Important Pet"
+                            class="img-fluid">
+                    </a>
+                    <div class="nav_tab">
+                        <div class="dropdown nav_item">
+                            <a class="navBarLinkClass" href="homepage.html" title="Home">Home</a>
+                        </div>
+                        <div class="dropdown nav_item">
+                            <a class="navBarLinkClass" href="aboutus.html" title="About Us">About Us</a>
+                        </div>
+                        <div class="dropdown nav_item">
+                            <a class="navBarLinkClass" href="" title="Products">Our Services <i
+                                    class="fa fa-caret-down" aria-hidden="true"></i></a>
+                            <div class="nav_dropdownContent">
+                                <a class="nav_dropdownContentList" href="petGrooming.html">Pet Grooming</a>
+                                <a class="nav_dropdownContentList" href="petBoarding.html">Pet Boarding</a>
+                                <a class="nav_dropdownContentList" href="petTraining.html">Pet Training</a>
+                                <a class="nav_dropdownContentList" href="petMedical.html">Pet Medical</a>
+                                <a class="nav_dropdownContentList" href="petAdoption.html">Pet Adoption</a>
+                            </div>
+                        </div>
+                        <div class="dropdown nav_item">
+                            <a class="navBarLinkClass" href="Product.html" title="Our Products">Products</a>
+                        </div>
+                        <div class="dropdown nav_item">
+                            <a class="navBarLinkClass" href="CatDogCategory.html" title="Pet Breeds">Pet Breeds</a>
+                        </div>
+                        <div class="dropdown nav_item">
+                            <a class="navBarLinkClass" href="petFacts.html" title="Pet Facts">Pet Facts</a>
+                        </div>
+                        <div class="dropdown nav_item">
+                            <a class="navBarLinkClass" href="Walk Pet Weather.html" title="Our Products">Pet Weather</a>
+                        </div>
+                        <div class="dropdown nav_item">
+                            <a class="navBarLinkClass" href="faq.html" title="FAQ">FAQ</a>
+                        </div>
+                        <div class="dropdown nav_item">
+                            <a class="navBarLinkClass" href="ContactUs.html" title="Contact Us">Contact Us</a>
+                        </div>
+                    </div>
+                    <div class="nav_login">
+                        <div class="dropdown nav_item">
+                            <a class="navBarLinkClass" href="registerLoginpage.html" title="Contact Us"
+                                id="loginNavBar">Login
+                                <i class="bi bi-box-arrow-in-right"></i></a>
+                        </div>
+                        <div class="nav_username" id="navUserName"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Navigation Bar (Mobile Version) -->
+    <div class="container-fluid secNavBarMobileVersion noPaddingLeftRightTopContent">
+        <div class="row">
+            <div class="col-md-12 p-0 ">
+                <div class="navBarDisplayFlex">
+                    <div class="hamburgerMenuSection" onclick="openNav()">
+                        <span class="designForMenuButton"> &#9776; </span>
+                    </div>
+                    <div class="logoSecion">
+                        <a class="Logo_All4Pet" href="homepage.html">
+                            <img src="images/Logo_All4Pet.png" alt="Very Important Pet" title="Very Important Pet"
+                                class="img-fluid mobileVersion_Logo">
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="nav_tab" id="mobileVerNavBar">
+                <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">
+                    <span class="logoClose"> &times;
+                    </span>
+                </a>
+                <div class="dropdown nav_item mt-3">
+                    <a class="navBarLinkClass" href="homepage.html" title="Home">Home</a>
+                </div>
+                <div class="dropdown nav_item">
+                    <a class="navBarLinkClass" href="aboutus.html" title="About Us">About Us</a>
+                </div>
+                <div class="dropdown nav_item">
+                    <a class="navBarLinkClass" href="" title="Products">Our Services <i class="fa fa-caret-down"
+                            aria-hidden="true"></i></a>
+                    <div class="nav_dropdownContent">
+                        <a class="nav_dropdownContentList" href="petGrooming.html">Pet Grooming</a>
+                        <a class="nav_dropdownContentList" href="petBoarding.html">Pet Boarding</a>
+                        <a class="nav_dropdownContentList" href="petTraining.html">Pet Training</a>
+                        <a class="nav_dropdownContentList" href="petMedical.html">Pet Medical</a>
+                        <a class="nav_dropdownContentList" href="petAdoption.html">Pet Adoption</a>
+                    </div>
+                </div>
+                <div class="dropdown nav_item">
+                    <a class="navBarLinkClass" href="Product.html" title="Products">Products</a>
+                </div>
+                <div class="dropdown nav_item">
+                    <a class="navBarLinkClass" href="CatDogCategory.html" title="Pet Breeds">Pet Breeds</a>
+                </div>
+                <div class="dropdown nav_item">
+                    <a class="navBarLinkClass" href="petFacts.html" title="Pet Facts">Pet Facts</a>
+                </div>
+                <div class="dropdown nav_item">
+                    <a class="navBarLinkClass" href="Walk Pet Weather.html" title="Our Products">Pet Weather</a>
+                </div>
+                <div class="dropdown nav_item">
+                    <a class="navBarLinkClass" href="faq.html" title="FAQ">FAQ</a>
+                </div>
+                <div class="dropdown nav_item">
+                    <a class="navBarLinkClass" href="ContactUs.html" title="Contact Us">Contact Us</a>
+                </div>
+                <div class="nav_login">
+                    <div class="dropdown nav_item">
+                        <a class="navBarLinkClass" href="registerLoginpage.html" title="Login Page" id="loginNavBar">Login
+                            <i class="bi bi-box-arrow-in-right"></i></a>
+                    </div>
+                    <div class="nav_username" id="navUserName"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--Banner Section -->
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-12 secBanner">
+                <div class="secBannerImage">
+                    <img src="images/petAdoptionBanner.png" alt="" class="img-fluid hp_banner_image"
+                        id="hp_banner_image">
+                    <div class="secBannerTextContent">
+                        <div class="secBannerContentCenter">
+                            <h2 class="titleBanner animate__animated" data-animation="fadeInUp">Pet Adoption</h2>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Banner Section -->
+
+    <!-- What is Pet Boarding-->
+    <div class="container-fluid sectionWhatIsPetAdoption">
+        <div class="row">
+            <div class="col-md-6">
+                <div class="WhatIsPetAdoptiontitleDisplayFlex">
+                    <h3 class="titleWhatIsPetAdoption">What is Pet Adoption ?</h3>
+                    <img src="images/Hp_Footrprint2.png" alt="" class="img-fluid WhatIsPetAdoptiontitleSubImage">
+                </div>
+            </div>
+            <div class="container sectionServicesWhatIsPetAdoption">
+                <div class="row">
+                    <div class="col-md-12" id="WhatIsPetAdoptionBox">
+                        <div class="WhatIsPetAdoptionborder-box">
+                            <div class="WhatIsPetAdoptionbox-text">
+                                <img src="images/whatispetgrooming.png" alt="" class="img-fluid whatispetAdoption_img"
+                                    id="whatispetAdoption">
+                                <div class="whatispetAdoptionTextContent">
+                                    <div class="whatispetAdoptionContentCenter">
+                                        <h2 class="titleBanner animate__animated" data-animation="bounceIn">
+                                            Pet adoption is the compassionate process of taking in and providing a
+                                            forever home to an animal in need, often from a shelter, rescue group, or
+                                            previous owner. By adopting, individuals not only gain a loyal companion but
+                                            also offer a second chance at life to a pet, reducing the strain on
+                                            overpopulated shelters and actively combating the issues of homeless and
+                                            mistreated animals.</h2>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- What is Pet Boarding-->
+
+    <!-- Pet Adoption Process -->
+    <div class="container sectionServices">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="titleDisplayFlex">
+                    <h3 class="titleServices">Pet Adoption Process</h3>
+                    <img src="images/Hp_Footprint.png" alt="" class="img-fluid titleSubImage">
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="border-boxPink animate__animated" data-animation="zoomIn">
+                    <div class="box-textPink">
+                        <h2 class="titleBoxServices pt-3">
+                            <strong>1. Research and Reflection</strong>
+                        </h2>
+                        <p class="desAbout"><br>
+                            Begin by assessing what type of pet is right for your living situation, lifestyle, and
+                            personal preferences. Consider factors like size, energy level, grooming needs, and
+                            temperament.
+                            Familiarize yourself with the responsibilities that come with pet ownership to ensure you're
+                            fully prepared.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="border-boxBrown animate__animated" data-animation="zoomIn">
+                    <div class="box-textBrown">
+                        <h2 class="titleBoxServices pt-3">
+                            <strong>2. Visit Shelter / Online</strong>
+                        </h2>
+                        <p class="desAbout"><br>
+                            Most shelters have both an on-site location where you can meet pets and an online database
+                            with profiles of available animals.
+                            By browsing online first, you can get an idea of which animals you might be interested in
+                            meeting in person.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="border-boxPink animate__animated" data-animation="zoomIn">
+                    <div class="box-textPink">
+                        <h2 class="titleBoxServices pt-3">
+                            <strong>3. Application</strong>
+                        </h2>
+                        <p class="desAbout"><br>
+                            Once you've identified a pet or pets you're interested in, you'll need to fill out an
+                            adoption application. This typically includes details about your living situation, pet
+                            history, and references.
+                            Some shelters may require a home check to ensure the environment is safe and suitable for
+                            the animal.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="border-boxBrown animate__animated" data-animation="zoomIn">
+                    <div class="box-textBrown">
+                        <h2 class="titleBoxServices pt-3">
+                            <strong>4. Counseling Session</strong>
+                        </h2>
+                        <p class="desAbout"><br>
+                            Some shelters conduct interviews or counseling sessions to discuss your application, answer
+                            any questions you might have, and ensure a good match between you and the pet.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="border-boxPink animate__animated" data-animation="zoomIn">
+                    <div class="box-textPink">
+                        <h2 class="titleBoxServices pt-3">
+                            <strong>5. Meet and Greet</strong>
+                        </h2>
+                        <p class="desAbout"><br>
+                            Spend time with the pet in a designated area to see if you both connect. For dogs, this
+                            might include a walk or playtime.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="border-boxBrown animate__animated" data-animation="zoomIn">
+                    <div class="box-textBrown">
+                        <h2 class="titleBoxServices pt-3">
+                            <strong>6. Adoption Fee</strong>
+                        </h2>
+                        <p class="desAbout"><br>
+                            Once approved, you'll need to pay an adoption fee. This fee often covers initial veterinary
+                            care (like vaccinations, spaying/neutering, and microchipping) and supports the shelter's
+                            operations.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="border-boxPink animate__animated" data-animation="zoomIn">
+                    <div class="box-textPink">
+                        <h2 class="titleBoxServices pt-3">
+                            <strong>7. Finalizing the Adoption</strong>
+                        </h2>
+                        <p class="desAbout"><br>
+                            You'll sign an adoption agreement, which outlines your responsibilities as a pet owner and
+                            the shelter's policies on things like returns or rehoming.
+                            Make sure to get copies of any medical records or other pertinent information about the pet.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="border-boxBrown animate__animated" data-animation="zoomIn">
+                    <div class="box-textBrown">
+                        <h2 class="titleBoxServices pt-3">
+                            <strong>8. Bringing Your New Pet Home</strong>
+                        </h2>
+                        <p class="desAbout"><br>
+                            Ensure your home is ready with all necessary supplies like food, a bed, toys, and a litter
+                            box for cats.
+                            Introduce your new pet to their new environment gradually, giving them time to adjust. Be
+                            patient and understanding as they settle in.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="border-boxPink animate__animated" data-animation="zoomIn">
+                    <div class="box-textPink">
+                        <h2 class="titleBoxServices pt-3">
+                            <strong>9. Post-Adoption Support</strong>
+                        </h2>
+                        <p class="desAbout"><br>
+                            Many shelters offer post-adoption support, such as advice on pet care, behavior, and
+                            training resources. Take advantage of these services if needed.
+                            Keep the shelter updated on how your new pet is adjusting. They love happy updates!
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Our Services in Pet Boarding-->
+    <div class="container sectionServices pt-5">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="titleDisplayFlex">
+                    <h3 class="titleServices">Our Services Provided in Pet Adoption</h3>
+                    <img src="images/Hp_Footprint.png" alt="" class="img-fluid titleSubImage">
+                </div>
+            </div>
+            <div class="container sectionServicessProvidedPG">
+                <div class="row">
+                    <div class="col-md-12" id="sProvidedPGBox">
+                        <div class="sProvidedPGborder-box">
+                            <div class="sProvidedPGbox-text">
+                                <img src="images/sprovidedPG1.png" alt="" class="img-fluid sProvidedPG_img"
+                                    id="sProvidedPG">
+                                <div class="sProvidedPGTextContent">
+                                    <div class="sProvidedPGContentCenter">
+                                        <h2 class="titleBanner animate__animated" data-animation="bounceIn">At All 4 Pet, we're not just dedicated
+                                            to finding forever homes for our lovely animals, but also to ensuring that
+                                            both our pets and their new owners have the best possible start together.
+                                            Here's how we assist in making that happen.</h2>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4" id="BrownBox">
+                        <div class="Brownborder-box animate__animated" data-animation="fadeInUp">
+                            <div class="Brownbox-text">
+                                <h2 class="BrowntitleBox mb-3">
+                                    <strong><br>Personalized Adoption Counseling<br></strong>
+                                </h2>
+                                <img src="images/counseling.jpg" alt="" class="img-fluid imgBrown">
+                                <p class="BrowndesAbout pt-3">
+                                    At All 4 Pet, we understand that every individual and family is unique. Our
+                                    specialized adoption counselors ensure that you find the perfect furry companion
+                                    that aligns with your lifestyle, ensuring a lasting bond.
+                                </p>
+                            </div>
+                            <br>
+                        </div>
+                    </div>
+                    <div class="col-md-4" id="PinkBox">
+                        <div class="Pinkborder-box animate__animated" data-animation="fadeInDown">
+                            <div class="Pinkbox-text">
+                                <h2 class="PinktitleBox mb-3">
+                                    <strong><br>Comprehensive Health Assurance<br></strong>
+                                </h2>
+                                <img src="images/healthcheck.png" alt="" class="img-fluid imgPink">
+                                <p class="PinkdesAbout pt-3">
+                                    Every pet adopted from us undergoes a thorough health check-up and receives all the
+                                    necessary vaccinations. We believe in providing a healthy start, and by adopting
+                                    from us, you're ensuring your new family member is in the best health possible.
+                                </p>
+                            </div>
+                            <br>
+                        </div>
+                    </div>
+                    <div class="col-md-4" id="BrownBox">
+                        <div class="Brownborder-box animate__animated" data-animation="fadeInUp">
+                            <div class="Brownbox-text">
+                                <h2 class="BrowntitleBox mb-3">
+                                    <strong><br>Empowering Pet Care Education<br></strong>
+                                </h2>
+                                <img src="images/petedu.png" alt="" class="img-fluid imgBrown">
+                                <p class="BrowndesAbout pt-3">
+                                    We're dedicated to not just providing pets, but also the knowledge to care for them.
+                                    Our team offers educational resources and workshops on essential pet care,
+                                    nutrition, and behavior. This way, you're well-equipped to raise your new pet with
+                                    confidence.
+                                </p>
+                            </div>
+                            <br>
+                        </div>
+                    </div>
+                    <div class="col-md-4 offset-md-2" id="PinkBox">
+                        <div class="Pinkborder-box animate__animated" data-animation="fadeInUp">
+                            <div class="Pinkbox-text">
+                                <h2 class="PinktitleBox mb-3">
+                                    <strong><br>Post-Adoption Support<br></strong>
+                                </h2>
+                                <img src="images/postAdopSup.png" alt="" class="img-fluid imgPink">
+                                <p class="PinkdesAbout pt-3">
+                                    Our commitment to you doesn't end once you walk out with your new pet. We provide
+                                    regular check-ins to see how your new family member is adjusting and are always here
+                                    to answer any questions or address concerns. Your journey with your pet is ours too!
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4" id="BrownBox">
+                        <div class="Brownborder-box animate__animated" data-animation="fadeInDown">
+                            <div class="Brownbox-text">
+                                <h2 class="BrowntitleBox mb-3">
+                                    <strong><br>Safety First with Microchipping<br></strong>
+                                </h2>
+                                <img src="images/Safety.png" alt="" class="img-fluid imgBrown">
+                                <p class="BrowndesAbout pt-3">
+                                    At All 4 Pet, we prioritize the safety of our animals. Every pet adopted from us
+                                    is microchipped, ensuring that they can always find their way back to you, come what
+                                    may.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Our Services in Pet Boarding-->
+
+    <!-- Pet Adoption - Dogs -->
+    <div class="container sectionServices pt-3">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="titleDisplayFlex">
+                    <h3 class="titleServices">Pet Adoption - Dogs</h3>
+                    <img src="images/Hp_Footprint.png" alt="" class="img-fluid titleSubImage">
+                </div>
+            </div>
+            <div class="col-md-4" id="StandardSuiteBox">
+                <div class="StandardLuxuryborder-box animate__animated" data-animation="fadeInLeft">
+                    <div class="StandardLuxurybox-text">
+                        <h2 class="StandardLuxurytitleBox mb-3" id="PetBreed1">
+                            <strong><br>Golden Retriever<br></strong>
+                        </h2>
+                        <img src="images/GoldenRetriever.png" alt="" class="img-fluid imgPetBoardingPackages">
+                        <h3 class="StandardLuxurydesAbout">
+                            <br><div id="PetName1">Name : Bruno</div>
+                            <div id="PetGender1">Gender : Male</div>
+                            <div id="PetAge1">Age: 5 years</div>
+                            <div id="PetColor1">Color: Golden</div>
+                            <div id="PetSize1">Size: Large</div>
+                        </h3>
+                        <div class="divAlignButtonCenter animate__bounceIn">
+                            <button type="button" class="buttonStandardLuxury" href="#" id="StandardSuiteButton"
+                                onclick="applyAdoptionDog1()">Apply for Adoption</button>
+                        </div>
+                        <br>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4" id="DeluxeSuiteBox">
+                <div class="DeluxeFelineborder-box animate__animated" data-animation="fadeInDown">
+                    <div class="DeluxeFelinebox-text">
+                        <h2 class="DeluxeFelinetitleBox mb-3">
+                            <strong><br>Dachshund<br></strong>
+                        </h2>
+                        <img src="images/Dachshund.png" alt="" class="img-fluid imgPetBoardingPackages">
+                        <h3 class="DeluxeFelinedesAbout"><br>
+                            <div id="PetName1">Name : Daisy</div>
+                            <div id="PetGender1">Gender : Female</div>
+                            <div id="PetAge1">Age: 2 years</div>
+                            <div id="PetColor1">Color: Brown</div>
+                            <div id="PetSize1">Size: Small</div>
+                        </h3>
+                        <div class="divAlignButtonCenter animate__bounceIn">
+                            <button type="button" class="buttonDeluxeFeline" href="#" id="DeluxeSuiteButton"
+                                onclick="applyAdoptionDog2()">Apply for Adoption</button>
+                        </div>
+                    </div>
+                    <br>
+                </div>
+            </div>
+            <div class="col-md-4" id="StandardSuiteBox">
+                <div class="StandardLuxuryborder-box animate__animated" data-animation="fadeInRight">
+                    <div class="StandardLuxurybox-text">
+                        <h2 class="StandardLuxurytitleBox mb-3">
+                            <strong><br>Border Collie<br></strong>
+                        </h2>
+                        <img src="images/BorderCollie.png" alt="" class="img-fluid imgPetBoardingPackages">
+                        <h3 class="StandardLuxurydesAbout">
+                            <br>Name : Rocky
+                            <br>Gender : Male
+                            <br>Age: 8 months
+                            <br>Color: Black and White
+                            <br>Size: Medium
+                        </h3>
+                        <div class="divAlignButtonCenter animate__bounceIn">
+                            <button type="button" class="buttonStandardLuxury" href="#" id="StandardSuiteButton"
+                                onclick="applyAdoptionDog3()">Apply for Adoption</button>
+                        </div>
+                        <br>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-12">
+                <h5 class="text-danger noticePetBoardingPackages"><br>*Notice: The adoption fees will be collected after
+                    the adoption application has approved. *
+                </h5>
+            </div>
+        </div>
+    </div>
+
+    <!-- Pet Adoption - Cats -->
+    <div class="container sectionServices pt-3">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="titleDisplayFlex">
+                    <h3 class="titleServices">Pet Adoption - Cats</h3>
+                    <img src="images/Hp_Footprint.png" alt="" class="img-fluid titleSubImage">
+                </div>
+            </div>
+            <div class="col-md-4" id="DeluxeSuiteBox">
+                <div class="DeluxeFelineborder-box animate__animated" data-animation="fadeInLeft">
+                    <div class="DeluxeFelinebox-text">
+                        <h2 class="DeluxeFelinetitleBox mb-3">
+                            <strong><br>Maine Coon<br></strong>
+                        </h2>
+                        <img src="images/MaineCoon.png" alt="" class="img-fluid imgPetBoardingPackages">
+                        <h3 class="DeluxeFelinedesAbout">
+                            <br>Name : Luna
+                            <br>Gender : Female
+                            <br>Age: 3 years
+                            <br>Color: Grey
+                            <br>Size: Large
+                        </h3>
+                        <div class="divAlignButtonCenter animate__bounceIn">
+                            <button type="button" class="buttonDeluxeFeline" href="#" id="DeluxeSuiteButton"
+                                onclick="applyAdoptionDog4()">Apply for Adoption</button>
+                        </div>
+                    </div>
+                    <br>
+                </div>
+            </div>
+            <div class="col-md-4" id="StandardSuiteBox">
+                <div class="StandardLuxuryborder-box animate__animated" data-animation="fadeInUp">
+                    <div class="StandardLuxurybox-text">
+                        <h2 class="StandardLuxurytitleBox mb-3">
+                            <strong><br>Siamese<br></strong>
+                        </h2>
+                        <img src="images/Siamese.png" alt="" class="img-fluid imgPetBoardingPackages">
+                        <h3 class="StandardLuxurydesAbout">
+                            <br>Name : Oliver
+                            <br>Gender : Male
+                            <br>Age: 7 years
+                            <br>Color: Cream with brown points
+                            <br>Size: Medium
+                        </h3>
+                        <div class="divAlignButtonCenter animate__bounceIn">
+                            <button type="button" class="buttonStandardLuxury" href="#" id="StandardSuiteButton"
+                                onclick="applyAdoptionDog5()">Apply for Adoption</button>
+                        </div>
+                        <br>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4" id="DeluxeSuiteBox">
+                <div class="DeluxeFelineborder-box animate__animated" data-animation="fadeInRight">
+                    <div class="DeluxeFelinebox-text">
+                        <h2 class="DeluxeFelinetitleBox mb-3">
+                            <strong><br>Tabby<br></strong>
+                        </h2>
+                        <img src="images/Tabby.png" alt="" class="img-fluid imgPetBoardingPackages">
+                        <h3 class="DeluxeFelinedesAbout">
+                            <br>Name : Bella
+                            <br>Gender : Female
+                            <br>Age: 1 years
+                            <br>Color: Striped Brown and Black
+                            <br>Size: Small
+                        </h3>
+                        <div class="divAlignButtonCenter animate__bounceIn">
+                            <button type="button" class="buttonDeluxeFeline" href="#" id="DeluxeSuiteButton"
+                                onclick="applyAdoptionDog6()">Apply for Adoption</button>
+                        </div>
+                    </div>
+                    <br>
+                </div>
+            </div>
+            <div class="col-md-12">
+                <h5 class="text-danger noticePetBoardingPackages"><br>*Notice: The adoption fees will be collected after
+                    the adoption application has approved. *
+                </h5>
+            </div>
+        </div>
+    </div>
+
+    <!-- Adoption Fees -->
+    <div class="container sectionServices pt-3">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="titleDisplayFlex">
+                    <h3 class="titleServices">Adoption Fees</h3>
+                    <img src="images/Hp_Footprint.png" alt="" class="img-fluid titleSubImage">
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="border-boxPink animate__animated" data-animation="slideInDown">
+                    <div class="box-textPink">
+                        <h2 class="titleBoxServices">
+                            <strong>Puppies (under 6 months)</strong>
+                        </h2>
+                        <p class="desAbout"><br>
+                            First vaccinations, microchipping, deworming, and a puppy starter kit (toys, collar, leash,
+                            and a small bag of puppy food).<br>
+                        </p>
+                        <h3 class="titleBoxServices">
+                            <strong>Fees: $350</strong>
+                        </h3>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="border-boxBrown animate__animated" data-animation="slideInDown">
+                    <div class="box-textBrown">
+                        <h2 class="titleBoxServices">
+                            <strong>Adult Dogs (6 months - 7 years)</strong>
+                        </h2>
+                        <p class="desAbout"><br>
+                            Vaccinations (up-to-date), microchipping, deworming, neuter/spay surgery, and a basic dog
+                            care starter kit (toys, collar, leash, and a bag of adult dog food).<br></p>
+                        <h3 class="titleBoxServices">
+                            <strong>Fees: $250</strong>
+                        </h3>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="border-boxPink animate__animated" data-animation="slideInDown">
+                    <div class="box-textPink">
+                        <h2 class="titleBoxServices">
+                            <strong>Senior Dogs (8 years and older)</strong>
+                        </h2>
+                        <p class="desAbout"><br>
+                            Vaccinations (up-to-date), microchipping, deworming, any required senior health check-ups,
+                            and a senior dog care kit (toys, collar, leash, and senior dog food).<br>
+                        </p>
+                        <h3 class="titleBoxServices">
+                            <strong>Fees: $150</strong>
+                        </h3>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="border-boxBrown animate__animated" data-animation="slideInUp">
+                    <div class="box-textBrown">
+                        <h2 class="titleBoxServices">
+                            <strong>Kittens (under 6 months)</strong>
+                        </h2>
+                        <p class="desAbout"><br>
+                            First vaccinations, microchipping, deworming, and a kitten starter kit (toys, collar, small
+                            litter box with scoop, and a small bag of kitten food).<br></p>
+                        <h3 class="titleBoxServices">
+                            <strong>Fees: $150</strong>
+                        </h3>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="border-boxPink animate__animated" data-animation="slideInUp">
+                    <div class="box-textPink">
+                        <h2 class="titleBoxServices">
+                            <strong>Adult Cats (6 months - 7 years)</strong>
+                        </h2>
+                        <p class="desAbout"><br>
+                            Vaccinations (up-to-date), microchipping, deworming, neuter/spay surgery, and a basic cat
+                            care starter kit (toys, collar, litter box with scoop, and a bag of adult cat food).<br>
+                        </p>
+                        <h3 class="titleBoxServices">
+                            <strong>Fees: $100</strong>
+                        </h3>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="border-boxBrown animate__animated" data-animation="slideInUp">
+                    <div class="box-textBrown">
+                        <h2 class="titleBoxServices">
+                            <strong>Senior Cats (8 years and older)</strong>
+                        </h2>
+                        <p class="desAbout"><br>
+                            Vaccinations (up-to-date), microchipping, deworming, any required senior health check-ups,
+                            and a senior cat care kit (toys, collar, litter box with scoop, and senior cat food).<br>
+                        </p>
+                        <h3 class="titleBoxServices">
+                            <strong>Fees: $75</strong>
+                        </h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Success Stories -->
+    <div class="container-fluid sectionSuccessStories">
+        <div class="row">
+            <div class="col-md-6">
+                <div class="SuccessStoriestitleDisplayFlex">
+                    <h3 class="titleSuccessStories">Success Stories</h3>
+                    <img src="images/Hp_Footrprint2.png" alt="" class="img-fluid SuccessStoriestitleSubImage">
+                </div>
+            </div>
+            <div class="container-fuild sectionServicesSuccessStories">
+                <div class="row">
+                    <div class="col-md-12" id="SuccessStoriesSlider">
+                        <!-- Slide 1 -->
+                        <div class="slide active-slide">
+                            <div class="SuccessStoriesborder-box">
+                                <div class="SuccessStoriesbox-text">
+                                    <div class="SuccessStoriesTextContent animate__animated" data-animation="fadeIn">
+                                        <h2 class="SuccessStoriestitleBoxServices">
+                                            <strong>- Julia -</strong>
+                                        </h2>
+                                        <p class="SuccessStoriesdesAbout">
+                                            "I adopted Kate, a playful calico cat, from All 4 Pets last year.
+                                            The experience was seamless, and the staff was incredibly supportive,
+                                            providing me with all the information I needed to make Luna feel at home. A
+                                            year later, she's brought so much joy and laughter to my life. I can't
+                                            imagine my home without her!"<br></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Slide 2 -->
+                        <div class="slide">
+                            <div class="SuccessStoriesborder-boxBrown">
+                                <div class="SuccessStoriesbox-textBrown">
+                                    <div class="SuccessStoriesTextContentBrown  animate__animated" data-animation="fadeIn">
+                                        <h2 class="SuccessStoriestitleBoxServicesBrown">
+                                            <strong>- Kelvin -</strong>
+                                        </h2>
+                                        <p class="SuccessStoriesdesAboutBrown">
+                                            "Bringing Max, our Golden Retriever, into our family was the best decision
+                                            we've made. We were initially hesitant about adopting, but the team at All 4
+                                            Pets made us feel at ease. Max had a tough start, but with love and
+                                            patience, he's become an inseparable part of our lives. Thank you for
+                                            uniting us with our furry friend!"<br></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Slide 3 -->
+                        <div class="slide">
+                            <div class="SuccessStoriesborder-box">
+                                <div class="SuccessStoriesbox-text">
+                                    <div class="SuccessStoriesTextContent  animate__animated" data-animation="fadeIn">
+                                        <h2 class="SuccessStoriestitleBoxServices">
+                                            <strong>- Samuel -</strong>
+                                        </h2>
+                                        <p class="SuccessStoriesdesAbout">
+                                            "In individual living alone, I was looking for a companion. That's
+                                            when I met Whiskers, a senior tabby cat, at All 4 Pets. They guided
+                                            me through the adoption process and ensured that Whiskers was the right fit
+                                            for my lifestyle. Today, we enjoy our peaceful moments together, and I'm
+                                            grateful for the love and comfort he brings."<br></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Slide 4 -->
+                        <div class="slide">
+                            <div class="SuccessStoriesborder-boxBrown">
+                                <div class="SuccessStoriesbox-textBrown">
+                                    <div class="SuccessStoriesTextContentBrown  animate__animated" data-animation="fadeIn">
+                                        <h2 class="SuccessStoriestitleBoxServicesBrown">
+                                            <strong>- Isabelle -</strong>
+                                        </h2>
+                                        <p class="SuccessStoriesdesAboutBrown">
+                                            "From the moment I set foot in All 4 Pets, I was met with warmth
+                                            and expertise. The staff introduced me to Dexter, It fills my home with
+                                            chirps, chatter, and endless amusement. A
+                                            heartfelt thank you to the team for helping me find such a delightful
+                                            companion!"<br></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Success Stories -->
+
+
+    <!-- HP - User's Feedback Section  -->
+    <!-- <div class="container sectionFeedback">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="titleDisplayFlex">
+                    <h3 class="titleServices">Users' Feedback</h3>
+                    <img src="images/Hp_Footprint.png" alt="" class="img-fluid titleSubImage">
+                </div>
+            </div>
+            <div class="col-md-12 m-auto">
+                <div class="row">
+                    <div class="col-md-4 m-auto">
+                        <div class="embed-responsive embed-responsive-16by9">
+                            <iframe class="embed-responsive-item feedbackBox"
+                                allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"
+                                src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Fpermalink.php%3Fstory_fbid%3Dpfbid02jVsBuDPGKwqakmiiL72W4bfG5WLSQFfBQBnm5JAnUTSfEUj2xkAx7ukhraTFbRdJl%26id%3D100077398280151&show_text=true&width=500"></iframe>
+                        </div>
+                    </div>
+                    <div class="col-md-4 m-auto">
+                        <div class="embed-responsive embed-responsive-16by9">
+                            <iframe class="embed-responsive-item feedbackBox"
+                                allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"
+                                src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Fpermalink.php%3Fstory_fbid%3Dpfbid0b4HAZaj5PyxavjmdzdnY2n4AqS9DsA7nKZ8hZhxVeJHhj1krgVGUytV3MpMx28val%26id%3D100008611029599&show_text=true&width=500"></iframe>
+                        </div>
+                    </div>
+                    <div class="col-md-4 m-auto">
+                        <div class="embed-responsive embed-responsive-16by9">
+                            <iframe class="embed-responsive-item feedbackBox" allowfullscreen="true" frameborder="0"
+                                allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"
+                                src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Fpermalink.php%3Fstory_fbid%3Dpfbid02jVsBuDPGKwqakmiiL72W4bfG5WLSQFfBQBnm5JAnUTSfEUj2xkAx7ukhraTFbRdJl%26id%3D100077398280151&show_text=true&width=500"></iframe>
+                        </div>
+                    </div>
+                   
+                </div>
+            </div>
+        </div>
+    </div> -->
+
+    <!-- End of Hp - User's Feedback Section -->
+
+    <!-- HP - Google Map -->
+    <!-- <div class="container-fluid sectionVisitUs">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="titleDisplayFlex">
+                    <h3 class="titleVisit">Come and Visit Us !</h3>
+                    <img src="images/Hp_Footrprint2.png" alt="" class="img-fluid titleSubImage">
+                </div>
+            </div>
+            <div class="col-md-12 p-0 contact_map">
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d6469.71020506478!2d103.8545108006285!3d1.5656262175344942!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31da697696916f4d%3A0x46c54ef9e4f9646f!2sAll%204%20Pets!5e0!3m2!1szh-CN!2smy!4v1693033520811!5m2!1szh-EN!2smy"
+                    scrolling="no" marginheight="0" marginwidth="0" style="width:100%" height="400"
+                    frameborder="0"></iframe>
+            </div>
+        </div>
+    </div> -->
+    <!-- HP - End of Google Map -->
+
+    <!-- Footer -->
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-12 secFooter">
+                <div class="container">
+                    <div class="row">
+                        <div class="footerSection">
+                            <hr class="horizontalLineWhiteColor">
+                            <div class="footerFlexContent">
+                                <p class="copyRightCompany">Copyright © 2023 All 4 Pet Sdn. Bhd. </p>
+                                <div class="socialMediaPlugin">
+                                    <span class="followUsFooter">Follow Us: &nbsp;</span>
+                                    <a href="https://www.facebook.com/all4petsssss">
+                                        <img src="images/icons8-facebook-100.png" alt=""
+                                            class="img-fluid logoSocialMedia">
+                                    </a>
+                                    <a href="https://instagram.com/all4pets_2023?igshid=NzZhOTFlYzFmZQ==">
+                                        <img src="images/icons8-instagram-100.png" alt=""
+                                            class="img-fluid logoSocialMedia">
+                                    </a>
+                                    <a href="mailto:info@example.com">
+                                        <img src="images/icons8-mail-100.png" alt="" class="img-fluid logoSocialMedia">
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End of Footer -->
+
+    <script defer src="//cdn1.npcdn.net/scripts/janimate.js"></script>
+    <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <!-- Link to 'register.js' file -->
+    <script src="javascript/register.js"> </script>
+    <script src="javascript/animation.js"> </script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        //=====================================================Adpotion 1====================================================================//
+        function applyAdoptionDog1(){
+            var getLogin = sessionStorage.getItem('IsLoggedIn');
+            //var getUserEmail = localStorage.getItem('User Email');
+
+            if (getLogin=== "true") {
+                pendingApplication1();    
+            } else {
+                alert("Please Login first"); 
+                //pendingApplication1();  
+            }
+        }
+        function pendingApplication1() {
+            //const UserName = localStorage.getItem('User Name');
+            //const UserEmail = localStorage.getItem('User Email');
+            const PetBreed = "Golden Retriever";
+            const PetName = "Bruno";
+            const PetGender = "Male";
+            const PetAge = "5 years";
+            const PetColor = "Golden";
+            const PetSize = "Large";
+
+
+            const formData = {
+                "Golden Retriever Pet Breed": PetBreed,
+                "Golden Retriever Pet Name": PetName,
+                "Golden Retriever Pet Gender": PetGender,
+                "Golden Retriever Pet Age": PetAge,
+                "Golden Retriever Pet Color": PetColor,
+                "Golden Retriever Pet Size": PetSize,
+            }
+            document.cookie = "Golden Retriever Status=Pending; path=/; max-age=86400"; 
+            localStorage.setItem('Golden Retriever Status', 'Pending');
+            sessionStorage.setItem('Golden Retriever Status', 'Pending');
+
+            //===============Save to cookies, local storage, and session storage=================//
+            for (const key in formData) {
+                //============Save to cookie for 1 days=======================//
+                setCookie(key, formData[key], 1);
+                //=================Save to local storage==================//
+                localStorage.setItem(key, formData[key]);
+                //==================Save to session storage=====================//
+                sessionStorage.setItem(key, formData[key]);
+            }
+
+            //====================Construct the alert message=============================//
+            let alertMessage = 'Pet Adoption has been sent successfully! \n*Our Team will contact you for interview session as soon as possible*\n\nPet Adoption details:\n';
+            for (const key in formData) {
+                alertMessage += `${key}: ${formData[key]}\n`;
+            }
+            alert(alertMessage);
+        }
+
+        //=================Helper function to set cookies==============================//
+        function setCookie(name, value, days) {
+            let expires = "";
+            if (days) {
+                let date = new Date();
+                date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
+                expires = "; expires=" + date.toUTCString();
+            }
+            document.cookie = name + "=" + (value || "") + expires + "; path=/";
+        }
+        //=====================================================Adpoption 1====================================================================//
+
+        //=====================================================Adpotion 2====================================================================//
+        function applyAdoptionDog2(){
+            var getLogin = sessionStorage.getItem('IsLoggedIn');
+            //var getUserEmail = localStorage.getItem('User Email');
+
+            if (getLogin=== "true") {
+                pendingApplication2();    
+            } else {
+                alert("Please Login first"); 
+                //pendingApplication2();  
+            }
+        }
+        function pendingApplication2() {
+            //const UserName = localStorage.getItem('User Name');
+            //const UserEmail = localStorage.getItem('User Email');
+            const PetBreed = "Dachshund";
+            const PetName = "Daisy";
+            const PetGender = "Female";
+            const PetAge = "2 years";
+            const PetColor = "Brown";
+            const PetSize = "Small";
+
+
+            const formData = {
+                "Dachshund Pet Breed": PetBreed,
+                "Dachshund Pet Name": PetName,
+                "Dachshund Pet Gender": PetGender,
+                "Dachshund Pet Age": PetAge,
+                "Dachshund Pet Color": PetColor,
+                "Dachshund Pet Size": PetSize,
+            }
+
+            document.cookie = "Dachshund Status=Pending; path=/; max-age=86400"; 
+            localStorage.setItem('Dachshund Status', 'Pending');
+            sessionStorage.setItem('Dachshund Status', 'Pending');
+
+            //===============Save to cookies, local storage, and session storage=================//
+            for (const key in formData) {
+                //============Save to cookie for 1 days=======================//
+                setCookie(key, formData[key], 1);
+                //=================Save to local storage==================//
+                localStorage.setItem(key, formData[key]);
+                //==================Save to session storage=====================//
+                sessionStorage.setItem(key, formData[key]);
+            }
+
+            //====================Construct the alert message=============================//
+            let alertMessage = 'Pet Adoption has been sent successfully! \n*Our Team will contact you for interview session as soon as possible*\n\nPet Adoption details:\n';
+            for (const key in formData) {
+                alertMessage += `${key}: ${formData[key]}\n`;
+            }
+            alert(alertMessage);
+        }
+
+        //=================Helper function to set cookies==============================//
+        function setCookie(name, value, days) {
+            let expires = "";
+            if (days) {
+                let date = new Date();
+                date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
+                expires = "; expires=" + date.toUTCString();
+            }
+            document.cookie = name + "=" + (value || "") + expires + "; path=/";
+        }
+        //=====================================================Adpoption 2====================================================================//
+        
+        //=====================================================Adpotion 3====================================================================//
+        function applyAdoptionDog3(){
+            var getLogin = sessionStorage.getItem('IsLoggedIn');
+            //var getUserEmail = localStorage.getItem('User Email');
+
+            if (getLogin=== "true") {
+                pendingApplication3();    
+            } else {
+                alert("Please Login first"); 
+                //pendingApplication3();  
+            }
+        }
+        function pendingApplication3() {
+            //const UserName = localStorage.getItem('User Name');
+            //const UserEmail = localStorage.getItem('User Email');
+            const PetBreed = "Border Collie";
+            const PetName = "Rocky";
+            const PetGender = "Male";
+            const PetAge = "8 months";
+            const PetColor = "Black and White";
+            const PetSize = "Medium";
+
+
+            const formData = {
+                "Border Collie Pet Breed": PetBreed,
+                "Border Collie Pet Name": PetName,
+                "Border Collie Pet Gender": PetGender,
+                "Border Collie Pet Age": PetAge,
+                "Border Collie Pet Color": PetColor,
+                "Border Collie Pet Size": PetSize,
+            }
+
+            document.cookie = "Border Collie Status=Pending; path=/; max-age=86400"; 
+            localStorage.setItem('Border Collie Status', 'Pending');
+            sessionStorage.setItem('Border Collie Status', 'Pending');
+
+            //===============Save to cookies, local storage, and session storage=================//
+            for (const key in formData) {
+                //============Save to cookie for 1 days=======================//
+                setCookie(key, formData[key], 1);
+                //=================Save to local storage==================//
+                localStorage.setItem(key, formData[key]);
+                //==================Save to session storage=====================//
+                sessionStorage.setItem(key, formData[key]);
+            }
+
+            //====================Construct the alert message=============================//
+            let alertMessage = 'Pet Adoption has been sent successfully! \n*Our Team will contact you for interview session as soon as possible*\n\nPet Adoption details:\n';
+            for (const key in formData) {
+                alertMessage += `${key}: ${formData[key]}\n`;
+            }
+            alert(alertMessage);
+        }
+
+        //=================Helper function to set cookies==============================//
+        function setCookie(name, value, days) {
+            let expires = "";
+            if (days) {
+                let date = new Date();
+                date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
+                expires = "; expires=" + date.toUTCString();
+            }
+            document.cookie = name + "=" + (value || "") + expires + "; path=/";
+        }
+        //=====================================================Adpoption 3====================================================================//
+
+        //=====================================================Adpotion 4====================================================================//
+        function applyAdoptionDog4(){
+            var getLogin = sessionStorage.getItem('IsLoggedIn');
+            //var getUserEmail = localStorage.getItem('User Email');
+
+            if (getLogin=== "true") {
+                pendingApplication4();    
+            } else {
+                alert("Please Login first"); 
+                //pendingApplication4();  
+            }
+        }
+        function pendingApplication4() {
+            //const UserName = localStorage.getItem('User Name');
+            //const UserEmail = localStorage.getItem('User Email');
+            const PetBreed = "Maine Coon";
+            const PetName = "Luna";
+            const PetGender = "Female";
+            const PetAge = "3 years";
+            const PetColor = "Grey";
+            const PetSize = "Large";
+
+
+            const formData = {
+                "Maine Coon Pet Breed": PetBreed,
+                "Maine Coon Pet Name": PetName,
+                "Maine Coon Pet Gender": PetGender,
+                "Maine Coon Pet Age": PetAge,
+                "Maine Coon Pet Color": PetColor,
+                "Maine Coon Pet Size": PetSize,
+            }
+
+            document.cookie = "Maine Coon Status=Pending; path=/; max-age=86400"; 
+            localStorage.setItem('Maine Coon Status', 'Pending');
+            sessionStorage.setItem('Maine Coon Status', 'Pending');
+
+            //===============Save to cookies, local storage, and session storage=================//
+            for (const key in formData) {
+                //============Save to cookie for 1 days=======================//
+                setCookie(key, formData[key], 1);
+                //=================Save to local storage==================//
+                localStorage.setItem(key, formData[key]);
+                //==================Save to session storage=====================//
+                sessionStorage.setItem(key, formData[key]);
+            }
+
+            //====================Construct the alert message=============================//
+            let alertMessage = 'Pet Adoption has been sent successfully! \n*Our Team will contact you for interview session as soon as possible*\n\nPet Adoption details:\n';
+            for (const key in formData) {
+                alertMessage += `${key}: ${formData[key]}\n`;
+            }
+            alert(alertMessage);
+        }
+
+        //=================Helper function to set cookies==============================//
+        function setCookie(name, value, days) {
+            let expires = "";
+            if (days) {
+                let date = new Date();
+                date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
+                expires = "; expires=" + date.toUTCString();
+            }
+            document.cookie = name + "=" + (value || "") + expires + "; path=/";
+        }
+        //=====================================================Adpoption 4====================================================================//
+
+        //=====================================================Adpotion 5====================================================================//
+        function applyAdoptionDog5(){
+            var getLogin = sessionStorage.getItem('IsLoggedIn');
+            //var getUserEmail = localStorage.getItem('User Email');
+
+            if (getLogin=== "true") {
+                pendingApplication5();    
+            } else {
+                alert("Please Login first"); 
+                //pendingApplication5();  
+            }
+        }
+        function pendingApplication5() {
+            //const UserName = localStorage.getItem('User Name');
+            //const UserEmail = localStorage.getItem('User Email');
+            const PetBreed = "Siamese";
+            const PetName = "Oliver";
+            const PetGender = "Male";
+            const PetAge = "7 years";
+            const PetColor = "Cream with brown points";
+            const PetSize = "Medium";
+
+
+            const formData = {
+                "Siamese Pet Breed": PetBreed,
+                "Siamese Pet Name": PetName,
+                "Siamese Pet Gender": PetGender,
+                "Siamese Pet Age": PetAge,
+                "Siamese Pet Color": PetColor,
+                "Siamese Pet Size": PetSize,
+            }
+
+            document.cookie = "Siamese Status=Pending; path=/; max-age=86400"; 
+            localStorage.setItem('Siamese Status', 'Pending');
+            sessionStorage.setItem('Siamese Status', 'Pending');
+
+            //===============Save to cookies, local storage, and session storage=================//
+            for (const key in formData) {
+                //============Save to cookie for 1 days=======================//
+                setCookie(key, formData[key], 1);
+                //=================Save to local storage==================//
+                localStorage.setItem(key, formData[key]);
+                //==================Save to session storage=====================//
+                sessionStorage.setItem(key, formData[key]);
+            }
+
+            //====================Construct the alert message=============================//
+            let alertMessage = 'Pet Adoption has been sent successfully! \n*Our Team will contact you for interview session as soon as possible*\n\nPet Adoption details:\n';
+            for (const key in formData) {
+                alertMessage += `${key}: ${formData[key]}\n`;
+            }
+            alert(alertMessage);
+        }
+
+        //=================Helper function to set cookies==============================//
+        function setCookie(name, value, days) {
+            let expires = "";
+            if (days) {
+                let date = new Date();
+                date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
+                expires = "; expires=" + date.toUTCString();
+            }
+            document.cookie = name + "=" + (value || "") + expires + "; path=/";
+        }
+        //=====================================================Adpoption 5====================================================================//
+
+        //=====================================================Adpotion 6====================================================================//
+        function applyAdoptionDog6(){
+            var getLogin = sessionStorage.getItem('IsLoggedIn');
+            //var getUserEmail = localStorage.getItem('User Email');
+
+            if (getLogin=== "true") {
+                pendingApplication6();    
+            } else {
+                alert("Please Login first"); 
+                //pendingApplication6();  
+            }
+        }
+        function pendingApplication6() {
+            //const UserName = localStorage.getItem('User Name');
+            //const UserEmail = localStorage.getItem('User Email');
+            const PetBreed = "Tabby";
+            const PetName = "Bella";
+            const PetGender = "Female";
+            const PetAge = "1 years";
+            const PetColor = "Striped Brown and Black";
+            const PetSize = "Small";
+
+
+            const formData = {
+                "Tabby Pet Breed": PetBreed,
+                "Tabby Pet Name": PetName,
+                "Tabby Pet Gender": PetGender,
+                "Tabby Pet Age": PetAge,
+                "Tabby Pet Color": PetColor,
+                "Tabby Pet Size": PetSize,
+            }
+
+            document.cookie = "Tabby Status=Pending; path=/; max-age=86400"; 
+            localStorage.setItem('Tabby Status', 'Pending');
+            sessionStorage.setItem('Tabby Status', 'Pending');
+
+            //===============Save to cookies, local storage, and session storage=================//
+            for (const key in formData) {
+                //============Save to cookie for 1 days=======================//
+                setCookie(key, formData[key], 1);
+                //=================Save to local storage==================//
+                localStorage.setItem(key, formData[key]);
+                //==================Save to session storage=====================//
+                sessionStorage.setItem(key, formData[key]);
+            }
+
+            //====================Construct the alert message=============================//
+            let alertMessage = 'Pet Adoption has been sent successfully! \n*Our Team will contact you for interview session as soon as possible*\n\nPet Adoption details:\n';
+            for (const key in formData) {
+                alertMessage += `${key}: ${formData[key]}\n`;
+            }
+            alert(alertMessage);
+        }
+
+        //=================Helper function to set cookies==============================//
+        function setCookie(name, value, days) {
+            let expires = "";
+            if (days) {
+                let date = new Date();
+                date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
+                expires = "; expires=" + date.toUTCString();
+            }
+            document.cookie = name + "=" + (value || "") + expires + "; path=/";
+        }
+        //=====================================================Adpoption 6====================================================================//
+
+
+        //==============================Current Promotions Slider====================================//
+
+        document.addEventListener("DOMContentLoaded", function () { // Ensure the DOM is fully loaded
+            const slides = document.querySelectorAll('#SuccessStoriesSlider .slide');
+            let currentSlideIndex = 0;
+
+            function goToSlide(n) {
+                slides[currentSlideIndex].classList.remove('active-slide');
+                currentSlideIndex = (n + slides.length) % slides.length; // This ensures we loop back to the first slide
+                slides[currentSlideIndex].classList.add('active-slide');
+            }
+
+            function nextSlide() {
+                goToSlide(currentSlideIndex + 1);
+            }
+            setInterval(nextSlide, 5000);
+        });
+    </script>
+</body>
+
+</html>

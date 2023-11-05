@@ -1,0 +1,657 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Homepage - All 4 Pets </title>
+    <link rel="icon" href="/images/Logo_All4Pet.png" type="image/x-icon">
+    <!-- "Get Bootstrap" CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <!-- Link to Navigation Bar CSS -->
+    <link rel="stylesheet" href="css/homepage.css">
+    <link rel="stylesheet" href="css/navbarFooter.css">
+    <!-- Icon CDN-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <!-- Animation CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.compat.css" />
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+        crossorigin="anonymous"></script>
+    <!-- Slick.js CSS -->
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+</head>
+
+<body>
+    <!-- Navigation Bar -->
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-12 secNavBar">
+                <div class="navigationBarInnerContent">
+                    <a class="Logo_All4Pet" href="homepage.html">
+                        <img src="images/Logo_All4Pet.png" alt="Very Important Pet" title="Very Important Pet"
+                            class="img-fluid">
+                    </a>
+                    <div class="nav_tab">
+                        <div class="dropdown nav_item">
+                            <a class="navBarLinkClass" href="homepage.html" title="Home">Home</a>
+                        </div>
+                        <div class="dropdown nav_item">
+                            <a class="navBarLinkClass" href="aboutus.html" title="About Us">About Us</a>
+                        </div>
+                        <div class="dropdown nav_item">
+                            <a class="navBarLinkClass" href="" title="Products">Our Services <i
+                                    class="fa fa-caret-down" aria-hidden="true"></i></a>
+                            <div class="nav_dropdownContent">
+                                <a class="nav_dropdownContentList" href="petGrooming.html">Pet Grooming</a>
+                                <a class="nav_dropdownContentList" href="petBoarding.html">Pet Boarding</a>
+                                <a class="nav_dropdownContentList" href="petTraining.html">Pet Training</a>
+                                <a class="nav_dropdownContentList" href="petMedical.html">Pet Medical</a>
+                                <a class="nav_dropdownContentList" href="petAdoption.html">Pet Adoption</a>
+                            </div>
+                        </div>
+                        <div class="dropdown nav_item">
+                            <a class="navBarLinkClass" href="Product.html" title="Our Products">Products</a>
+                        </div>
+                        <div class="dropdown nav_item">
+                            <a class="navBarLinkClass" href="CatDogCategory.html" title="Pet Breeds">Pet Breeds</a>
+                        </div>
+                        <div class="dropdown nav_item">
+                            <a class="navBarLinkClass" href="petFacts.html" title="Pet Facts">Pet Facts</a>
+                        </div>
+                        <div class="dropdown nav_item">
+                            <a class="navBarLinkClass" href="Walk Pet Weather.html" title="Our Products">Pet Weather</a>
+                        </div>
+                        <div class="dropdown nav_item">
+                            <a class="navBarLinkClass" href="faq.html" title="FAQ">FAQ</a>
+                        </div>
+                        <div class="dropdown nav_item">
+                            <a class="navBarLinkClass" href="ContactUs.html" title="Contact Us">Contact Us</a>
+                        </div>
+                    </div>
+                    <div class="nav_login">
+                        <div class="dropdown nav_item">
+                            <a class="navBarLinkClass" href="registerLoginpage.html" title="Contact Us"
+                                id="loginNavBar">Login
+                                <i class="bi bi-box-arrow-in-right"></i></a>
+                        </div>
+                        <div class="nav_username" id="navUserName"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Navigation Bar (Mobile Version) -->
+    <div class="container-fluid secNavBarMobileVersion noPaddingLeftRightTopContent">
+        <div class="row">
+            <div class="col-md-12 p-0 ">
+                <div class="navBarDisplayFlex">
+                    <div class="hamburgerMenuSection" onclick="openNav()">
+                        <span class="designForMenuButton"> &#9776; </span>
+                    </div>
+                    <div class="logoSecion">
+                        <a class="Logo_All4Pet" href="homepage.html">
+                            <img src="images/Logo_All4Pet.png" alt="Very Important Pet" title="Very Important Pet"
+                                class="img-fluid mobileVersion_Logo">
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="nav_tab" id="mobileVerNavBar">
+                <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">
+                    <span class="logoClose"> &times;
+                    </span>
+                </a>
+                <div class="dropdown nav_item mt-3">
+                    <a class="navBarLinkClass" href="homepage.html" title="Home">Home</a>
+                </div>
+                <div class="dropdown nav_item">
+                    <a class="navBarLinkClass" href="aboutus.html" title="About Us">About Us</a>
+                </div>
+                <div class="dropdown nav_item">
+                    <a class="navBarLinkClass" href="" title="Products">Our Services <i class="fa fa-caret-down"
+                            aria-hidden="true"></i></a>
+                    <div class="nav_dropdownContent">
+                        <a class="nav_dropdownContentList" href="petGrooming.html">Pet Grooming</a>
+                        <a class="nav_dropdownContentList" href="petBoarding.html">Pet Boarding</a>
+                        <a class="nav_dropdownContentList" href="petTraining.html">Pet Training</a>
+                        <a class="nav_dropdownContentList" href="petMedical.html">Pet Medical</a>
+                        <a class="nav_dropdownContentList" href="petAdoption.html">Pet Adoption</a>
+                    </div>
+                </div>
+                <div class="dropdown nav_item">
+                    <a class="navBarLinkClass" href="Product.html" title="Products">Products</a>
+                </div>
+                <div class="dropdown nav_item">
+                    <a class="navBarLinkClass" href="CatDogCategory.html" title="Pet Breeds">Pet Breeds</a>
+                </div>
+                <div class="dropdown nav_item">
+                    <a class="navBarLinkClass" href="petFacts.html" title="Pet Facts">Pet Facts</a>
+                </div>
+                <div class="dropdown nav_item">
+                    <a class="navBarLinkClass" href="Walk Pet Weather.html" title="Our Products">Pet Weather</a>
+                </div>
+                <div class="dropdown nav_item">
+                    <a class="navBarLinkClass" href="faq.html" title="FAQ">FAQ</a>
+                </div>
+                <div class="dropdown nav_item">
+                    <a class="navBarLinkClass" href="ContactUs.html" title="Contact Us">Contact Us</a>
+                </div>
+                <div class="nav_login">
+                    <div class="dropdown nav_item">
+                        <a class="navBarLinkClass" href="registerLoginpage.html" title="Login Page" id="loginNavBar">Login
+                            <i class="bi bi-box-arrow-in-right"></i></a>
+                    </div>
+                    <div class="nav_username" id="navUserName"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- HP - Banner Section -->
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-12 secBanner">
+                <div class="secBannerImage">
+                    <img src="images/Hp_Banner.png" alt="" class="img-fluid hp_banner_image" id="hp_banner_image">
+                    <div class="secBannerTextContent">
+                        <div class="secBannerContentCenter">
+                            <h2 class="titleBanner animate__animated" data-animation="fadeInDown">Welcome to All 4 Pets !</h2>
+                            <h5 class="subTitleBanner animate__animated" data-animation="fadeInDown">Your One-Stop Destination for All Things
+                                Pet-related</h5>
+                            <p class="contentBanner_hp animate__animated" data-animation="fadeInDown">At All 4 Pets, we believe that pets are not just animals; they
+                                are
+                                beloved family members. That's why we've created a haven where all your pet needs are
+                                met
+                                under one roof.
+                            </p>
+                            <div class="divAlignButtonCenter  animate__animated" data-animation="bounceInUp">
+                                <button type="button" class="buttonExploreMore" href="#">Explore More !</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End of HP - Banner Section -->
+
+    <!-- HP - About Us Section -->
+    <div class="container-fluid sectionAboutUs">
+        <div class="row">
+            <div class="col-md-6 order-md-1 order-2">
+                <div class="paddingTopSectionAboutUs animate__animated " data-animation="fadeInRight">
+                    <img src="images/Hp_AboutUs.png" alt="" class="img-fluid imgAboutUs">
+                </div>
+            </div>
+            <div class="col-md-6 order-md-2 order-1">
+                <div class="container">
+                    <div class="row">
+                        <div class="aboutUsTextSec animate__animated " data-animation="fadeInLeft">
+                            <div class="titleDisplayFlex">
+                                <h2 class="titleAboutUs animate__bounceIn">About Us </h2>
+                                <img src="images/Hp_Footprint.png" alt="" class="img-fluid titleSubImage">
+                            </div>
+                            <div class="paragraphForAboutUs">
+                                <p class="desDescription">
+                                    Welcome to All 4 Pets ！ Your premier destination for all things pet-related!
+                                    We are a dedicated team of pet enthusiasts committed to enhancing the lives of pets
+                                    and their owners
+                                    through a comprehensive range of services and top-quality products.
+                                </p>
+                                <p class="desDescription">
+                                    We understand the unique needs of pets and their owners and are committed to
+                                    providing tailored
+                                    solutions to ensure your pet's well-being. Together, we can create a world where
+                                    pets are cherished
+                                    members of the family, receiving the best care and love possible.
+                                </p>
+                                <p class="desDescription">
+                                    Thank you for choosing us as your trusted partner in pet care. Explore our website,
+                                    connect with us
+                                    on social media, and
+                                    reach out if you have any questions or need assistance. We're here to make your pet
+                                    parenting
+                                    journey as joyful and fulfilling as possible.
+                                </p>
+                                <div class="divAlignButtonCenter">
+                                    <a href="aboutus.html" style="text-decoration:none;"><button type="button"
+                                            class="buttonExploreMore">View More !</button></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End of HP - About Us Section -->
+
+
+    <!-- HP - Why Choosing Us Section -->
+    <div class="container-fluid sectionWhyChooseUs">
+        <div class="row">
+            <div class="col-md-6">
+                <div class="titleDisplayFlex">
+                    <h3 class="titleWhyChoosingUs">Why Choosing Us ?</h3>
+                    <img src="images/Hp_Footrprint2.png" alt="" class="img-fluid titleSubImage">
+                </div>
+                <div class="whyChooseUsContent">
+                    <div class="col-md-12 pt-3">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="whyUsBox animate__animated" data-animation="fadeInUp">
+                                    <img src="images/icons8-pet-grooming-100.png" alt="" class="img-fluid imgWhyUs">
+                                    <h5 class="subTitleForChoosingUs">Premier Pet Care</h5>
+                                    <p class="desWhyChooseUs">With years of experience in the industry, we offer a level
+                                        of expertise that ensures your pet receives the best care available.
+                                        Our commitment to excellence means your pet will always receive top-notch care,
+                                        from grooming to medical services.</p>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="whyUsBox  animate__animated" data-animation="fadeInUp">
+                                    <img src="images/icons8-dog-house-100.png" alt="" class="img-fluid imgWhyUs">
+                                    <h5 class="subTitleForChoosingUs">Top-Notch Pet Management</h5>
+                                    <p class="desWhyChooseUs">We provide a wide range of services, such as grooming,
+                                        boarding, medical care, and adoption, all under one roof.
+                                        Your pet will feel secure and at home in our facilities whether it's for a brief
+                                        visit or a protracted stay.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-12">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="whyUsBox animate__animated" data-animation="fadeInDown">
+                                    <img src="images/icons8-pet-love-100.png" alt="" class="img-fluid imgWhyUs">
+                                    <h5 class="subTitleForChoosingUs">Your Pet, Our Priority</h5>
+                                    <p class="desWhyChooseUs">We listen to your specific needs and preferences,
+                                        tailoring our services to meet both your and your pet's requirements.
+                                        You can trust that your pet is in capable and caring hands when you choose us.
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="whyUsBox animate__animated" data-animation="fadeInDown">
+                                    <img src="images/icons8-dog-walking-100.png" alt="" class="img-fluid imgWhyUs">
+                                    <h5 class="subTitleForChoosingUs">Training with Care and Love</h5>
+                                    <p class="desWhyChooseUs">Our pet training services are not just about exercise;
+                                        they're about building bonds and creating positive experiences for your pet.
+                                        Our walkers are not only trained professionals but also pet enthusiasts who
+                                        genuinely love spending time with animals</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="paddingTopSectionWhyUs animate__animated" data-animation="rotateInDownRight">
+                    <img src="images/Hp_WhyUs.png" alt="" class="img-fluid">
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End of HP - Why Choosing Us Section -->
+
+    <!-- HP - Our Services Section -->
+    <div class="container sectionServices">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="titleDisplayFlex">
+                    <h3 class="titleServices">Our Services</h3>
+                    <img src="images/Hp_Footprint.png" alt="" class="img-fluid titleSubImage">
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="border-box animate__animated " data-animation="zoomIn">
+                    <div class="box-icon">
+                        <!-- <img src="icons8-number-1-35.png" alt="" class="img-fluid imgAlignCenter"></i> -->
+                        <i class="fa-regular fa-1 fafaColor"></i>
+                    </div>
+                    <div class="box-text">
+                        <h2 class="titleBoxServices mb-3">
+                            <strong>Pet Grooming</strong>
+                        </h2>
+                        <p class="desAbout">
+                            With our professional pet grooming services, pamper your pet like royalty. Pets of all types
+                            and sizes can be pampered by our trained groomers. From a soothing bath to a trendy haircut,
+                            we'll have your pet looking and feeling their best, all while ensuring a stress-free and
+                            pleasant experience for your cherished companion.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="border-box animate__animated " data-animation="zoomIn">
+                    <div class="box-icon">
+                        <i class="fa-regular fa-2 fafaColor"></i>
+                    </div>
+                    <div class="box-text">
+                        <h2 class="titleBoxServices mb-3">
+                            <strong>Pet Boarding</strong>
+                        </h2>
+                        <p class="desAbout">
+                            When life takes you away from home, rest easy knowing that your pet is in safe hands at our
+                            premium pet boarding facility. We provide a comfortable and secure environment where your
+                            pet can relax and enjoy their stay, complete with attentive care and plenty of playtime！</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="border-box animate__animated " data-animation="zoomIn">
+                    <div class="box-icon">
+                        <i class="fa-regular fa-3 fafaColor"></i>
+                    </div>
+                    <div class="box-text">
+                        <h2 class="titleBoxServices mb-3">
+                            <strong>Pet Training</strong>
+                        </h2>
+                        <p class="desAbout">
+                            Regular exercise is essential for your pet's health and happiness. Our professional pet
+                            trainers are here to ensure that your furry friend gets the exercise and mental stimulation
+                            they need. Whether it's a leisurely stroll or an energetic play session, we've got their
+                            paws covered.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 offset-md-2 pt-3">
+                <div class="border-box animate__animated " data-animation="zoomIn">
+                    <div class="box-icon">
+                        <i class="fa-regular fa-4 fafaColor"></i>
+                    </div>
+                    <div class="box-text">
+                        <h2 class="titleBoxServices mb-3">
+                            <strong>Pet Medical</strong>
+                        </h2>
+                        <p class="desAbout">
+                            Your pet's health is our top priority. We provide access to reputable doctors and critical
+                            pet care services to maintain your pet in the best possible health. From routine check-ups
+                            to urgent care, we're here to provide the best medical attention for your pet!</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 pt-3">
+                <div class="border-box animate__animated " data-animation="zoomIn">
+                    <div class="box-icon">
+                        <i class="fa-regular fa-5 fafaColor"></i>
+                    </div>
+                    <div class="box-text">
+                        <h2 class="titleBoxServices mb-3">
+                            <strong>Pet Adoption</strong>
+                        </h2>
+                        <p class="desAbout">
+                            Looking to expand your family? Consider pet adoption through All 4 Pets. We work tirelessly
+                            to find loving forever homes for homeless pets. By choosing adoption, you not only change a
+                            pet's life but also gain a loyal and loving companion.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- HP - Product Section -->
+    <div class="container-fluid secOurProduct">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="titleDisplayFlex">
+                    <h3 class="titleProducts">Our Products </h3>
+                    <img src="images/Hp_Footrprint2.png" alt="" class="img-fluid titleSubImage">
+                </div>
+            </div>
+            <div class="col-md-12  animate__animated " data-animation="slideInDown">
+                <div class="slick1">
+                    <div>
+                        <a href="Product.html">
+                            <img alt="" src="images/Hp_CatProduct.png" class="img-fluid imgProduct" />
+                        </a>
+                    </div>
+                    <div>
+                        <a href="Product.html">
+                            <img alt="" src="images/Hp_DogProduct.png" class="img-fluid imgProduct" />
+                        </a>
+                    </div>
+                    <div>
+                        <a href="Product.html">
+                            <img alt="" src="images/Hp_DailySupplies.png" class="img-fluid imgProduct" />
+                        </a>
+                    </div>
+                    <div>
+                        <a href="Product.html">
+                            <img alt="" src="images/Hp_HealthProducts.png" class="img-fluid imgProduct" />
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End of HP - Product Section -->
+
+    <!-- HP - User's Feedback Section  -->
+    <div class="container sectionFeedback">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="titleDisplayFlex">
+                    <h3 class="titleServices">Users' Feedback</h3>
+                    <img src="images/Hp_Footprint.png" alt="" class="img-fluid titleSubImage">
+                </div>
+            </div>
+            <div class="col-md-12 m-auto  animate__animated " data-animation="slideInUp">
+                <div class="row">
+                    <div class="col-md-4 m-auto pb-3 pt-3">
+                        <div class="boxFeedback" id="feedbackBox1">
+
+                        </div>
+                    </div>
+                    <div class="col-md-4 m-auto pb-3 pt-3">
+                        <div class="boxFeedback" id="feedbackBox2">
+
+                        </div>
+                    </div>
+                    <div class="col-md-4 m-auto pb-3 pt-3">
+                        <div class="boxFeedback" id="feedbackBox3">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- <div class="col-md-12 m-auto">
+                <div class="row">
+                    <div class="col-md-4 m-auto">
+                        <div class="boxFeedback">
+                            <div class="embed-responsive embed-responsive-16by9">
+                                <iframe class="embed-responsive-item feedbackBox" frameborder="0"
+                                    allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"
+                                    src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Fpermalink.php%3Fstory_fbid%3Dpfbid02jVsBuDPGKwqakmiiL72W4bfG5WLSQFfBQBnm5JAnUTSfEUj2xkAx7ukhraTFbRdJl%26id%3D100077398280151&show_text=true&width=100%"></iframe>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 m-auto">
+                        <div class="boxFeedback">
+                            <div class="embed-responsive embed-responsive-16by9">
+                                <iframe class="embed-responsive-item feedbackBox"
+                                    allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"
+                                    src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Fpermalink.php%3Fstory_fbid%3Dpfbid0b4HAZaj5PyxavjmdzdnY2n4AqS9DsA7nKZ8hZhxVeJHhj1krgVGUytV3MpMx28val%26id%3D100008611029599&show_text=true&width=100%"></iframe>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 m-auto">
+                        <div class="boxFeedback">
+                            <div class="embed-responsive embed-responsive-16by9">
+                                <iframe class="embed-responsive-item feedbackBox" allowfullscreen="true" frameborder="0"
+                                    allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"
+                                    src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Fpeyying.chew%2Fposts%2Fpfbid0pzetPSCAhzXh6fZ8QmptFZkxYUfdwcAhzVa4h2sfjpmi5VasQLsA4vUfZC6YzWH9l&show_text=true&width=100%"></iframe>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div> -->
+        </div>
+    </div>
+
+    <!-- End of Hp - User's Feedback Section -->
+
+    <!-- HP - Google Map -->
+    <div class="container-fluid sectionVisitUs pt-3">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="titleDisplayFlex">
+                    <h3 class="titleVisit">Come and Visit Us !</h3>
+                    <img src="images/Hp_Footrprint2.png" alt="" class="img-fluid titleSubImage">
+                </div>
+            </div>
+            <div class="col-md-12 p-0 contact_map">
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d6469.71020506478!2d103.8545108006285!3d1.5656262175344942!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31da697696916f4d%3A0x46c54ef9e4f9646f!2sAll%204%20Pets!5e0!3m2!1szh-CN!2smy!4v1693033520811!5m2!1szh-EN!2smy"
+                    scrolling="no" marginheight="0" marginwidth="0" style="width:100%" height="400"
+                    frameborder="0"></iframe>
+            </div>
+        </div>
+    </div>
+    <!-- HP - End of Google Map -->
+
+    <!-- Footer -->
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-12 secFooter">
+                <div class="container">
+                    <div class="row">
+                        <div class="footerSection">
+                            <hr class="horizontalLineWhiteColor">
+                            <div class="footerFlexContent">
+                                <p class="copyRightCompany">Copyright © 2023 All 4 Pet Sdn. Bhd. </p>
+                                <div class="socialMediaPlugin">
+                                    <span class="followUsFooter">Follow Us: &nbsp;</span>
+                                    <a href="https://www.facebook.com/all4petsssss">
+                                        <img src="images/icons8-facebook-100.png" alt=""
+                                            class="img-fluid logoSocialMedia">
+                                    </a>
+                                    <a href="https://instagram.com/all4pets_2023?igshid=NzZhOTFlYzFmZQ==">
+                                        <img src="images/icons8-instagram-100.png" alt=""
+                                            class="img-fluid logoSocialMedia">
+                                    </a>
+                                    <a href="mailto:example@hotmail.com">
+                                        <img src="images/icons8-mail-100.png" alt="" class="img-fluid logoSocialMedia">
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- End of Footer -->
+
+
+    <script defer src="//cdn1.npcdn.net/scripts/janimate.js"></script>
+    <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <!-- Link to 'register.js' file -->
+    <script src="javascript/register.js"> </script>
+    <script src="javascript/animation.js"> </script>
+    <script>
+
+        // Slick.js
+        $(document).ready(function () {
+            $('.slick1').slick({
+                dots: false,
+                infinite: true,
+                speed: 300,
+                arrows: true,
+                autoplaySpeed: 2500,
+                autoplay: true,
+                slidesToShow: 3,
+                slidesToScroll: 1,
+                adaptiveHeight: true,
+                pauseOnHover: false,
+                responsive: [
+                    {
+                        breakpoint: 1024,
+                        settings: {
+                            slidesToShow: 3,
+                            slidesToScroll: 1,
+                            infinite: true,
+                            dots: true,
+                            adaptiveHeight: true,
+                        }
+                    },
+                    {
+                        breakpoint: 600,
+                        settings: {
+                            slidesToShow: 1,
+                            slidesToScroll: 1,
+                            adaptiveHeight: true,
+                        }
+                    },
+                    {
+                        breakpoint: 480,
+                        settings: {
+                            slidesToShow: 1,
+                            slidesToScroll: 1,
+                            adaptiveHeight: true,
+                            speed: 300,
+                            arrows: true,
+                            autoplaySpeed: 2500,
+                        }
+                    }
+                ]
+            });
+        });
+
+        //API   - Facebook Developers API
+        //AccessToken
+        const accessToken = 'EAAEOdZA2x6OwBOzCd1S9jPg1WLrsJxZCzFUpGX4dmcylYmOxWVQlM1aHe3iyhOrYfILF0cgWO0pIb4uTirbqGH7QpsYJVm9dAZAayjCBZCCqt6pWIwFQWDL93buW0yAg7Ge418IeZCfJhEZB8BxHEOrCQFAlXxTbHYCKyrYi3MfJcmSRirbg9pDhzICZAiqKPIZD';
+
+        // Facebook Public Page ID - All 4 Pets
+        const pageId = '117360064789535';
+
+        // Full API url link
+        const apiUrl = `https://graph.facebook.com/v12.0/${pageId}/ratings?access_token=${accessToken}`;
+
+        console.log(apiUrl);
+
+        // Function to fetch and display ratings
+        async function fetchAndDisplayRatings() {
+            try {
+                const response = await fetch(apiUrl);
+                const data = await response.json();
+
+                if (response.status === 200) {
+                    data.data.slice(0, 3).forEach(async (rating, index) => {
+                        const reviewerName = `User ${ index + 1}`;
+                        const feedbackBox = document.getElementById(`feedbackBox${index + 1}`);
+
+                        const ratingElement = document.createElement('div');
+                        ratingElement.className = "ratingBoxContainer";
+                        ratingElement.innerHTML = `
+              <img src="images/userProfile2.png" class="img-fluid imgProfilePic">
+              <p class="titleFont"> ${reviewerName}</p>
+              <p class="textFont">Review: ${rating.review_text}</p>
+              <p class="textFont">Created Time:  ${rating.created_time}</p>
+              <hr>
+            `;
+                        feedbackBox.appendChild(ratingElement);
+                    });
+                } else {
+                    console.error('Error:', data);
+                }
+            } catch (error) {
+                console.error('Error:', error.message);
+            }
+        }
+
+        // Fetch and display ratings when the page loads
+        window.addEventListener('load', fetchAndDisplayRatings);
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title> Pet Breeds - All 4 Pets </title>
+  <link rel="icon" href="/images/Logo_All4Pet.png" type="image/x-icon">
+  <!-- "Get Bootstrap" CDN -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+  <!-- Link to Navigation Bar CSS -->
+  <link rel="stylesheet" href="css/homepage.css">
+  <link rel="stylesheet" href="css/navbarFooter.css">
+  <!-- Icon CDN-->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+  <!-- Animation CDN -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.compat.css" />
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+    crossorigin="anonymous"></script>
+  <!-- Slick.js CSS -->
+  <!-- <link rel="stylesheet" type="text/css" href="//cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css"> -->
+  <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+</head>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Single+Day&display=swap');
+
+  body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    margin: 0;
+  }
+
+  main {
+    flex-grow: 1;
+  }
+
+  .container1 {
+    background: #FFFFFF;
+    border-radius: 4px;
+    padding: 20px;
+    text-align: center;
+    transition: all 0.2s;
+    margin: 0 auto;
+    width: 500px;
+    font-family: 'Single Day', sans-serif;
+  }
+
+  #breed_data {
+    background: #FFFFFF;
+    border-radius: 4px;
+    padding: 20px;
+    font-size: 12px;
+    text-align: left;
+    transition: all 0.2s;
+    margin: 0 auto;
+    width: 500px;
+  }
+
+  #breed_image_container {
+    background: #FFFFFF;
+    text-align: center;
+    padding: 20px;
+    border-radius: 4px;
+    margin: 20px auto;
+  }
+
+  #breed_image {
+    max-width: 100%;
+    height: auto;
+  }
+
+  #toggle_button {
+    display: block;
+    margin: 20px auto;
+    padding: 10px 20px;
+    background-color: #A04668;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    font-family: 'Single Day', sans-serif;
+  }
+
+  #title {
+    font-size: 30px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    text-align: center;
+    color: #A04668;
+  }
+</style>
+</head>
+
+<body>
+    <!-- Navigation Bar -->
+    <div class="container-fluid">
+      <div class="row">
+          <div class="col-md-12 secNavBar">
+              <div class="navigationBarInnerContent">
+                  <a class="Logo_All4Pet" href="homepage.html">
+                      <img src="images/Logo_All4Pet.png" alt="Very Important Pet" title="Very Important Pet"
+                          class="img-fluid">
+                  </a>
+                  <div class="nav_tab">
+                      <div class="dropdown nav_item">
+                          <a class="navBarLinkClass" href="homepage.html" title="Home">Home</a>
+                      </div>
+                      <div class="dropdown nav_item">
+                          <a class="navBarLinkClass" href="aboutus.html" title="About Us">About Us</a>
+                      </div>
+                      <div class="dropdown nav_item">
+                          <a class="navBarLinkClass" href="" title="Products">Our Services <i
+                                  class="fa fa-caret-down" aria-hidden="true"></i></a>
+                          <div class="nav_dropdownContent">
+                              <a class="nav_dropdownContentList" href="petGrooming.html">Pet Grooming</a>
+                              <a class="nav_dropdownContentList" href="petBoarding.html">Pet Boarding</a>
+                              <a class="nav_dropdownContentList" href="petTraining.html">Pet Training</a>
+                              <a class="nav_dropdownContentList" href="petMedical.html">Pet Medical</a>
+                              <a class="nav_dropdownContentList" href="petAdoption.html">Pet Adoption</a>
+                          </div>
+                      </div>
+                      <div class="dropdown nav_item">
+                          <a class="navBarLinkClass" href="Product.html" title="Our Products">Products</a>
+                      </div>
+                      <div class="dropdown nav_item">
+                          <a class="navBarLinkClass" href="CatDogCategory.html" title="Pet Breeds">Pet Breeds</a>
+                      </div>
+                      <div class="dropdown nav_item">
+                          <a class="navBarLinkClass" href="petFacts.html" title="Pet Facts">Pet Facts</a>
+                      </div>
+                      <div class="dropdown nav_item">
+                          <a class="navBarLinkClass" href="Walk Pet Weather.html" title="Our Products">Pet Weather</a>
+                      </div>
+                      <div class="dropdown nav_item">
+                          <a class="navBarLinkClass" href="faq.html" title="FAQ">FAQ</a>
+                      </div>
+                      <div class="dropdown nav_item">
+                          <a class="navBarLinkClass" href="ContactUs.html" title="Contact Us">Contact Us</a>
+                      </div>
+                  </div>
+                  <div class="nav_login">
+                      <div class="dropdown nav_item">
+                          <a class="navBarLinkClass" href="registerLoginpage.html" title="Contact Us"
+                              id="loginNavBar">Login
+                              <i class="bi bi-box-arrow-in-right"></i></a>
+                      </div>
+                      <div class="nav_username" id="navUserName"></div>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+
+  <!-- Navigation Bar (Mobile Version) -->
+  <div class="container-fluid secNavBarMobileVersion noPaddingLeftRightTopContent">
+      <div class="row">
+          <div class="col-md-12 p-0 ">
+              <div class="navBarDisplayFlex">
+                  <div class="hamburgerMenuSection" onclick="openNav()">
+                      <span class="designForMenuButton"> &#9776; </span>
+                  </div>
+                  <div class="logoSecion">
+                      <a class="Logo_All4Pet" href="homepage.html">
+                          <img src="images/Logo_All4Pet.png" alt="Very Important Pet" title="Very Important Pet"
+                              class="img-fluid mobileVersion_Logo">
+                      </a>
+                  </div>
+              </div>
+          </div>
+          <div class="nav_tab" id="mobileVerNavBar">
+              <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">
+                  <span class="logoClose"> &times;
+                  </span>
+              </a>
+              <div class="dropdown nav_item mt-3">
+                  <a class="navBarLinkClass" href="homepage.html" title="Home">Home</a>
+              </div>
+              <div class="dropdown nav_item">
+                  <a class="navBarLinkClass" href="aboutus.html" title="About Us">About Us</a>
+              </div>
+              <div class="dropdown nav_item">
+                  <a class="navBarLinkClass" href="" title="Products">Our Services <i class="fa fa-caret-down"
+                          aria-hidden="true"></i></a>
+                  <div class="nav_dropdownContent">
+                      <a class="nav_dropdownContentList" href="petGrooming.html">Pet Grooming</a>
+                      <a class="nav_dropdownContentList" href="petBoarding.html">Pet Boarding</a>
+                      <a class="nav_dropdownContentList" href="petTraining.html">Pet Training</a>
+                      <a class="nav_dropdownContentList" href="petMedical.html">Pet Medical</a>
+                      <a class="nav_dropdownContentList" href="petAdoption.html">Pet Adoption</a>
+                  </div>
+              </div>
+              <div class="dropdown nav_item">
+                  <a class="navBarLinkClass" href="Product.html" title="Products">Products</a>
+              </div>
+              <div class="dropdown nav_item">
+                  <a class="navBarLinkClass" href="CatDogCategory.html" title="Pet Breeds">Pet Breeds</a>
+              </div>
+              <div class="dropdown nav_item">
+                  <a class="navBarLinkClass" href="petFacts.html" title="Pet Facts">Pet Facts</a>
+              </div>
+              <div class="dropdown nav_item">
+                  <a class="navBarLinkClass" href="Walk Pet Weather.html" title="Our Products">Pet Weather</a>
+              </div>
+              <div class="dropdown nav_item">
+                  <a class="navBarLinkClass" href="faq.html" title="FAQ">FAQ</a>
+              </div>
+              <div class="dropdown nav_item">
+                  <a class="navBarLinkClass" href="ContactUs.html" title="Contact Us">Contact Us</a>
+              </div>
+              <div class="nav_login">
+                  <div class="dropdown nav_item">
+                      <a class="navBarLinkClass" href="registerLoginpage.html" title="Login Page" id="loginNavBar">Login
+                          <i class="bi bi-box-arrow-in-right"></i></a>
+                  </div>
+                  <div class="nav_username" id="navUserName"></div>
+              </div>
+          </div>
+      </div>
+  </div>
+
+  <div class="container-fluid">
+    <div class="row">
+      <div class="container1">
+        <div id="title">Cat Category</div>
+        <p>Select a Breed</p>
+        <p>Here, you can choose between breeds of dogs or cats and see a corresponding image of the chosen breed. You
+          can click 'toggle between cat and dog' to switch between the two.</p>
+        <button id="toggle_button" class="btn btn-primary">Toggle between Cat and Dog</button>
+        <select class="form-select breed_select">
+          <option></option>
+        </select>
+        <div id="breed_image_container">
+          <img id="breed_image" src="" alt="Breed Image" class="img-fluid" style="box-shadow: 3px 4px 5px lightgrey;" />
+        </div>
+        <table id="breed_data_table" class="table">
+        </table>
+      </div>
+    </div>
+  </div>
+
+
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script>
+    var defaultCatBreedId = 'abys';
+    var defaultDogBreedId = '1';
+    var breeds;
+    var animalType = 'cat';
+
+    var $breed_select = $('select.breed_select');
+    $breed_select.change(function () {
+      var id = $(this).children(":selected").attr("id");
+      getAnimalByBreed(id);
+    });
+
+    $('#toggle_button').click(function () {
+      animalType = (animalType === 'cat') ? 'dog' : 'cat';
+      updateTitle();
+      $('#breed_image').attr('src', '');
+      $("#breed_data_table tr").remove();
+      getBreeds();
+      var defaultBreedId = (animalType === 'cat') ? defaultCatBreedId : defaultDogBreedId;
+      getAnimalByBreed(defaultBreedId);
+    });
+
+
+    function getBreeds() {
+      var apiUrl = (animalType === 'cat') ? 'https://api.thecatapi.com/v1/breeds' : 'https://api.thedogapi.com/v1/breeds';
+      ajax_get(apiUrl, function (data) {
+        populateBreedsSelect(data);
+      });
+    }
+
+    function populateBreedsSelect(breeds) {
+      $breed_select.empty().append(function () {
+        var output = '';
+        $.each(breeds, function (key, value) {
+          output += '<option id="' + value.id + '">' + value.name + '</option>';
+        });
+        return output;
+      });
+    }
+
+    function getAnimalByBreed(breed_id) {
+      var apiUrl = (animalType === 'cat') ? 'https://api.thecatapi.com/v1/images/search?breed_ids=' + breed_id : 'https://api.thedogapi.com/v1/images/search?include_breed=1&breed_id=' + breed_id;
+      ajax_get(apiUrl, function (data) {
+        if (data.length == 0) {
+          clearAnimal();
+          $("#breed_data_table").append("<tr><td style='text-align: center;'>Sorry, no Image for that breed yet</td></tr>");
+        } else {
+          displayAnimal(data[0]);
+        }
+      });
+    }
+
+    function clearAnimal() {
+      $('#breed_image').attr('src', '');
+      $("#breed_data_table tr").remove();
+    }
+
+    function displayAnimal(image) {
+      $('#breed_image').attr('src', image.url);
+      $("#breed_data_table tr").remove();
+
+      var breed_data = image.breeds[0];
+      $.each(breed_data, function (key, value) {
+        if (key == 'weight' || key == 'height') value = value.metric;
+        $("#breed_data_table").append("<tr><td>" + key + "</td><td>" + value + "</td></tr>");
+      });
+    }
+
+    function updateTitle() {
+      var titleText = (animalType === 'cat') ? 'Cat Category' : 'Dog Category';
+      $('#title').text(titleText);
+    }
+
+
+    function ajax_get(url, callback) {
+      var xmlhttp = new XMLHttpRequest();
+      xmlhttp.onreadystatechange = function () {
+        if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
+          console.log('responseText:' + xmlhttp.responseText);
+          try {
+            var data = JSON.parse(xmlhttp.responseText);
+          } catch (err) {
+            console.log(err.message + " in " + xmlhttp.responseText);
+            return;
+          }
+          callback(data);
+        }
+      };
+
+      xmlhttp.open("GET", url, true);
+      xmlhttp.send();
+    }
+    getAnimalByBreed(defaultCatBreedId);
+    getBreeds();
+  </script>
+
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-md-12 secFooter">
+        <div class="container">
+          <div class="row">
+            <div class="footerSection">
+              <hr class="horizontalLineWhiteColor">
+              <div class="footerFlexContent">
+                <p class="copyRightCompany">Copyright © 2023 All 4 Pet Sdn. Bhd. </p>
+                <div class="socialMediaPlugin">
+                  <span class="followUsFooter">Follow Us: &nbsp;</span>
+                  <a href="https://www.facebook.com/all4petsssss">
+                    <img src="images/icons8-facebook-100.png" alt="" class="img-fluid logoSocialMedia">
+                  </a>
+                  <a href="https://www.facebook.com/all4petsssss">
+                    <img src="images/icons8-instagram-100.png" alt="" class="img-fluid logoSocialMedia">
+                  </a>
+                  <a href="mailto:info@example.com">
+                    <img src="images/icons8-mail-100.png" alt="" class="img-fluid logoSocialMedia">
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script defer src="//cdn1.npcdn.net/scripts/janimate.js"></script>
+    <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <!-- Link to 'register.js' file -->
+    <script src="javascript/register.js"> </script>
+    <script src="javascript/animation.js"></script>
+</body>
+
+</html>

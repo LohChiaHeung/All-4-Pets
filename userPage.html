@@ -1,0 +1,1479 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Booking Details - All 4 Pets </title>
+    <link rel="icon" href="/images/Logo_All4Pet.png" type="image/x-icon">
+    <!-- "Get Bootstrap" CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <!-- Link to Navigation Bar CSS -->
+    <link rel="stylesheet" href="css/userPage.css">
+    <link rel="stylesheet" href="css/navbarFooter.css">
+    <!-- Icon CDN-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <!-- Animation CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.compat.css" />
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+        crossorigin="anonymous"></script>
+    <!-- Slick.js CSS -->
+    <!-- <link rel="stylesheet" type="text/css" href="//cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css"> -->
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+</head>
+
+<body onload="checkLoginStatus()">
+      <!-- Navigation Bar -->
+      <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-12 secNavBar">
+                <div class="navigationBarInnerContent">
+                    <a class="Logo_All4Pet" href="homepage.html">
+                        <img src="images/Logo_All4Pet.png" alt="Very Important Pet" title="Very Important Pet"
+                            class="img-fluid">
+                    </a>
+                    <div class="nav_tab">
+                        <div class="dropdown nav_item">
+                            <a class="navBarLinkClass" href="homepage.html" title="Home">Home</a>
+                        </div>
+                        <div class="dropdown nav_item">
+                            <a class="navBarLinkClass" href="aboutus.html" title="About Us">About Us</a>
+                        </div>
+                        <div class="dropdown nav_item">
+                            <a class="navBarLinkClass" href="" title="Products">Our Services <i
+                                    class="fa fa-caret-down" aria-hidden="true"></i></a>
+                            <div class="nav_dropdownContent">
+                                <a class="nav_dropdownContentList" href="petGrooming.html">Pet Grooming</a>
+                                <a class="nav_dropdownContentList" href="petBoarding.html">Pet Boarding</a>
+                                <a class="nav_dropdownContentList" href="petTraining.html">Pet Training</a>
+                                <a class="nav_dropdownContentList" href="petMedical.html">Pet Medical</a>
+                                <a class="nav_dropdownContentList" href="petAdoption.html">Pet Adoption</a>
+                            </div>
+                        </div>
+                        <div class="dropdown nav_item">
+                            <a class="navBarLinkClass" href="Product.html" title="Our Products">Products</a>
+                        </div>
+                        <div class="dropdown nav_item">
+                            <a class="navBarLinkClass" href="CatDogCategory.html" title="Pet Breeds">Pet Breeds</a>
+                        </div>
+                        <div class="dropdown nav_item">
+                            <a class="navBarLinkClass" href="petFacts.html" title="Pet Facts">Pet Facts</a>
+                        </div>
+                        <div class="dropdown nav_item">
+                            <a class="navBarLinkClass" href="Walk Pet Weather.html" title="Our Products">Pet Weather</a>
+                        </div>
+                        <div class="dropdown nav_item">
+                            <a class="navBarLinkClass" href="faq.html" title="FAQ">FAQ</a>
+                        </div>
+                        <div class="dropdown nav_item">
+                            <a class="navBarLinkClass" href="ContactUs.html" title="Contact Us">Contact Us</a>
+                        </div>
+                    </div>
+                    <div class="nav_login">
+                        <div class="dropdown nav_item">
+                            <a class="navBarLinkClass" href="registerLoginpage.html" title="Contact Us"
+                                id="loginNavBar">Login
+                                <i class="bi bi-box-arrow-in-right"></i></a>
+                        </div>
+                        <div class="nav_username" id="navUserName"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Navigation Bar (Mobile Version) -->
+    <div class="container-fluid secNavBarMobileVersion noPaddingLeftRightTopContent">
+        <div class="row">
+            <div class="col-md-12 p-0 ">
+                <div class="navBarDisplayFlex">
+                    <div class="hamburgerMenuSection" onclick="openNav()">
+                        <span class="designForMenuButton"> &#9776; </span>
+                    </div>
+                    <div class="logoSecion">
+                        <a class="Logo_All4Pet" href="homepage.html">
+                            <img src="images/Logo_All4Pet.png" alt="Very Important Pet" title="Very Important Pet"
+                                class="img-fluid mobileVersion_Logo">
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="nav_tab" id="mobileVerNavBar">
+                <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">
+                    <span class="logoClose"> &times;
+                    </span>
+                </a>
+                <div class="dropdown nav_item mt-3">
+                    <a class="navBarLinkClass" href="homepage.html" title="Home">Home</a>
+                </div>
+                <div class="dropdown nav_item">
+                    <a class="navBarLinkClass" href="aboutus.html" title="About Us">About Us</a>
+                </div>
+                <div class="dropdown nav_item">
+                    <a class="navBarLinkClass" href="" title="Products">Our Services <i class="fa fa-caret-down"
+                            aria-hidden="true"></i></a>
+                    <div class="nav_dropdownContent">
+                        <a class="nav_dropdownContentList" href="petGrooming.html">Pet Grooming</a>
+                        <a class="nav_dropdownContentList" href="petBoarding.html">Pet Boarding</a>
+                        <a class="nav_dropdownContentList" href="petTraining.html">Pet Training</a>
+                        <a class="nav_dropdownContentList" href="petMedical.html">Pet Medical</a>
+                        <a class="nav_dropdownContentList" href="petAdoption.html">Pet Adoption</a>
+                    </div>
+                </div>
+                <div class="dropdown nav_item">
+                    <a class="navBarLinkClass" href="Product.html" title="Products">Products</a>
+                </div>
+                <div class="dropdown nav_item">
+                    <a class="navBarLinkClass" href="CatDogCategory.html" title="Pet Breeds">Pet Breeds</a>
+                </div>
+                <div class="dropdown nav_item">
+                    <a class="navBarLinkClass" href="petFacts.html" title="Pet Facts">Pet Facts</a>
+                </div>
+                <div class="dropdown nav_item">
+                    <a class="navBarLinkClass" href="Walk Pet Weather.html" title="Our Products">Pet Weather</a>
+                </div>
+                <div class="dropdown nav_item">
+                    <a class="navBarLinkClass" href="faq.html" title="FAQ">FAQ</a>
+                </div>
+                <div class="dropdown nav_item">
+                    <a class="navBarLinkClass" href="ContactUs.html" title="Contact Us">Contact Us</a>
+                </div>
+                <div class="nav_login">
+                    <div class="dropdown nav_item">
+                        <a class="navBarLinkClass" href="registerLoginpage.html" title="Login Page" id="loginNavBar">Login
+                            <i class="bi bi-box-arrow-in-right"></i></a>
+                    </div>
+                    <div class="nav_username" id="navUserName"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--Banner Section -->
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-12 secBanner">
+                <div class="secBannerImage">
+                    <img src="images/petAdoptionBanner.png" alt="" class="img-fluid hp_banner_image"
+                        id="hp_banner_image">
+                    <div class="secBannerTextContent">
+                        <div class="secBannerContentCenter">
+                            <h2 class="titleBanner animate__bounceIn">User Booking Details</h2>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Banner Section -->
+
+    <!-- Welcome User -->
+    <div class="container sectionWelcomeUser">
+        <div class="row">
+            <div class="col-md-6">
+                <div class="WelcomeUsertitleDisplayFlex">
+                    <h3 class="titleWelcomeUser" id="welcomeUser">Welcome, User</h3>
+                    <img src="images/Hp_Footrprint2.png" alt="" class="img-fluid WelcomeUsertitleSubImage">
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Welcome User-->
+
+    <!-- Pet Grooming Booking Details -->
+    <div class="container sectionServices pt-3 pb-3">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="titleDisplayFlex">
+                    <h3 class="titleServices">Pet Grooming Booking Details</h3>
+                    <img src="images/Hp_Footprint.png" alt="" class="img-fluid titleSubImage">
+                </div>
+            </div>
+            <div class="col-md-6" id="BasicTrimmingBox" style="display: none;">
+                <div class="TrimmingSpaborder-box">
+                    <div class="TrimmingSpabox-text">
+                        <h2 class="TrimmingSpatitleBox mb-3">
+                            <strong><br>Basic Trimming<br></strong>
+                        </h2>
+                        <img src="images/basicgrooming.png" alt="" class="img-fluid imgPetGroomingPackages">
+                        <h3 class="TrimmingSpadesAbout">
+                            <div id="PetType1">Pet Type : -</div>
+                            <div id="BreedsofPets1">Breeds of Pets : -</div>
+                            <div id="AppointmentType1">Appointment Type : -</div>
+                            <div id="BookingDate1">Booking Date : -</div>
+                            <div id="BookingTime1">Booking Time : -</div>
+                            <div id="BookingPrice1">Booking Price : -</div>
+                        </h3>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6" id="BasicBathingBox" style="display: none;">
+                <div class="BathGroomborder-box">
+                    <div class="BathGroombox-text">
+                        <h2 class="BathGroomtitleBox mb-3">
+                            <strong><br>Basic Bathing<br></strong>
+                        </h2>
+                        <img src="images/bathgrooming.png" alt="" class="img-fluid imgPetGroomingPackages">
+                        <h3 class="BathGroomdesAbout">
+                            <div id="PetType2">Pet Type : -</div>
+                            <div id="BreedsofPets2">Breeds of Pets : -</div>
+                            <div id="AppointmentType2">Appointment Type : -</div>
+                            <div id="BookingDate2">Booking Date : -</div>
+                            <div id="BookingTime2">Booking Time : -</div>
+                            <div id="BookingPrice2">Booking Price : -</div>
+                        </h3>
+                    </div>
+                    <br>
+                </div>
+            </div>
+            <div class="col-md-6" id="SpaTreatmentBox" style="display: none;">
+                <div class="TrimmingSpaborder-box">
+                    <div class="TrimmingSpabox-text">
+                        <h2 class="TrimmingSpatitleBox mb-3">
+                            <strong><br>Spa treatment<br></strong>
+                        </h2>
+                        <img src="images/spagrooming.png" alt="" class="img-fluid imgPetGroomingPackages">
+                        <h3 class="TrimmingSpadesAbout">
+                            <div id="PetType3">Pet Type : -</div>
+                            <div id="BreedsofPets3">Breeds of Pets : -</div>
+                            <div id="AppointmentType3">Appointment Type : -</div>
+                            <div id="BookingDate3">Booking Date : -</div>
+                            <div id="BookingTime3">Booking Time : -</div>
+                            <div id="BookingPrice3">Booking Price : -</div>
+                        </h3>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6" id="LuxuryGroomingBox" style="display: none;">
+                <div class="BathGroomborder-box">
+                    <div class="BathGroombox-text">
+                        <h2 class="BathGroomtitleBox mb-3">
+                            <strong><br>Luxury Grooming<br></strong>
+                        </h2>
+                        <img src="images/luxurygrooming.png" alt="" class="img-fluid imgPetGroomingPackages">
+                        <h3 class="BathGroomdesAbout">
+                            <div id="PetType4">Pet Type : -</div>
+                            <div id="BreedsofPets4">Breeds of Pets : -</div>
+                            <div id="AppointmentType4">Appointment Type : -</div>
+                            <div id="BookingDate4">Booking Date : -</div>
+                            <div id="BookingTime4">Booking Time : -</div>
+                            <div id="BookingPrice4">Booking Price : -</div>
+                        </h3>
+                    </div>
+                    <br>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Pet Boarding Booking Details -->
+    <div class="container sectionServices pt-3 pb-3">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="titleDisplayFlex">
+                    <h3 class="titleServices">Pet Boarding Booking Details</h3>
+                    <img src="images/Hp_Footprint.png" alt="" class="img-fluid titleSubImage">
+                </div>
+            </div>
+            <div class="col-md-6" id="StandardSuiteBox" style="display: none;">
+                <div class="StandardLuxuryborder-box">
+                    <div class="StandardLuxurybox-text">
+                        <h2 class="StandardLuxurytitleBox mb-3">
+                            <strong><br>Standard Suite<br></strong>
+                        </h2>
+                        <img src="images/standardboarding.png" alt="" class="img-fluid imgPetBoardingPackages">
+                        <h3 class="StandardLuxurydesAbout">
+                            <div id="PetType5">Pet Type : -</div>
+                            <div id="BreedsofPets5">Breeds of Pets : -</div>
+                            <div id="BookingType5">Booking Type : -</div>
+                            <div id="BookingDate5">Booking Date : -</div>
+                            <div id="BookingTime5">Booking Time : -</div>
+                            <div id="BookingPrice5">Booking Price : -</div>
+                        </h3>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6" id="DeluxeSuiteBox" style="display: none;">
+                <div class="DeluxeFelineborder-box">
+                    <div class="DeluxeFelinebox-text">
+                        <h2 class="DeluxeFelinetitleBox mb-3">
+                            <strong><br>Deluxe Suite<br></strong>
+                        </h2>
+                        <img src="images/deluxdesuite.jpg" alt="" class="img-fluid imgPetBoardingPackages">
+                        <h3 class="DeluxeFelinedesAbout">
+                            <div id="PetType6">Pet Type : -</div>
+                            <div id="BreedsofPets6">Breeds of Pets : -</div>
+                            <div id="BookingType6">Booking Type : -</div>
+                            <div id="BookingDate6">Booking Date : -</div>
+                            <div id="BookingTime6">Booking Time : -</div>
+                            <div id="BookingPrice6">Booking Price : -</div>
+                        </h3>
+                    </div>
+                    <br>
+                </div>
+            </div>
+            <div class="col-md-6" id="LuxuryVillaBox" style="display: none;">
+                <div class="StandardLuxuryborder-box">
+                    <div class="StandardLuxurybox-text">
+                        <h2 class="StandardLuxurytitleBox mb-3">
+                            <strong><br>Luxury Villa<br></strong>
+                        </h2>
+                        <img src="images/luxuryboarding.png" alt="" class="img-fluid imgPetBoardingPackages">
+                        <h3 class="StandardLuxurydesAbout">
+                            <div id="PetType7">Pet Type : -</div>
+                            <div id="BreedsofPets7">Breeds of Pets : -</div>
+                            <div id="BookingType7">Booking Type : -</div>
+                            <div id="BookingDate7">Booking Date : -</div>
+                            <div id="BookingTime7">Booking Time : -</div>
+                            <div id="BookingPrice7">Booking Price : -</div>
+                        </h3>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6" id="FelineParadiseBox" style="display: none;">
+                <div class="DeluxeFelineborder-box">
+                    <div class="DeluxeFelinebox-text">
+                        <h2 class="DeluxeFelinetitleBox mb-3">
+                            <strong><br>Feline Paradise<br></strong>
+                        </h2>
+                        <img src="images/felineparadise.jpg" alt="" class="img-fluid imgPetBoardingPackages">
+                        <h3 class="DeluxeFelinedesAbout">
+                            <div id="PetType8">Pet Type : -</div>
+                            <div id="BreedsofPets8">Breeds of Pets : -</div>
+                            <div id="BookingType8">Booking Type : -</div>
+                            <div id="BookingDate8">Booking Date : -</div>
+                            <div id="BookingTime8">Booking Time : -</div>
+                            <div id="BookingPrice8">Booking Price : -</div>
+                        </h3>
+                    </div>
+                    <br>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Pet Training Booking Details -->
+    <div class="container sectionServices pt-3 pb-3">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="titleDisplayFlex">
+                    <h3 class="titleServices">Pet Training Booking Details</h3>
+                    <img src="images/Hp_Footprint.png" alt="" class="img-fluid titleSubImage">
+                </div>
+            </div>
+            <div class="col-md-6" id="BasicObedienceBox" style="display: none;">
+                <div class="ObedienceBehaviorborder-box">
+                    <div class="ObedienceBehaviorbox-text">
+                        <h2 class="ObedienceBehaviortitleBox mb-3">
+                            <strong><br>Basic Obedience<br></strong>
+                        </h2>
+                        <img src="images/sprovidedPT2.png" alt="" class="img-fluid imgPetTrainingPackages">
+                        <h3 class="ObedienceBehaviordesAbout">
+                            <div id="PetType9">Pet Type : -</div>
+                            <div id="BreedsofPets9">Breeds of Pets : -</div>
+                            <div id="AppointmentType9">Appointment Type : -</div>
+                            <div id="BookingDate9">Booking Date : -</div>
+                            <div id="BookingTime9">Booking Time : -</div>
+                            <div id="BookingPrice9">Booking Price : -</div>
+                        </h3>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6" id="PuppySocializationBox" style="display: none;">
+                <div class="PuppyBoardborder-box">
+                    <div class="PuppyBoardbox-text">
+                        <h2 class="PuppyBoardtitleBox mb-3">
+                            <strong><br>Puppy Socialization<br></strong>
+                        </h2>
+                        <img src="images/sprovidePT.png" alt="" class="img-fluid imgPetTrainingPackages">
+                        <h3 class="PuppyBoarddesAbout">
+                            <div id="PetType10">Pet Type : -</div>
+                            <div id="BreedsofPets10">Breeds of Pets : -</div>
+                            <div id="AppointmentType10">Appointment Type : -</div>
+                            <div id="BookingDate10">Booking Date : -</div>
+                            <div id="BookingTime10">Booking Time : -</div>
+                            <div id="BookingPrice10">Booking Price : -</div>
+                        </h3>
+                    </div>
+                    <br>
+                </div>
+            </div>
+            <div class="col-md-6" id="BehaviorModificationBox" style="display: none;">
+                <div class="ObedienceBehaviorborder-box">
+                    <div class="ObedienceBehaviorbox-text">
+                        <h2 class="ObedienceBehaviortitleBox mb-3">
+                            <strong><br>Behavior Modification<br></strong>
+                        </h2>
+                        <img src="images/sprovidedPT4.png" alt="" class="img-fluid imgPetTrainingPackages">
+                        <h3 class="ObedienceBehaviordesAbout">
+                            <div id="PetType11">Pet Type : -</div>
+                            <div id="BreedsofPets11">Breeds of Pets : -</div>
+                            <div id="AppointmentType11">Appointment Type : -</div>
+                            <div id="BookingDate11">Booking Date : -</div>
+                            <div id="BookingTime11">Booking Time : -</div>
+                            <div id="BookingPrice11">Booking Price : -</div>
+                        </h3>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6" id="BoardTrainBox" style="display: none;">
+                <div class="PuppyBoardborder-box">
+                    <div class="PuppyBoardbox-text">
+                        <h2 class="PuppyBoardtitleBox mb-3">
+                            <strong><br>Board & Train<br></strong>
+                        </h2>
+                        <img src="images/sprovidedPT1.png" alt="" class="img-fluid imgPetTrainingPackages">
+                        <h3 class="PuppyBoarddesAbout">
+                            <div id="PetType12">Pet Type : -</div>
+                            <div id="BreedsofPets12">Breeds of Pets : -</div>
+                            <div id="AppointmentType12">Appointment Type : -</div>
+                            <div id="BookingDate12">Booking Date : -</div>
+                            <div id="BookingTime12">Booking Time : -</div>
+                            <div id="BookingPrice12">Booking Price : -</div>
+                        </h3>
+                    </div>
+                    <br>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Pet Medical Booking Details -->
+    <div class="container sectionServices pt-3 pb-3">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="titleDisplayFlex">
+                    <h3 class="titleServices">Pet Medical Booking Details</h3>
+                    <img src="images/Hp_Footprint.png" alt="" class="img-fluid titleSubImage">
+                </div>
+            </div>
+            <div class="col-md-6" id="BasicHealthWellnessBox" style="display: none;">
+                <div class="StandardLuxuryborder-box">
+                    <div class="StandardLuxurybox-text">
+                        <h2 class="StandardLuxurytitleBox mb-3">
+                            <strong><br>Basic Health & Wellness<br></strong>
+                        </h2>
+                        <img src="images/cleanpet.png" alt="" class="img-fluid imgPetBoardingPackages">
+                        <h3 class="StandardLuxurydesAbout">
+                            <div id="PetType13">Pet Type : -</div>
+                            <div id="BreedsofPets13">Breeds of Pets : -</div>
+                            <div id="BookingType13">Booking Type : -</div>
+                            <div id="BookingDate13">Booking Date : -</div>
+                            <div id="BookingTime13">Booking Time : -</div>
+                            <div id="BookingPrice13">Booking Price : -</div>
+                        </h3>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6" id="AdvancedHealthMaintenanceBox" style="display: none;">
+                <div class="DeluxeFelineborder-box">
+                    <div class="DeluxeFelinebox-text">
+                        <h2 class="DeluxeFelinetitleBox mb-3">
+                            <strong><br>Advanced Health Maintenance<br></strong>
+                        </h2>
+                        <img src="images/bodycheckpet.png" alt="" class="img-fluid imgPetBoardingPackages">
+                        <h3 class="DeluxeFelinedesAbout">
+                            <div id="PetType14">Pet Type : -</div>
+                            <div id="BreedsofPets14">Breeds of Pets : -</div>
+                            <div id="BookingType14">Booking Type : -</div>
+                            <div id="BookingDate14">Booking Date : -</div>
+                            <div id="BookingTime14">Booking Time : -</div>
+                            <div id="BookingPrice14">Booking Price : -</div>
+                        </h3>
+                    </div>
+                    <br>
+                </div>
+            </div>
+            <div class="col-md-6" id="CareTherapyBox" style="display: none;">
+                <div class="StandardLuxuryborder-box">
+                    <div class="StandardLuxurybox-text">
+                        <h2 class="StandardLuxurytitleBox mb-3">
+                            <strong><br>Complete Care & Therapy<br></strong>
+                        </h2>
+                        <img src="images/healthcheck.png" alt="" class="img-fluid imgPetBoardingPackages">
+                        <h3 class="StandardLuxurydesAbout">
+                            <div id="PetType15">Pet Type : -</div>
+                            <div id="BreedsofPets15">Breeds of Pets : -</div>
+                            <div id="BookingType15">Booking Type : -</div>
+                            <div id="BookingDate15">Booking Date : -</div>
+                            <div id="BookingTime15">Booking Time : -</div>
+                            <div id="BookingPrice15">Booking Price : -</div>
+                        </h3>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6" id="EmergencySpecializedBox" style="display: none;">
+                <div class="DeluxeFelineborder-box">
+                    <div class="DeluxeFelinebox-text">
+                        <h2 class="DeluxeFelinetitleBox mb-3">
+                            <strong><br>Emergency & Specialized Care<br></strong>
+                        </h2>
+                        <img src="images/emergencypet.png" alt="" class="img-fluid imgPetBoardingPackages">
+                        <h3 class="DeluxeFelinedesAbout">
+                            <div id="PetType16">Pet Type : -</div>
+                            <div id="BreedsofPets16">Breeds of Pets : -</div>
+                            <div id="BookingType16">Booking Type : -</div>
+                            <div id="BookingDate16">Booking Date : -</div>
+                            <div id="BookingTime16">Booking Time : -</div>
+                            <div id="BookingPrice16">Booking Price : -</div>
+                        </h3>
+                    </div>
+                    <br>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Pet Adoption - Dogs -->
+    <div class="container sectionServices pt-3 pb-3">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="titleDisplayFlex">
+                    <h3 class="titleServices">Pet Adoption - Dogs</h3>
+                    <img src="images/Hp_Footprint.png" alt="" class="img-fluid titleSubImage">
+                </div>
+            </div>
+            <div class="col-md-4" id="GoldenRetrievereBox" style="display: none;">
+                <div class="StandardLuxuryborder-box">
+                    <div class="StandardLuxurybox-text">
+                        <h2 class="StandardLuxurytitleBox mb-3" id="PetBreed1">
+                            <strong><br>Golden Retriever<br></strong>
+                        </h2>
+                        <img src="images/GoldenRetriever.png" alt="" class="img-fluid imgPetBoardingPackages">
+                        <h3 class="StandardLuxurydesAbout">
+                            <br>
+                            <div id="PetName1">Name : -</div>
+                            <div id="PetGender1">Gender : -</div>
+                            <div id="PetAge1">Age: -</div>
+                            <div id="PetColor1">Color: -</div>
+                            <div id="PetSize1">Size: -</div>
+                            <div id="Status1">Status: -</div>
+                        </h3>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4" id="DachshundBox" style="display: none;">
+                <div class="DeluxeFelineborder-box">
+                    <div class="DeluxeFelinebox-text">
+                        <h2 class="DeluxeFelinetitleBox mb-3">
+                            <strong><br>Dachshund<br></strong>
+                        </h2>
+                        <img src="images/Dachshund.png" alt="" class="img-fluid imgPetBoardingPackages">
+                        <h3 class="DeluxeFelinedesAbout"><br>
+                            <div id="PetName2">Name : -</div>
+                            <div id="PetGender2">Gender : -</div>
+                            <div id="PetAge2">Age: -</div>
+                            <div id="PetColor2">Color: -</div>
+                            <div id="PetSize2">Size: -</div>
+                            <div id="Status2">Status: -</div>
+                        </h3>
+                    </div>
+                    <br>
+                </div>
+            </div>
+            <div class="col-md-4" id="BorderCollieBox" style="display: none;">
+                <div class="StandardLuxuryborder-box">
+                    <div class="StandardLuxurybox-text">
+                        <h2 class="StandardLuxurytitleBox mb-3">
+                            <strong><br>Border Collie<br></strong>
+                        </h2>
+                        <img src="images/BorderCollie.png" alt="" class="img-fluid imgPetBoardingPackages">
+                        <h3 class="StandardLuxurydesAbout">
+                            <div id="PetName3">Name : -</div>
+                            <div id="PetGender3">Gender : -</div>
+                            <div id="PetAge3">Age: -</div>
+                            <div id="PetColor3">Color: -</div>
+                            <div id="PetSize3">Size: -</div>
+                            <div id="Status3">Status: -</div>
+                        </h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Pet Adoption - Cats -->
+    <div class="container sectionServices pt-3 pb-3">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="titleDisplayFlex">
+                    <h3 class="titleServices">Pet Adoption - Cats</h3>
+                    <img src="images/Hp_Footprint.png" alt="" class="img-fluid titleSubImage">
+                </div>
+            </div>
+            <div class="col-md-4" id="MaineCoonBox" style="display: none;">
+                <div class="DeluxeFelineborder-box">
+                    <div class="DeluxeFelinebox-text">
+                        <h2 class="DeluxeFelinetitleBox mb-3">
+                            <strong><br>Maine Coon<br></strong>
+                        </h2>
+                        <img src="images/MaineCoon.png" alt="" class="img-fluid imgPetBoardingPackages">
+                        <h3 class="DeluxeFelinedesAbout">
+                            <div id="PetName4">Name : -</div>
+                            <div id="PetGender4">Gender : -</div>
+                            <div id="PetAge4">Age: -</div>
+                            <div id="PetColor4">Color: -</div>
+                            <div id="PetSize4">Size: -</div>
+                            <div id="Status4">Status: -</div>
+                        </h3>
+                    </div>
+                    <br>
+                </div>
+            </div>
+            <div class="col-md-4" id="SiameseBox" style="display: none;">
+                <div class="StandardLuxuryborder-box">
+                    <div class="StandardLuxurybox-text">
+                        <h2 class="StandardLuxurytitleBox mb-3">
+                            <strong><br>Siamese<br></strong>
+                        </h2>
+                        <img src="images/Siamese.png" alt="" class="img-fluid imgPetBoardingPackages">
+                        <h3 class="StandardLuxurydesAbout">
+                            <div id="PetName5">Name : -</div>
+                            <div id="PetGender5">Gender : -</div>
+                            <div id="PetAge5">Age: -</div>
+                            <div id="PetColor5">Color: -</div>
+                            <div id="PetSize5">Size: -</div>
+                            <div id="Status5">Status: -</div>
+                        </h3>
+                        <br>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4" id="TabbyBox" style="display: none;">
+                <div class="DeluxeFelineborder-box">
+                    <div class="DeluxeFelinebox-text">
+                        <h2 class="DeluxeFelinetitleBox mb-3">
+                            <strong><br>Tabby<br></strong>
+                        </h2>
+                        <img src="images/Tabby.png" alt="" class="img-fluid imgPetBoardingPackages">
+                        <h3 class="DeluxeFelinedesAbout">
+                            <div id="PetName6">Name : -</div>
+                            <div id="PetGender6">Gender : -</div>
+                            <div id="PetAge6">Age: -</div>
+                            <div id="PetColor6">Color: -</div>
+                            <div id="PetSize6">Size: -</div>
+                            <div id="Status6">Status: -</div>
+                        </h3>
+                    </div>
+                    <br>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <br>
+
+        <!-- Footer -->
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-12 secFooter">
+                <div class="container">
+                    <div class="row">
+                        <div class="footerSection">
+                            <hr class="horizontalLineWhiteColor">
+                            <div class="footerFlexContent">
+                                <p class="copyRightCompany">Copyright © 2023 All 4 Pet Sdn. Bhd. </p>
+                                <div class="socialMediaPlugin">
+                                    <span class="followUsFooter">Follow Us: &nbsp;</span>
+                                    <a href="https://www.facebook.com/all4petsssss">
+                                        <img src="images/icons8-facebook-100.png" alt=""
+                                            class="img-fluid logoSocialMedia">
+                                    </a>
+                                    <a href="https://instagram.com/all4pets_2023?igshid=NzZhOTFlYzFmZQ==">
+                                        <img src="images/icons8-instagram-100.png" alt=""
+                                            class="img-fluid logoSocialMedia">
+                                    </a>
+                                    <a href="mailto:info@example.com">
+                                        <img src="images/icons8-mail-100.png" alt="" class="img-fluid logoSocialMedia">
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    
+    <script defer src="//cdn1.npcdn.net/scripts/janimate.js"></script>
+    <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <!-- Link to 'register.js' file -->
+    <script src="javascript/register.js"> </script>
+    <script src="javascript/animation.js"> </script>
+
+    <!-- End of Footer -->
+
+    <script>
+        function checkLoginStatus() {
+            var getLogin = sessionStorage.getItem('IsLoggedIn');
+            var username = localStorage.getItem('User Name');
+
+            var welcomeuser = document.getElementById('welcomeUser');
+
+            //========================= Pet Grooming ===========================================================//
+            var BasicTrimmingBoxContainer = document.getElementById('BasicTrimmingBox');
+            var BasicBathingBoxContainer = document.getElementById('BasicBathingBox');
+            var SpaTreatmentBoxContainer = document.getElementById('SpaTreatmentBox');
+            var LuxuryGroomingBoxContainer = document.getElementById('LuxuryGroomingBox');
+
+            var BTpetType = localStorage.getItem('Basic Trimming Pet Type');
+            var BTbreedofPets = localStorage.getItem('Basic Trimming Breed of Pets');
+            var BTappointmentType = localStorage.getItem('Basic Trimming Appointment Type');
+            var BTbookingDate = localStorage.getItem('Basic Trimming Booking Date');
+            var BTbookingTime = localStorage.getItem('Basic Trimming Booking Time');
+            var BTbookingPrice = localStorage.getItem('Basic Trimming Booking Price');
+
+            var BBpetType = localStorage.getItem('Basic Bathing Pet Type');
+            var BBbreedofPets = localStorage.getItem('Basic Bathing Breed of Pets');
+            var BBappointmentType = localStorage.getItem('Basic Bathing Appointment Type');
+            var BBbookingDate = localStorage.getItem('Basic Bathing Booking Date');
+            var BBbookingTime = localStorage.getItem('Basic Bathing Booking Time');
+            var BBbookingPrice = localStorage.getItem('Basic Bathing Booking Price');
+
+            var STpetType = localStorage.getItem('Spa Treatment Pet Type');
+            var STbreedofPets = localStorage.getItem('Spa Treatment Breed of Pets');
+            var STappointmentType = localStorage.getItem('Spa Treatment Appointment Type');
+            var STbookingDate = localStorage.getItem('Spa Treatment Booking Date');
+            var STbookingTime = localStorage.getItem('Spa Treatment Booking Time');
+            var STbookingPrice = localStorage.getItem('Spa Treatment Booking Price');
+
+            var LGpetType = localStorage.getItem('Luxury Grooming Pet Type');
+            var LGbreedofPets = localStorage.getItem('Luxury Grooming Breed of Pets');
+            var LGappointmentType = localStorage.getItem('Luxury Grooming Appointment Type');
+            var LGbookingDate = localStorage.getItem('Luxury Grooming Booking Date');
+            var LGbookingTime = localStorage.getItem('Luxury Grooming Booking Time');
+            var LGbookingPrice = localStorage.getItem('Luxury Grooming Booking Price');
+
+            var petType1 = document.getElementById('PetType1');
+            var breedsofPets1 = document.getElementById('BreedsofPets1');
+            var appointmentType1 = document.getElementById('AppointmentType1');
+            var bookingDate1 = document.getElementById('BookingDate1');
+            var bookingTime1 = document.getElementById('BookingTime1');
+            var bookingPrice1 = document.getElementById('BookingPrice1');
+
+            var petType2 = document.getElementById('PetType2');
+            var breedsofPets2 = document.getElementById('BreedsofPets2');
+            var appointmentType2 = document.getElementById('AppointmentType2');
+            var bookingDate2 = document.getElementById('BookingDate2');
+            var bookingTime2 = document.getElementById('BookingTime2');
+            var bookingPrice2 = document.getElementById('BookingPrice2');
+
+            var petType3 = document.getElementById('PetType3');
+            var breedsofPets3 = document.getElementById('BreedsofPets3');
+            var appointmentType3 = document.getElementById('AppointmentType3');
+            var bookingDate3 = document.getElementById('BookingDate3');
+            var bookingTime3 = document.getElementById('BookingTime3');
+            var bookingPrice3 = document.getElementById('BookingPrice3');
+
+            var petType4 = document.getElementById('PetType4');
+            var breedsofPets4 = document.getElementById('BreedsofPets4');
+            var appointmentType4 = document.getElementById('AppointmentType4');
+            var bookingDate4 = document.getElementById('BookingDate4');
+            var bookingTime4 = document.getElementById('BookingTime4');
+            var bookingPrice4 = document.getElementById('BookingPrice4');
+            //=========================  End of Pet Grooming ===========================================================//
+
+            //========================= Pet Boarding ===========================================================//
+            var StandardSuiteBoxContainer = document.getElementById('StandardSuiteBox');
+            var DeluxeSuiteBoxContainer = document.getElementById('DeluxeSuiteBox');
+            var LuxuryVillaBoxContainer = document.getElementById('LuxuryVillaBox');
+            var FelineParadiseBoxContainer = document.getElementById('FelineParadiseBox');
+
+            var SSpetType = localStorage.getItem('Standard Suite Pet Type');
+            var SSbreedofPets = localStorage.getItem('Standard Suite Breed of Pets');
+            var SSbookingType = localStorage.getItem('Standard Suite Booking Type');
+            var SSbookingDate = localStorage.getItem('Standard Suite Booking Date');
+            var SSbookingTime = localStorage.getItem('Standard Suite Booking Time');
+            var SSbookingPrice = localStorage.getItem('Standard Suite Booking Price');
+
+            var DSpetType = localStorage.getItem('Deluxe Suite Pet Type');
+            var DSbreedofPets = localStorage.getItem('Deluxe Suite Breed of Pets');
+            var DSbookingType = localStorage.getItem('Deluxe Suite Booking Type');
+            var DSbookingDate = localStorage.getItem('Deluxe Suite Booking Date');
+            var DSbookingTime = localStorage.getItem('Deluxe Suite Booking Time');
+            var DSbookingPrice = localStorage.getItem('Deluxe Suite Booking Price');
+
+            var LVpetType = localStorage.getItem('Luxury Villa Pet Type');
+            var LVbreedofPets = localStorage.getItem('Luxury Villa Breed of Pets');
+            var LVbookingType = localStorage.getItem('Luxury Villa Booking Type');
+            var LVbookingDate = localStorage.getItem('Luxury Villa Booking Date');
+            var LVbookingTime = localStorage.getItem('Luxury Villa Booking Time');
+            var LVbookingPrice = localStorage.getItem('Luxury Villa Booking Price');
+
+            var FPpetType = localStorage.getItem('Feline Paradise Pet Type');
+            var FPbreedofPets = localStorage.getItem('Feline Paradise Breed of Pets');
+            var FPbookingType = localStorage.getItem('Feline Paradise Booking Type');
+            var FPbookingDate = localStorage.getItem('Feline Paradise Booking Date');
+            var FPbookingTime = localStorage.getItem('Feline Paradise Booking Time');
+            var FPbookingPrice = localStorage.getItem('Feline Paradise Booking Price');
+
+            var petType5 = document.getElementById('PetType5');
+            var breedsofPets5 = document.getElementById('BreedsofPets5');
+            var bookingType5 = document.getElementById('BookingType5');
+            var bookingDate5 = document.getElementById('BookingDate5');
+            var bookingTime5 = document.getElementById('BookingTime5');
+            var bookingPrice5 = document.getElementById('BookingPrice5');
+
+            var petType6 = document.getElementById('PetType6');
+            var breedsofPets6 = document.getElementById('BreedsofPets6');
+            var bookingType6 = document.getElementById('BookingType6');
+            var bookingDate6 = document.getElementById('BookingDate6');
+            var bookingTime6 = document.getElementById('BookingTime6');
+            var bookingPrice6 = document.getElementById('BookingPrice6');
+
+            var petType7 = document.getElementById('PetType7');
+            var breedsofPets7 = document.getElementById('BreedsofPets7');
+            var bookingType7 = document.getElementById('BookingType7');
+            var bookingDate7 = document.getElementById('BookingDate7');
+            var bookingTime7 = document.getElementById('BookingTime7');
+            var bookingPrice7 = document.getElementById('BookingPrice7');
+
+            var petType8 = document.getElementById('PetType8');
+            var breedsofPets8 = document.getElementById('BreedsofPets8');
+            var bookingType8 = document.getElementById('BookingType8');
+            var bookingDate8 = document.getElementById('BookingDate8');
+            var bookingTime8 = document.getElementById('BookingTime8');
+            var bookingPrice8 = document.getElementById('BookingPrice8');
+            //=========================  End of Pet Boarding ===========================================================//
+
+            //========================= Pet Training ===========================================================//
+            var BasicObedienceBoxContainer = document.getElementById('BasicObedienceBox');
+            var PuppySocializationBoxContainer = document.getElementById('PuppySocializationBox');
+            var BehaviorModificationBoxContainer = document.getElementById('BehaviorModificationBox');
+            var BoardTrainBoxContainer = document.getElementById('BoardTrainBox');
+
+            var BOpetType = localStorage.getItem('Basic Obedience Pet Type');
+            var BObreedofPets = localStorage.getItem('Basic Obedience Breed of Pets');
+            var BOappointmentType = localStorage.getItem('Basic Obedience Appointment Type');
+            var BObookingDate = localStorage.getItem('Basic Obedience Booking Date');
+            var BObookingTime = localStorage.getItem('Basic Obedience Booking Time');
+            var BObookingPrice = localStorage.getItem('Basic Obedience Booking Price');
+
+            var PSpetType = localStorage.getItem('Puppy Socialization Pet Type');
+            var PSbreedofPets = localStorage.getItem('Puppy Socialization Breed of Pets');
+            var PSappointmentType = localStorage.getItem('Puppy Socialization Appointment Type');
+            var PSbookingDate = localStorage.getItem('Puppy Socialization Booking Date');
+            var PSbookingTime = localStorage.getItem('Puppy Socialization Booking Time');
+            var PSbookingPrice = localStorage.getItem('Puppy Socialization Booking Price');
+
+            var BMpetType = localStorage.getItem('Behavior Modification Pet Type');
+            var BMbreedofPets = localStorage.getItem('Behavior Modification Breed of Pets');
+            var BMappointmentType = localStorage.getItem('Behavior Modification Appointment Type');
+            var BMbookingDate = localStorage.getItem('Behavior Modification Booking Date');
+            var BMbookingTime = localStorage.getItem('Behavior Modification Booking Time');
+            var BMbookingPrice = localStorage.getItem('Behavior Modification Booking Price');
+
+            var BTrainpetType = localStorage.getItem('Board Train Pet Type');
+            var BTrainbreedofPets = localStorage.getItem('Board Train Breed of Pets');
+            var BTrainappointmentType = localStorage.getItem('Board Train Appointment Type');
+            var BTrainbookingDate = localStorage.getItem('Board Train Booking Date');
+            var BTrainbookingTime = localStorage.getItem('Board Train Booking Time');
+            var BTrainbookingPrice = localStorage.getItem('Board Train Booking Price');
+
+            var petType9 = document.getElementById('PetType9');
+            var breedsofPets9 = document.getElementById('BreedsofPets9');
+            var appointmentType9 = document.getElementById('AppointmentType9');
+            var bookingDate9 = document.getElementById('BookingDate9');
+            var bookingTime9 = document.getElementById('BookingTime9');
+            var bookingPrice9 = document.getElementById('BookingPrice9');
+
+            var petType10 = document.getElementById('PetType10');
+            var breedsofPets10 = document.getElementById('BreedsofPets10');
+            var appointmentType10 = document.getElementById('AppointmentType10');
+            var bookingDate10 = document.getElementById('BookingDate10');
+            var bookingTime10 = document.getElementById('BookingTime10');
+            var bookingPrice10 = document.getElementById('BookingPrice10');
+
+            var petType11 = document.getElementById('PetType11');
+            var breedsofPets11 = document.getElementById('BreedsofPets11');
+            var appointmentType11 = document.getElementById('AppointmentType11');
+            var bookingDate11 = document.getElementById('BookingDate11');
+            var bookingTime11 = document.getElementById('BookingTime11');
+            var bookingPrice11 = document.getElementById('BookingPrice11');
+
+            var petType12 = document.getElementById('PetType12');
+            var breedsofPets12 = document.getElementById('BreedsofPets12');
+            var appointmentType12 = document.getElementById('AppointmentType12');
+            var bookingDate12 = document.getElementById('BookingDate12');
+            var bookingTime12 = document.getElementById('BookingTime12');
+            var bookingPrice12 = document.getElementById('BookingPrice12');
+            //=========================  End of Pet Training ===========================================================//
+
+            //========================= Pet Medical ===========================================================//
+            var BasicHealthWellnessBoxContainer = document.getElementById('BasicHealthWellnessBox');
+            var AdvancedHealthMaintenanceBoxContainer = document.getElementById('AdvancedHealthMaintenanceBox');
+            var CareTherapyBoxContainer = document.getElementById('CareTherapyBox');
+            var EmergencySpecializedBoxContainer = document.getElementById('EmergencySpecializedBox');
+
+            var HWpetType = localStorage.getItem('Basic Health Wellness Pet Type');
+            var HWbreedofPets = localStorage.getItem('Basic Health Wellness Breed of Pets');
+            var HWbookingType = localStorage.getItem('Basic Health Wellness Booking Type');
+            var HWbookingDate = localStorage.getItem('Basic Health Wellness Booking Date');
+            var HWbookingTime = localStorage.getItem('Basic Health Wellness Booking Time');
+            var HWbookingPrice = localStorage.getItem('Basic Health Wellness Booking Price');
+
+            var HMpetType = localStorage.getItem('Advanced Health Maintenance Pet Type');
+            var HMbreedofPets = localStorage.getItem('Advanced Health Maintenance Breed of Pets');
+            var HMbookingType = localStorage.getItem('Advanced Health Maintenance Booking Type');
+            var HMbookingDate = localStorage.getItem('Advanced Health Maintenance Booking Date');
+            var HMbookingTime = localStorage.getItem('Advanced Health Maintenance Booking Time');
+            var HMbookingPrice = localStorage.getItem('Advanced Health Maintenance Booking Price');
+
+            var CTpetType = localStorage.getItem('Care Therapy Pet Type');
+            var CTbreedofPets = localStorage.getItem('Care Therapy Breed of Pets');
+            var CTbookingType = localStorage.getItem('Care Therapy Booking Type');
+            var CTbookingDate = localStorage.getItem('Care Therapy Booking Date');
+            var CTbookingTime = localStorage.getItem('Care Therapy Booking Time');
+            var CTbookingPrice = localStorage.getItem('Care Therapy Booking Price');
+
+            var ESpetType = localStorage.getItem('Emergency Specialized Pet Type');
+            var ESbreedofPets = localStorage.getItem('Emergency Specialized Breed of Pets');
+            var ESbookingType = localStorage.getItem('Emergency Specialized Booking Type');
+            var ESbookingDate = localStorage.getItem('Emergency Specialized Booking Date');
+            var ESbookingTime = localStorage.getItem('Emergency Specialized Booking Time');
+            var ESbookingPrice = localStorage.getItem('Emergency Specialized Booking Price');
+
+            var petType13 = document.getElementById('PetType13');
+            var breedsofPets13 = document.getElementById('BreedsofPets13');
+            var bookingType13 = document.getElementById('BookingType13');
+            var bookingDate13 = document.getElementById('BookingDate13');
+            var bookingTime13 = document.getElementById('BookingTime13');
+            var bookingPrice13 = document.getElementById('BookingPrice13');
+
+            var petType14 = document.getElementById('PetType14');
+            var breedsofPets14 = document.getElementById('BreedsofPets14');
+            var bookingType14 = document.getElementById('BookingType14');
+            var bookingDate14 = document.getElementById('BookingDate14');
+            var bookingTime14 = document.getElementById('BookingTime14');
+            var bookingPrice14 = document.getElementById('BookingPrice14');
+
+            var petType15 = document.getElementById('PetType15');
+            var breedsofPets15 = document.getElementById('BreedsofPets15');
+            var bookingType15 = document.getElementById('BookingType15');
+            var bookingDate15 = document.getElementById('BookingDate15');
+            var bookingTime15 = document.getElementById('BookingTime15');
+            var bookingPrice15 = document.getElementById('BookingPrice15');
+
+            var petType16 = document.getElementById('PetType16');
+            var breedsofPets16 = document.getElementById('BreedsofPets16');
+            var bookingType16 = document.getElementById('BookingType16');
+            var bookingDate16 = document.getElementById('BookingDate16');
+            var bookingTime16 = document.getElementById('BookingTime16');
+            var bookingPrice16 = document.getElementById('BookingPrice16');
+            //=========================  End of Pet Medical ===========================================================//
+
+            //========================= Pet Adoption - Dogs ===========================================================//
+            var GoldenRetrievereBoxContainer = document.getElementById('GoldenRetrievereBox');
+            var DachshundBoxContainer = document.getElementById('DachshundBox');
+            var BorderCollieBoxContainer = document.getElementById('BorderCollieBox');
+
+            var GRpetName = localStorage.getItem('Golden Retriever Pet Name');
+            var GRpetGender = localStorage.getItem('Golden Retriever Pet Gender');
+            var GRpetAge = localStorage.getItem('Golden Retriever Pet Age');
+            var GRpetColor = localStorage.getItem('Golden Retriever Pet Color');
+            var GRpetSize = localStorage.getItem('Golden Retriever Pet Size');
+            var GRpetStatus = localStorage.getItem('Golden Retriever Status');
+
+            var DpetName = localStorage.getItem('Dachshund Pet Name');
+            var DpetGender = localStorage.getItem('Dachshund Pet Gender');
+            var DpetAge = localStorage.getItem('Dachshund Pet Age');
+            var DpetColor = localStorage.getItem('Dachshund Pet Color');
+            var DpetSize = localStorage.getItem('Dachshund Pet Size');
+            var DpetStatus = localStorage.getItem('Dachshund Status');
+
+            var BCpetName = localStorage.getItem('Border Collie Pet Name');
+            var BCpetGender = localStorage.getItem('Border Collie Pet Gender');
+            var BCpetAge = localStorage.getItem('Border Collie Pet Age');
+            var BCpetColor = localStorage.getItem('Border Collie Pet Color');
+            var BCpetSize = localStorage.getItem('Border Collie Pet Size');
+            var BCpetStatus = localStorage.getItem('Border Collie Status');
+
+
+            var petName1 = document.getElementById('PetName1');
+            var petGender1 = document.getElementById('PetGender1');
+            var petAge1 = document.getElementById('PetAge1');
+            var petColor1 = document.getElementById('PetColor1');
+            var petSize1 = document.getElementById('PetSize1');
+            var status1 = document.getElementById('Status1');
+
+            var petName2 = document.getElementById('PetName2');
+            var petGender2 = document.getElementById('PetGender2');
+            var petAge2 = document.getElementById('PetAge2');
+            var petColor2 = document.getElementById('PetColor2');
+            var petSize2 = document.getElementById('PetSize2');
+            var status2 = document.getElementById('Status2');
+
+            var petName3 = document.getElementById('PetName3');
+            var petGender3 = document.getElementById('PetGender3');
+            var petAge3 = document.getElementById('PetAge3');
+            var petColor3 = document.getElementById('PetColor3');
+            var petSize3 = document.getElementById('PetSize3');
+            var status3 = document.getElementById('Status3');
+            //=========================  End of Pet Adoption ===========================================================//
+
+            //========================= Pet Adoption - Cats ===========================================================//
+            var MaineCoonBoxContainer = document.getElementById('MaineCoonBox');
+            var SiameseBoxContainer = document.getElementById('SiameseBox');
+            var TabbyBoxContainer = document.getElementById('TabbyBox');
+
+            var MCpetName = localStorage.getItem('Maine Coon Pet Name');
+            var MCpetGender = localStorage.getItem('Maine Coon Pet Gender');
+            var MCpetAge = localStorage.getItem('Maine Coon Pet Age');
+            var MCpetColor = localStorage.getItem('Maine Coon Pet Color');
+            var MCpetSize = localStorage.getItem('Maine Coon Pet Size');
+            var MCpetStatus = localStorage.getItem('Maine Coon Status');
+
+            var SpetName = localStorage.getItem('Siamese Pet Name');
+            var SpetGender = localStorage.getItem('Siamese Pet Gender');
+            var SpetAge = localStorage.getItem('Siamese Pet Age');
+            var SpetColor = localStorage.getItem('Siamese Pet Color');
+            var SpetSize = localStorage.getItem('Siamese Pet Size');
+            var SpetStatus = localStorage.getItem('Siamese Status');
+
+            var TpetName = localStorage.getItem('Tabby Pet Name');
+            var TpetGender = localStorage.getItem('Tabby Pet Gender');
+            var TpetAge = localStorage.getItem('Tabby Pet Age');
+            var TpetColor = localStorage.getItem('Tabby Pet Color');
+            var TpetSize = localStorage.getItem('Tabby Pet Size');
+            var TpetStatus = localStorage.getItem('Tabby Status');
+
+
+            var petName4 = document.getElementById('PetName4');
+            var petGender4 = document.getElementById('PetGender4');
+            var petAge4 = document.getElementById('PetAge4');
+            var petColor4 = document.getElementById('PetColor4');
+            var petSize4 = document.getElementById('PetSize4');
+            var status4 = document.getElementById('Status4');
+
+            var petName5 = document.getElementById('PetName5');
+            var petGender5 = document.getElementById('PetGender5');
+            var petAge5 = document.getElementById('PetAge5');
+            var petColor5 = document.getElementById('PetColor5');
+            var petSize5 = document.getElementById('PetSize5');
+            var status5 = document.getElementById('Status5');
+
+            var petName6 = document.getElementById('PetName6');
+            var petGender6 = document.getElementById('PetGender6');
+            var petAge6 = document.getElementById('PetAge6');
+            var petColor6 = document.getElementById('PetColor6');
+            var petSize6 = document.getElementById('PetSize6');
+            var status6 = document.getElementById('Status6');
+            //=========================  End of Pet Adoption - Cats ===========================================================//
+
+            //=========================  title of Details ===========================================================//
+            //var pgbd = document.getElementById('PGBD');
+            //var pbbd = document.getElementById('PBBD');
+            //var ptbd = document.getElementById('PTBD');
+            //var pmbd = document.getElementById('PMBD');
+            //var pad = document.getElementById('PAD');
+            //var pac = document.getElementById('PAC');
+            //=========================  End title of Details ===========================================================//
+
+
+            if (getLogin === "true") {
+                if (username) {
+                    welcomeuser.textContent = `Welcome, ${username}`;
+                }
+                else {
+                    welcomeuser.textContent = `Welcome, User`;
+                }
+                //========================= Pet Grooming ===========================================================//
+                if (BTpetType && BTbreedofPets && BTappointmentType && BTbookingDate && BTbookingTime && BTbookingPrice) {
+                    petType1.textContent = `Pet Type : ${BTpetType}`;
+                    breedsofPets1.textContent = `Breeds of Pets : ${BTbreedofPets}`;
+                    appointmentType1.textContent = `Appointment Type : ${BTappointmentType}`;
+                    bookingDate1.textContent = `Booking Date : ${BTbookingDate}`;
+                    bookingTime1.textContent = `Booking Time :  ${BTbookingTime}`;
+                    bookingPrice1.textContent = `Booking Price : ${BTbookingPrice}`;
+                    BasicTrimmingBoxContainer.style.display = 'block';
+                    //pgbd.style.display = 'block';
+                }
+                else {
+                    BasicTrimmingBoxContainer.style.display = 'none';
+                    //pgbd.style.display = 'none';
+                }
+
+                if (BBpetType && BBbreedofPets && BBappointmentType && BBbookingDate && BBbookingTime && BBbookingPrice) {
+                    petType2.textContent = `Pet Type : ${BBpetType}`;
+                    breedsofPets2.textContent = `Breeds of Pets : ${BBbreedofPets}`;
+                    appointmentType2.textContent = `Appointment Type : ${BBappointmentType}`;
+                    bookingDate2.textContent = `Booking Date : ${BBbookingDate}`;
+                    bookingTime2.textContent = `Booking Time :  ${BBbookingTime}`;
+                    bookingPrice2.textContent = `Booking Price : ${BBbookingPrice}`;
+                    BasicBathingBoxContainer.style.display = 'block';
+                    //pgbd.style.display = 'block';
+                }
+                else {
+                    BasicBathingBoxContainer.style.display = 'none';
+                    //pgbd.style.display = 'none';
+                }
+
+                if (STpetType && STbreedofPets && STappointmentType && STbookingDate && STbookingTime && STbookingPrice) {
+                    petType3.textContent = `Pet Type : ${STpetType}`;
+                    breedsofPets3.textContent = `Breeds of Pets : ${STbreedofPets}`;
+                    appointmentType3.textContent = `Appointment Type : ${STappointmentType}`;
+                    bookingDate3.textContent = `Booking Date : ${STbookingDate}`;
+                    bookingTime3.textContent = `Booking Time :  ${STbookingTime}`;
+                    bookingPrice3.textContent = `Booking Price : ${STbookingPrice}`;
+                    SpaTreatmentBoxContainer.style.display = 'block';
+                    //pgbd.style.display = 'block';
+                }
+                else {
+                    SpaTreatmentBoxContainer.style.display = 'none';
+                    //pgbd.style.display = 'none';
+                }
+
+                if (LGpetType && LGbreedofPets && LGappointmentType && LGbookingDate && LGbookingTime && LGbookingPrice) {
+                    petType4.textContent = `Pet Type : ${LGpetType}`;
+                    breedsofPets4.textContent = `Breeds of Pets : ${LGbreedofPets}`;
+                    appointmentType4.textContent = `Appointment Type : ${LGappointmentType}`;
+                    bookingDate4.textContent = `Booking Date : ${LGbookingDate}`;
+                    bookingTime4.textContent = `Booking Time :  ${LGbookingTime}`;
+                    bookingPrice4.textContent = `Booking Price : ${LGbookingPrice}`;
+                    LuxuryGroomingBoxContainer.style.display = 'block';
+                    //pgbd.style.display = 'block';
+                }
+                else {
+                    LuxuryGroomingBoxContainer.style.display = 'none';
+                    //pgbd.style.display = 'none';
+                }
+                //=========================  End of Pet Grooming ===========================================================//
+
+                //========================= Pet Boarding ===========================================================//
+                if (SSpetType && SSbreedofPets && SSbookingType && SSbookingDate && SSbookingTime && SSbookingPrice) {
+                    petType5.textContent = `Pet Type : ${SSpetType}`;
+                    breedsofPets5.textContent = `Breeds of Pets : ${SSbreedofPets}`;
+                    bookingType5.textContent = `Booking Type : ${SSbookingType}`;
+                    bookingDate5.textContent = `Booking Date : ${SSbookingDate}`;
+                    bookingTime5.textContent = `Booking Time :  ${SSbookingTime}`;
+                    bookingPrice5.textContent = `Booking Price : ${SSbookingPrice}`;
+                    StandardSuiteBoxContainer.style.display = 'block';
+                    //pbbd.style.display = 'block';
+                }
+                else {
+                    StandardSuiteBoxContainer.style.display = 'none';
+                    //pbbd.style.display = 'none';
+                }
+
+                if (DSpetType && DSbreedofPets && DSbookingType && DSbookingDate && DSbookingTime && DSbookingPrice) {
+                    petType6.textContent = `Pet Type : ${DSpetType}`;
+                    breedsofPets6.textContent = `Breeds of Pets : ${DSbreedofPets}`;
+                    bookingType6.textContent = `Booking Type : ${DSbookingType}`;
+                    bookingDate6.textContent = `Booking Date : ${DSbookingDate}`;
+                    bookingTime6.textContent = `Booking Time :  ${DSbookingTime}`;
+                    bookingPrice6.textContent = `Booking Price : ${DSbookingPrice}`;
+                    DeluxeSuiteBoxContainer.style.display = 'block';
+                    //pbbd.style.display = 'block';
+                }
+                else {
+                    DeluxeSuiteBoxContainer.style.display = 'none';
+                   //pbbd.style.display = 'none';
+                }
+
+                if (LVpetType && LVbreedofPets && LVbookingType && LVbookingDate && LVbookingTime && LVbookingPrice) {
+                    petType7.textContent = `Pet Type : ${LVpetType}`;
+                    breedsofPets7.textContent = `Breeds of Pets : ${LVbreedofPets}`;
+                    bookingType7.textContent = `Booking Type : ${LVbookingType}`;
+                    bookingDate7.textContent = `Booking Date : ${LVbookingDate}`;
+                    bookingTime7.textContent = `Booking Time :  ${LVbookingTime}`;
+                    bookingPrice7.textContent = `Booking Price : ${LVbookingPrice}`;
+                    LuxuryVillaBoxContainer.style.display = 'block';
+                    //pbbd.style.display = 'block';
+                }
+                else {
+                    LuxuryVillaBoxContainer.style.display = 'none';
+                    //pbbd.style.display = 'none';
+                }
+
+                if (FPpetType && FPbreedofPets && FPbookingType && FPbookingDate && FPbookingTime && FPbookingPrice) {
+                    petType8.textContent = `Pet Type : ${FPpetType}`;
+                    breedsofPets8.textContent = `Breeds of Pets : ${FPbreedofPets}`;
+                    bookingType8.textContent = `Booking Type : ${FPbookingType}`;
+                    bookingDate8.textContent = `Booking Date : ${FPbookingDate}`;
+                    bookingTime8.textContent = `Booking Time :  ${FPbookingTime}`;
+                    bookingPrice8.textContent = `Booking Price : ${FPbookingPrice}`;
+                    FelineParadiseBoxContainer.style.display = 'block';
+                    //pbbd.style.display = 'block';
+                }
+                else {
+                    FelineParadiseBoxContainer.style.display = 'none';
+                    //pbbd.style.display = 'none';
+                }
+                //=========================  End of Pet Boarding ===========================================================//
+
+                //========================= Pet Training ===========================================================//
+                if (BOpetType && BObreedofPets && BOappointmentType && BObookingDate && BObookingTime && BObookingPrice) {
+                    petType9.textContent = `Pet Type : ${BOpetType}`;
+                    breedsofPets9.textContent = `Breeds of Pets : ${BObreedofPets}`;
+                    appointmentType9.textContent = `Appointment Type : ${BOappointmentType}`;
+                    bookingDate9.textContent = `Booking Date : ${BObookingDate}`;
+                    bookingTime9.textContent = `Booking Time :  ${BObookingTime}`;
+                    bookingPrice9.textContent = `Booking Price : ${BObookingPrice}`;
+                    BasicObedienceBoxContainer.style.display = 'block';
+                    //ptbd.style.display = 'block';
+                }
+                else {
+                    BasicObedienceBoxContainer.style.display = 'none';
+                    //ptbd.style.display = 'none';
+                }
+
+                if (PSpetType && PSbreedofPets && PSappointmentType && PSbookingDate && PSbookingTime && PSbookingPrice) {
+                    petType10.textContent = `Pet Type : ${PSpetType}`;
+                    breedsofPets10.textContent = `Breeds of Pets : ${PSbreedofPets}`;
+                    appointmentType10.textContent = `Appointment Type : ${PSappointmentType}`;
+                    bookingDate10.textContent = `Booking Date : ${PSbookingDate}`;
+                    bookingTime10.textContent = `Booking Time :  ${PSbookingTime}`;
+                    bookingPrice10.textContent = `Booking Price : ${PSbookingPrice}`;
+                    PuppySocializationBoxContainer.style.display = 'block';
+                    //ptbd.style.display = 'block';
+                }
+                else {
+                    PuppySocializationBoxContainer.style.display = 'none';
+                    //ptbd.style.display = 'none';
+                }
+
+                if (BMpetType && BMbreedofPets && BMappointmentType && BMbookingDate && BMbookingTime && BMbookingPrice) {
+                    petType11.textContent = `Pet Type : ${BMpetType}`;
+                    breedsofPets11.textContent = `Breeds of Pets : ${BMbreedofPets}`;
+                    appointmentType11.textContent = `Appointment Type : ${BMappointmentType}`;
+                    bookingDate11.textContent = `Booking Date : ${BMbookingDate}`;
+                    bookingTime11.textContent = `Booking Time :  ${BMbookingTime}`;
+                    bookingPrice11.textContent = `Booking Price : ${BMbookingPrice}`;
+                    BehaviorModificationBoxContainer.style.display = 'block';
+                    //ptbd.style.display = 'block';
+                }
+                else {
+                    BehaviorModificationBoxContainer.style.display = 'none';
+                    //ptbd.style.display = 'none';
+                }
+
+                if (BTrainpetType && BTrainbreedofPets && BTrainappointmentType && BTrainbookingDate && BTrainbookingTime && BTrainbookingPrice) {
+                    petType12.textContent = `Pet Type : ${BTrainpetType}`;
+                    breedsofPets12.textContent = `Breeds of Pets : ${BTrainbreedofPets}`;
+                    appointmentType12.textContent = `Appointment Type : ${BTrainappointmentType}`;
+                    bookingDate12.textContent = `Booking Date : ${BTrainbookingDate}`;
+                    bookingTime12.textContent = `Booking Time :  ${BTrainbookingTime}`;
+                    bookingPrice12.textContent = `Booking Price : ${BTrainbookingPrice}`;
+                    BoardTrainBoxContainer.style.display = 'block';
+                    //ptbd.style.display = 'block';
+                }
+                else {
+                    BoardTrainBoxContainer.style.display = 'none';
+                    //ptbd.style.display = 'none';
+                }
+                //=========================  End of Pet Training ===========================================================//
+
+                //========================= Pet Medical ===========================================================//
+                if (HWpetType && HWbreedofPets && HWbookingType && HWbookingDate && HWbookingTime && HWbookingPrice) {
+                    petType13.textContent = `Pet Type : ${HWpetType}`;
+                    breedsofPets13.textContent = `Breeds of Pets : ${HWbreedofPets}`;
+                    bookingType13.textContent = `Booking Type : ${HWbookingType}`;
+                    bookingDate13.textContent = `Booking Date : ${HWbookingDate}`;
+                    bookingTime13.textContent = `Booking Time :  ${HWbookingTime}`;
+                    bookingPrice13.textContent = `Booking Price : ${HWbookingPrice}`;
+                    BasicHealthWellnessBoxContainer.style.display = 'block';
+                    //pmbd.style.display = 'block';
+                }
+                else {
+                    BasicHealthWellnessBoxContainer.style.display = 'none';
+                    //pmbd.style.display = 'none';
+                }
+
+                if (HMpetType && HMbreedofPets && HMbookingType && HMbookingDate && HMbookingTime && HMbookingPrice) {
+                    petType14.textContent = `Pet Type : ${HMpetType}`;
+                    breedsofPets14.textContent = `Breeds of Pets : ${HMbreedofPets}`;
+                    bookingType14.textContent = `Booking Type : ${HMbookingType}`;
+                    bookingDate14.textContent = `Booking Date : ${HMbookingDate}`;
+                    bookingTime14.textContent = `Booking Time :  ${HMbookingTime}`;
+                    bookingPrice14.textContent = `Booking Price : ${HMbookingPrice}`;
+                    AdvancedHealthMaintenanceBoxContainer.style.display = 'block';
+                    //pmbd.style.display = 'block';
+                }
+                else {
+                    AdvancedHealthMaintenanceBoxContainer.style.display = 'none';
+                    //pmbd.style.display = 'none';
+                }
+
+                if (CTpetType && CTbreedofPets && CTbookingType && CTbookingDate && CTbookingTime && CTbookingPrice) {
+                    petType15.textContent = `Pet Type : ${CTpetType}`;
+                    breedsofPets15.textContent = `Breeds of Pets : ${CTbreedofPets}`;
+                    bookingType15.textContent = `Booking Type : ${CTbookingType}`;
+                    bookingDate15.textContent = `Booking Date : ${CTbookingDate}`;
+                    bookingTime15.textContent = `Booking Time :  ${CTbookingTime}`;
+                    bookingPrice15.textContent = `Booking Price : ${CTbookingPrice}`;
+                    CareTherapyBoxContainer.style.display = 'block';
+                    //pmbd.style.display = 'block';
+                }
+                else {
+                    CareTherapyBoxContainer.style.display = 'none';
+                    //pmbd.style.display = 'none';
+                }
+
+                if (ESpetType && ESbreedofPets && ESbookingType && ESbookingDate && ESbookingTime && ESbookingPrice) {
+                    petType16.textContent = `Pet Type : ${ESpetType}`;
+                    breedsofPets16.textContent = `Breeds of Pets : ${ESbreedofPets}`;
+                    bookingType16.textContent = `Booking Type : ${ESbookingType}`;
+                    bookingDate16.textContent = `Booking Date : ${ESbookingDate}`;
+                    bookingTime16.textContent = `Booking Time :  ${ESbookingTime}`;
+                    bookingPrice16.textContent = `Booking Price : ${ESbookingPrice}`;
+                    EmergencySpecializedBoxContainer.style.display = 'block';
+                    //pmbd.style.display = 'block';
+                }
+                else {
+                    EmergencySpecializedBoxContainer.style.display = 'none';
+                    //pmbd.style.display = 'none';
+                }
+                //=========================  End of Pet Medical ===========================================================//
+
+                //========================= Pet Adoption - Dogs===========================================================//
+                if (GRpetName && GRpetGender && GRpetAge && GRpetColor && GRpetSize && GRpetStatus) {
+                    petName1.textContent = `Name : ${GRpetName}`;
+                    petGender1.textContent = `Gender : ${GRpetGender}`;
+                    petAge1.textContent = `Age : ${GRpetAge}`;
+                    petColor1.textContent = `Color : ${GRpetColor}`;
+                    petSize1.textContent = `Size :  ${GRpetSize}`;
+                    status1.textContent = `Status : ${GRpetStatus}`;
+                    GoldenRetrievereBoxContainer.style.display = 'block';
+                    //pad.style.display = 'block';
+                }
+                else {
+                    GoldenRetrievereBoxContainer.style.display = 'none';
+                    //pad.style.display = 'none';
+                }
+                if (DpetName && DpetGender && DpetAge && DpetColor && DpetSize && DpetStatus) {
+                    petName2.textContent = `Name : ${DpetName}`;
+                    petGender2.textContent = `Gender : ${DpetGender}`;
+                    petAge2.textContent = `Age : ${DpetAge}`;
+                    petColor2.textContent = `Color : ${DpetColor}`;
+                    petSize2.textContent = `Size :  ${DpetSize}`;
+                    status2.textContent = `Status : ${DpetStatus}`;
+                    DachshundBoxContainer.style.display = 'block';
+                    //pad.style.display = 'block';
+                }
+                else {
+                    DachshundBoxContainer.style.display = 'none';
+                    //pad.style.display = 'none';
+                }
+
+                if (BCpetName && BCpetGender && BCpetAge && BCpetColor && BCpetSize && BCpetStatus) {
+                    petName3.textContent = `Name : ${BCpetName}`;
+                    petGender3.textContent = `Gender : ${BCpetGender}`;
+                    petAge3.textContent = `Age : ${BCpetAge}`;
+                    petColor3.textContent = `Color : ${BCpetColor}`;
+                    petSize3.textContent = `Size :  ${BCpetSize}`;
+                    status3.textContent = `Status : ${BCpetStatus}`;
+                    BorderCollieBoxContainer.style.display = 'block';
+                    //pad.style.display = 'block';
+                }
+                else {
+                    BorderCollieBoxContainer.style.display = 'none';
+                    //pad.style.display = 'none';
+                }
+                //=========================  End of Pet Adoption - Dogs ===========================================================//
+
+                //========================= Pet Adoption - Cats ===========================================================//
+                if (MCpetName && MCpetGender && MCpetAge && MCpetColor && MCpetSize && MCpetStatus) {
+                    petName4.textContent = `Name : ${MCpetName}`;
+                    petGender4.textContent = `Gender : ${MCpetGender}`;
+                    petAge4.textContent = `Age : ${MCpetAge}`;
+                    petColor4.textContent = `Color : ${MCpetColor}`;
+                    petSize4.textContent = `Size :  ${MCpetSize}`;
+                    status4.textContent = `Status : ${MCpetStatus}`;
+                    MaineCoonBoxContainer.style.display = 'block';
+                    //pac.style.display = 'block';
+                }
+                else {
+                    MaineCooneBoxContainer.style.display = 'none';
+                    //pac.style.display = 'none';
+                }
+                if (SpetName && SpetGender && SpetAge && SpetColor && SpetSize && SpetStatus) {
+                    petName5.textContent = `Name : ${SpetName}`;
+                    petGender5.textContent = `Gender : ${SpetGender}`;
+                    petAge5.textContent = `Age : ${SpetAge}`;
+                    petColor5.textContent = `Color : ${SpetColor}`;
+                    petSize5.textContent = `Size :  ${SpetSize}`;
+                    status5.textContent = `Status : ${SpetStatus}`;
+                    SiameseBoxContainer.style.display = 'block';
+                    //pac.style.display = 'block';
+                }
+                else {
+                    SiameseBoxContainer.style.display = 'none';
+                    //pac.style.display = 'none';
+                }
+
+                if (TpetName && TpetGender && TpetAge && TpetColor && TpetSize && TpetStatus) {
+                    petName6.textContent = `Name : ${TpetName}`;
+                    petGender6.textContent = `Gender : ${TpetGender}`;
+                    petAge6.textContent = `Age : ${TpetAge}`;
+                    petColor6.textContent = `Color : ${TpetColor}`;
+                    petSize6.textContent = `Size :  ${TpetSize}`;
+                    status6.textContent = `Status : ${TpetStatus}`;
+                    TabbyBoxContainer.style.display = 'block';
+                    //pac.style.display = 'block';
+                }
+                else {
+                    TabbyBoxContainer.style.display = 'none';
+                    //pac.style.display = 'none';
+                }
+                //=========================  End of Pet Adoption - Cats ===========================================================//
+
+            } else {
+                welcomeuser.textContent = 'Welcome, User';
+                //pgbd.style.display = 'none';
+                //pbbd.style.display = 'none';
+                //ptbd.style.display = 'none';
+                //pmbd.style.display = 'none';
+                //pad.style.display = 'none';
+                //pac.style.display = 'none';
+
+                //========================= Pet Grooming ===========================================================//
+                BasicTrimmingBoxContainer.style.display = 'none';
+                BasicBathingBoxContainer.style.display = 'none';
+                SpaTreatmentBoxContainer.style.display = 'none';
+                LuxuryGroomingBoxContainer.style.display = 'none';
+                //=========================  End of Pet Grooming ===========================================================//
+
+                //========================= Pet Boarding ===========================================================//
+                StandardSuiteBoxContainer.style.display = 'none';
+                DeluxeSuiteBoxContainer.style.display = 'none';
+                LuxuryVillaBoxContainer.style.display = 'none';
+                FelineParadiseBoxContainer.style.display = 'none';
+                //=========================  End of Pet Boarding ===========================================================//
+
+                //========================= Pet Training ===========================================================//
+                BasicObedienceBoxContainer.style.display = 'none';
+                PuppySocializationBoxContainer.style.display = 'none';
+                BehaviorModificationBoxContainer.style.display = 'none';
+                BoardTrainBoxContainer.style.display = 'none';
+                //=========================  End of Pet Training ===========================================================//
+
+                //========================= Pet Medical ===========================================================//
+                BasicHealthWellnessBoxContainer.style.display = 'none';
+                AdvancedHealthMaintenanceBoxContainer.style.display = 'none';
+                CareTherapyBoxContainer.style.display = 'none';
+                EmergencySpecializedBoxContainer.style.display = 'none';
+                //=========================  End of Pet Medical ===========================================================//
+
+                //========================= Pet Adoption -Dogs ===========================================================//
+                GoldenRetrievereBoxContainer.style.display = 'none';
+                DachshundBoxContainer.style.display = 'none';
+                BorderCollieBoxContainer.style.display = 'none';
+                //=========================  End of Pet Adoption - Dogs ===========================================================//
+
+                //========================= Pet Adoption -Cats ===========================================================//
+                MaineCooneBoxContainer.style.display = 'none';
+                SiameseBoxContainer.style.display = 'none';
+                TabbyBoxContainer.style.display = 'none';
+                //=========================  End of Pet Adoption - Cats ===========================================================//
+            }
+        };
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,936 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Products - All 4 Pets </title>
+    <link rel="icon" href="/images/Logo_All4Pet.png" type="image/x-icon">
+    <!-- "Get Bootstrap" CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <!-- Link to Navigation Bar CSS -->
+    <link rel="stylesheet" href="css/homepage.css">
+    <link rel="stylesheet" href="css/navbarFooter.css">
+    <link rel="stylesheet" href="css/Product.css">
+    <!-- Icon CDN-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <!-- Animation CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.compat.css" />
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+        crossorigin="anonymous"></script>
+    <!-- Slick.js CSS -->
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+</head>
+
+<body>
+    <!-- Navigation Bar -->
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-12 secNavBar">
+                <div class="navigationBarInnerContent">
+                    <a class="Logo_All4Pet" href="homepage.html">
+                        <img src="images/Logo_All4Pet.png" alt="Very Important Pet" title="Very Important Pet"
+                            class="img-fluid">
+                    </a>
+                    <div class="nav_tab">
+                        <div class="dropdown nav_item">
+                            <a class="navBarLinkClass" href="homepage.html" title="Home">Home</a>
+                        </div>
+                        <div class="dropdown nav_item">
+                            <a class="navBarLinkClass" href="aboutus.html" title="About Us">About Us</a>
+                        </div>
+                        <div class="dropdown nav_item">
+                            <a class="navBarLinkClass" href="" title="Products">Our Services <i
+                                    class="fa fa-caret-down" aria-hidden="true"></i></a>
+                            <div class="nav_dropdownContent">
+                                <a class="nav_dropdownContentList" href="petGrooming.html">Pet Grooming</a>
+                                <a class="nav_dropdownContentList" href="petBoarding.html">Pet Boarding</a>
+                                <a class="nav_dropdownContentList" href="petTraining.html">Pet Training</a>
+                                <a class="nav_dropdownContentList" href="petMedical.html">Pet Medical</a>
+                                <a class="nav_dropdownContentList" href="petAdoption.html">Pet Adoption</a>
+                            </div>
+                        </div>
+                        <div class="dropdown nav_item">
+                            <a class="navBarLinkClass" href="Product.html" title="Our Products">Products</a>
+                        </div>
+                        <div class="dropdown nav_item">
+                            <a class="navBarLinkClass" href="CatDogCategory.html" title="Pet Breeds">Pet Breeds</a>
+                        </div>
+                        <div class="dropdown nav_item">
+                            <a class="navBarLinkClass" href="petFacts.html" title="Pet Facts">Pet Facts</a>
+                        </div>
+                        <div class="dropdown nav_item">
+                            <a class="navBarLinkClass" href="Walk Pet Weather.html" title="Our Products">Pet Weather</a>
+                        </div>
+                        <div class="dropdown nav_item">
+                            <a class="navBarLinkClass" href="faq.html" title="FAQ">FAQ</a>
+                        </div>
+                        <div class="dropdown nav_item">
+                            <a class="navBarLinkClass" href="ContactUs.html" title="Contact Us">Contact Us</a>
+                        </div>
+                    </div>
+                    <div class="nav_login">
+                        <div class="dropdown nav_item">
+                            <a class="navBarLinkClass" href="registerLoginpage.html" title="Contact Us"
+                                id="loginNavBar">Login
+                                <i class="bi bi-box-arrow-in-right"></i></a>
+                        </div>
+                        <div class="nav_username" id="navUserName"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Navigation Bar (Mobile Version) -->
+    <div class="container-fluid secNavBarMobileVersion noPaddingLeftRightTopContent">
+        <div class="row">
+            <div class="col-md-12 p-0 ">
+                <div class="navBarDisplayFlex">
+                    <div class="hamburgerMenuSection" onclick="openNav()">
+                        <span class="designForMenuButton"> &#9776; </span>
+                    </div>
+                    <div class="logoSecion">
+                        <a class="Logo_All4Pet" href="homepage.html">
+                            <img src="images/Logo_All4Pet.png" alt="Very Important Pet" title="Very Important Pet"
+                                class="img-fluid mobileVersion_Logo">
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="nav_tab" id="mobileVerNavBar">
+                <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">
+                    <span class="logoClose"> &times;
+                    </span>
+                </a>
+                <div class="dropdown nav_item mt-3">
+                    <a class="navBarLinkClass" href="homepage.html" title="Home">Home</a>
+                </div>
+                <div class="dropdown nav_item">
+                    <a class="navBarLinkClass" href="aboutus.html" title="About Us">About Us</a>
+                </div>
+                <div class="dropdown nav_item">
+                    <a class="navBarLinkClass" href="" title="Products">Our Services <i class="fa fa-caret-down"
+                            aria-hidden="true"></i></a>
+                    <div class="nav_dropdownContent">
+                        <a class="nav_dropdownContentList" href="petGrooming.html">Pet Grooming</a>
+                        <a class="nav_dropdownContentList" href="petBoarding.html">Pet Boarding</a>
+                        <a class="nav_dropdownContentList" href="petTraining.html">Pet Training</a>
+                        <a class="nav_dropdownContentList" href="petMedical.html">Pet Medical</a>
+                        <a class="nav_dropdownContentList" href="petAdoption.html">Pet Adoption</a>
+                    </div>
+                </div>
+                <div class="dropdown nav_item">
+                    <a class="navBarLinkClass" href="Product.html" title="Products">Products</a>
+                </div>
+                <div class="dropdown nav_item">
+                    <a class="navBarLinkClass" href="CatDogCategory.html" title="Pet Breeds">Pet Breeds</a>
+                </div>
+                <div class="dropdown nav_item">
+                    <a class="navBarLinkClass" href="petFacts.html" title="Pet Facts">Pet Facts</a>
+                </div>
+                <div class="dropdown nav_item">
+                    <a class="navBarLinkClass" href="Walk Pet Weather.html" title="Our Products">Pet Weather</a>
+                </div>
+                <div class="dropdown nav_item">
+                    <a class="navBarLinkClass" href="faq.html" title="FAQ">FAQ</a>
+                </div>
+                <div class="dropdown nav_item">
+                    <a class="navBarLinkClass" href="ContactUs.html" title="Contact Us">Contact Us</a>
+                </div>
+                <div class="nav_login">
+                    <div class="dropdown nav_item">
+                        <a class="navBarLinkClass" href="registerLoginpage.html" title="Login Page" id="loginNavBar">Login
+                            <i class="bi bi-box-arrow-in-right"></i></a>
+                    </div>
+                    <div class="nav_username" id="navUserName"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container pt-3 pb-3">
+        <div class="row">
+            <div class="col-md-10 m-auto">
+                <h2 class="ourProductTitle">Welcome to visit our shop !</h2>
+            </div>
+        </div>
+    </div>
+
+    <!-- Dogs -->
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <h2 class="productTitle">Section - Featured Puppies </h2>
+            </div>
+            <div class="col-md-3 pt-3 pb-3">
+                <div class="outsideBorder animate__animated" data-animation="bounceIn">
+                    <div class="imgSection">
+                        <img src="images/Product/dog/AlaskanHusky-Female.jpg" alt="Product 1" class="img-fluid">
+                    </div>
+                    <div class="contentSection">
+                        <hr>
+                        <h4 class="petTitle"><span class="subtitleContent">Pet Breed:</span> Alaskan Husky</h4>
+                        <h2 class="petGender"><span class="subtitleContent">Gender: </span> Female</h2>
+                        <p class="petPrice"><span class="subtitleContent">Price:</span> RM3988</p>
+                        <button class="add-to-cart" data-id="1" data-name="Alaskan Husky (Female)" data-price="3988">Add
+                            to
+                            Cart</button>
+                        <br><br>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 pt-3 pb-3">
+                <div class="outsideBorder animate__animated" data-animation="bounceIn">
+                    <div class="imgSection">
+                        <img src="images/Product/dog/BichonFrise-Male.jpg" alt="Product 2" class="img-fluid">
+                    </div>
+                    <div class="contentSection">
+                        <hr>
+                        <h4 class="petTitle"><span class="subtitleContent">Pet Breed:</span> Bichon Frise
+                        </h4>
+                        <h2 class="petGender"><span class="subtitleContent">Gender: </span> Male</h2>
+                        <p class="petPrice"><span class="subtitleContent">Price:</span> RM5200</p>
+                        <button class="add-to-cart" data-id="2" data-name="Bichon Frise (Male)" data-price="5200">Add to
+                            Cart</button>
+                        <br><br>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 pt-3 pb-3">
+                <div class="outsideBorder animate__animated" data-animation="bounceIn">
+                    <div class="imgSection">
+                        <img src="images/Product/dog/Cavapoo-Female.jpg" alt="Product 3" class="img-fluid">
+                    </div>
+                    <div class="contentSection">
+                        <hr>
+                        <h4 class="petTitle"><span class="subtitleContent">Pet Breed:</span> Cavapoo</h4>
+                        <h2 class="petGender"><span class="subtitleContent">Gender: </span> Female</h2>
+                        <p class="petPrice"><span class="subtitleContent">Price:</span> RM4800</p>
+                        <button class="add-to-cart" data-id="3" data-name="Cavapoo (Female)" data-price="4800">Add to
+                            Cart</button>
+                        <br><br>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 pt-3 pb-3">
+                <div class="outsideBorder animate__animated" data-animation="bounceIn" >
+                    <div class="imgSection">
+                        <img src="images/Product/dog/ChowChow-Female.jpg" alt="Product 4" class="img-fluid">
+                    </div>
+                    <div class="contentSection">
+                        <hr>
+                        <h4 class="petTitle"><span class="subtitleContent">Pet Breed:</span> Chow Chow</h4>
+                        <h2 class="petGender"><span class="subtitleContent">Gender: </span> Female</h2>
+                        <p class="petPrice"><span class="subtitleContent">Price:</span> RM5988</p>
+                        <button class="add-to-cart" data-id="4" data-name="Chow Chow (Female)" data-price="5988">Add to
+                            Cart</button>
+                        <br><br>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 pt-3 pb-3">
+                <div class="outsideBorder animate__animated" data-animation="bounceIn">
+                    <div class="imgSection">
+                        <img src="images/Product/dog/Maltese-Female.jpg" alt="Product 5" class="img-fluid">
+                    </div>
+                    <div class="contentSection">
+                        <hr>
+                        <h4 class="petTitle"><span class="subtitleContent">Pet Breed:</span> Maltese</h4>
+                        <h2 class="petGender"><span class="subtitleContent">Gender: </span> Female</h2>
+                        <p class="petPrice"><span class="subtitleContent">Price:</span> RM5800</p>
+                        <button class="add-to-cart" data-id="5" data-name="Maltese (Female)" data-price="5800">Add to
+                            Cart</button>
+                        <br><br>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 pt-3 pb-3">
+                <div class="outsideBorder animate__animated" data-animation="bounceIn">
+                    <div class="imgSection">
+                        <img src="images/Product/dog/Pomeranian-Male.jpg" alt="Product 6" class="img-fluid">
+                    </div>
+                    <div class="contentSection">
+                        <hr>
+                        <h4 class="petTitle"><span class="subtitleContent">Pet Breed:</span> Pomeranian</h4>
+                        <h2 class="petGender"><span class="subtitleContent">Gender: </span> Male</h2>
+                        <p class="petPrice"><span class="subtitleContent">Price:</span> RM3988</p>
+                        <button class="add-to-cart" data-id="6" data-name="Pomeranian (Male)" data-price="3988">Add to
+                            Cart</button>
+                        <br><br>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 pt-3 pb-3">
+                <div class="outsideBorder animate__animated" data-animation="bounceIn">
+                    <div class="imgSection">
+                        <img src="images/Product/dog/Poodle-Tiny-Male.jpg" alt="Product 7" class="img-fluid">
+                    </div>
+                    <div class="contentSection">
+                        <hr>
+                        <h4 class="petTitle"><span class="subtitleContent">Pet Breed:</span> Poodle-Tiny</h4>
+                        <h2 class="petGender"><span class="subtitleContent">Gender: </span> Male</h2>
+                        <p class="petPrice"><span class="subtitleContent">Price:</span> RM2999</p>
+                        <button class="add-to-cart" data-id="7" data-name="Alaskan Husky (Female)" data-price="2999">Add
+                            to
+                            Cart</button>
+                        <br><br>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 pt-3 pb-3">
+                <div class="outsideBorder animate__animated" data-animation="bounceIn">
+                    <div class="imgSection">
+                        <img src="images/Product/dog/ShibaInu-Female.jpg" alt="Product 8" class="img-fluid">
+                    </div>
+                    <div class="contentSection">
+                        <hr>
+                        <h4 class="petTitle"><span class="subtitleContent">Pet Breed:</span> Shiba Inu</h4>
+                        <h2 class="petGender"><span class="subtitleContent">Gender: </span> Female</h2>
+                        <p class="petPrice"><span class="subtitleContent">Price:</span> RM3999</p>
+                        <button class="add-to-cart" data-id="8" data-name="Shiba Inu (Female)" data-price="3999">Add to
+                            Cart</button>
+                        <br><br>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 pt-3 pb-3">
+                <div class="outsideBorder animate__animated" data-animation="bounceIn">
+                    <div class="imgSection">
+                        <img src="images/Product/dog/ShihTzu-Female.jpg" alt="Product 9" class="img-fluid">
+                    </div>
+                    <div class="contentSection">
+                        <hr>
+                        <h4 class="petTitle"><span class="subtitleContent">Pet Breed:</span> Alaskan Husky</h4>
+                        <h2 class="petGender"><span class="subtitleContent">Gender: </span> Female</h2>
+                        <p class="petPrice"><span class="subtitleContent">Price:</span> RM1980</p>
+                        <button class="add-to-cart" data-id="9" data-name="Shih Tzu (Female)" data-price="1980">Add to
+                            Cart</button>
+                        <br><br>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 pt-3 pb-3">
+                <div class="outsideBorder animate__animated" data-animation="bounceIn">
+                    <div class="imgSection">
+                        <img src="images/Product/dog/WelshCorgi-Male.jpg" alt="Product 10" class="img-fluid">
+                    </div>
+                    <div class="contentSection">
+                        <hr>
+                        <h4 class="petTitle"><span class="subtitleContent">Pet Breed:</span> Welsh Corgi</h4>
+                        <h2 class="petGender"><span class="subtitleContent">Gender: </span> Male</h2>
+                        <p class="petPrice"><span class="subtitleContent">Price:</span> RM3800</p>
+                        <button class="add-to-cart" data-id="10" data-name="Welsh Corgi (Male)" data-price="3800">Add to
+                            Cart</button>
+                        <br><br>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Cats -->
+    <div class="container pt-5">
+        <div class="row">
+            <div class="col-md-12">
+                <h2 class="productTitle">Section - Featured Kittens </h2>
+            </div>
+            <div class="col-md-3 pt-3 pb-3">
+                <div class="outsideBorder animate__animated" data-animation="fadeInUp">
+                    <div class="imgSection">
+                        <img src="images/Product/cat/AmericanShorthair-Male.jpg" alt="Product 11" class="img-fluid">
+                    </div>
+                    <div class="contentSection">
+                        <hr>
+                        <h4 class="petTitle"><span class="subtitleContent">Pet Breed:</span> American Shorthair</h4>
+                        <h2 class="petGender"><span class="subtitleContent">Gender: </span> Male</h2>
+                        <p class="petPrice"><span class="subtitleContent">Price:</span> RM1000</p>
+                        <button class="add-to-cart" data-id="11" data-name="American Shorthair (Male)"
+                            data-price="1000">Add to
+                            Cart</button>
+                        <br><br>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 pt-3 pb-3">
+                <div class="outsideBorder animate__animated" data-animation="fadeInDown">
+                    <div class="imgSection">
+                        <img src="images/Product/cat/BritishShorthair-Female.jpg" alt="Product 12" class="img-fluid">
+                    </div>
+                    <div class="contentSection">
+                        <hr>
+                        <h4 class="petTitle"><span class="subtitleContent">Pet Breed:</span> British Shorthair
+                        </h4>
+                        <h2 class="petGender"><span class="subtitleContent">Gender: </span> Female</h2>
+                        <p class="petPrice"><span class="subtitleContent">Price:</span> RM2200</p>
+                        <button class="add-to-cart" data-id="12" data-name="British Shorthair (Male)"
+                            data-price="2200">Add to
+                            Cart</button>
+                        <br><br>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 pt-3 pb-3">
+                <div class="outsideBorder animate__animated" data-animation="fadeInUp">
+                    <div class="imgSection">
+                        <img src="images/Product/cat/Himalayan-Female.jpg" alt="Product 13" class="img-fluid">
+                    </div>
+                    <div class="contentSection">
+                        <hr>
+                        <h4 class="petTitle"><span class="subtitleContent">Pet Breed:</span> Himalayan</h4>
+                        <h2 class="petGender"><span class="subtitleContent">Gender: </span> Female</h2>
+                        <p class="petPrice"><span class="subtitleContent">Price:</span> RM1800</p>
+                        <button class="add-to-cart" data-id="13" data-name="Himalayan (Female)" data-price="1800">Add to
+                            Cart</button>
+                        <br><br>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 pt-3 pb-3">
+                <div class="outsideBorder animate__animated" data-animation="fadeInDown">
+                    <div class="imgSection">
+                        <img src="images/Product/cat/Kinkalow-Male.jpg" alt="Product 14" class="img-fluid">
+                    </div>
+                    <div class="contentSection">
+                        <hr>
+                        <h4 class="petTitle"><span class="subtitleContent">Pet Breed:</span> Kinkalow</h4>
+                        <h2 class="petGender"><span class="subtitleContent">Gender: </span> Male</h2>
+                        <p class="petPrice"><span class="subtitleContent">Price:</span> RM3088</p>
+                        <button class="add-to-cart" data-id="14" data-name="Chow Chow (Female)" data-price="3088">Add to
+                            Cart</button>
+                        <br><br>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 pt-3 pb-3">
+                <div class="outsideBorder animate__animated" data-animation="fadeInUp">
+                    <div class="imgSection">
+                        <img src="images/Product/cat/MaineCoonPersian-Female.jpg" alt="Product 15" class="img-fluid">
+                    </div>
+                    <div class="contentSection">
+                        <hr>
+                        <h4 class="petTitle"><span class="subtitleContent">Pet Breed:</span> Maine Coon Persian</h4>
+                        <h2 class="petGender"><span class="subtitleContent">Gender: </span> Female</h2>
+                        <p class="petPrice"><span class="subtitleContent">Price:</span> RM2800</p>
+                        <button class="add-to-cart" data-id="15" data-name="Maine Coon Persian (Female)"
+                            data-price="2800">Add to
+                            Cart</button>
+                        <br><br>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 pt-3 pb-3">
+                <div class="outsideBorder animate__animated" data-animation="fadeInDown">
+                    <div class="imgSection">
+                        <img src="images/Product/cat/MunchkinSupershort-Male.jpg" alt="Product 16" class="img-fluid">
+                    </div>
+                    <div class="contentSection">
+                        <hr>
+                        <h4 class="petTitle"><span class="subtitleContent">Pet Breed:</span> Munchkin Supershort</h4>
+                        <h2 class="petGender"><span class="subtitleContent">Gender: </span> Male</h2>
+                        <p class="petPrice"><span class="subtitleContent">Price:</span> RM3800</p>
+                        <button class="add-to-cart" data-id="16" data-name="Munchkin Supershort (Male)"
+                            data-price="3800">Add to
+                            Cart</button>
+                        <br><br>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 pt-3 pb-3">
+                <div class="outsideBorder animate__animated" data-animation="fadeInUp">
+                    <div class="imgSection">
+                        <img src="images/Product/cat/Persian-Female.jpg" alt="Product 17" class="img-fluid">
+                    </div>
+                    <div class="contentSection">
+                        <hr>
+                        <h4 class="petTitle"><span class="subtitleContent">Pet Breed:</span> Persian</h4>
+                        <h2 class="petGender"><span class="subtitleContent">Gender: </span> Female</h2>
+                        <p class="petPrice"><span class="subtitleContent">Price:</span> RM2500</p>
+                        <button class="add-to-cart" data-id="17" data-name="Persian (Female)" data-price="2500">Add to
+                            Cart</button>
+                        <br><br>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 pt-3 pb-3">
+                <div class="outsideBorder animate__animated" data-animation="fadeInDown">
+                    <div class="imgSection">
+                        <img src="images/Product/CAT/ScottishFold-Female.jpg" alt="Product 18" class="img-fluid">
+                    </div>
+                    <div class="contentSection">
+                        <hr>
+                        <h4 class="petTitle"><span class="subtitleContent">Pet Breed:</span> Scottish Fold</h4>
+                        <h2 class="petGender"><span class="subtitleContent">Gender: </span> Female</h2>
+                        <p class="petPrice"><span class="subtitleContent">Price:</span> RM2400</p>
+                        <button class="add-to-cart" data-id="18" data-name=" Scottish Fold (Female)"
+                            data-price="2400">Add to
+                            Cart</button>
+                        <br><br>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 pt-3 pb-3">
+                <div class="outsideBorder animate__animated" data-animation="fadeInUp">
+                    <div class="imgSection">
+                        <img src="images/Product/cat/Siamese-Female.jpg" alt="Product 19" class="img-fluid">
+                    </div>
+                    <div class="contentSection">
+                        <hr>
+                        <h4 class="petTitle"><span class="subtitleContent">Pet Breed:</span> Siamese</h4>
+                        <h2 class="petGender"><span class="subtitleContent">Gender: </span> Female</h2>
+                        <p class="petPrice"><span class="subtitleContent">Price:</span> RM1800</p>
+                        <button class="add-to-cart" data-id="19" data-name="Siamese (Female)" data-price="1800">Add to
+                            Cart</button>
+                        <br><br>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 pt-3 pb-3">
+                <div class="outsideBorder animate__animated" data-animation="fadeInDown">
+                    <div class="imgSection">
+                        <img src="images/Product/cat/TurkishAngoraBSH-Male.jpg" alt="Product 20" class="img-fluid">
+                    </div>
+                    <div class="contentSection">
+                        <hr>
+                        <h4 class="petTitle"><span class="subtitleContent">Pet Breed:</span> Turkish Angora BSH</h4>
+                        <h2 class="petGender"><span class="subtitleContent">Gender: </span> Male</h2>
+                        <p class="petPrice"><span class="subtitleContent">Price:</span> RM2500</p>
+                        <button class="add-to-cart" data-id="20" data-name="Turkish Angora BSH (Male)"
+                            data-price="2500">Add to
+                            Cart</button>
+                        <br><br>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Daily Supplies-->
+    <div class="container pt-5">
+        <div class="row">
+            <div class="col-md-12">
+                <h2 class="productTitle">Section - Daily Supplies ! Your buddies might need these !</h2>
+            </div>
+            <div class="col-md-3 pt-3 pb-3">
+                <div class="outsideBorder animate__animated" data-animation="zoomInUp">
+                    <div class="imgSection">
+                        <img src="images/Product/necessities/dog/DogDryFood1.jpg" alt="Product 21" class="img-fluid">
+                    </div>
+                    <div class="contentSection">
+                        <hr>
+                        <h4 class="petTitle"><span class="subtitleContent">Product:</span> IAMS Dog Dry Food Adult Small
+                            Breed 3kg</h4>
+                        <p class="petPrice"><span class="subtitleContent">Price:</span> RM66.00</p>
+                        <button class="add-to-cart" data-id="21" data-name="IAMS Dog Dry Food Adult Small Breed 3kg"
+                            data-price="66">Add to
+                            Cart</button>
+                        <br><br>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 pt-3 pb-3">
+                <div class="outsideBorder animate__animated" data-animation="zoomInUp">
+                    <div class="imgSection">
+                        <img src="images/Product/necessities/dog/DogDryFood2.jpg" alt="Product 22" class="img-fluid">
+                    </div>
+                    <div class="contentSection">
+                        <hr>
+                        <h4 class="petTitle"><span class="subtitleContent">Product:</span> IAMS Dog Dry Food Adult Small
+                            Breed 3kg</h4>
+                        <p class="petPrice"><span class="subtitleContent">Price:</span> RM66.00</p>
+                        <button class="add-to-cart" data-id="22" data-name="IAMS Dog Dry Food Adult Small Breed 3kg"
+                            data-price="66">Add to
+                            Cart</button>
+                        <br><br>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 pt-3 pb-3">
+                <div class="outsideBorder animate__animated" data-animation="zoomInUp">
+                    <div class="imgSection">
+                        <img src="images/Product/necessities/dog/DogWetFood1.jpg" alt="Product 23" class="img-fluid">
+                    </div>
+                    <div class="contentSection">
+                        <hr>
+                        <h4 class="petTitle"><span class="subtitleContent">Product:</span> Morando - Professional Dog
+                            Lamb 400</h4>
+                        <p class="petPrice"><span class="subtitleContent">Price:</span> RM4.20</p>
+                        <button class="add-to-cart" data-id="23" data-name="Morando - Professional Dog Lamb 400"
+                            data-price="4.2">Add to
+                            Cart</button>
+                        <br><br>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 pt-3 pb-3">
+                <div class="outsideBorder animate__animated" data-animation="zoomInUp">
+                    <div class="imgSection">
+                        <img src="images/Product/necessities/dog/DogWetFood2.jpg" alt="Product 24" class="img-fluid">
+                    </div>
+                    <div class="contentSection">
+                        <hr>
+                        <h4 class="petTitle"><span class="subtitleContent">Product:</span>Morando - Professional Dog
+                            Chicken 400g</h4>
+                        <p class="petPrice"><span class="subtitleContent">Price:</span> RM4.20</p>
+                        <button class="add-to-cart" data-id="24" data-name="Morando - Professional Dog Chicken 400g"
+                            data-price="4.2">Add to
+                            Cart</button>
+                        <br><br>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 pt-3 pb-3">
+                <div class="outsideBorder animate__animated" data-animation="zoomInDown">
+                    <div class="imgSection">
+                        <img src="images/Product/necessities/dog/DogToy1.jpg" alt="Product 25" class="img-fluid">
+                    </div>
+                    <div class="contentSection">
+                        <hr>
+                        <h4 class="petTitle"><span class="subtitleContent">Product:</span> ZOLUX Sleeping Latex Toy
+                            Hippo 16cm</h4>
+                        <p class="petPrice"><span class="subtitleContent">Price:</span> RM32.90</p>
+                        <button class="add-to-cart" data-id="25" data-name="ZOLUX Sleeping Latex Toy Hippo 16cm"
+                            data-price="32.9">Add to
+                            Cart</button>
+                        <br><br>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 pt-3 pb-3">
+                <div class="outsideBorder animate__animated" data-animation="zoomInDown">
+                    <div class="imgSection">
+                        <img src="images/Product/necessities/dog/DogDeodorizer.jpg" alt="Product 26" class="img-fluid">
+                    </div>
+                    <div class="contentSection">
+                        <hr>
+                        <h4 class="petTitle"><span class="subtitleContent">Product:</span> Pets Pounce 500ml - Ocean
+                            (Dog)</h4>
+                        <p class="petPrice"><span class="subtitleContent">Price:</span> RM36.90</p>
+                        <button class="add-to-cart" data-id="26" data-name="Pets Pounce 500ml - Ocean (Dog)"
+                            data-price="36.9">Add to
+                            Cart</button>
+                        <br><br>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 pt-3 pb-3">
+                <div class="outsideBorder animate__animated" data-animation="zoomInDown">
+                    <div class="imgSection">
+                        <img src="images/Product/necessities/dog/DogShampoo1.jpg" alt="Product 27" class="img-fluid">
+                    </div>
+                    <div class="contentSection">
+                        <hr>
+                        <h4 class="petTitle"><span class="subtitleContent">Product:</span> Hartz Groomer's Best
+                            Waterless Dog Shampoo 12fl.oz</h4>
+                        <p class="petPrice"><span class="subtitleContent">Price:</span> RM41.80</p>
+                        <button class="add-to-cart" data-id="27"
+                            data-name="Hartz Groomer's Best Waterless Dog Shampoo 12fl.oz" data-price="41.8">Add to
+                            Cart</button>
+                        <br><br>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 pt-3 pb-3">
+                <div class="outsideBorder animate__animated" data-animation="zoomInDown">
+                    <div class="imgSection">
+                        <img src="images/Product/necessities/dog/ImmuplusSyrup.jpg" alt="Product 28" class="img-fluid">
+                    </div>
+                    <div class="contentSection">
+                        <hr>
+                        <h4 class="petTitle"><span class="subtitleContent">Product:</span> Bexton Immuplus Syrup 100ml
+                        </h4>
+                        <p class="petPrice"><span class="subtitleContent">Price:</span> RM21.90</p>
+                        <button class="add-to-cart" data-id="28" data-name=" Bexton Immuplus Syrup 100ml"
+                            data-price="21.9">Add to
+                            Cart</button>
+                        <br><br>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 pt-3 pb-3">
+                <div class="outsideBorder animate__animated" data-animation="zoomIn">
+                    <div class="imgSection">
+                        <img src="images/Product/necessities/dog/DogCollar.jpg" alt="Product 29" class="img-fluid">
+                    </div>
+                    <div class="contentSection">
+                        <hr>
+                        <h4 class="petTitle"><span class="subtitleContent">Product:</span> Coastal Collar Adjustable
+                            Nylon with tuft 5/8" </h4>
+                        <p class="petPrice"><span class="subtitleContent">Price:</span> RM25.00</p>
+                        <button class="add-to-cart" data-id="29"
+                            data-name="Coastal Collar Adjustable Nylon with tuft 5/8" data-price="25">Add to
+                            Cart</button>
+                        <br><br>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 pt-3 pb-3">
+                <div class="outsideBorder animate__animated" data-animation="zoomIn">
+                    <div class="imgSection">
+                        <img src="images/Product/necessities/dog/DogBed.jpg" alt="Product 30" class="img-fluid">
+                    </div>
+                    <div class="contentSection">
+                        <hr>
+                        <h4 class="petTitle"><span class="subtitleContent">Product:</span> Siesta Deluxe 8 Black</h4>
+                        <p class="petPrice"><span class="subtitleContent">Price:</span> RM136.50</p>
+                        <button class="add-to-cart" data-id="30" data-name="Siesta Deluxe 8 Black"
+                            data-price="136.5">Add to
+                            Cart</button>
+                        <br><br>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 pt-3 pb-3">
+                <div class="outsideBorder animate__animated" data-animation="zoomIn">
+                    <div class="imgSection">
+                        <img src="images/Product/necessities/cat/CatDryFood1.jpg" alt="Product 31" class="img-fluid">
+                    </div>
+                    <div class="contentSection">
+                        <hr>
+                        <h4 class="petTitle"><span class="subtitleContent">Product:</span> Purina One Adult Indoor
+                            Chicken 3kg</h4>
+                        <p class="petPrice"><span class="subtitleContent">Price:</span> RM66.00</p>
+                        <button class="add-to-cart" data-id="31" data-name="Purina One Adult Indoor Chicken 3kg"
+                            data-price="66">Add to
+                            Cart</button>
+                        <br><br>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 pt-3 pb-3">
+                <div class="outsideBorder animate__animated" data-animation="zoomIn">
+                    <div class="imgSection">
+                        <img src="images/Product/necessities/cat/CatDryFood2.jpg" alt="Product 32" class="img-fluid">
+                    </div>
+                    <div class="contentSection">
+                        <hr>
+                        <h4 class="petTitle"><span class="subtitleContent">Product:</span> Purina One Adult Salmon Tuna
+                            3kg</h4>
+                        <p class="petPrice"><span class="subtitleContent">Price:</span> RM66.00</p>
+                        <button class="add-to-cart" data-id="32" data-name="Purina One Adult Salmon Tuna 3kg"
+                            data-price="66">Add to
+                            Cart</button>
+                        <br><br>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 pt-3 pb-3">
+                <div class="outsideBorder animate__animated" data-animation="zoomInLeft">
+                    <div class="imgSection">
+                        <img src="images/Product/necessities/cat/CatWetFood1.jpg" alt="Product 33" class="img-fluid">
+                    </div>
+                    <div class="contentSection">
+                        <hr>
+                        <h4 class="petTitle"><span class="subtitleContent">Product:</span> Frisian Supreme Delight -
+                            Tuna Light Meat with Beef 85g</h4>
+                        <p class="petPrice"><span class="subtitleContent">Price:</span> RM3.90</p>
+                        <button class="add-to-cart" data-id="33"
+                            data-name="Frisian Supreme Delight - Tuna Light Meat with Beef 85g" data-price="3.9">Add to
+                            Cart</button>
+                        <br><br>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 pt-3 pb-3">
+                <div class="outsideBorder animate__animated" data-animation="zoomInLeft">
+                    <div class="imgSection">
+                        <img src="images/Product/necessities/cat/CatWetFood2.jpg" alt="Product 34" class="img-fluid">
+                    </div>
+                    <div class="contentSection">
+                        <hr>
+                        <h4 class="petTitle"><span class="subtitleContent">Product:</span> Frisian Supreme Delight -
+                            Tuna Light Meat with Crab 85g</h4>
+                        <p class="petPrice"><span class="subtitleContent">Price:</span> RM3.90</p>
+                        <button class="add-to-cart" data-id="34"
+                            data-name="Frisian Supreme Delight - Tuna Light Meat with Crab 85g" data-price="3.9">Add to
+                            Cart</button>
+                        <br><br>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 pt-3 pb-3">
+                <div class="outsideBorder  animate__animated" data-animation="zoomInLeft">
+                    <div class="imgSection">
+                        <img src="images/Product/necessities/cat/CatToy1.jpg" alt="Product 35" class="img-fluid">
+                    </div>
+                    <div class="contentSection">
+                        <hr>
+                        <h4 class="petTitle"><span class="subtitleContent">Product:</span> Felt Cloth Cat Toy
+                            Multicolour</h4>
+                        <p class="petPrice"><span class="subtitleContent">Price:</span> RM15.10</p>
+                        <button class="add-to-cart" data-id="35" data-name="Felt Cloth Cat Toy Multicolour"
+                            data-price="15.1">Add to
+                            Cart</button>
+                        <br><br>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 pt-3 pb-3">
+                <div class="outsideBorder  animate__animated" data-animation="zoomInLeft">
+                    <div class="imgSection">
+                        <img src="images/Product/necessities/cat/CatShampoo1.jpg" alt="Product 36" class="img-fluid">
+                    </div>
+                    <div class="contentSection">
+                        <hr>
+                        <h4 class="petTitle"><span class="subtitleContent">Product:</span>Petdiatric 2X Antiseptic Ad
+                            Nanofood Dry Shampoo 100ml</h4>
+                        <p class="petPrice"><span class="subtitleContent">Price:</span> RM40.20</p>
+                        <button class="add-to-cart" data-id="36" data-name="ZOLUX Cat Toy Canvas Mouse 4cm"
+                            data-price="40.2">Add to
+                            Cart</button>
+                        <br><br>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 pt-3 pb-3">
+                <div class="outsideBorder  animate__animated" data-animation="zoomInRight">
+                    <div class="imgSection">
+                        <img src="images/Product/necessities/cat/CatToy2.jpg" alt="Product 37" class="img-fluid">
+                    </div>
+                    <div class="contentSection">
+                        <hr>
+                        <h4 class="petTitle"><span class="subtitleContent">Product:</span> ZOLUX Cat Toy Canvas Mouse
+                            4cm</h4>
+                        <p class="petPrice"><span class="subtitleContent">Price:</span> RM12.00</p>
+                        <button class="add-to-cart" data-id="37" data-name="ZOLUX Cat Toy Canvas Mouse 4cm"
+                            data-price="12">Add to
+                            Cart</button>
+                        <br><br>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 pt-3 pb-3">
+                <div class="outsideBorder   animate__animated" data-animation="zoomInRight">
+                    <div class="imgSection">
+                        <img src="images/Product/necessities/cat/vetzCream.jpg" alt="Product 38" class="img-fluid">
+                    </div>
+                    <div class="contentSection">
+                        <hr>
+                        <h4 class="petTitle"><span class="subtitleContent">Product:</span> Vetz Cream 15ml</h4>
+                        <p class="petPrice"><span class="subtitleContent">Price:</span> RM15.20</p>
+                        <button class="add-to-cart" data-id="38" data-name="Vetz Cream 15ml" data-price="15.2">Add to
+                            Cart</button>
+                        <br><br>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 pt-3 pb-3">
+                <div class="outsideBorder   animate__animated" data-animation="zoomInRight">
+                    <div class="imgSection">
+                        <img src="images/Product/necessities/cat/CatBrush.jpg" alt="Product 39" class="img-fluid">
+                    </div>
+                    <div class="contentSection">
+                        <hr>
+                        <h4 class="petTitle"><span class="subtitleContent">Product:</span> Le Salon Cat Rubber Slicker
+                            Brush</h4>
+                        <p class="petPrice"><span class="subtitleContent">Price:</span> RM19.30</p>
+                        <button class="add-to-cart" data-id="39" data-name="Le Salon Cat Rubber Slicker Brush"
+                            data-price="19.3">Add to
+                            Cart</button>
+                        <br><br>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 pt-3 pb-3">
+                <div class="outsideBorder   animate__animated" data-animation="zoomInRight">
+                    <div class="imgSection">
+                        <img src="images/Product/necessities/cat/CatHouse.jpg" alt="Product 40" class="img-fluid">
+                    </div>
+                    <div class="contentSection">
+                        <hr>
+                        <h4 class="petTitle"><span class="subtitleContent">Product:</span> Wooden Cat Houser</h4>
+                        <p class="petPrice"><span class="subtitleContent">Price:</span> RM200.00</p>
+                        <button class="add-to-cart" data-id="40" data-name=">Wooden Cat House" data-price="200">Add to
+                            Cart</button>
+                        <br><br>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <!-- Shopping Cart -->
+                <div class="cart">
+                    <h2>Shopping Cart</h2>
+                    <ul id="cart-items"></ul>
+                    <p>Total: RM<span id="cart-total">0</span></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="payment-options">
+                    <h2>Payment Options</h2>
+                    <label><input type="radio" name="payment" value="ewallet"> eWallet</label> &nbsp; &nbsp;
+                    <label><input type="radio" name="payment" value="creditCard"> Credit/Debit Card</label>
+                    <br><br>
+                    <button id="confirm-payment" class="btnDesign">Confirm Payment</button>
+                    <br><br>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <!-- Footer -->
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-12 secFooter">
+                <div class="container">
+                    <div class="row">
+                        <div class="footerSection">
+                            <hr class="horizontalLineWhiteColor">
+                            <div class="footerFlexContent">
+                                <p class="copyRightCompany">Copyright © 2023 All 4 Pet Sdn. Bhd. </p>
+                                <div class="socialMediaPlugin">
+                                    <span class="followUsFooter">Follow Us: &nbsp;</span>
+                                    <a href="https://www.facebook.com/all4petsssss">
+                                        <img src="images/icons8-facebook-100.png" alt=""
+                                            class="img-fluid logoSocialMedia">
+                                    </a>
+                                    <a href="https://instagram.com/all4pets_2023?igshid=NzZhOTFlYzFmZQ==">
+                                        <img src="images/icons8-instagram-100.png" alt=""
+                                            class="img-fluid logoSocialMedia">
+                                    </a>
+                                    <a href="mailto:info@example.com">
+                                        <img src="images/icons8-mail-100.png" alt="" class="img-fluid logoSocialMedia">
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- End of Footer -->
+
+
+    <script src="javascript/script1.js"></script>
+
+    <script defer src="//cdn1.npcdn.net/scripts/janimate.js"></script>
+    <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <!-- Link to 'register.js' file -->
+    <script src="javascript/register.js"> </script>
+    <script src="javascript/animation.js"> </script>
+
+
+
+</body>
+
+</html>

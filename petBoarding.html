@@ -1,0 +1,1685 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pet Boarding- All 4 Pets </title>
+    <link rel="icon" href="/images/Logo_All4Pet.png" type="image/x-icon">
+    <!-- "Get Bootstrap" CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <!-- Link to Navigation Bar CSS -->
+    <link rel="stylesheet" href="css/petBoarding.css">
+    <link rel="stylesheet" href="css/navbarFooter.css">
+    <!-- Icon CDN-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <!-- Animation CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.compat.css" />
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+        crossorigin="anonymous"></script>
+    <!-- Slick.js CSS -->
+    <!-- <link rel="stylesheet" type="text/css" href="//cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css"> -->
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+</head>
+
+<body>
+     <!-- Navigation Bar -->
+     <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-12 secNavBar">
+                <div class="navigationBarInnerContent">
+                    <a class="Logo_All4Pet" href="homepage.html">
+                        <img src="images/Logo_All4Pet.png" alt="Very Important Pet" title="Very Important Pet"
+                            class="img-fluid">
+                    </a>
+                    <div class="nav_tab">
+                        <div class="dropdown nav_item">
+                            <a class="navBarLinkClass" href="homepage.html" title="Home">Home</a>
+                        </div>
+                        <div class="dropdown nav_item">
+                            <a class="navBarLinkClass" href="aboutus.html" title="About Us">About Us</a>
+                        </div>
+                        <div class="dropdown nav_item">
+                            <a class="navBarLinkClass" href="" title="Products">Our Services <i
+                                    class="fa fa-caret-down" aria-hidden="true"></i></a>
+                            <div class="nav_dropdownContent">
+                                <a class="nav_dropdownContentList" href="petGrooming.html">Pet Grooming</a>
+                                <a class="nav_dropdownContentList" href="petBoarding.html">Pet Boarding</a>
+                                <a class="nav_dropdownContentList" href="petTraining.html">Pet Training</a>
+                                <a class="nav_dropdownContentList" href="petMedical.html">Pet Medical</a>
+                                <a class="nav_dropdownContentList" href="petAdoption.html">Pet Adoption</a>
+                            </div>
+                        </div>
+                        <div class="dropdown nav_item">
+                            <a class="navBarLinkClass" href="Product.html" title="Our Products">Products</a>
+                        </div>
+                        <div class="dropdown nav_item">
+                            <a class="navBarLinkClass" href="CatDogCategory.html" title="Pet Breeds">Pet Breeds</a>
+                        </div>
+                        <div class="dropdown nav_item">
+                            <a class="navBarLinkClass" href="petFacts.html" title="Pet Facts">Pet Facts</a>
+                        </div>
+                        <div class="dropdown nav_item">
+                            <a class="navBarLinkClass" href="Walk Pet Weather.html" title="Our Products">Pet Weather</a>
+                        </div>
+                        <div class="dropdown nav_item">
+                            <a class="navBarLinkClass" href="faq.html" title="FAQ">FAQ</a>
+                        </div>
+                        <div class="dropdown nav_item">
+                            <a class="navBarLinkClass" href="ContactUs.html" title="Contact Us">Contact Us</a>
+                        </div>
+                    </div>
+                    <div class="nav_login">
+                        <div class="dropdown nav_item">
+                            <a class="navBarLinkClass" href="registerLoginpage.html" title="Contact Us"
+                                id="loginNavBar">Login
+                                <i class="bi bi-box-arrow-in-right"></i></a>
+                        </div>
+                        <div class="nav_username" id="navUserName"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Navigation Bar (Mobile Version) -->
+    <div class="container-fluid secNavBarMobileVersion noPaddingLeftRightTopContent">
+        <div class="row">
+            <div class="col-md-12 p-0 ">
+                <div class="navBarDisplayFlex">
+                    <div class="hamburgerMenuSection" onclick="openNav()">
+                        <span class="designForMenuButton"> &#9776; </span>
+                    </div>
+                    <div class="logoSecion">
+                        <a class="Logo_All4Pet" href="homepage.html">
+                            <img src="images/Logo_All4Pet.png" alt="Very Important Pet" title="Very Important Pet"
+                                class="img-fluid mobileVersion_Logo">
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="nav_tab" id="mobileVerNavBar">
+                <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">
+                    <span class="logoClose"> &times;
+                    </span>
+                </a>
+                <div class="dropdown nav_item mt-3">
+                    <a class="navBarLinkClass" href="homepage.html" title="Home">Home</a>
+                </div>
+                <div class="dropdown nav_item">
+                    <a class="navBarLinkClass" href="aboutus.html" title="About Us">About Us</a>
+                </div>
+                <div class="dropdown nav_item">
+                    <a class="navBarLinkClass" href="" title="Products">Our Services <i class="fa fa-caret-down"
+                            aria-hidden="true"></i></a>
+                    <div class="nav_dropdownContent">
+                        <a class="nav_dropdownContentList" href="petGrooming.html">Pet Grooming</a>
+                        <a class="nav_dropdownContentList" href="petBoarding.html">Pet Boarding</a>
+                        <a class="nav_dropdownContentList" href="petTraining.html">Pet Training</a>
+                        <a class="nav_dropdownContentList" href="petMedical.html">Pet Medical</a>
+                        <a class="nav_dropdownContentList" href="petAdoption.html">Pet Adoption</a>
+                    </div>
+                </div>
+                <div class="dropdown nav_item">
+                    <a class="navBarLinkClass" href="Product.html" title="Products">Products</a>
+                </div>
+                <div class="dropdown nav_item">
+                    <a class="navBarLinkClass" href="CatDogCategory.html" title="Pet Breeds">Pet Breeds</a>
+                </div>
+                <div class="dropdown nav_item">
+                    <a class="navBarLinkClass" href="petFacts.html" title="Pet Facts">Pet Facts</a>
+                </div>
+                <div class="dropdown nav_item">
+                    <a class="navBarLinkClass" href="Walk Pet Weather.html" title="Our Products">Pet Weather</a>
+                </div>
+                <div class="dropdown nav_item">
+                    <a class="navBarLinkClass" href="faq.html" title="FAQ">FAQ</a>
+                </div>
+                <div class="dropdown nav_item">
+                    <a class="navBarLinkClass" href="ContactUs.html" title="Contact Us">Contact Us</a>
+                </div>
+                <div class="nav_login">
+                    <div class="dropdown nav_item">
+                        <a class="navBarLinkClass" href="registerLoginpage.html" title="Login Page" id="loginNavBar">Login
+                            <i class="bi bi-box-arrow-in-right"></i></a>
+                    </div>
+                    <div class="nav_username" id="navUserName"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--Banner Section -->
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-12 secBanner">
+                <div class="secBannerImage">
+                    <img src="images/petBoardingBanner.png" alt="" class="img-fluid hp_banner_image"
+                        id="hp_banner_image">
+                    <div class="secBannerTextContent">
+                        <div class="secBannerContentCenter">
+                            <h2 class="titleBanner animate__animated" data-animation="fadeInUp">Pet Boarding</h2>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Banner Section -->
+
+    <!-- What is Pet Boarding-->
+    <div class="container-fluid sectionWhatIsPetBoarding">
+        <div class="row">
+            <div class="col-md-6">
+                <div class="WhatIsPetBoardingtitleDisplayFlex">
+                    <h3 class="titleWhatIsPetBoarding">What is Pet Boarding ?</h3>
+                    <img src="images/Hp_Footrprint2.png" alt="" class="img-fluid WhatIsPetBoardingtitleSubImage">
+                </div>
+            </div>
+            <div class="container sectionServicesWhatIsPetBoarding">
+                <div class="row">
+                    <div class="col-md-12" id="WhatIsPetBoardingBox">
+                        <div class="WhatIsPetBoardingborder-box">
+                            <div class="WhatIsPetBoardingbox-text">
+                                <img src="images/whatispetgrooming.png" alt="" class="img-fluid whatispetBoarding_img"
+                                    id="whatispetBoarding">
+                                <div class="whatispetBoardingTextContent">
+                                    <div class="whatispetBoardingContentCenter">
+                                        <h2 class="titleBanner  animate__animated" data-animation="bounceIn">
+                                            Pet boarding is a specialized service where pets are housed and cared for
+                                            temporarily in a facility or residence other than their own home, often
+                                            while their owners are away. These establishments provide shelter, food,
+                                            care, and often additional amenities like playtime, grooming, and
+                                            socialization opportunities to ensure the pet's well-being and comfort
+                                            during their stay.</h2>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- What is Pet Boarding-->
+
+    <!-- Our Services in Pet Boarding-->
+    <div class="container sectionServices">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="titleDisplayFlex">
+                    <h3 class="titleServices">Our Services Provided in Pet Boarding</h3>
+                    <img src="images/Hp_Footprint.png" alt="" class="img-fluid titleSubImage">
+                </div>
+            </div>
+            <div class="container sectionServicessProvidedPG">
+                <div class="row">
+                    <div class="col-md-12" id="sProvidedPGBox">
+                        <div class="sProvidedPGborder-box">
+                            <div class="sProvidedPGbox-text">
+                                <img src="images/sprovidedPG1.png" alt="" class="img-fluid sProvidedPG_img"
+                                    id="sProvidedPG">
+                                <div class="sProvidedPGTextContent">
+                                    <div class="sProvidedPGContentCenter">
+                                        <h2 class="titleBanner  animate__animated" data-animation="bounceIn">At All 4
+                                            Pet, we understand that
+                                            leaving your beloved pet can be a stressful experience. That's why our pet
+                                            boarding services are designed to be a home away from home for your furry
+                                            friend. With dedicated caregivers, state-of-the-art facilities, and a warm,
+                                            nurturing environment, we ensure your pet feels loved, safe, and
+                                            comfortable. Our boarding packages cater to pets of all sizes and needs,
+                                            offering them a vacation as relaxing as yours.</h2>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4" id="BrownBox">
+                        <div class="Brownborder-box animate__animated" data-animation="zoomIn">
+                            <div class="Brownbox-text">
+                                <h2 class="BrowntitleBox mb-3">
+                                    <strong><br>Standard Accommodation<br></strong>
+                                </h2>
+                                <img src="images/standardboarding.png" alt="" class="img-fluid imgBrown">
+                                <p class="BrowndesAbout pt-3">
+                                    Our standard rooms provide a spacious and comfortable setting for your pet. With
+                                    soft bedding, regular meal times, and daily health checks, your pet's basic needs
+                                    are more than covered.
+                                </p>
+                            </div>
+                            <br>
+                        </div>
+                    </div>
+                    <div class="col-md-4" id="PinkBox">
+                        <div class="Pinkborder-box  animate__animated" data-animation="zoomIn">
+                            <div class="Pinkbox-text">
+                                <h2 class="PinktitleBox mb-3">
+                                    <strong><br>Luxury Suites<br></strong>
+                                </h2>
+                                <img src="images/luxuryboarding.png" alt="" class="img-fluid imgPink">
+                                <p class="PinkdesAbout pt-3">
+                                    For pets that are used to the finer things in life, our luxury suites offer a plush
+                                    bedding environment, personal playtime sessions, and premium meals. It's a 5-star
+                                    experience for your four-legged friend.
+                                </p>
+                            </div>
+                            <br>
+                        </div>
+                    </div>
+                    <div class="col-md-4" id="BrownBox">
+                        <div class="Brownborder-box  animate__animated" data-animation="zoomIn">
+                            <div class="Brownbox-text">
+                                <h2 class="BrowntitleBox mb-3">
+                                    <strong><br>Play and Socialization<br></strong>
+                                </h2>
+                                <img src="images/playSocialization.png" alt="" class="img-fluid imgBrown">
+                                <p class="BrowndesAbout pt-3">
+                                    At All 4 Pet, we believe in a holistic approach to pet care. Our designated play
+                                    areas allow pets to socialize, make new friends, and get the exercise they need.
+                                    Supervised by our trained staff, playtime is both safe and fun.
+                                </p>
+                            </div>
+                            <br>
+                        </div>
+                    </div>
+                    <div class="col-md-4 offset-md-2" id="PinkBox">
+                        <div class="Pinkborder-box  animate__animated" data-animation="zoomIn">
+                            <div class="Pinkbox-text">
+                                <h2 class="PinktitleBox mb-3">
+                                    <strong><br>Special Care Services<br></strong>
+                                </h2>
+                                <img src="images/specialCare.png" alt="" class="img-fluid imgPink">
+                                <p class="PinkdesAbout pt-3">
+                                    For pets with specific medical or dietary needs, our special care services are
+                                    ideal. Administering medications, special diets, or extra cuddles for anxious pets -
+                                    we're prepared for it all.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4" id="BrownBox">
+                        <div class="Brownborder-box  animate__animated" data-animation="zoomIn">
+                            <div class="Brownbox-text">
+                                <h2 class="BrowntitleBox mb-3">
+                                    <strong><br>24/7 Surveillance<br></strong>
+                                </h2>
+                                <img src="images/24Surveillance.png" alt="" class="img-fluid imgBrown">
+                                <p class="BrowndesAbout pt-3">
+                                    Your pet's safety is our utmost priority. Our facility is equipped with 24/7
+                                    surveillance cameras, ensuring that your pet is monitored round the clock, giving
+                                    you peace of mind during your time away.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Our Services in Pet Boarding-->
+
+    <!-- Current Promotions -->
+    <div class="container-fluid sectionCurrentPromotions">
+        <div class="row">
+            <div class="col-md-6">
+                <div class="CurrentPromotionstitleDisplayFlex">
+                    <h3 class="titleCurrentPromotions">Current Promotions</h3>
+                    <img src="images/Hp_Footrprint2.png" alt="" class="img-fluid CurrentPromotionstitleSubImage">
+                </div>
+            </div>
+            <div class="container-fuild sectionServicesCurrentPromotions">
+                <div class="row">
+                    <div class="col-md-12" id="CurrentPromotionsSlider">
+                        <!-- Slide 1 -->
+                        <div class="slide active-slide">
+                            <div class="CurrentPromotionsborder-box">
+                                <div class="CurrentPromotionsbox-text">
+                                    <img src="images/currentpromotions2.png" alt=""
+                                        class="img-fluid CurrentPromotions_img" id="CurrentPromotions">
+                                    <div class="CurrentPromotionsTextContent">
+                                        <div class="CurrentPromotionsContentCenter">
+                                            <h2 class="titleBanner animate__animated" data-animation="bounceIn">Summer
+                                                Splash!<br>
+                                                Get a free wash with any grooming package this summer!</h2>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Slide 2 -->
+                        <div class="slide">
+                            <div class="CurrentPromotionsborder-box">
+                                <div class="CurrentPromotionsbox-text">
+                                    <img src="images/currentpromotions1.png" alt=""
+                                        class="img-fluid CurrentPromotions_img" id="CurrentPromotions">
+                                    <div class="CurrentPromotionsTextContent">
+                                        <div class="CurrentPromotionsContentCenter">
+                                            <h2 class="titleBanner  animate__animated" data-animation="bounceIn">
+                                                Referral Discount <br>
+                                                Refer a friend and get 20% off your next visit!</h2>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Current Promotions -->
+
+    <!-- Pet BoardingPackages -->
+    <div class="container sectionServices">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="titleDisplayFlex">
+                    <h3 class="titleServices">Pet Boarding Packages</h3>
+                    <img src="images/Hp_Footprint.png" alt="" class="img-fluid titleSubImage">
+                </div>
+            </div>
+            <div class="col-md-3" id="StandardSuiteBox">
+                <div class="StandardLuxuryborder-box  animate__animated" data-animation="fadeInUp">
+                    <div class="StandardLuxurybox-text">
+                        <h2 class="StandardLuxurytitleBox mb-3">
+                            <strong><br>Standard Suite<br></strong>
+                        </h2>
+                        <img src="images/standardboarding.png" alt="" class="img-fluid imgPetBoardingPackages">
+                        <p class="StandardLuxurydesAbout pt-3">
+                            Comfortable climate-controlled private room.
+                        </p>
+                        <h3 class="StandardPrice"><br>Price : $ 35 /day<br></h3>
+                        <div class="divAlignButtonCenter animate__bounceIn">
+                            <button type="button" class="buttonStandardLuxury" href="#" id="StandardSuiteButton"
+                                onclick="checkLoginPB1()">Book Now</button>
+                        </div>
+                        <br>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3" id="DeluxeSuiteBox">
+                <div class="DeluxeFelineborder-box   animate__animated" data-animation="fadeInDown">
+                    <div class="DeluxeFelinebox-text">
+                        <h2 class="DeluxeFelinetitleBox mb-3">
+                            <strong><br>Deluxe Suite<br></strong>
+                        </h2>
+                        <img src="images/deluxdesuite.jpg" alt="" class="img-fluid imgPetBoardingPackages">
+                        <p class="DeluxeFelinedesAbout pt-3">
+                            A spacious suite with plush bed and interactive toys.
+                        </p>
+                        <h3 class="DeluxePrice"><br>Price : $ 50 /day<br></h3>
+                        <div class="divAlignButtonCenter animate__bounceIn">
+                            <button type="button" class="buttonDeluxeFeline" href="#" id="DeluxeSuiteButton"
+                                onclick="checkLoginPB2()">Book Now</button>
+                        </div>
+                    </div>
+                    <br>
+                </div>
+            </div>
+            <div class="col-md-3" id="LuxuryVillaBox">
+                <div class="StandardLuxuryborder-box   animate__animated" data-animation="fadeInUp">
+                    <div class="StandardLuxurybox-text">
+                        <h2 class="StandardLuxurytitleBox mb-3">
+                            <strong><br>Luxury Villa<br></strong>
+                        </h2>
+                        <img src="images/luxuryboarding.png" alt="" class="img-fluid imgPetBoardingPackages">
+                        <p class="StandardLuxurydesAbout pt-3">
+                            Largecozy bed with 24/7 webcam access.
+                        </p>
+                        <h3 class="VillaPrice"><br>Price : $ 80 /day<br></h3>
+                        <div class="divAlignButtonCenter animate__bounceIn">
+                            <button type="button" class="buttonStandardLuxury" href="#" id="LuxuryVillaButton"
+                                onclick="checkLoginPB3()">Book
+                                Now</button>
+                        </div>
+                        <br>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3" id="FelineParadiseBox">
+                <div class="DeluxeFelineborder-box   animate__animated" data-animation="fadeInDown">
+                    <div class="DeluxeFelinebox-text">
+                        <h2 class="DeluxeFelinetitleBox mb-3">
+                            <strong><br>Feline Paradise<br></strong>
+                        </h2>
+                        <img src="images/felineparadise.jpg" alt="" class="img-fluid imgPetBoardingPackages">
+                        <p class="DeluxeFelinedesAbout pt-3">
+                            A Special Cozy perches with serene environment.
+                        </p>
+                        <h3 class="FelineParadisePrice"><br>Price : $ 40 /day<br></h3>
+                        <div class="divAlignButtonCenter animate__bounceIn">
+                            <button type="button" class="buttonDeluxeFeline" href="#" id="FelineParadiseButton"
+                                onclick="checkLoginPB4()">Book Now</button>
+                        </div>
+                    </div>
+                    <br>
+                </div>
+            </div>
+            <div class="col-md-12 pt-3 pb-3">
+                <h5 class="text-danger noticePetBoardingPackages"><br>*Notice: The booking need the pet's breed. If did
+                    not know about what is it, it can be found in the <a href="CatDogCategory.html"
+                        style="text-decoration:underline; color:#a8888b;">Pet
+                        Breeds</a>.
+                    <br>All the prices are included service tax.*
+                </h5>
+            </div>
+        </div>
+    </div>
+
+    <!-- HP - User's Feedback Section  -->
+    <div class="container sectionFeedback">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="titleDisplayFlex">
+                    <h3 class="titleServices">Users' Feedback</h3>
+                    <img src="images/Hp_Footprint.png" alt="" class="img-fluid titleSubImage">
+                </div>
+            </div>
+            <div class="col-md-12 m-auto">
+                <div class="row">
+                    <div class="col-md-4 m-auto">
+                        <div class="embed-responsive embed-responsive-16by9">
+                            <iframe class="embed-responsive-item feedbackBox"
+                                allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"
+                                src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Fpermalink.php%3Fstory_fbid%3Dpfbid02jVsBuDPGKwqakmiiL72W4bfG5WLSQFfBQBnm5JAnUTSfEUj2xkAx7ukhraTFbRdJl%26id%3D100077398280151&show_text=true&width=500"></iframe>
+                        </div>
+                    </div>
+                    <div class="col-md-4 m-auto">
+                        <div class="embed-responsive embed-responsive-16by9">
+                            <iframe class="embed-responsive-item feedbackBox"
+                                allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"
+                                src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Fpermalink.php%3Fstory_fbid%3Dpfbid0b4HAZaj5PyxavjmdzdnY2n4AqS9DsA7nKZ8hZhxVeJHhj1krgVGUytV3MpMx28val%26id%3D100008611029599&show_text=true&width=500"></iframe>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End of Hp - User's Feedback Section -->
+
+    <!-- HP - Google Map -->
+    <!-- <div class="container-fluid sectionVisitUs">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="titleDisplayFlex">
+                    <h3 class="titleVisit">Come and Visit Us !</h3>
+                    <img src="images/Hp_Footrprint2.png" alt="" class="img-fluid titleSubImage">
+                </div>
+            </div>
+            <div class="col-md-12 p-0 contact_map">
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d6469.71020506478!2d103.8545108006285!3d1.5656262175344942!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31da697696916f4d%3A0x46c54ef9e4f9646f!2sAll%204%20Pets!5e0!3m2!1szh-CN!2smy!4v1693033520811!5m2!1szh-EN!2smy"
+                    scrolling="no" marginheight="0" marginwidth="0" style="width:100%" height="400"
+                    frameborder="0"></iframe>
+            </div>
+        </div>
+    </div> -->
+    <!-- HP - End of Google Map -->
+    
+    <!-- Footer -->
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-12 secFooter">
+                <div class="container">
+                    <div class="row">
+                        <div class="footerSection">
+                            <hr class="horizontalLineWhiteColor">
+                            <div class="footerFlexContent">
+                                <p class="copyRightCompany">Copyright © 2023 All 4 Pet Sdn. Bhd. </p>
+                                <div class="socialMediaPlugin">
+                                    <span class="followUsFooter">Follow Us: &nbsp;</span>
+                                    <a href="https://www.facebook.com/all4petsssss">
+                                        <img src="images/icons8-facebook-100.png" alt=""
+                                            class="img-fluid logoSocialMedia">
+                                    </a>
+                                    <a href="https://instagram.com/all4pets_2023?igshid=NzZhOTFlYzFmZQ==">
+                                        <img src="images/icons8-instagram-100.png" alt=""
+                                            class="img-fluid logoSocialMedia">
+                                    </a>
+                                    <a href="mailto:info@example.com">
+                                        <img src="images/icons8-mail-100.png" alt="" class="img-fluid logoSocialMedia">
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- End of Footer -->
+
+    <script defer src="//cdn1.npcdn.net/scripts/janimate.js"></script>
+    <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <!-- Link to 'register.js' file -->
+    <script src="javascript/animation.js"> </script>
+    <script src="javascript/register.js"> </script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <script>
+        // Global Variables
+        const StandardSuiteBasePrice = 35;
+        const DeluxeSuiteBasePrice = 50;
+        const LuxuryVillaBasePrice = 80;
+        const FelineParadiseBasePrice = 40;
+        let globalStandardSuiteCurrentPrice = StandardSuiteBasePrice;
+        let globalDeluxeSuiteCurrentPrice = DeluxeSuiteBasePrice;
+        let globalLuxuryVillaCurrentPrice = LuxuryVillaBasePrice;
+        let globalFelineParadiseCurrentPrice = FelineParadiseBasePrice;
+
+        //================================Get the Breed of Pets from the API====================================================================//
+        function populateBreeds(apiUrl) {
+            $.ajax({
+                url: apiUrl,
+                method: 'GET',
+                success: function (data) {
+                    let breedsDropdown = $('#breed_Pet');
+                    breedsDropdown.empty();
+                    breedsDropdown.append('<option value="">Select breed</option>');
+
+                    $.each(data, function (index, breed) {
+                        breedsDropdown.append($('<option>', {
+                            value: breed.id,
+                            text: breed.name
+                        }));
+                    });
+                },
+                error: function (error) {
+                    console.error('There was an error fetching the breeds:', error);
+                }
+            });
+        }
+
+        $(document).on('change', '#pet_Type', function () {
+            let selectedPet = $(this).val();
+
+            if (selectedPet !== "Dog" && selectedPet !== "Cat") {
+                let breedsDropdown = $('#breed_Pet');
+                breedsDropdown.empty();
+                breedsDropdown.append('<option value="">Select breed</option>');
+                return;
+            }
+
+            if (selectedPet === "Dog") {
+                populateBreeds('https://api.thedogapi.com/v1/breeds');
+            } else if (selectedPet === "Cat") {
+                populateBreeds('https://api.thecatapi.com/v1/breeds');
+            }
+        });
+        //=========================End of get the Breed of Pets from the API====================================================================//
+        function checkLoginPB1() {
+            var getLogin = sessionStorage.getItem('IsLoggedIn');
+            //var getUserEmail = localStorage.getItem('User Email');
+
+            if (getLogin === "true") {
+                StandardSuiteExpandContainer();
+            } else {
+                alert("Please Login first");
+                //StandardSuiteExpandContainer();  
+            }
+        }
+        function checkLoginPB2() {
+            var getLogin = sessionStorage.getItem('IsLoggedIn');
+            //var getUserEmail = localStorage.getItem('User Email');
+
+            if (getLogin === "true") {
+                DeluxeSuiteExpandContainer();
+            } else {
+                alert("Please Login first");
+                //DeluxeSuiteExpandContainer();  
+            }
+        }
+        function checkLoginPB3() {
+            var getLogin = sessionStorage.getItem('IsLoggedIn');
+            //var getUserEmail = localStorage.getItem('User Email');
+
+            if (getLogin === "true") {
+                LuxuryVillaExpandContainer();
+            } else {
+                alert("Please Login first");
+                //LuxuryVillaExpandContainer();  
+            }
+        }
+        function checkLoginPB4() {
+            var getLogin = sessionStorage.getItem('IsLoggedIn');
+            //var getUserEmail = localStorage.getItem('User Email');
+
+            if (getLogin === "true") {
+                FelineParadiseExpandContainer();
+            } else {
+                alert("Please Login first");
+                //FelineParadiseExpandContainer();  
+            }
+        }
+
+        //=====================================================Standard Suite====================================================================//
+        //============================Standard Suite Expand Container===========================================================================//
+        function StandardSuiteExpandContainer() {
+            SScollapseExpandedContainers();
+            setTimeout(function () {
+                const container = document.getElementById('StandardSuiteBox');
+                container.classList.remove('col-md-3');
+                container.classList.add('col-md-6');
+                container.classList.add('expanded');
+                const containerB = document.getElementById('DeluxeSuiteBox');
+                containerB.classList.remove('col-md-3');
+                containerB.classList.add('col-md-2');
+                const containerS = document.getElementById('LuxuryVillaBox');
+                containerS.classList.remove('col-md-3');
+                containerS.classList.add('col-md-2');
+                const containerL = document.getElementById('FelineParadiseBox');
+                containerL.classList.remove('col-md-3');
+                containerL.classList.add('col-md-2');
+
+                const bookingBtn = document.getElementById('StandardSuiteButton');
+
+                const bookingForm = document.createElement('form');
+                bookingForm.id = 'bookingForm';
+                bookingForm.className = 'form-groupStandardSuite';
+
+                //==============Standard Suite Form fields==================//
+                bookingForm.innerHTML = `
+                    <div class="row">
+                        <div class="col-md-2">
+                            <label="StandardSuitePetType">Pet Type:</label>
+                        </div>
+                        <div class="col-md-2">
+                            <select class="form-control StandardSuitePetType" id="pet_Type" name="StandardSuitePetType">---
+                                <option value="">---</option>
+                                <option value="Dog">Dog</option>
+                                <option value="Cat">Cat</option>
+                            </select>
+                        </div>
+                        <div class="col-md-2">
+                            <label ="StandardSuiteBreedPet">Breed of Pets:</label>
+                        </div>
+                        <div class="col-md-2">
+                            <select class="form-control StandardSuiteBreedPet" id="breed_Pet" name="StandardSuiteBreedPet">
+                                <option value="">Select breed</option>
+                            </select>
+                        </div>
+                        <div class="col-md-2">
+                            <label ="StandardSuiteFormBooking">Booking:</label>
+                        </div>
+                        <div class="col-md-2">
+                            <select class="form-control StandardSuiteFormBooking" id="StandardSuiteForm_Booking" name="StandardSuiteFormBooking">
+                                <option value="">---</option>
+                                <option value="One Day">One Day Pass</option>
+                                <option value="Weekend Getaway">Weekend Getaway - 3 days</option>
+                                <option value="Business Trip">Business Trip - 5 days</option>
+                                <option value="One Week Vacation">One Week Vacation - 7 days</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="row mt-2">
+                        <div class="col-md-2">
+                            <label ="StandardSuiteBookingDate">Date:</label>
+                        </div>
+                        <div class="col-md-4">
+                            <input type="date" class="form-control StandardSuiteBookingDate" id="StandardSuiteBookingDate" name="StandardSuiteBookingDate">
+                        </div>
+                        <div class="col-md-2">
+                            <label ="StandardSuiteBookingTime">Time:</label>
+                        </div>
+                        <div class="col-md-4">
+                            <input type="time" class="form-control" id="StandardSuiteBookingTime" name="StandardSuiteBookingTime">
+                        </div>
+                    </div>
+                `;
+                //===========================End of Standard Suite Form fields==========================//
+
+                //===========================Check==========================//
+                const descriptionElement = container.querySelector('.StandardLuxurydesAbout');
+                if (descriptionElement && descriptionElement.nextSibling) {
+                    descriptionElement.parentNode.insertBefore(bookingForm, descriptionElement.nextSibling);
+                }
+
+                //===========================Update the price==========================//
+                const StandardSuiteFormBooking = document.getElementById('StandardSuiteForm_Booking');
+                StandardSuiteFormBooking.addEventListener('change', StandardSuiteUpdatePrice);
+
+                //===========================Change Booking Button and replace a new function==========================//
+                bookingBtn.innerText = 'Book';
+                bookingBtn.onclick = StandardSuitenewOnClickFunction;
+
+                //===========================Create Cancel Button and insert function==========================//
+                const cancelBtn = document.createElement('button');
+                cancelBtn.innerText = 'Cancel';
+                cancelBtn.id = 'StandardSuiteCancelButton';
+                cancelBtn.onclick = StandardSuiteCancelExpansion;
+                cancelBtn.type = 'button';
+                cancelBtn.className = bookingBtn.className;
+                cancelBtn.style.marginLeft = "30px";
+
+                //===========================Insert Cancel Button beside the booking button==========================//
+                bookingBtn.parentNode.insertBefore(cancelBtn, bookingBtn.nextSibling);
+            }, 100);
+        }
+        //===========================end of basic trimming expand container====================================================================//
+
+        //===========================Function of booking button==========================//
+        function StandardSuitenewOnClickFunction() {
+            const StandardSuitePetType = document.getElementById('pet_Type');
+            const StandardSuiteBreedPet = document.getElementById('breed_Pet');
+            const StandardSuiteFormBooking = document.getElementById('StandardSuiteForm_Booking');
+            const StandardSuiteBookingDate = document.getElementById('StandardSuiteBookingDate');
+            const StandardSuiteBookingTime = document.getElementById('StandardSuiteBookingTime');
+
+            if (!StandardSuitePetType.value || !StandardSuiteBreedPet.value || !StandardSuiteFormBooking.value || !StandardSuiteBookingDate.value || !StandardSuiteBookingTime.value) {
+                alert('Please fill out all the fields before booking!');
+                return;
+            }
+
+            const formData = {
+                "Standard Suite Pet Type": StandardSuitePetType.value,
+                "Standard Suite Breed of Pets": $("#breed_Pet option:selected").text(),
+                "Standard Suite Booking Type": StandardSuiteFormBooking.value,
+                "Standard Suite Booking Date": StandardSuiteBookingDate.value,
+                "Standard Suite Booking Time": StandardSuiteBookingTime.value,
+                "Standard Suite Booking Price": globalStandardSuiteCurrentPrice,
+            }
+
+            //===============Save to cookies, local storage, and session storage=================//
+            for (const key in formData) {
+                //============Save to cookie for 1 days=======================//
+                setCookie(key, formData[key], 1);
+                //=================Save to local storage==================//
+                localStorage.setItem(key, formData[key]);
+                //==================Save to session storage=====================//
+                sessionStorage.setItem(key, formData[key]);
+            }
+
+            //====================Construct the alert message=============================//
+            let alertMessage = 'Standard Suite Booking has been sent successfully!\n\nStandard Suite Booking details:\n\n';
+            for (const key in formData) {
+                alertMessage += `${key}: ${formData[key]}\n`;
+            }
+            alert(alertMessage);
+            StandardSuiteResetPrice();
+            const container = document.getElementById('StandardSuiteBox');
+            container.classList.remove('col-md-6');
+            container.classList.add('col-md-3');
+            const containerB = document.getElementById('DeluxeSuiteBox');
+            containerB.classList.remove('col-md-2');
+            containerB.classList.add('col-md-3');
+            const containerS = document.getElementById('LuxuryVillaBox');
+            containerS.classList.remove('col-md-2');
+            containerS.classList.add('col-md-3');
+            const containerL = document.getElementById('FelineParadiseBox');
+            containerL.classList.remove('col-md-');
+            containerL.classList.add('col-md-3');
+            StandardSuiteCancelExpansion();
+        }
+
+        //=================Helper function to set cookies==============================//
+        function setCookie(name, value, days) {
+            let expires = "";
+            if (days) {
+                let date = new Date();
+                date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
+                expires = "; expires=" + date.toUTCString();
+            }
+            document.cookie = name + "=" + (value || "") + expires + "; path=/";
+        }
+
+        //=================Function of Cancel button==============================//
+        function StandardSuiteCancelExpansion() {
+            const container = document.getElementById('StandardSuiteBox');
+            container.classList.remove('col-md-6');
+            container.classList.add('col-md-3');
+            container.classList.remove('expanded');
+            const containerB = document.getElementById('DeluxeSuiteBox');
+            containerB.classList.remove('col-md-2');
+            containerB.classList.add('col-md-3');
+            const containerS = document.getElementById('LuxuryVillaBox');
+            containerS.classList.remove('col-md-2');
+            containerS.classList.add('col-md-3');
+            const containerL = document.getElementById('FelineParadiseBox');
+            containerL.classList.remove('col-md-');
+            containerL.classList.add('col-md-3');
+
+            const bookingBtn = document.getElementById('StandardSuiteButton');
+            bookingBtn.innerText = 'Book Now';
+            bookingBtn.type = 'button';
+            bookingBtn.setAttribute('onclick', 'StandardSuiteExpandContainer()');
+
+            const cancelBtn = document.getElementById('StandardSuiteCancelButton');
+            if (cancelBtn && cancelBtn.parentNode) {
+                cancelBtn.parentNode.removeChild(cancelBtn);
+            }
+
+            const bookingForm = document.getElementById('bookingForm');
+            if (bookingForm && bookingForm.parentNode) {
+                bookingForm.parentNode.removeChild(bookingForm);
+            }
+
+            StandardSuiteResetPrice();
+        }
+
+        //===========================Reset the package price==========================//
+        function StandardSuiteResetPrice() {
+            const priceElement = document.querySelector('.StandardPrice');
+            priceElement.innerHTML = `<br>Price : $ ${StandardSuiteBasePrice} /day<br>`;
+        }
+
+        //===========================Update the package price==========================//
+        function StandardSuiteUpdatePrice() {
+            const StandardSuiteFormBooking = document.getElementById('StandardSuiteForm_Booking');
+            const priceElement = document.querySelector('.StandardPrice');
+            let StandardSuiteCurrentPrice = StandardSuiteBasePrice;
+
+            if (StandardSuiteFormBooking.value === "Weekend Getaway") {
+                StandardSuiteCurrentPrice += 70;
+            } else if (StandardSuiteFormBooking.value === "Business Trip") {
+                StandardSuiteCurrentPrice += 140;
+            }
+            else if (StandardSuiteFormBooking.value === "One Week Vacation") {
+                StandardSuiteCurrentPrice += 210;
+            }
+
+            priceElement.innerHTML = `<br>Price : $ ${StandardSuiteCurrentPrice}<br>`;
+            globalStandardSuiteCurrentPrice = StandardSuiteCurrentPrice;
+
+        }
+
+        // Using event delegation for the dynamically created dropdown
+        $(document).on('change', '#StandardSuiteForm_Booking', StandardSuiteUpdatePrice);
+
+        function SScollapseExpandedContainers() {
+            const DeluxeSuiteContainer = document.getElementById('DeluxeSuiteBox');
+            if (DeluxeSuiteContainer.classList.contains('expanded')) {
+                DeluxeSuiteCancelExpansion();
+            }
+
+            const LuxuryVillaContainer = document.getElementById('LuxuryVillaBox');
+            if (LuxuryVillaContainer.classList.contains('expanded')) {
+                LuxuryVillaCancelExpansion();
+            }
+
+            const FelineParadiseContainer = document.getElementById('FelineParadiseBox');
+            if (FelineParadiseContainer.classList.contains('expanded')) {
+                FelineParadiseCancelExpansion();
+            }
+        }
+
+        //=====================================================Standard Suite====================================================================//
+
+        //=====================================================Deluxe Suite====================================================================//
+        //============================Deluxe Suite Expand Container===========================================================================//
+        function DeluxeSuiteExpandContainer() {
+            DScollapseExpandedContainers()
+            setTimeout(function () {
+                const container = document.getElementById('DeluxeSuiteBox');
+                container.classList.remove('col-md-3');
+                container.classList.add('col-md-6');
+                container.classList.add('expanded');
+                const containerB = document.getElementById('StandardSuiteBox');
+                containerB.classList.remove('col-md-3');
+                containerB.classList.add('col-md-2');
+                const containerS = document.getElementById('LuxuryVillaBox');
+                containerS.classList.remove('col-md-3');
+                containerS.classList.add('col-md-2');
+                const containerL = document.getElementById('FelineParadiseBox');
+                containerL.classList.remove('col-md-3');
+                containerL.classList.add('col-md-2');
+
+                const bookingBtn = document.getElementById('DeluxeSuiteButton');
+
+                const bookingForm = document.createElement('form');
+                bookingForm.id = 'bookingForm';
+                bookingForm.className = 'form-groupDeluxeSuite';
+
+                //==============Deluxe Suite Form fields==================//
+                bookingForm.innerHTML = `
+                    <div class="row">
+                        <div class="col-md-2">
+                            <label="DeluxeSuitePetType">Pet Type:</label>
+                        </div>
+                        <div class="col-md-2">
+                            <select class="form-control DeluxeSuitePetType" id="pet_Type" name="DeluxeSuitePetType">---
+                                <option value="">---</option>
+                                <option value="Dog">Dog</option>
+                                <option value="Cat">Cat</option>
+                            </select>
+                        </div>
+                        <div class="col-md-2">
+                            <label ="DeluxeSuiteBreedPet">Breed of Pets:</label>
+                        </div>
+                        <div class="col-md-2">
+                            <select class="form-control DeluxeSuiteBreedPet" id="breed_Pet" name="DeluxeSuiteBreedPet">
+                                <option value="">Select breed</option>
+                            </select>
+                        </div>
+                        <div class="col-md-2">
+                            <label ="DeluxeSuiteFormBooking">Booking:</label>
+                        </div>
+                        <div class="col-md-2">
+                            <select class="form-control DeluxeSuiteFormBooking" id="DeluxeSuiteForm_Booking" name="DeluxeSuiteFormBooking">
+                                <option value="">---</option>
+                                <option value="One Day">One Day Pass</option>
+                                <option value="Weekend Getaway">Weekend Getaway - 3 days</option>
+                                <option value="Business Trip">Business Trip - 5 days</option>
+                                <option value="One Week Vacation">One Week Vacation - 7 days</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="row mt-2">
+                        <div class="col-md-2">
+                            <label ="DeluxeSuiteBookingDate">Date:</label>
+                        </div>
+                        <div class="col-md-4">
+                            <input type="date" class="form-control DeluxeSuiteBookingDate" id="DeluxeSuiteBookingDate" name="DeluxeSuiteBookingDate">
+                        </div>
+                        <div class="col-md-2">
+                            <label ="DeluxeSuiteBookingTime">Time:</label>
+                        </div>
+                        <div class="col-md-4">
+                            <input type="time" class="form-control" id="DeluxeSuiteBookingTime" name="DeluxeSuiteBookingTime">
+                        </div>
+                    </div>
+                `;
+                //===========================End of Deluxe Suite Form fields==========================//
+
+                //===========================Check==========================//
+                const descriptionElement = container.querySelector('.DeluxeFelinedesAbout');
+                if (descriptionElement && descriptionElement.nextSibling) {
+                    descriptionElement.parentNode.insertBefore(bookingForm, descriptionElement.nextSibling);
+                }
+
+                //===========================Update the price==========================//
+                const DeluxeSuiteFormBooking = document.getElementById('DeluxeSuiteForm_Booking');
+                DeluxeSuiteFormBooking.addEventListener('change', DeluxeSuiteUpdatePrice);
+
+                //===========================Change Booking Button and replace a new function==========================//
+                bookingBtn.innerText = 'Book';
+                bookingBtn.onclick = DeluxeSuitenewOnClickFunction;
+
+                //===========================Create Cancel Button and insert function==========================//
+                const cancelBtn = document.createElement('button');
+                cancelBtn.innerText = 'Cancel';
+                cancelBtn.id = 'DeluxeSuiteCancelButton';
+                cancelBtn.onclick = DeluxeSuiteCancelExpansion;
+                cancelBtn.type = 'button';
+                cancelBtn.className = bookingBtn.className;
+                cancelBtn.style.marginLeft = "30px";
+
+                //===========================Insert Cancel Button beside the booking button==========================//
+                bookingBtn.parentNode.insertBefore(cancelBtn, bookingBtn.nextSibling);
+            }, 100);
+        }
+        //===========================end of basic bathing expand container====================================================================//
+
+        //===========================Function of booking button==========================//
+        function DeluxeSuitenewOnClickFunction() {
+            const DeluxeSuitePetType = document.getElementById('pet_Type');
+            const DeluxeSuiteBreedPet = document.getElementById('breed_Pet');
+            const DeluxeSuiteFormBooking = document.getElementById('DeluxeSuiteForm_Booking');
+            const DeluxeSuiteBookingDate = document.getElementById('DeluxeSuiteBookingDate');
+            const DeluxeSuiteBookingTime = document.getElementById('DeluxeSuiteBookingTime');
+
+            if (!DeluxeSuitePetType.value || !DeluxeSuiteBreedPet.value || !DeluxeSuiteFormBooking.value || !DeluxeSuiteBookingDate.value || !DeluxeSuiteBookingTime.value) {
+                alert('Please fill out all the fields before booking!');
+                return;
+            }
+
+            const formData = {
+                "Deluxe Suite Pet Type": DeluxeSuitePetType.value,
+                "Deluxe Suite Breed of Pets": $("#breed_Pet option:selected").text(),
+                "Deluxe Suite Booking Type": DeluxeSuiteFormBooking.value,
+                "Deluxe Suite Booking Date": DeluxeSuiteBookingDate.value,
+                "Deluxe Suite Booking Time": DeluxeSuiteBookingTime.value,
+                "Deluxe Suite Booking Price": globalDeluxeSuiteCurrentPrice,
+            };
+
+            //===============Save to cookies, local storage, and session storage=================//
+            for (const key in formData) {
+                //============Save to cookie for 1 days=======================//
+                setCookie(key, formData[key], 1);
+                //=================Save to local storage==================//
+                localStorage.setItem(key, formData[key]);
+                //==================Save to session storage=====================//
+                sessionStorage.setItem(key, formData[key]);
+            }
+
+            //====================Construct the alert message=============================//
+            let alertMessage = 'Deluxe Suite Booking has been sent successfully!\n\nDeluxe Suite Booking details:\n\n';
+            for (const key in formData) {
+                alertMessage += `${key}: ${formData[key]}\n`;
+            }
+            alert(alertMessage);
+            const container = document.getElementById('DeluxeSuiteBox');
+            container.classList.remove('col-md-6');
+            container.classList.add('col-md-3');
+            const containerB = document.getElementById('StandardSuiteBox');
+            containerB.classList.remove('col-md-2');
+            containerB.classList.add('col-md-3');
+            const containerS = document.getElementById('LuxuryVillaBox');
+            containerS.classList.remove('col-md-2');
+            containerS.classList.add('col-md-3');
+            const containerL = document.getElementById('FelineParadiseBox');
+            containerL.classList.remove('col-md-2');
+            containerL.classList.add('col-md-3');
+            DeluxeSuiteResetPrice();
+            DeluxeSuiteCancelExpansion();
+        }
+
+        //=================Helper function to set cookies==============================//
+        function setCookie(name, value, days) {
+            let expires = "";
+            if (days) {
+                let date = new Date();
+                date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
+                expires = "; expires=" + date.toUTCString();
+            }
+            document.cookie = name + "=" + (value || "") + expires + "; path=/";
+        }
+
+        //=================Function of Cancel button==============================//
+        function DeluxeSuiteCancelExpansion() {
+            const container = document.getElementById('DeluxeSuiteBox');
+            container.classList.remove('col-md-6');
+            container.classList.add('col-md-3');
+            container.classList.remove('expanded');
+            const containerB = document.getElementById('StandardSuiteBox');
+            containerB.classList.remove('col-md-2');
+            containerB.classList.add('col-md-3');
+            const containerS = document.getElementById('LuxuryVillaBox');
+            containerS.classList.remove('col-md-2');
+            containerS.classList.add('col-md-3');
+            const containerL = document.getElementById('FelineParadiseBox');
+            containerL.classList.remove('col-md-2');
+            containerL.classList.add('col-md-3');
+
+            const bookingBtn = document.getElementById('DeluxeSuiteButton');
+            bookingBtn.innerText = 'Book Now';
+            bookingBtn.type = 'button';
+            bookingBtn.setAttribute('onclick', 'DeluxeSuiteExpandContainer()');
+
+            const cancelBtn = document.getElementById('DeluxeSuiteCancelButton');
+            if (cancelBtn && cancelBtn.parentNode) {
+                cancelBtn.parentNode.removeChild(cancelBtn);
+            }
+
+            const bookingForm = document.getElementById('bookingForm');
+            if (bookingForm && bookingForm.parentNode) {
+                bookingForm.parentNode.removeChild(bookingForm);
+            }
+
+            DeluxeSuiteResetPrice();
+        }
+
+        //===========================Reset the package price==========================//
+        function DeluxeSuiteResetPrice() {
+            const priceElement = document.querySelector('.DeluxePrice');
+            priceElement.innerHTML = `<br>Price : $ ${DeluxeSuiteBasePrice}/day<br>`;
+        }
+
+        //===========================Update the package price==========================//
+        function DeluxeSuiteUpdatePrice() {
+            const DeluxeSuiteFormBooking = document.getElementById('DeluxeSuiteForm_Booking');
+            const priceElement = document.querySelector('.DeluxePrice');
+            let DeluxeSuiteCurrentPrice = DeluxeSuiteBasePrice;
+
+            if (DeluxeSuiteFormBooking.value === "Weekend Getaway") {
+                DeluxeSuiteCurrentPrice += 100;
+            } else if (DeluxeSuiteFormBooking.value === "Business Trip") {
+                DeluxeSuiteCurrentPrice += 200;
+            }
+            else if (DeluxeSuiteFormBooking.value === "One Week Vacation") {
+                DeluxeSuiteCurrentPrice += 300;
+            }
+
+            priceElement.innerHTML = `<br>Price : $ ${DeluxeSuiteCurrentPrice}<br>`;
+            globalDeluxeSuiteCurrentPrice = DeluxeSuiteCurrentPrice;
+
+        }
+
+        function DScollapseExpandedContainers() {
+            const StandardSuiteContainer = document.getElementById('StandardSuiteBox');
+            if (StandardSuiteContainer.classList.contains('expanded')) {
+                StandardSuiteCancelExpansion();
+            }
+
+            const LuxuryVillaContainer = document.getElementById('LuxuryVillaBox');
+            if (LuxuryVillaContainer.classList.contains('expanded')) {
+                LuxuryVillaCancelExpansion();
+            }
+
+            const FelineParadiseContainer = document.getElementById('FelineParadiseBox');
+            if (FelineParadiseContainer.classList.contains('expanded')) {
+                FelineParadiseCancelExpansion();
+            }
+        }
+
+        // Using event delegation for the dynamically created dropdown
+        $(document).on('change', '#DeluxeSuiteForm_Booking', DeluxeSuiteUpdatePrice);
+        //=====================================================Deluxe Suite====================================================================//
+
+        //=====================================================Luxury Villa====================================================================//
+        //============================Luxury Villa Expand Container===========================================================================//
+        function LuxuryVillaExpandContainer() {
+            LVcollapseExpandedContainers()
+            setTimeout(function () {
+                const container = document.getElementById('LuxuryVillaBox');
+                container.classList.remove('col-md-3');
+                container.classList.add('col-md-6');
+                container.classList.add('expanded');
+                const containerB = document.getElementById('StandardSuiteBox');
+                containerB.classList.remove('col-md-3');
+                containerB.classList.add('col-md-2');
+                const containerS = document.getElementById('DeluxeSuiteBox');
+                containerS.classList.remove('col-md-3');
+                containerS.classList.add('col-md-2');
+                const containerL = document.getElementById('FelineParadiseBox');
+                containerL.classList.remove('col-md-3');
+                containerL.classList.add('col-md-2');
+
+                const bookingBtn = document.getElementById('LuxuryVillaButton');
+
+                const bookingForm = document.createElement('form');
+                bookingForm.id = 'bookingForm';
+                bookingForm.className = 'form-groupLuxuryVilla';
+
+                //==============Luxury Villa Form fields==================//
+                bookingForm.innerHTML = `
+                    <div class="row">
+                        <div class="col-md-2">
+                            <label="LuxuryVillaPetType">Pet Type:</label>
+                        </div>
+                        <div class="col-md-2">
+                            <select class="form-control LuxuryVillaPetType" id="pet_Type" name="LuxuryVillaPetType">---
+                                <option value="">---</option>
+                                <option value="Dog">Dog</option>
+                                <option value="Cat">Cat</option>
+                            </select>
+                        </div>
+                        <div class="col-md-2">
+                            <label ="LuxuryVillaBreedPet">Breed of Pets:</label>
+                        </div>
+                        <div class="col-md-2">
+                            <select class="form-control LuxuryVillaBreedPet" id="breed_Pet" name="LuxuryVillaBreedPet">
+                                <option value="">Select breed</option>
+                            </select>
+                        </div>
+                        <div class="col-md-2">
+                            <label ="LuxuryVillaFormBooking">Booking:</label>
+                        </div>
+                        <div class="col-md-2">
+                            <select class="form-control LuxuryVillaFormBooking" id="LuxuryVillaForm_Booking" name="LuxuryVillaFormBooking">
+                                <option value="">---</option>
+                                <option value="One Day">One Day Pass</option>
+                                <option value="Weekend Getaway">Weekend Getaway - 3 days</option>
+                                <option value="Business Trip">Business Trip - 5 days</option>
+                                <option value="One Week Vacation">One Week Vacation - 7 days</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="row mt-2">
+                        <div class="col-md-2">
+                            <label ="LuxuryVillaBookingDate">Date:</label>
+                        </div>
+                        <div class="col-md-4">
+                            <input type="date" class="form-control LuxuryVillaBookingDate" id="LuxuryVillaBookingDate" name="LuxuryVillaBookingDate">
+                        </div>
+                        <div class="col-md-2">
+                            <label ="LuxuryVillaBookingTime">Time:</label>
+                        </div>
+                        <div class="col-md-4">
+                            <input type="time" class="form-control" id="LuxuryVillaBookingTime" name="LuxuryVillaBookingTime">
+                        </div>
+                    </div>
+                `;
+                //===========================End of Luxury Villa Form fields==========================//
+
+                //===========================Check==========================//
+                const descriptionElement = container.querySelector('.StandardLuxurydesAbout');
+                if (descriptionElement && descriptionElement.nextSibling) {
+                    descriptionElement.parentNode.insertBefore(bookingForm, descriptionElement.nextSibling);
+                }
+
+                //===========================Update the price==========================//
+                const LuxuryVillaFormBooking = document.getElementById('LuxuryVillaForm_Booking');
+                LuxuryVillaFormBooking.addEventListener('change', LuxuryVillaUpdatePrice);
+
+                //===========================Change Booking Button and replace a new function==========================//
+                bookingBtn.innerText = 'Book';
+                bookingBtn.onclick = LuxuryVillanewOnClickFunction;
+
+                //===========================Create Cancel Button and insert function==========================//
+                const cancelBtn = document.createElement('button');
+                cancelBtn.innerText = 'Cancel';
+                cancelBtn.id = 'LuxuryVillaCancelButton';
+                cancelBtn.onclick = LuxuryVillaCancelExpansion;
+                cancelBtn.type = 'button';
+                cancelBtn.className = bookingBtn.className;
+                cancelBtn.style.marginLeft = "30px";
+
+                //===========================Insert Cancel Button beside the booking button==========================//
+                bookingBtn.parentNode.insertBefore(cancelBtn, bookingBtn.nextSibling);
+            }, 100);
+        }
+        //===========================end of Luxury Villa expand container====================================================================//
+
+        //===========================Function of booking button==========================//
+        function LuxuryVillanewOnClickFunction() {
+            const LuxuryVillaPetType = document.getElementById('pet_Type');
+            const LuxuryVillaBreedPet = document.getElementById('breed_Pet');
+            const LuxuryVillaFormBooking = document.getElementById('LuxuryVillaForm_Booking');
+            const LuxuryVillaBookingDate = document.getElementById('LuxuryVillaBookingDate');
+            const LuxuryVillaBookingTime = document.getElementById('LuxuryVillaBookingTime');
+
+            if (!LuxuryVillaPetType.value || !LuxuryVillaBreedPet.value || !LuxuryVillaFormBooking.value || !LuxuryVillaBookingDate.value || !LuxuryVillaBookingTime.value) {
+                alert('Please fill out all the fields before booking!');
+                return;
+            }
+
+            const formData = {
+                "Luxury Villa Pet Type": LuxuryVillaPetType.value,
+                "Luxury Villa Breed of Pets": $("#breed_Pet option:selected").text(),
+                "Luxury Villa Booking Type": LuxuryVillaFormBooking.value,
+                "Luxury Villa Booking Date": LuxuryVillaBookingDate.value,
+                "Luxury Villa Booking Time": LuxuryVillaBookingTime.value,
+                "Luxury Villa Booking Price": globalLuxuryVillaCurrentPrice,
+            };
+
+            //===============Save to cookies, local storage, and session storage=================//
+            for (const key in formData) {
+                //============Save to cookie for 1 days=======================//
+                setCookie(key, formData[key], 1);
+                //=================Save to local storage==================//
+                localStorage.setItem(key, formData[key]);
+                //==================Save to session storage=====================//
+                sessionStorage.setItem(key, formData[key]);
+            }
+
+            //====================Construct the alert message=============================//
+            let alertMessage = 'Luxury Villa Booking has been sent successfully!\n\nLuxury Villa Booking details:\n\n';
+            for (const key in formData) {
+                alertMessage += `${key}: ${formData[key]}\n`;
+            }
+            alert(alertMessage);
+            const container = document.getElementById('LuxuryVillaBox');
+            container.classList.remove('col-md-6');
+            container.classList.add('col-md-3');
+            const containerB = document.getElementById('StandardSuiteBox');
+            containerB.classList.remove('col-md-2');
+            containerB.classList.add('col-md-3');
+            const containerS = document.getElementById('DeluxeSuiteBox');
+            containerS.classList.remove('col-md-2');
+            containerS.classList.add('col-md-3');
+            const containerL = document.getElementById('FelineParadiseBox');
+            containerL.classList.remove('col-md-2');
+            containerL.classList.add('col-md-3');
+            LuxuryVillaResetPrice();
+            LuxuryVillaCancelExpansion();
+        }
+
+        //=================Helper function to set cookies==============================//
+        function setCookie(name, value, days) {
+            let expires = "";
+            if (days) {
+                let date = new Date();
+                date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
+                expires = "; expires=" + date.toUTCString();
+            }
+            document.cookie = name + "=" + (value || "") + expires + "; path=/";
+        }
+
+        //=================Function of Cancel button==============================//
+        function LuxuryVillaCancelExpansion() {
+            const container = document.getElementById('LuxuryVillaBox');
+            container.classList.remove('col-md-6');
+            container.classList.add('col-md-3');
+            container.classList.remove('expanded');
+            const containerB = document.getElementById('StandardSuiteBox');
+            containerB.classList.remove('col-md-2');
+            containerB.classList.add('col-md-3');
+            const containerS = document.getElementById('DeluxeSuiteBox');
+            containerS.classList.remove('col-md-2');
+            containerS.classList.add('col-md-3');
+            const containerL = document.getElementById('FelineParadiseBox');
+            containerL.classList.remove('col-md-2');
+            containerL.classList.add('col-md-3');
+
+            const bookingBtn = document.getElementById('LuxuryVillaButton');
+            bookingBtn.innerText = 'Book Now';
+            bookingBtn.type = 'button';
+            bookingBtn.setAttribute('onclick', 'LuxuryVillaExpandContainer()');
+
+            const cancelBtn = document.getElementById('LuxuryVillaCancelButton');
+            if (cancelBtn && cancelBtn.parentNode) {
+                cancelBtn.parentNode.removeChild(cancelBtn);
+            }
+
+            const bookingForm = document.getElementById('bookingForm');
+            if (bookingForm && bookingForm.parentNode) {
+                bookingForm.parentNode.removeChild(bookingForm);
+            }
+
+            LuxuryVillaResetPrice();
+        }
+
+        //===========================Reset the package price==========================//
+        function LuxuryVillaResetPrice() {
+            const priceElement = document.querySelector('.VillaPrice');
+            priceElement.innerHTML = `<br>Price : $ ${LuxuryVillaBasePrice} /day<br>`;
+        }
+
+        //===========================Update the package price==========================//
+        function LuxuryVillaUpdatePrice() {
+            const LuxuryVillaFormBooking = document.getElementById('LuxuryVillaForm_Booking');
+            const priceElement = document.querySelector('.VillaPrice');
+            let LuxuryVillaCurrentPrice = LuxuryVillaBasePrice;
+
+            if (LuxuryVillaFormBooking.value === "Weekend Getaway") {
+                LuxuryVillaCurrentPrice += 160;
+            } else if (LuxuryVillaFormBooking.value === "Business Trip") {
+                LuxuryVillaCurrentPrice += 320;
+            }
+            else if (LuxuryVillaFormBooking.value === "One Week Vacation") {
+                LuxuryVillaCurrentPrice += 480;
+            }
+
+            priceElement.innerHTML = `<br>Price : $ ${LuxuryVillaCurrentPrice}<br>`;
+            globalLuxuryVillaCurrentPrice = LuxuryVillaCurrentPrice;
+        }
+
+        function LVcollapseExpandedContainers() {
+            const StandardSuiteContainer = document.getElementById('StandardSuiteBox');
+            if (StandardSuiteContainer.classList.contains('expanded')) {
+                StandardSuiteCancelExpansion();
+            }
+
+            const DeluxeSuiteContainer = document.getElementById('DeluxeSuiteBox');
+            if (DeluxeSuiteContainer.classList.contains('expanded')) {
+                DeluxeSuiteCancelExpansion();
+            }
+
+            const FelineParadiseContainer = document.getElementById('FelineParadiseBox');
+            if (FelineParadiseContainer.classList.contains('expanded')) {
+                FelineParadiseCancelExpansion();
+            }
+        }
+
+        // Using event delegation for the dynamically created dropdown
+        $(document).on('change', '#LuxuryVillaForm_Booking', LuxuryVillaUpdatePrice);
+        //=====================================================Luxury Villa====================================================================//
+
+        //=====================================================Feline Paradise====================================================================//
+        //============================Feline Paradise Expand Container===========================================================================//
+        function FelineParadiseExpandContainer() {
+            FPcollapseExpandedContainers()
+            setTimeout(function () {
+                const container = document.getElementById('FelineParadiseBox');
+                container.classList.remove('col-md-3');
+                container.classList.add('col-md-6');
+                container.classList.add('expanded');
+                const containerB = document.getElementById('StandardSuiteBox');
+                containerB.classList.remove('col-md-3');
+                containerB.classList.add('col-md-2');
+                const containerS = document.getElementById('DeluxeSuiteBox');
+                containerS.classList.remove('col-md-3');
+                containerS.classList.add('col-md-2');
+                const containerL = document.getElementById('LuxuryVillaBox');
+                containerL.classList.remove('col-md-3');
+                containerL.classList.add('col-md-2');
+
+                const bookingBtn = document.getElementById('FelineParadiseButton');
+
+                const bookingForm = document.createElement('form');
+                bookingForm.id = 'bookingForm';
+                bookingForm.className = 'form-groupFelineParadise';
+
+                //==============Feline Paradise Form fields==================//
+                bookingForm.innerHTML = `
+                    <div class="row">
+                        <div class="col-md-2">
+                            <label="FelineParadisePetType">Pet Type:</label>
+                        </div>
+                        <div class="col-md-2">
+                            <select class="form-control FelineParadisePetType" id="pet_Type" name="FelineParadisePetType">---
+                                <option value="">---</option>
+                                <option value="Dog">Dog</option>
+                                <option value="Cat">Cat</option>
+                            </select>
+                        </div>
+                        <div class="col-md-2">
+                            <label ="FelineParadiseBreedPet">Breed of Pets:</label>
+                        </div>
+                        <div class="col-md-2">
+                            <select class="form-control FelineParadiseBreedPet" id="breed_Pet" name="FelineParadiseBreedPet">
+                                <option value="">Select breed</option>
+                            </select>
+                        </div>
+                        <div class="col-md-2">
+                            <label ="FelineParadiseFormBooking">Booking:</label>
+                        </div>
+                        <div class="col-md-2">
+                            <select class="form-control FelineParadiseFormBooking" id="FelineParadiseForm_Booking" name="FelineParadiseFormBooking">
+                                <option value="">---</option>
+                                <option value="One Day">One Day Pass</option>
+                                <option value="Weekend Getaway">Weekend Getaway - 3 days</option>
+                                <option value="Business Trip">Business Trip - 5 days</option>
+                                <option value="One Week Vacation">One Week Vacation - 7 days</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="row mt-2">
+                        <div class="col-md-2">
+                            <label ="FelineParadiseBookingDate">Date:</label>
+                        </div>
+                        <div class="col-md-4">
+                            <input type="date" class="form-control FelineParadiseBookingDate" id="FelineParadiseBookingDate" name="FelineParadiseBookingDate">
+                        </div>
+                        <div class="col-md-2">
+                            <label ="FelineParadiseBookingTime">Time:</label>
+                        </div>
+                        <div class="col-md-4">
+                            <input type="time" class="form-control" id="FelineParadiseBookingTime" name="FelineParadiseBookingTime">
+                        </div>
+                    </div>
+                `;
+                //===========================End of Feline Paradise Form fields==========================//
+
+                //===========================Check==========================//
+                const descriptionElement = container.querySelector('.DeluxeFelinedesAbout');
+                if (descriptionElement && descriptionElement.nextSibling) {
+                    descriptionElement.parentNode.insertBefore(bookingForm, descriptionElement.nextSibling);
+                }
+
+                //===========================Update the price==========================//
+                const FelineParadiseFormBooking = document.getElementById('FelineParadiseForm_Booking');
+                FelineParadiseFormBooking.addEventListener('change', FelineParadiseUpdatePrice);
+
+                //===========================Change Booking Button and replace a new function==========================//
+                bookingBtn.innerText = 'Book';
+                bookingBtn.onclick = FelineParadisenewOnClickFunction;
+
+                //===========================Create Cancel Button and insert function==========================//
+                const cancelBtn = document.createElement('button');
+                cancelBtn.innerText = 'Cancel';
+                cancelBtn.id = 'FelineParadiseCancelButton';
+                cancelBtn.onclick = FelineParadiseCancelExpansion;
+                cancelBtn.type = 'button';
+                cancelBtn.className = bookingBtn.className;
+                cancelBtn.style.marginLeft = "30px";
+
+                //===========================Insert Cancel Button beside the booking button==========================//
+                bookingBtn.parentNode.insertBefore(cancelBtn, bookingBtn.nextSibling);
+            }, 100);
+        }
+        //===========================end of basic bathing expand container====================================================================//
+
+        //===========================Function of booking button==========================//
+        function FelineParadisenewOnClickFunction() {
+            const FelineParadisePetType = document.getElementById('pet_Type');
+            const FelineParadiseBreedPet = document.getElementById('breed_Pet');
+            const FelineParadiseFormBooking = document.getElementById('FelineParadiseForm_Booking');
+            const FelineParadiseBookingDate = document.getElementById('FelineParadiseBookingDate');
+            const FelineParadiseBookingTime = document.getElementById('FelineParadiseBookingTime');
+
+            if (!FelineParadisePetType.value || !FelineParadiseBreedPet.value || !FelineParadiseFormBooking.value || !FelineParadiseBookingDate.value || !FelineParadiseBookingTime.value) {
+                alert('Please fill out all the fields before booking!');
+                return;
+            }
+
+            const formData = {
+                "Feline Paradise Pet Type": FelineParadisePetType.value,
+                "Feline Paradise Breed of Pets": $("#breed_Pet option:selected").text(),
+                "Feline Paradise Booking Type": FelineParadiseFormBooking.value,
+                "Feline Paradise Booking Date": FelineParadiseBookingDate.value,
+                "Feline Paradise Booking Time": FelineParadiseBookingTime.value,
+                "Feline Paradise Booking Price": globalFelineParadiseCurrentPrice,
+            };
+
+            //===============Save to cookies, local storage, and session storage=================//
+            for (const key in formData) {
+                //============Save to cookie for 1 days=======================//
+                setCookie(key, formData[key], 1);
+                //=================Save to local storage==================//
+                localStorage.setItem(key, formData[key]);
+                //==================Save to session storage=====================//
+                sessionStorage.setItem(key, formData[key]);
+            }
+
+            //====================Construct the alert message=============================//
+            let alertMessage = 'Feline Paradise Booking has been sent successfully!\n\nFeline Paradise Booking details:\n\n';
+            for (const key in formData) {
+                alertMessage += `${key}: ${formData[key]}\n`;
+            }
+            alert(alertMessage);
+            const container = document.getElementById('FelineParadiseBox');
+            container.classList.remove('col-md-6');
+            container.classList.add('col-md-3');
+            const containerB = document.getElementById('StandardSuiteBox');
+            containerB.classList.remove('col-md-2');
+            containerB.classList.add('col-md-3');
+            const containerS = document.getElementById('DeluxeSuiteBox');
+            containerS.classList.remove('col-md-2');
+            containerS.classList.add('col-md-3');
+            const containerL = document.getElementById('LuxuryVillaBox');
+            containerL.classList.remove('col-md-2');
+            containerL.classList.add('col-md-3');
+            FelineParadiseResetPrice();
+            FelineParadiseCancelExpansion();
+        }
+
+        //=================Helper function to set cookies==============================//
+        function setCookie(name, value, days) {
+            let expires = "";
+            if (days) {
+                let date = new Date();
+                date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
+                expires = "; expires=" + date.toUTCString();
+            }
+            document.cookie = name + "=" + (value || "") + expires + "; path=/";
+        }
+
+        //=================Function of Cancel button==============================//
+        function FelineParadiseCancelExpansion() {
+            const container = document.getElementById('FelineParadiseBox');
+            container.classList.remove('col-md-6');
+            container.classList.add('col-md-3');
+            container.classList.remove('expanded');
+            const containerB = document.getElementById('StandardSuiteBox');
+            containerB.classList.remove('col-md-2');
+            containerB.classList.add('col-md-3');
+            const containerS = document.getElementById('DeluxeSuiteBox');
+            containerS.classList.remove('col-md-2');
+            containerS.classList.add('col-md-3');
+            const containerL = document.getElementById('LuxuryVillaBox');
+            containerL.classList.remove('col-md-2');
+            containerL.classList.add('col-md-3');
+
+            const bookingBtn = document.getElementById('FelineParadiseButton');
+            bookingBtn.innerText = 'Book Now';
+            bookingBtn.type = 'button';
+            bookingBtn.setAttribute('onclick', 'FelineParadiseExpandContainer()');
+
+            const cancelBtn = document.getElementById('FelineParadiseCancelButton');
+            if (cancelBtn && cancelBtn.parentNode) {
+                cancelBtn.parentNode.removeChild(cancelBtn);
+            }
+
+            const bookingForm = document.getElementById('bookingForm');
+            if (bookingForm && bookingForm.parentNode) {
+                bookingForm.parentNode.removeChild(bookingForm);
+            }
+
+            FelineParadiseResetPrice();
+        }
+
+        //===========================Reset the package price==========================//
+        function FelineParadiseResetPrice() {
+            const priceElement = document.querySelector('.FelineParadisePrice');
+            priceElement.innerHTML = `<br>Price : $ ${FelineParadiseBasePrice}/day<br>`;
+        }
+
+        //===========================Update the package price==========================//
+        function FelineParadiseUpdatePrice() {
+            const FelineParadiseFormBooking = document.getElementById('FelineParadiseForm_Booking');
+            const priceElement = document.querySelector('.FelineParadisePrice');
+            let FelineParadiseCurrentPrice = FelineParadiseBasePrice;
+
+            if (FelineParadiseFormBooking.value === "Weekend Getaway") {
+                FelineParadiseCurrentPrice += 80;
+            } else if (FelineParadiseFormBooking.value === "Business Trip") {
+                FelineParadiseCurrentPrice += 160;
+            }
+            else if (FelineParadiseFormBooking.value === "One Week Vacation") {
+                FelineParadiseCurrentPrice += 240;
+            }
+
+            priceElement.innerHTML = `<br>Price : $ ${FelineParadiseCurrentPrice}<br>`;
+            globalFelineParadiseCurrentPrice = FelineParadiseCurrentPrice;
+        }
+
+        function FPcollapseExpandedContainers() {
+            const StandardSuiteContainer = document.getElementById('StandardSuiteBox');
+            if (StandardSuiteContainer.classList.contains('expanded')) {
+                StandardSuiteCancelExpansion();
+            }
+
+            const DeluxeSuiteContainer = document.getElementById('DeluxeSuiteBox');
+            if (DeluxeSuiteContainer.classList.contains('expanded')) {
+                DeluxeSuiteCancelExpansion();
+            }
+
+            const LuxuryVillaContainer = document.getElementById('LuxuryVillaBox');
+            if (LuxuryVillaContainer.classList.contains('expanded')) {
+                LuxuryVillaCancelExpansion();
+            }
+        }
+        //==============================Current Promotions Slider====================================//
+        // Using event delegation for the dynamically created dropdown
+        $(document).on('change', '#FelineParadiseForm_Booking', FelineParadiseUpdatePrice);
+        //=====================================================Feline Paradise====================================================================//
+
+        document.addEventListener("DOMContentLoaded", function () { // Ensure the DOM is fully loaded
+            const slides = document.querySelectorAll('#CurrentPromotionsSlider .slide');
+            let currentSlideIndex = 0;
+
+            function goToSlide(n) {
+                slides[currentSlideIndex].classList.remove('active-slide');
+                currentSlideIndex = (n + slides.length) % slides.length; // This ensures we loop back to the first slide
+                slides[currentSlideIndex].classList.add('active-slide');
+            }
+
+            function nextSlide() {
+                goToSlide(currentSlideIndex + 1);
+            }
+
+            setInterval(nextSlide, 3000);
+        });
+        //==============================Current Promotions Slider====================================//
+    </script>
+</body>
+
+</html>

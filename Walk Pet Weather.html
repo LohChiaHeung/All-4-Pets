@@ -1,0 +1,1243 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Pet Weather - All 4 Pets </title>
+        <link rel="icon" href="/images/Logo_All4Pet.png" type="image/x-icon">
+        <!-- "Get Bootstrap" CDN -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
+            integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+        <!-- Link to Navigation Bar CSS -->
+        <link rel="stylesheet" href="css/homepage.css">
+        <link rel="stylesheet" href="css/navbarFooter.css">
+        <!-- Icon CDN-->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+        <!-- Animation CDN -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.compat.css" />
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+            crossorigin="anonymous"></script>
+        <!-- Slick.js CSS -->
+        <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+    </head>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Single+Day&display=swap');
+
+
+        .container1 {
+            background: #FFFFFF;
+            border-radius: 4px;
+            padding: 20px;
+            text-align: center;
+            transition: all 0.2s;
+            /* margin: 0 auto; */
+            font-family: 'Single Day', sans-serif;
+        }
+
+        #title {
+            font-size: 30px;
+            font-weight: bold;
+            margin-bottom: 20px;
+            text-align: center;
+            color: #A04668;
+        }
+    </style>
+    <script>
+        // 更新日期为今天
+        var today = new Date().toISOString().slice(0, 10);
+
+        function getWeatherForecast() {
+            // 获取用户选择的城镇
+            var townSelect = document.getElementById("townSelect");
+            var selectedTownId = townSelect.value;
+
+            // 构建API请求URL
+            var apiUrl = "https://api.met.gov.my/v2.1/data?datasetid=FORECAST&datacategoryid=GENERAL&locationid=" + selectedTownId + "&start_date=" + today + "&end_date=" + today + "&lang=en";
+
+            // 使用XMLHttpRequest发出GET请求
+            var xhr = new XMLHttpRequest();
+            xhr.open("GET", apiUrl, true);
+            xhr.setRequestHeader("Authorization", "METToken b34e45f815878409a579b2f36934e7d7556a9544"); // 使用新的API令牌
+            xhr.onreadystatechange = function () {
+                if (xhr.readyState === 4 && xhr.status === 200) {
+                    // 解析JSON响应
+                    var response = JSON.parse(xhr.responseText);
+
+                    // 处理和显示天气数据
+                    displayWeatherData(response);
+                }
+            };
+            xhr.send();
+        }
+
+        function displayWeatherData(data) {
+            // 在此处处理和显示天气数据
+            var results = data.results;
+            var output = document.getElementById("weatherOutput");
+
+            // 清空之前的内容
+            output.innerHTML = "";
+
+            // 如果结果为空，显示没有数据的消息
+            if (results.length === 0) {
+                var noDataMessage = document.createElement("p");
+                noDataMessage.textContent = "No weather data available for this location.";
+                output.appendChild(noDataMessage);
+            } else {
+                // 遍历结果并显示
+                for (var i = 0; i < results.length; i++) {
+                    var datatype = results[i].datatype;
+                    var value = results[i].value;
+
+                    // 创建新的HTML元素来显示数据
+                    var weatherInfo = document.createElement("p");
+                    weatherInfo.textContent = datatype + ": " + value;
+
+                    // 将数据添加到输出区域
+                    output.appendChild(weatherInfo);
+                }
+            }
+        }
+
+    </script>
+</head>
+
+<body>
+  <!-- Navigation Bar -->
+  <div class="container-fluid">
+    <div class="row">
+        <div class="col-md-12 secNavBar">
+            <div class="navigationBarInnerContent">
+                <a class="Logo_All4Pet" href="homepage.html">
+                    <img src="images/Logo_All4Pet.png" alt="Very Important Pet" title="Very Important Pet"
+                        class="img-fluid">
+                </a>
+                <div class="nav_tab">
+                    <div class="dropdown nav_item">
+                        <a class="navBarLinkClass" href="homepage.html" title="Home">Home</a>
+                    </div>
+                    <div class="dropdown nav_item">
+                        <a class="navBarLinkClass" href="aboutus.html" title="About Us">About Us</a>
+                    </div>
+                    <div class="dropdown nav_item">
+                        <a class="navBarLinkClass" href="" title="Products">Our Services <i
+                                class="fa fa-caret-down" aria-hidden="true"></i></a>
+                        <div class="nav_dropdownContent">
+                            <a class="nav_dropdownContentList" href="petGrooming.html">Pet Grooming</a>
+                            <a class="nav_dropdownContentList" href="petBoarding.html">Pet Boarding</a>
+                            <a class="nav_dropdownContentList" href="petTraining.html">Pet Training</a>
+                            <a class="nav_dropdownContentList" href="petMedical.html">Pet Medical</a>
+                            <a class="nav_dropdownContentList" href="petAdoption.html">Pet Adoption</a>
+                        </div>
+                    </div>
+                    <div class="dropdown nav_item">
+                        <a class="navBarLinkClass" href="Product.html" title="Our Products">Products</a>
+                    </div>
+                    <div class="dropdown nav_item">
+                        <a class="navBarLinkClass" href="CatDogCategory.html" title="Pet Breeds">Pet Breeds</a>
+                    </div>
+                    <div class="dropdown nav_item">
+                        <a class="navBarLinkClass" href="petFacts.html" title="Pet Facts">Pet Facts</a>
+                    </div>
+                    <div class="dropdown nav_item">
+                        <a class="navBarLinkClass" href="Walk Pet Weather.html" title="Our Products">Pet Weather</a>
+                    </div>
+                    <div class="dropdown nav_item">
+                        <a class="navBarLinkClass" href="faq.html" title="FAQ">FAQ</a>
+                    </div>
+                    <div class="dropdown nav_item">
+                        <a class="navBarLinkClass" href="ContactUs.html" title="Contact Us">Contact Us</a>
+                    </div>
+                </div>
+                <div class="nav_login">
+                    <div class="dropdown nav_item">
+                        <a class="navBarLinkClass" href="registerLoginpage.html" title="Contact Us"
+                            id="loginNavBar">Login
+                            <i class="bi bi-box-arrow-in-right"></i></a>
+                    </div>
+                    <div class="nav_username" id="navUserName"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Navigation Bar (Mobile Version) -->
+<div class="container-fluid secNavBarMobileVersion noPaddingLeftRightTopContent">
+    <div class="row">
+        <div class="col-md-12 p-0 ">
+            <div class="navBarDisplayFlex">
+                <div class="hamburgerMenuSection" onclick="openNav()">
+                    <span class="designForMenuButton"> &#9776; </span>
+                </div>
+                <div class="logoSecion">
+                    <a class="Logo_All4Pet" href="homepage.html">
+                        <img src="images/Logo_All4Pet.png" alt="Very Important Pet" title="Very Important Pet"
+                            class="img-fluid mobileVersion_Logo">
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="nav_tab" id="mobileVerNavBar">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">
+                <span class="logoClose"> &times;
+                </span>
+            </a>
+            <div class="dropdown nav_item mt-3">
+                <a class="navBarLinkClass" href="homepage.html" title="Home">Home</a>
+            </div>
+            <div class="dropdown nav_item">
+                <a class="navBarLinkClass" href="aboutus.html" title="About Us">About Us</a>
+            </div>
+            <div class="dropdown nav_item">
+                <a class="navBarLinkClass" href="" title="Products">Our Services <i class="fa fa-caret-down"
+                        aria-hidden="true"></i></a>
+                <div class="nav_dropdownContent">
+                    <a class="nav_dropdownContentList" href="petGrooming.html">Pet Grooming</a>
+                    <a class="nav_dropdownContentList" href="petBoarding.html">Pet Boarding</a>
+                    <a class="nav_dropdownContentList" href="petTraining.html">Pet Training</a>
+                    <a class="nav_dropdownContentList" href="petMedical.html">Pet Medical</a>
+                    <a class="nav_dropdownContentList" href="petAdoption.html">Pet Adoption</a>
+                </div>
+            </div>
+            <div class="dropdown nav_item">
+                <a class="navBarLinkClass" href="Product.html" title="Products">Products</a>
+            </div>
+            <div class="dropdown nav_item">
+                <a class="navBarLinkClass" href="CatDogCategory.html" title="Pet Breeds">Pet Breeds</a>
+            </div>
+            <div class="dropdown nav_item">
+                <a class="navBarLinkClass" href="petFacts.html" title="Pet Facts">Pet Facts</a>
+            </div>
+            <div class="dropdown nav_item">
+                <a class="navBarLinkClass" href="Walk Pet Weather.html" title="Our Products">Pet Weather</a>
+            </div>
+            <div class="dropdown nav_item">
+                <a class="navBarLinkClass" href="faq.html" title="FAQ">FAQ</a>
+            </div>
+            <div class="dropdown nav_item">
+                <a class="navBarLinkClass" href="ContactUs.html" title="Contact Us">Contact Us</a>
+            </div>
+            <div class="nav_login">
+                <div class="dropdown nav_item">
+                    <a class="navBarLinkClass" href="registerLoginpage.html" title="Login Page" id="loginNavBar">Login
+                        <i class="bi bi-box-arrow-in-right"></i></a>
+                </div>
+                <div class="nav_username" id="navUserName"></div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+    <div class="container pt-3 pb-5">
+        <div class="row">
+            <div class="col-md-10 m-auto pt-3 pb-3">
+                <div class="container1">
+                    <div id="title">Walking Pet Weather</div>
+
+                    <label for="stateSelect">Select a State:</label>
+                    <select class="form-select" id="stateSelect" onchange="updateTownOptions()">
+                        <option value="">Select a State</option>
+
+                    </select>
+                    <br>
+                    <label for="townSelect">Select a Town:</label>
+                    <select class="form-select" id="townSelect" onchange="getWeatherForecast()">
+                        <option value="">Select a Town</option>
+
+                    </select>
+                </div>
+            </div>
+            <div class="col-md-4 offset-md-2 pb-3" style="text-align:center;">
+                <div>
+                    <p>FGM - Forecast General Morning</p>
+                    <p>FGA - Forecast General Afternoon</p>
+                    <p>FGN - Forecast General Night</p>
+                    <p>FMAXT - Forecast Maximum Temperature</p>
+                    <p>FMINT - Forecast Minimum Temperature</p>
+                    <p>FSIGW - Forecast Significant Weather</p>
+                </div>
+            </div>
+            <div class="col-md-6 pb-3 mb-3" style="text-align:center; color: #A04668; font-weight: bold;">
+                <div id="weatherOutput">
+                    <!-- 在此处显示天气数据 -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-12 secFooter">
+                <div class="container">
+                    <div class="row">
+                        <div class="footerSection">
+                            <hr class="horizontalLineWhiteColor">
+                            <div class="footerFlexContent">
+                                <p class="copyRightCompany">Copyright © 2023 All 4 Pet Sdn. Bhd. </p>
+                                <div class="socialMediaPlugin">
+                                    <span class="followUsFooter">Follow Us: &nbsp;</span>
+                                    <a href="https://www.facebook.com/all4petsssss">
+                                        <img src="images/icons8-facebook-100.png" alt=""
+                                            class="img-fluid logoSocialMedia">
+                                    </a>
+                                    <a href="https://instagram.com/all4pets_2023?igshid=NzZhOTFlYzFmZQ==">
+                                        <img src="images/icons8-instagram-100.png" alt=""
+                                            class="img-fluid logoSocialMedia">
+                                    </a>
+                                    <a href="mailto:example@hotmail.com">
+                                        <img src="images/icons8-mail-100.png" alt="" class="img-fluid logoSocialMedia">
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- End of Footer -->
+    <script defer src="//cdn1.npcdn.net/scripts/janimate.js"></script>
+    <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <!-- Link to 'register.js' file -->
+    <script src="javascript/register.js"> </script>
+    <script src="javascript/animation.js"></script>
+    
+    <script>
+        // 您提供的州和城镇数据
+        const statesData = [
+            {
+                "id": "LOCATION:1",
+                "name": "JOHOR",
+                "locationcategoryid": "STATE"
+            }, {
+                "id": "LOCATION:2",
+                "name": "KEDAH",
+                "locationcategoryid": "STATE",
+            }, {
+                "id": "LOCATION:3",
+                "name": "KELANTAN",
+                "locationcategoryid": "STATE",
+            }, {
+                "id": "LOCATION:4",
+                "name": "KUALA LUMPUR",
+                "locationcategoryid": "STATE",
+            }, {
+                "id": "LOCATION:6",
+                "name": "MELAKA",
+                "locationcategoryid": "STATE",
+            }, {
+                "id": "LOCATION:7",
+                "name": "NEGERI SEMBILAN",
+                "locationcategoryid": "STATE",
+            }, {
+                "id": "LOCATION:8",
+                "name": "PAHANG",
+                "locationcategoryid": "STATE",
+            }, {
+                "id": "LOCATION:9",
+                "name": "PULAU PINANG",
+                "locationcategoryid": "STATE",
+            }, {
+                "id": "LOCATION:10",
+                "name": "PERAK",
+                "locationcategoryid": "STATE",
+            }, {
+                "id": "LOCATION:12",
+                "name": "PUTRAJAYA",
+                "locationcategoryid": "STATE",
+            }, {
+                "id": "LOCATION:14",
+                "name": "SARAWAK",
+                "locationcategoryid": "STATE",
+            }, {
+                "id": "LOCATION:15",
+                "name": "SELANGOR",
+                "locationcategoryid": "STATE",
+            }, {
+                "id": "LOCATION:16",
+                "name": "TERENGGANU",
+                "locationcategoryid": "STATE",
+            }, {
+                "id": "LOCATION:11",
+                "name": "PERLIS",
+                "locationcategoryid": "STATE",
+            }
+        ];
+
+        const townsData = [
+            {
+                "id": "LOCATION:127",
+                "name": "MUAR",
+                "locationcategoryid": "TOWN",
+                "locationrootid": "LOCATION:1"
+            }, {
+                "id": "LOCATION:126",
+                "name": "TANGKAK",
+                "locationcategoryid": "TOWN",
+                "locationrootid": "LOCATION:1",
+            }, {
+                "id": "LOCATION:125",
+                "name": "LABIS",
+                "locationcategoryid": "TOWN",
+                "locationrootid": "LOCATION:1",
+            }, {
+                "id": "LOCATION:124",
+                "name": "JOHOR BAHRU",
+                "locationcategoryid": "TOWN",
+                "locationrootid": "LOCATION:1",
+            }, {
+                "id": "LOCATION:122",
+                "name": "AYER HITAM",
+                "locationcategoryid": "TOWN",
+                "locationrootid": "LOCATION:1",
+            }, {
+                "id": "LOCATION:123",
+                "name": "BATU PAHAT",
+                "locationcategoryid": "TOWN",
+                "locationrootid": "LOCATION:1",
+            }, {
+                "id": "LOCATION:131",
+                "name": "MERSING",
+                "locationcategoryid": "TOWN",
+                "locationrootid": "LOCATION:1",
+            }, {
+                "id": "LOCATION:659",
+                "name": "ISKANDAR PUTERI",
+                "locationcategoryid": "TOWN",
+                "locationrootid": "LOCATION:1",
+            }, {
+                "id": "LOCATION:129",
+                "name": "KLUANG",
+                "locationcategoryid": "TOWN",
+                "locationrootid": "LOCATION:1",
+            }, {
+                "id": "LOCATION:768",
+                "name": "NUSAJAYA",
+                "locationcategoryid": "TOWN",
+                "locationrootid": "LOCATION:1",
+            }, {
+                "id": "LOCATION:130",
+                "name": "KOTA TINGGI",
+                "locationcategoryid": "TOWN",
+                "locationrootid": "LOCATION:1",
+            }, {
+                "id": "LOCATION:134",
+                "name": "PONTIAN",
+                "locationcategoryid": "TOWN",
+                "locationrootid": "LOCATION:1",
+            }, {
+                "id": "LOCATION:135",
+                "name": "SEGAMAT",
+                "locationcategoryid": "TOWN",
+                "locationrootid": "LOCATION:1",
+            }, {
+                "id": "LOCATION:136",
+                "name": "SENAI",
+                "locationcategoryid": "TOWN",
+                "locationrootid": "LOCATION:1",
+            }, {
+                "id": "LOCATION:137",
+                "name": "SIMPANG RENGGAM",
+                "locationcategoryid": "TOWN",
+                "locationrootid": "LOCATION:1",
+            }, {
+                "id": "LOCATION:138",
+                "name": "YONG PENG",
+                "locationcategoryid": "TOWN",
+                "locationrootid": "LOCATION:1",
+            }, {
+                "id": "LOCATION:133",
+                "name": "PASIR GUDANG",
+                "locationcategoryid": "TOWN",
+                "locationrootid": "LOCATION:1",
+            }, {
+                "id": "LOCATION:439",
+                "name": "KULAI",
+                "locationcategoryid": "TOWN",
+                "locationrootid": "LOCATION:1",
+            }, {
+                "id": "LOCATION:128",
+                "name": "PAGOH",
+                "locationcategoryid": "TOWN",
+                "locationrootid": "LOCATION:1",
+            },
+
+
+            {
+                "id": "LOCATION:426",
+                "name": "SERDANG",
+                "locationcategoryid": "TOWN",
+                "locationrootid": "LOCATION:2",
+            }, {
+                "id": "LOCATION:139",
+                "name": "ALOR STAR",
+                "locationcategoryid": "TOWN",
+                "locationrootid": "LOCATION:2",
+            }, {
+                "id": "LOCATION:140",
+                "name": "BALING",
+                "locationcategoryid": "TOWN",
+                "locationrootid": "LOCATION:2",
+            }, {
+                "id": "LOCATION:141",
+                "name": "JITRA",
+                "locationcategoryid": "TOWN",
+                "locationrootid": "LOCATION:2",
+            }, {
+                "id": "LOCATION:142",
+                "name": "KUALA NERANG",
+                "locationcategoryid": "TOWN",
+                "locationrootid": "LOCATION:2",
+            }, {
+                "id": "LOCATION:143",
+                "name": "KULIM",
+                "locationcategoryid": "TOWN",
+                "locationrootid": "LOCATION:2",
+            }, {
+                "id": "LOCATION:145",
+                "name": "PENDANG",
+                "locationcategoryid": "TOWN",
+                "locationrootid": "LOCATION:2",
+            }, {
+                "id": "LOCATION:146",
+                "name": "POKOK SENA",
+                "locationcategoryid": "TOWN",
+                "locationrootid": "LOCATION:2",
+            }, {
+                "id": "LOCATION:147",
+                "name": "SIK",
+                "locationcategoryid": "TOWN",
+                "locationrootid": "LOCATION:2",
+            }, {
+                "id": "LOCATION:148",
+                "name": "SUNGAI PETANI",
+                "locationcategoryid": "TOWN",
+                "locationrootid": "LOCATION:2",
+            }, {
+                "id": "LOCATION:149",
+                "name": "YAN",
+                "locationcategoryid": "TOWN",
+                "locationrootid": "LOCATION:2",
+            },
+
+
+            {
+                "id": "LOCATION:154",
+                "name": "KUALA KRAI",
+                "locationcategoryid": "TOWN",
+                "locationrootid": "LOCATION:3",
+            }, {
+                "id": "LOCATION:155",
+                "name": "LOJING",
+                "locationcategoryid": "TOWN",
+                "locationrootid": "LOCATION:3",
+            }, {
+                "id": "LOCATION:156",
+                "name": "MACHANG",
+                "locationcategoryid": "TOWN",
+                "locationrootid": "LOCATION:3",
+            }, {
+                "id": "LOCATION:158",
+                "name": "PASIR PUTEH",
+                "locationcategoryid": "TOWN",
+                "locationrootid": "LOCATION:3",
+            }, {
+                "id": "LOCATION:160",
+                "name": "TANAH MERAH",
+                "locationcategoryid": "TOWN",
+                "locationrootid": "LOCATION:3",
+            }, {
+                "id": "LOCATION:161",
+                "name": "TUMPAT",
+                "locationcategoryid": "TOWN",
+                "locationrootid": "LOCATION:3",
+            }, {
+                "id": "LOCATION:153",
+                "name": "KOTA BHARU",
+                "locationcategoryid": "TOWN",
+                "locationrootid": "LOCATION:3",
+            }, {
+                "id": "LOCATION:152",
+                "name": "JELI",
+                "locationcategoryid": "TOWN",
+                "locationrootid": "LOCATION:3",
+            }, {
+                "id": "LOCATION:151",
+                "name": "GUA MUSANG",
+                "locationcategoryid": "TOWN",
+                "locationrootid": "LOCATION:3",
+            }, {
+                "id": "LOCATION:150",
+                "name": "BACHOK",
+                "locationcategoryid": "TOWN",
+                "locationrootid": "LOCATION:3",
+            }, {
+                "id": "LOCATION:159",
+                "name": "RANTAU PANJANG",
+                "locationcategoryid": "TOWN",
+                "locationrootid": "LOCATION:3",
+            }, {
+                "id": "LOCATION:157",
+                "name": "PASIR MAS",
+                "locationcategoryid": "TOWN",
+                "locationrootid": "LOCATION:3",
+            },
+
+
+            {
+                "id": "LOCATION:169",
+                "name": "SETAPAK",
+                "locationcategoryid": "TOWN",
+                "locationrootid": "LOCATION:4",
+            }, {
+                "id": "LOCATION:340",
+                "name": "KUALA LUMPUR",
+                "locationcategoryid": "TOWN",
+                "locationrootid": "LOCATION:4",
+            }, {
+                "id": "LOCATION:162",
+                "name": "AMPANG",
+                "locationcategoryid": "TOWN",
+                "locationrootid": "LOCATION:4",
+            }, {
+                "id": "LOCATION:163",
+                "name": "BANGSAR",
+                "locationcategoryid": "TOWN",
+                "locationrootid": "LOCATION:4",
+            }, {
+                "id": "LOCATION:164",
+                "name": "BUKIT BINTANG",
+                "locationcategoryid": "TOWN",
+                "locationrootid": "LOCATION:4",
+            }, {
+                "id": "LOCATION:165",
+                "name": "CHERAS",
+                "locationcategoryid": "TOWN",
+                "locationrootid": "LOCATION:4",
+            }, {
+                "id": "LOCATION:166",
+                "name": "JALAN DUTA",
+                "locationcategoryid": "TOWN",
+                "locationrootid": "LOCATION:4",
+            }, {
+                "id": "LOCATION:167",
+                "name": "KEPONG",
+                "locationcategoryid": "TOWN",
+                "locationrootid": "LOCATION:4",
+            }, {
+                "id": "LOCATION:168",
+                "name": "SELAYANG",
+                "locationcategoryid": "TOWN",
+                "locationrootid": "LOCATION:4",
+            }, {
+                "id": "LOCATION:170",
+                "name": "SUNGAI BESI",
+                "locationcategoryid": "TOWN",
+                "locationrootid": "LOCATION:4",
+            },
+
+
+            {
+                "id": "LOCATION:179",
+                "name": "TANGGA BATU",
+                "locationcategoryid": "TOWN",
+                "locationrootid": "LOCATION:6",
+            }, {
+                "id": "LOCATION:766",
+                "name": "MELAKA CITY",
+                "locationcategoryid": "TOWN",
+                "locationrootid": "LOCATION:6",
+            }, {
+                "id": "LOCATION:172",
+                "name": "ALOR GAJAH",
+                "locationcategoryid": "TOWN",
+                "locationrootid": "LOCATION:6",
+            }, {
+                "id": "LOCATION:173",
+                "name": "AYER KEROH",
+                "locationcategoryid": "TOWN",
+                "locationrootid": "LOCATION:6",
+            }, {
+                "id": "LOCATION:174",
+                "name": "BANDARAYA MELAKA",
+                "locationcategoryid": "TOWN",
+                "locationrootid": "LOCATION:6",
+            }, {
+                "id": "LOCATION:175",
+                "name": "DURIAN TUNGGAL",
+                "locationcategoryid": "TOWN",
+                "locationrootid": "LOCATION:6",
+            }, {
+                "id": "LOCATION:176",
+                "name": "JASIN",
+                "locationcategoryid": "TOWN",
+                "locationrootid": "LOCATION:6",
+            }, {
+                "id": "LOCATION:177",
+                "name": "MASJID TANAH",
+                "locationcategoryid": "TOWN",
+                "locationrootid": "LOCATION:6",
+            }, {
+                "id": "LOCATION:178",
+                "name": "MERLIMAU",
+                "locationcategoryid": "TOWN",
+                "locationrootid": "LOCATION:6",
+            },
+
+
+            {
+                "id": "LOCATION:188",
+                "name": "SEREMBAN",
+                "locationcategoryid": "TOWN",
+                "locationrootid": "LOCATION:7",
+            }, {
+                "id": "LOCATION:189",
+                "name": "TAMPIN",
+                "locationcategoryid": "TOWN",
+                "locationrootid": "LOCATION:7",
+            }, {
+                "id": "LOCATION:781",
+                "name": "PDSA ENSTEK",
+                "locationcategoryid": "TOWN",
+                "locationrootid": "LOCATION:7",
+            }, {
+                "id": "LOCATION:180",
+                "name": "GEMAS",
+                "locationcategoryid": "TOWN",
+                "locationrootid": "LOCATION:7",
+            }, {
+                "id": "LOCATION:181",
+                "name": "JELEBU",
+                "locationcategoryid": "TOWN",
+                "locationrootid": "LOCATION:7",
+            }, {
+                "id": "LOCATION:182",
+                "name": "JEMPOL",
+                "locationcategoryid": "TOWN",
+                "locationrootid": "LOCATION:7",
+            }, {
+                "id": "LOCATION:183",
+                "name": "KUALA KLAWANG",
+                "locationcategoryid": "TOWN",
+                "locationrootid": "LOCATION:7",
+            }, {
+                "id": "LOCATION:184",
+                "name": "KUALA PILAH",
+                "locationcategoryid": "TOWN",
+                "locationrootid": "LOCATION:7",
+            }, {
+                "id": "LOCATION:185",
+                "name": "NILAI",
+                "locationcategoryid": "TOWN",
+                "locationrootid": "LOCATION:7",
+            }, {
+                "id": "LOCATION:186",
+                "name": "PORT DICKSON",
+                "locationcategoryid": "TOWN",
+                "locationrootid": "LOCATION:7",
+            }, {
+                "id": "LOCATION:187",
+                "name": "REMBAU",
+                "locationcategoryid": "TOWN",
+                "locationrootid": "LOCATION:7",
+            },
+
+
+            {
+                "id": "LOCATION:199",
+                "name": "PEKAN",
+                "locationcategoryid": "TOWN",
+                "locationrootid": "LOCATION:8",
+            }, {
+                "id": "LOCATION:200",
+                "name": "RAUB",
+                "locationcategoryid": "TOWN",
+                "locationrootid": "LOCATION:8",
+            }, {
+                "id": "LOCATION:201",
+                "name": "TEMERLOH",
+                "locationcategoryid": "TOWN",
+                "locationrootid": "LOCATION:8",
+            }, {
+                "id": "LOCATION:202",
+                "name": "TRIANG",
+                "locationcategoryid": "TOWN",
+                "locationrootid": "LOCATION:8",
+            }, {
+                "id": "LOCATION:198",
+                "name": "MUADZAM SHAH",
+                "locationcategoryid": "TOWN",
+                "locationrootid": "LOCATION:8",
+            }, {
+                "id": "LOCATION:197",
+                "name": "MENTAKAB",
+                "locationcategoryid": "TOWN",
+                "locationrootid": "LOCATION:8",
+            }, {
+                "id": "LOCATION:196",
+                "name": "MARAN",
+                "locationcategoryid": "TOWN",
+                "locationrootid": "LOCATION:8",
+            }, {
+                "id": "LOCATION:195",
+                "name": "KUALA ROMPIN",
+                "locationcategoryid": "TOWN",
+                "locationrootid": "LOCATION:8",
+            }, {
+                "id": "LOCATION:194",
+                "name": "KUALA LIPIS",
+                "locationcategoryid": "TOWN",
+                "locationrootid": "LOCATION:8",
+            }, {
+                "id": "LOCATION:193",
+                "name": "KUANTAN",
+                "locationcategoryid": "TOWN",
+                "locationrootid": "LOCATION:8",
+            }, {
+                "id": "LOCATION:192",
+                "name": "JERANTUT",
+                "locationcategoryid": "TOWN",
+                "locationrootid": "LOCATION:8",
+            }, {
+                "id": "LOCATION:191",
+                "name": "BERA",
+                "locationcategoryid": "TOWN",
+                "locationrootid": "LOCATION:8",
+            }, {
+                "id": "LOCATION:773",
+                "name": "BATU EMBUN",
+                "locationcategoryid": "TOWN",
+                "locationrootid": "LOCATION:8",
+            }, {
+                "id": "LOCATION:190",
+                "name": "BENTONG",
+                "locationcategoryid": "TOWN",
+                "locationrootid": "LOCATION:8",
+            },
+
+
+            {
+                "id": "LOCATION:204",
+                "name": "BALIK PULAU",
+                "locationcategoryid": "TOWN",
+                "locationrootid": "LOCATION:9",
+            }, {
+                "id": "LOCATION:203",
+                "name": "AYER ITAM",
+                "locationcategoryid": "TOWN",
+                "locationrootid": "LOCATION:9",
+            }, {
+                "id": "LOCATION:205",
+                "name": "BAYAN LEPAS",
+                "locationcategoryid": "TOWN",
+                "locationrootid": "LOCATION:9",
+            }, {
+                "id": "LOCATION:206",
+                "name": "BATU KAWAN",
+                "locationcategoryid": "TOWN",
+                "locationrootid": "LOCATION:9",
+            }, {
+                "id": "LOCATION:207",
+                "name": "BUTTERWORTH",
+                "locationcategoryid": "TOWN",
+                "locationrootid": "LOCATION:9",
+            }, {
+                "id": "LOCATION:208",
+                "name": "BUKIT MERTAJAM",
+                "locationcategoryid": "TOWN",
+                "locationrootid": "LOCATION:9",
+            }, {
+                "id": "LOCATION:209",
+                "name": "BUKIT TENGAH",
+                "locationcategoryid": "TOWN",
+                "locationrootid": "LOCATION:9",
+            }, {
+                "id": "LOCATION:210",
+                "name": "GEORGETOWN",
+                "locationcategoryid": "TOWN",
+                "locationrootid": "LOCATION:9",
+            }, {
+                "id": "LOCATION:211",
+                "name": "KEPALA BATAS",
+                "locationcategoryid": "TOWN",
+                "locationrootid": "LOCATION:9",
+            }, {
+                "id": "LOCATION:212",
+                "name": "NIBONG TEBAL",
+                "locationcategoryid": "TOWN",
+                "locationrootid": "LOCATION:9",
+            }, {
+                "id": "LOCATION:213",
+                "name": "PERAI",
+                "locationcategoryid": "TOWN",
+                "locationrootid": "LOCATION:9",
+            }, {
+                "id": "LOCATION:775",
+                "name": "PRAI",
+                "locationcategoryid": "TOWN",
+                "locationrootid": "LOCATION:9",
+            },
+
+
+            {
+                "id": "LOCATION:231",
+                "name": "SLIM RIVER",
+                "locationcategoryid": "TOWN",
+                "locationrootid": "LOCATION:10",
+            }, {
+                "id": "LOCATION:226",
+                "name": "SITIAWAN",
+                "locationcategoryid": "TOWN",
+                "locationrootid": "LOCATION:10",
+            }, {
+                "id": "LOCATION:216",
+                "name": "BATU GAJAH",
+                "locationcategoryid": "TOWN",
+                "locationrootid": "LOCATION:10",
+            }, {
+                "id": "LOCATION:215",
+                "name": "BAGAN SERAI",
+                "locationcategoryid": "TOWN",
+                "locationrootid": "LOCATION:10",
+            }, {
+                "id": "LOCATION:225",
+                "name": "SUNGAI SIPUT",
+                "locationcategoryid": "TOWN",
+                "locationrootid": "LOCATION:10",
+            }, {
+                "id": "LOCATION:227",
+                "name": "TAIPING",
+                "locationcategoryid": "TOWN",
+                "locationrootid": "LOCATION:10",
+            }, {
+                "id": "LOCATION:224",
+                "name": "SELAMA",
+                "locationcategoryid": "TOWN",
+                "locationrootid": "LOCATION:10",
+            }, {
+                "id": "LOCATION:223",
+                "name": "PARIT BUNTAR",
+                "locationcategoryid": "TOWN",
+                "locationrootid": "LOCATION:10",
+            }, {
+                "id": "LOCATION:222",
+                "name": "LENGGONG",
+                "locationcategoryid": "TOWN",
+                "locationrootid": "LOCATION:10",
+            }, {
+                "id": "LOCATION:221",
+                "name": "KUALA KANGSAR",
+                "locationcategoryid": "TOWN",
+                "locationrootid": "LOCATION:10",
+            }, {
+                "id": "LOCATION:434",
+                "name": "BAGAN DATUK",
+                "locationcategoryid": "TOWN",
+                "locationrootid": "LOCATION:10",
+            }, {
+                "id": "LOCATION:217",
+                "name": "GERIK",
+                "locationcategoryid": "TOWN",
+                "locationrootid": "LOCATION:10",
+            }, {
+                "id": "LOCATION:220",
+                "name": "KAMPAR",
+                "locationcategoryid": "TOWN",
+                "locationrootid": "LOCATION:10",
+            }, {
+                "id": "LOCATION:228",
+                "name": "TAPAH",
+                "locationcategoryid": "TOWN",
+                "locationrootid": "LOCATION:10",
+            }, {
+                "id": "LOCATION:431",
+                "name": "SERI ISKANDAR",
+                "locationcategoryid": "TOWN",
+                "locationrootid": "LOCATION:10",
+            }, {
+                "id": "LOCATION:219",
+                "name": "IPOH",
+                "locationcategoryid": "TOWN",
+                "locationrootid": "LOCATION:10",
+            }, {
+                "id": "LOCATION:774",
+                "name": "LUBOK MERBAU",
+                "locationcategoryid": "TOWN",
+                "locationrootid": "LOCATION:10",
+            }, {
+                "id": "LOCATION:230",
+                "name": "TELUK INTAN",
+                "locationcategoryid": "TOWN",
+                "locationrootid": "LOCATION:10",
+            }, {
+                "id": "LOCATION:218",
+                "name": "GOPENG",
+                "locationcategoryid": "TOWN",
+                "locationrootid": "LOCATION:10",
+            },
+
+
+            {
+                "id": "LOCATION:780",
+                "name": "PADANG BESAR",
+                "locationcategoryid": "TOWN",
+                "locationrootid": "LOCATION:11",
+            }, {
+                "id": "LOCATION:753",
+                "name": "PERLIS",
+                "locationcategoryid": "TOWN",
+                "locationrootid": "LOCATION:11",
+            }, {
+                "id": "LOCATION:237",
+                "name": "PUTRAJAYA",
+                "locationcategoryid": "TOWN",
+                "locationrootid": "LOCATION:12",
+            }, {
+                "id": "LOCATION:772",
+                "name": "KASA",
+                "locationcategoryid": "TOWN",
+                "locationrootid": "LOCATION:12",
+            },
+
+
+            {
+                "id": "LOCATION:770",
+                "name": "TAMAN NEGARA GUNUNG MULU",
+                "locationcategoryid": "TOWN",
+                "locationrootid": "LOCATION:14",
+            }, {
+                "id": "LOCATION:771",
+                "name": "TAMAN NEGARA NIAH",
+                "locationcategoryid": "TOWN",
+                "locationrootid": "LOCATION:14",
+            }, {
+                "id": "LOCATION:776",
+                "name": "MULU",
+                "locationcategoryid": "TOWN",
+                "locationrootid": "LOCATION:14",
+            },
+
+
+            {
+                "id": "LOCATION:299",
+                "name": "SERI KEMBANGAN",
+                "locationcategoryid": "TOWN",
+                "locationrootid": "LOCATION:15",
+            }, {
+                "id": "LOCATION:283",
+                "name": "BANGI",
+                "locationcategoryid": "TOWN",
+                "locationrootid": "LOCATION:15",
+            }, {
+                "id": "LOCATION:284",
+                "name": "BANTING",
+                "locationcategoryid": "TOWN",
+                "locationrootid": "LOCATION:15",
+            }, {
+                "id": "LOCATION:285",
+                "name": "BATU CAVES",
+                "locationcategoryid": "TOWN",
+                "locationrootid": "LOCATION:15",
+            }, {
+                "id": "LOCATION:286",
+                "name": "CYBERJAYA",
+                "locationcategoryid": "TOWN",
+                "locationrootid": "LOCATION:15",
+            }, {
+                "id": "LOCATION:287",
+                "name": "DAMANSARA",
+                "locationcategoryid": "TOWN",
+                "locationrootid": "LOCATION:15",
+            }, {
+                "id": "LOCATION:288",
+                "name": "KAJANG",
+                "locationcategoryid": "TOWN",
+                "locationrootid": "LOCATION:15",
+            }, {
+                "id": "LOCATION:289",
+                "name": "KUALA KUBU BHARU",
+                "locationcategoryid": "TOWN",
+                "locationrootid": "LOCATION:15",
+            }, {
+                "id": "LOCATION:290",
+                "name": "KUALA SELANGOR",
+                "locationcategoryid": "TOWN",
+                "locationrootid": "LOCATION:15",
+            }, {
+                "id": "LOCATION:291",
+                "name": "RAWANG",
+                "locationcategoryid": "TOWN",
+                "locationrootid": "LOCATION:15",
+            }, {
+                "id": "LOCATION:293",
+                "name": "PETALING JAYA",
+                "locationcategoryid": "TOWN",
+                "locationrootid": "LOCATION:15",
+            }, {
+                "id": "LOCATION:294",
+                "name": "SABAK BERNAM",
+                "locationcategoryid": "TOWN",
+                "locationrootid": "LOCATION:15",
+            }, {
+                "id": "LOCATION:295",
+                "name": "SHAH ALAM",
+                "locationcategoryid": "TOWN",
+                "locationrootid": "LOCATION:15",
+            }, {
+                "id": "LOCATION:296",
+                "name": "SEMENYIH",
+                "locationcategoryid": "TOWN",
+                "locationrootid": "LOCATION:15",
+            }, {
+                "id": "LOCATION:297",
+                "name": "SENTUL",
+                "locationcategoryid": "TOWN",
+                "locationrootid": "LOCATION:15",
+            }, {
+                "id": "LOCATION:298",
+                "name": "SEPANG",
+                "locationcategoryid": "TOWN",
+                "locationrootid": "LOCATION:15",
+            }, {
+                "id": "LOCATION:300",
+                "name": "SUBANG JAYA",
+                "locationcategoryid": "TOWN",
+                "locationrootid": "LOCATION:15",
+            }, {
+                "id": "LOCATION:537",
+                "name": "PELABUHAN KLANG",
+                "locationcategoryid": "TOWN",
+                "locationrootid": "LOCATION:15",
+            }, {
+                "id": "LOCATION:764",
+                "name": "PORT KLANG",
+                "locationcategoryid": "TOWN",
+                "locationrootid": "LOCATION:15",
+            }, {
+                "id": "LOCATION:782",
+                "name": "KFC TAMAN SRI MUDA SHAH ALAM",
+                "locationcategoryid": "TOWN",
+                "locationrootid": "LOCATION:15",
+            },
+
+
+            {
+                "id": "LOCATION:309",
+                "name": "SETIU",
+                "locationcategoryid": "TOWN",
+                "locationrootid": "LOCATION:16",
+            }, {
+                "id": "LOCATION:308",
+                "name": "PAKA",
+                "locationcategoryid": "TOWN",
+                "locationrootid": "LOCATION:16",
+            }, {
+                "id": "LOCATION:307",
+                "name": "KUALA TERENGGANU",
+                "locationcategoryid": "TOWN",
+                "locationrootid": "LOCATION:16",
+            }, {
+                "id": "LOCATION:306",
+                "name": "KERTIH",
+                "locationcategoryid": "TOWN",
+                "locationrootid": "LOCATION:16",
+            }, {
+                "id": "LOCATION:305",
+                "name": "KEMAMAN",
+                "locationcategoryid": "TOWN",
+                "locationrootid": "LOCATION:16",
+            }, {
+                "id": "LOCATION:301",
+                "name": "BANDAR PERMAISURI",
+                "locationcategoryid": "TOWN",
+                "locationrootid": "LOCATION:16",
+            }, {
+                "id": "LOCATION:304",
+                "name": "JERTEH",
+                "locationcategoryid": "TOWN",
+                "locationrootid": "LOCATION:16",
+            }, {
+                "id": "LOCATION:777",
+                "name": "KERTEH",
+                "locationcategoryid": "TOWN",
+                "locationrootid": "LOCATION:16",
+            }, {
+                "id": "LOCATION:303",
+                "name": "DUNGUN",
+                "locationcategoryid": "TOWN",
+                "locationrootid": "LOCATION:16",
+            }, {
+                "id": "LOCATION:302",
+                "name": "BESUT",
+                "locationcategoryid": "TOWN",
+                "locationrootid": "LOCATION:16",
+            }, {
+                "id": "LOCATION:437",
+                "name": "KUALA NERUS",
+                "locationcategoryid": "TOWN",
+                "locationrootid": "LOCATION:16",
+            }
+        ];
+
+        // 获取州和城镇选择框的引用
+        const stateSelect = document.getElementById("stateSelect");
+        const townSelect = document.getElementById("townSelect");
+
+        // 填充州选择框的选项
+        statesData.forEach(state => {
+            const option = document.createElement("option");
+            option.value = state.id;
+            option.textContent = state.name;
+            stateSelect.appendChild(option);
+        });
+
+        // 当州选择框的值发生变化时，更新城镇选择框的选项
+        function updateTownOptions() {
+            const selectedStateId = stateSelect.value;
+
+            // 清空城镇选择框的选项
+            while (townSelect.options.length > 1) {
+                townSelect.remove(1);
+            }
+
+            // 仅显示与所选州相关的城镇选项
+            townsData.forEach(town => {
+                if (town.locationrootid === selectedStateId) {
+                    const option = document.createElement("option");
+                    option.value = town.id;
+                    option.textContent = town.name;
+                    townSelect.appendChild(option);
+                }
+            });
+        }
+    </script>
+    <script>
+        function openNav() {
+            document.getElementById("mobileVerNavBar").style.display = "block";
+        }
+
+        function closeNav() {
+            document.getElementById("mobileVerNavBar").style.display = "none";
+        }
+
+        function toggleNav() {
+            var navBar = document.getElementById("mobileVerNavBar");
+            if (navBar.style.display === "block") {
+                navBar.style.display = "none";
+            } else {
+                navBar.style.display = "block";
+            }
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FAQ - All 4 Pets </title>
+    <link rel="icon" href="/images/Logo_All4Pet.png" type="image/x-icon">
+    <!-- "Get Bootstrap" CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <!-- Link to Navigation Bar CSS -->
+    <link rel="stylesheet" href="css/homepage.css">
+    <link rel="stylesheet" href="css/navbarFooter.css">
+    <link rel="stylesheet" href="css/FAQ.css">
+    <!-- Icon CDN-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <!-- Animation CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.compat.css" />
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+        crossorigin="anonymous"></script>
+    <!-- Slick.js CSS -->
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+</head>
+
+<body>
+      <!-- Navigation Bar -->
+      <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-12 secNavBar">
+                <div class="navigationBarInnerContent">
+                    <a class="Logo_All4Pet" href="homepage.html">
+                        <img src="images/Logo_All4Pet.png" alt="Very Important Pet" title="Very Important Pet"
+                            class="img-fluid">
+                    </a>
+                    <div class="nav_tab">
+                        <div class="dropdown nav_item">
+                            <a class="navBarLinkClass" href="homepage.html" title="Home">Home</a>
+                        </div>
+                        <div class="dropdown nav_item">
+                            <a class="navBarLinkClass" href="aboutus.html" title="About Us">About Us</a>
+                        </div>
+                        <div class="dropdown nav_item">
+                            <a class="navBarLinkClass" href="" title="Products">Our Services <i
+                                    class="fa fa-caret-down" aria-hidden="true"></i></a>
+                            <div class="nav_dropdownContent">
+                                <a class="nav_dropdownContentList" href="petGrooming.html">Pet Grooming</a>
+                                <a class="nav_dropdownContentList" href="petBoarding.html">Pet Boarding</a>
+                                <a class="nav_dropdownContentList" href="petTraining.html">Pet Training</a>
+                                <a class="nav_dropdownContentList" href="petMedical.html">Pet Medical</a>
+                                <a class="nav_dropdownContentList" href="petAdoption.html">Pet Adoption</a>
+                            </div>
+                        </div>
+                        <div class="dropdown nav_item">
+                            <a class="navBarLinkClass" href="Product.html" title="Our Products">Products</a>
+                        </div>
+                        <div class="dropdown nav_item">
+                            <a class="navBarLinkClass" href="CatDogCategory.html" title="Pet Breeds">Pet Breeds</a>
+                        </div>
+                        <div class="dropdown nav_item">
+                            <a class="navBarLinkClass" href="petFacts.html" title="Pet Facts">Pet Facts</a>
+                        </div>
+                        <div class="dropdown nav_item">
+                            <a class="navBarLinkClass" href="Walk Pet Weather.html" title="Our Products">Pet Weather</a>
+                        </div>
+                        <div class="dropdown nav_item">
+                            <a class="navBarLinkClass" href="faq.html" title="FAQ">FAQ</a>
+                        </div>
+                        <div class="dropdown nav_item">
+                            <a class="navBarLinkClass" href="ContactUs.html" title="Contact Us">Contact Us</a>
+                        </div>
+                    </div>
+                    <div class="nav_login">
+                        <div class="dropdown nav_item">
+                            <a class="navBarLinkClass" href="registerLoginpage.html" title="Contact Us"
+                                id="loginNavBar">Login
+                                <i class="bi bi-box-arrow-in-right"></i></a>
+                        </div>
+                        <div class="nav_username" id="navUserName"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Navigation Bar (Mobile Version) -->
+    <div class="container-fluid secNavBarMobileVersion noPaddingLeftRightTopContent">
+        <div class="row">
+            <div class="col-md-12 p-0 ">
+                <div class="navBarDisplayFlex">
+                    <div class="hamburgerMenuSection" onclick="openNav()">
+                        <span class="designForMenuButton"> &#9776; </span>
+                    </div>
+                    <div class="logoSecion">
+                        <a class="Logo_All4Pet" href="homepage.html">
+                            <img src="images/Logo_All4Pet.png" alt="Very Important Pet" title="Very Important Pet"
+                                class="img-fluid mobileVersion_Logo">
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="nav_tab" id="mobileVerNavBar">
+                <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">
+                    <span class="logoClose"> &times;
+                    </span>
+                </a>
+                <div class="dropdown nav_item mt-3">
+                    <a class="navBarLinkClass" href="homepage.html" title="Home">Home</a>
+                </div>
+                <div class="dropdown nav_item">
+                    <a class="navBarLinkClass" href="aboutus.html" title="About Us">About Us</a>
+                </div>
+                <div class="dropdown nav_item">
+                    <a class="navBarLinkClass" href="" title="Products">Our Services <i class="fa fa-caret-down"
+                            aria-hidden="true"></i></a>
+                    <div class="nav_dropdownContent">
+                        <a class="nav_dropdownContentList" href="petGrooming.html">Pet Grooming</a>
+                        <a class="nav_dropdownContentList" href="petBoarding.html">Pet Boarding</a>
+                        <a class="nav_dropdownContentList" href="petTraining.html">Pet Training</a>
+                        <a class="nav_dropdownContentList" href="petMedical.html">Pet Medical</a>
+                        <a class="nav_dropdownContentList" href="petAdoption.html">Pet Adoption</a>
+                    </div>
+                </div>
+                <div class="dropdown nav_item">
+                    <a class="navBarLinkClass" href="Product.html" title="Products">Products</a>
+                </div>
+                <div class="dropdown nav_item">
+                    <a class="navBarLinkClass" href="CatDogCategory.html" title="Pet Breeds">Pet Breeds</a>
+                </div>
+                <div class="dropdown nav_item">
+                    <a class="navBarLinkClass" href="petFacts.html" title="Pet Facts">Pet Facts</a>
+                </div>
+                <div class="dropdown nav_item">
+                    <a class="navBarLinkClass" href="Walk Pet Weather.html" title="Our Products">Pet Weather</a>
+                </div>
+                <div class="dropdown nav_item">
+                    <a class="navBarLinkClass" href="faq.html" title="FAQ">FAQ</a>
+                </div>
+                <div class="dropdown nav_item">
+                    <a class="navBarLinkClass" href="ContactUs.html" title="Contact Us">Contact Us</a>
+                </div>
+                <div class="nav_login">
+                    <div class="dropdown nav_item">
+                        <a class="navBarLinkClass" href="registerLoginpage.html" title="Login Page" id="loginNavBar">Login
+                            <i class="bi bi-box-arrow-in-right"></i></a>
+                    </div>
+                    <div class="nav_username" id="navUserName"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container pt-3">
+        <div class="row">
+            <div class="col-md-10 m-auto">
+                <div class="centered-h1">
+                    <h1 class="titleFAQ animate__animated" data-animation="bounceIn">FAQ</h1>
+
+                    <h1 class="subTitle animate__animated" data-animation="fadeInUp">1. How to take care of your dog !
+                    </h1>
+                    <p class="textDescription  animate__animated" data-animation="fadeInUp">
+                        Hey there, young pet owners! We're excited to help you learn all about taking care of your new
+                        doggie pal.
+                        <br>
+                        Having a dog is like having a forever buddy who will wag their tail and give you endless
+                        cuddles.
+                        <br>
+                        Here are some easy tips to make sure your furry friend is happy, healthy, and feels right at
+                        home:<br><br>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 pb-3">
+                <div class="boxBorderColor animate__animated" data-animation="zoomIn">
+                    <h3 class="titleDogsFAQ">1. Lots of Love and Attention: </h3>
+                    <p class="textforDogsFAQ">
+                        Dogs love to be around people! Spend time playing, petting, and talking to your dog.
+                        They'll feel super loved and bond with you in no time.</p>
+                </div>
+            </div>
+            <div class="col-md-6 pb-3">
+                <div class="boxBorderColorBrown animate__animated" data-animation="zoomIn">
+                    <h3 class="titleDogsFAQBrown">2. Yummy Meals: </h3>
+                    <p class="textforDogsFAQBrown">
+                        Just like how you need your meals, your dog needs theirs too.
+                        Feed them good dog food twice a day.
+                        Always make sure they have fresh water to drink.</p>
+                </div>
+            </div>
+            <div class="col-md-6 pt-3 pb-3">
+                <div class="boxBorderColorBrown animate__animated" data-animation="zoomIn">
+                    <h3 class="titleDogsFAQBrown">3. Safe and Cozy Space: </h3>
+                    <p class="textforDogsFAQBrown">
+                        Create a cozy spot for your dog to sleep and rest.
+                        They'll appreciate having a quiet place to relax when they're tired.</p>
+                </div>
+            </div>
+            <div class="col-md-6 pt-3 pb-3">
+                <div class="boxBorderColor animate__animated" data-animation="zoomIn">
+                    <h3 class="titleDogsFAQ">4. Walks and Exercise: </h3>
+                    <p class="textforDogsFAQ">
+                        Dogs have lots of energy to burn!
+                        Take them for walks, play fetch, or have a fun game of tag in the yard.
+                        It's great exercise for both of you!</p>
+                </div>
+            </div>
+            <div class="col-md-6 pt-3 pb-3 animate__animated" data-animation="zoomIn">
+                <div class="boxBorderColor">
+                    <h3 class="titleDogsFAQ">5. Bath Time: </h3>
+                    <p class="textforDogsFAQ">
+                        Every now and then, give your dog a bath.
+                        Use gentle dog shampoo, and make sure to dry them with a fluffy towel afterward.</p>
+                </div>
+            </div>
+            <div class="col-md-6 pt-3 pb-3 animate__animated" data-animation="zoomIn">
+                <div class="boxBorderColorBrown">
+                    <h3 class="titleDogsFAQBrown">6. Visiting the Vet: </h3>
+                    <p class="textforDogsFAQBrown">
+                        Just like you visit the doctor, dogs need to visit the vet too.
+                        They'll get check-ups and shots to stay healthy.
+                        Don't worry; the vet is there to help!</p>
+                </div>
+            </div>
+            <div class="col-md-6 pt-3 pb-3 animate__animated" data-animation="zoomIn">
+                <div class="boxBorderColorBrown">
+                    <h3 class="titleDogsFAQBrown">7. Good Manners: </h3>
+                    <p class="textforDogsFAQBrown">
+                        Teach your dog simple commands like "sit," "stay," and "come."
+                        This helps them understand what you want and keeps them safe.</p>
+                </div>
+            </div>
+            <div class="col-md-6 pt-3 pb-3 animate__animated" data-animation="zoomIn">
+                <div class="boxBorderColor">
+                    <h3 class="titleDogsFAQ">8. Grooming Fun </h3>
+                    <p class="textforDogsFAQ">
+                        Brush your dog's fur to keep it soft and shiny.
+                        It's a great way to bond and show them you care..</p>
+                </div>
+            </div>
+            <div class="col-md-6 pt-3 pb-3 animate__animated" data-animation="zoomIn">
+                <div class="boxBorderColor">
+                    <h3 class="titleDogsFAQ">9. Sharing is Caring:</h3>
+                    <p class="textforDogsFAQ">
+                        Dogs love to be around people! Spend time playing, petting, and talking to your dog.
+                        They'll feel super loved and bond with you in no time.</p>
+                </div>
+            </div>
+            <div class="col-md-6 pt-3 pb-3 animate__animated" data-animation="zoomIn">
+                <div class="boxBorderColorBrown">
+                    <h3 class="titleDogsFAQBrown">10. Be Patient: </h3>
+                    <p class="textforDogsFAQBrown">
+                        Remember, dogs need time to learn and get used to their new home.
+                        Be patient and kind, and you'll build a wonderful friendship.</p>
+                </div>
+            </div>
+            <div class="col-md-8 m-auto pt-5 animate__animated" data-animation="fadeInDown">
+                <p class="conclusionText">
+                    Having a dog is a fantastic adventure filled with love and laughter.
+                    You're going to make wonderful memories together!
+                    So go ahead, give your dog a belly rub,
+                    and enjoy the fantastic journey of being a dog owner. Woof woof!
+                </p>
+            </div>
+            <div class="col-md-8 m-auto">
+                <div style="text-align:center;">
+                    <img src="images/dog11.png" alt="Description of the image" class="img-fluid">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <hr class="horizontalLineWhiteColor">
+        </div>
+    </div>
+
+    <div class="container pt-3 pb-3">
+        <div class="row">
+            <div class="col-md-10 m-auto">
+                <div class="centered-h1">
+                    <h1 class="subTitle animate__animated" data-animation="fadeInUp">2.How to take care of your cat !
+                    </h1>
+                    <p class="textDescription  animate__animated" data-animation="fadeInUp">
+                        Hey there, young cat lovers! Welcome to the wonderful world of taking care of your new furry
+                        feline friend.
+                        <br>
+                        Cats are like playful, purring pals that will fill your days with joy. <br>
+                        Here are some simple tips to make sure your new kitty is happy, healthy, and feels right at
+                        home:
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 pb-3">
+                <div class="boxBorderColor animate__animated" data-animation="zoomIn">
+                    <h3 class="titleDogsFAQ">1. Gentle Affection: </h3>
+                    <p class="textforDogsFAQ">
+                        Cats love gentle petting and attention.
+                        Spend time with your kitty, stroke their soft fur, and let them curl up in your lap.
+                        They'll adore your company!</p>
+                </div>
+            </div>
+            <div class="col-md-6 pb-3">
+                <div class="boxBorderColorBrown animate__animated" data-animation="zoomIn">
+                    <h3 class="titleDogsFAQBrown">2. Wholesome Meals: </h3>
+                    <p class="textforDogsFAQBrown">
+                        Just like how you need your meals, your cat needs to eat too.
+                        Feed them yummy cat food twice a day.
+                        Always keep their food and water bowls clean and filled.</p>
+                </div>
+            </div>
+            <div class="col-md-6 pt-3 pb-3">
+                <div class="boxBorderColorBrown animate__animated" data-animation="zoomIn">
+                    <h3 class="titleDogsFAQBrown">3. Cozy Hideout: </h3>
+                    <p class="textforDogsFAQBrown">
+                        Create a comfy spot for your cat to relax and nap.
+                        Cats love having a quiet corner where they can feel safe and snuggled.</p>
+                </div>
+            </div>
+            <div class="col-md-6 pt-3 pb-3">
+                <div class="boxBorderColor animate__animated" data-animation="zoomIn">
+                    <h3 class="titleDogsFAQ">4. Playful Adventures: </h3>
+                    <p class="textforDogsFAQ">
+                        Cats are curious creatures!
+                        Play with them using toys like feather wands and balls of yarn.
+                        It's a fun way to keep them active and entertained.</p>
+                </div>
+            </div>
+            <div class="col-md-6 pt-3 pb-3 animate__animated" data-animation="zoomIn">
+                <div class="boxBorderColor">
+                    <h3 class="titleDogsFAQ">5. Litter Box Love: </h3>
+                    <p class="textforDogsFAQ">
+                        Make sure your cat's litter box is clean and fresh.
+                        They'll use it to do their business, so keep it tidy and in a quiet spot.</p>
+                </div>
+            </div>
+            <div class="col-md-6 pt-3 pb-3 animate__animated" data-animation="zoomIn">
+                <div class="boxBorderColorBrown">
+                    <h3 class="titleDogsFAQBrown">6. Health Check-ups: </h3>
+                    <p class="textforDogsFAQBrown">
+                        Cats need to visit the vet to stay healthy too.
+                        They'll get check-ups and shots to make sure they're feeling their best.</p>
+                </div>
+            </div>
+            <div class="col-md-6 pt-3 pb-3 animate__animated" data-animation="zoomIn">
+                <div class="boxBorderColorBrown">
+                    <h3 class="titleDogsFAQBrown">7. Polished Grooming: </h3>
+                    <p class="textforDogsFAQBrown">
+                        Cats groom themselves, but they might need your help too.
+                        Gently brush their fur to keep it soft and tangle-free.</p>
+                </div>
+            </div>
+            <div class="col-md-6 pt-3 pb-3 animate__animated" data-animation="zoomIn">
+                <div class="boxBorderColor">
+                    <h3 class="titleDogsFAQ">8. Respectful Space </h3>
+                    <p class="textforDogsFAQ">
+                        Sometimes cats like their alone time.
+                        If your kitty wants some space, let them have it.
+                        They'll come back to you when they're ready for cuddles.</p>
+                </div>
+            </div>
+            <div class="col-md-6 pt-3 pb-3 animate__animated" data-animation="zoomIn">
+                <div class="boxBorderColor">
+                    <h3 class="titleDogsFAQ">9. Sharing and Caring:</h3>
+                    <p class="textforDogsFAQ">
+                        Let your family members join in on the cat care fun.
+                        Feeding, playing, and cuddling can be a family affair!</p>
+                </div>
+            </div>
+            <div class="col-md-6 pt-3 pb-3 animate__animated" data-animation="zoomIn">
+                <div class="boxBorderColorBrown">
+                    <h3 class="titleDogsFAQBrown">10. Patience is Key: </h3>
+                    <p class="textforDogsFAQBrown">
+                        Cats have their own personalities and may need time to adjust.
+                        Be patient and kind, and you'll build a wonderful friendship.</p>
+                </div>
+            </div>
+            <div class="col-md-8 m-auto pt-5 animate__animated" data-animation="fadeInDown">
+                <p class="conclusionText">
+                    Owning a cat is like having a purrfect companion for life's adventures.
+                    Get ready for a world of whiskers and wiggles as you enjoy the incredible journey of being a cat
+                    owner. Meow meow!
+                </p>
+            </div>
+            <div class="col-md-8 m-auto">
+                <div style="text-align:center;">
+                    <img src="images/cat11.png" alt="Description of the image" class="img-fluid">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container pb-3">
+        <div class="row">
+            <hr class="horizontalLineWhiteColor">
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-12 secFooter">
+                <div class="container">
+                    <div class="row">
+                        <div class="footerSection">
+                            <hr class="horizontalLineWhiteColor">
+                            <div class="footerFlexContent">
+                                <p class="copyRightCompany">Copyright © 2023 All 4 Pet Sdn. Bhd. </p>
+                                <div class="socialMediaPlugin">
+                                    <span class="followUsFooter">Follow Us: &nbsp;</span>
+                                    <a href="https://www.facebook.com/all4petsssss">
+                                        <img src="images/icons8-facebook-100.png" alt=""
+                                            class="img-fluid logoSocialMedia">
+                                    </a>
+                                    <a href="https://instagram.com/all4pets_2023?igshid=NzZhOTFlYzFmZQ==">
+                                        <img src="images/icons8-instagram-100.png" alt=""
+                                            class="img-fluid logoSocialMedia">
+                                    </a>
+                                    <a href="mailto:info@example.com">
+                                        <img src="images/icons8-mail-100.png" alt="" class="img-fluid logoSocialMedia">
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- End of Footer -->
+
+
+    <script defer src="//cdn1.npcdn.net/scripts/janimate.js"></script>
+    <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <!-- Link to 'register.js' file -->
+    <script src="javascript/register.js"> </script>
+    <script src="javascript/animation.js"> </script>
+</body>
+
+</html>

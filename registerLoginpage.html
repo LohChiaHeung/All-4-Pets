@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register & Login Page - All 4 Pets</title>
+    <link rel="icon" href="/images/Logo_All4Pet.png" type="image/x-icon">
+    <!-- "Get Bootstrap" CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <!-- Link to Navigation Bar CSS -->
+    <link rel="stylesheet" href="css/regsiterLoginPage.css">
+    <link rel="stylesheet" href="css/navbarFooter.css">
+    <!-- Icon CDN-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <!-- Animation CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.compat.css" />
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+        crossorigin="anonymous"></script>
+    <!-- Slick.js CSS -->
+    <!-- <link rel="stylesheet" type="text/css" href="//cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css"> -->
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+    <!-- Jquery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+
+<body>
+  <!-- Navigation Bar -->
+  <div class="container-fluid">
+    <div class="row">
+        <div class="col-md-12 secNavBar">
+            <div class="navigationBarInnerContent">
+                <a class="Logo_All4Pet" href="homepage.html">
+                    <img src="images/Logo_All4Pet.png" alt="Very Important Pet" title="Very Important Pet"
+                        class="img-fluid">
+                </a>
+                <div class="nav_tab">
+                    <div class="dropdown nav_item">
+                        <a class="navBarLinkClass" href="homepage.html" title="Home">Home</a>
+                    </div>
+                    <div class="dropdown nav_item">
+                        <a class="navBarLinkClass" href="aboutus.html" title="About Us">About Us</a>
+                    </div>
+                    <div class="dropdown nav_item">
+                        <a class="navBarLinkClass" href="" title="Products">Our Services <i
+                                class="fa fa-caret-down" aria-hidden="true"></i></a>
+                        <div class="nav_dropdownContent">
+                            <a class="nav_dropdownContentList" href="petGrooming.html">Pet Grooming</a>
+                            <a class="nav_dropdownContentList" href="petBoarding.html">Pet Boarding</a>
+                            <a class="nav_dropdownContentList" href="petTraining.html">Pet Training</a>
+                            <a class="nav_dropdownContentList" href="petMedical.html">Pet Medical</a>
+                            <a class="nav_dropdownContentList" href="petAdoption.html">Pet Adoption</a>
+                        </div>
+                    </div>
+                    <div class="dropdown nav_item">
+                        <a class="navBarLinkClass" href="Product.html" title="Our Products">Products</a>
+                    </div>
+                    <div class="dropdown nav_item">
+                        <a class="navBarLinkClass" href="CatDogCategory.html" title="Pet Breeds">Pet Breeds</a>
+                    </div>
+                    <div class="dropdown nav_item">
+                        <a class="navBarLinkClass" href="petFacts.html" title="Pet Facts">Pet Facts</a>
+                    </div>
+                    <div class="dropdown nav_item">
+                        <a class="navBarLinkClass" href="Walk Pet Weather.html" title="Our Products">Pet Weather</a>
+                    </div>
+                    <div class="dropdown nav_item">
+                        <a class="navBarLinkClass" href="faq.html" title="FAQ">FAQ</a>
+                    </div>
+                    <div class="dropdown nav_item">
+                        <a class="navBarLinkClass" href="ContactUs.html" title="Contact Us">Contact Us</a>
+                    </div>
+                </div>
+                <div class="nav_login">
+                    <div class="dropdown nav_item">
+                        <a class="navBarLinkClass" href="registerLoginpage.html" title="Contact Us"
+                            id="loginNavBar">Login
+                            <i class="bi bi-box-arrow-in-right"></i></a>
+                    </div>
+                    <div class="nav_username" id="navUserName"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Navigation Bar (Mobile Version) -->
+<div class="container-fluid secNavBarMobileVersion noPaddingLeftRightTopContent">
+    <div class="row">
+        <div class="col-md-12 p-0 ">
+            <div class="navBarDisplayFlex">
+                <div class="hamburgerMenuSection" onclick="openNav()">
+                    <span class="designForMenuButton"> &#9776; </span>
+                </div>
+                <div class="logoSecion">
+                    <a class="Logo_All4Pet" href="homepage.html">
+                        <img src="images/Logo_All4Pet.png" alt="Very Important Pet" title="Very Important Pet"
+                            class="img-fluid mobileVersion_Logo">
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="nav_tab" id="mobileVerNavBar">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">
+                <span class="logoClose"> &times;
+                </span>
+            </a>
+            <div class="dropdown nav_item mt-3">
+                <a class="navBarLinkClass" href="homepage.html" title="Home">Home</a>
+            </div>
+            <div class="dropdown nav_item">
+                <a class="navBarLinkClass" href="aboutus.html" title="About Us">About Us</a>
+            </div>
+            <div class="dropdown nav_item">
+                <a class="navBarLinkClass" href="" title="Products">Our Services <i class="fa fa-caret-down"
+                        aria-hidden="true"></i></a>
+                <div class="nav_dropdownContent">
+                    <a class="nav_dropdownContentList" href="petGrooming.html">Pet Grooming</a>
+                    <a class="nav_dropdownContentList" href="petBoarding.html">Pet Boarding</a>
+                    <a class="nav_dropdownContentList" href="petTraining.html">Pet Training</a>
+                    <a class="nav_dropdownContentList" href="petMedical.html">Pet Medical</a>
+                    <a class="nav_dropdownContentList" href="petAdoption.html">Pet Adoption</a>
+                </div>
+            </div>
+            <div class="dropdown nav_item">
+                <a class="navBarLinkClass" href="Product.html" title="Products">Products</a>
+            </div>
+            <div class="dropdown nav_item">
+                <a class="navBarLinkClass" href="CatDogCategory.html" title="Pet Breeds">Pet Breeds</a>
+            </div>
+            <div class="dropdown nav_item">
+                <a class="navBarLinkClass" href="petFacts.html" title="Pet Facts">Pet Facts</a>
+            </div>
+            <div class="dropdown nav_item">
+                <a class="navBarLinkClass" href="Walk Pet Weather.html" title="Our Products">Pet Weather</a>
+            </div>
+            <div class="dropdown nav_item">
+                <a class="navBarLinkClass" href="faq.html" title="FAQ">FAQ</a>
+            </div>
+            <div class="dropdown nav_item">
+                <a class="navBarLinkClass" href="ContactUs.html" title="Contact Us">Contact Us</a>
+            </div>
+            <div class="nav_login">
+                <div class="dropdown nav_item">
+                    <a class="navBarLinkClass" href="registerLoginpage.html" title="Login Page" id="loginNavBar">Login
+                        <i class="bi bi-box-arrow-in-right"></i></a>
+                </div>
+                <div class="nav_username" id="navUserName"></div>
+            </div>
+        </div>
+    </div>
+</div>
+
+    <div class="container sectionRegLogin pb-4">
+            <div class="col-md-10 boxSectionReg">
+                <div class="row">
+                    <div class="col-md-6 sectionImage">
+                        <div class="logoImageSection">
+                            <img src="images/Logo_All4Pet.png" alt="" class="img-fluid logoPets">
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="sectionRegisterLogin">
+                            <h3 class="titleName">Welcome to All 4 Pets !</h3>
+                            <div class="registerBlock">
+                                <h5 class="titleRegister">Register Your Account Here <i class="fa fa-user fafaColor"
+                                        aria-hidden="true"></i></h5>
+                                <!-- Error message for registration validation -->
+                                <div class="error-message" id="registrationError"></div>
+                                <form>
+                                    <label for="reg-email" class="labelClass">Email: </label> <br>
+                                    <input type="email" id="reg-email" placeholder=" abc@gmail.com" class="inputBox"
+                                        required>
+                                    <br><br>
+                                    <label for="reg-password" class="labelClass">Password: </label> <br>
+                                    <input type="password" id="reg-password" placeholder="********" class="inputBox"
+                                        required>
+                                    <p class="descriptionPassword">Reminder: A strong password must contain at least 8
+                                        characters long.</p>
+                                    <label for="reg-userName" class="labelClass">Username: </label> <br>
+                                    <input type="text" id="reg-userName" placeholder="Alex" class="inputBox" required>
+                                    <br><br>
+                                    <button type="submit" class="buttonGeneral" id="btn-register">Register</button>
+                                </form>
+                            </div>
+                            <div class="loginBlock">
+                                <h5 class="titleRegister">Login to Your Account <i class="fa fa-sign-in fafaColor"
+                                        aria-hidden="true"></i> </h5>
+                                <form>
+                                    <label for="log-email" class="labelClass">Email: </label> <br>
+                                    <input type="email" id="log-email" placeholder=" abc@gmail.com" class="inputBox"
+                                        required>
+                                    <br><br>
+                                    <label for="log-password" class="labelClass">Password: </label> <br>
+                                    <input type="password" id="log-password" placeholder="********" class="inputBox"
+                                        required> <br><br>
+                                    <button type="button" class="buttonGeneral" id="btn-login">Login </button>
+                                </form>
+                            </div>
+                            <hr class="hrClassHorizontal">
+                            <div class="row">
+                                <div class="button-container">
+                                    <div class="col-md-6 pt-3">
+                                        <button id="showLoginSection" type="button" class="buttonGeneral">Already have
+                                            an
+                                            account ?</button>
+                                    </div>
+                                    <div class="col-md-6 pt-3">
+                                        <button id="registerButton" type="button" class="buttonGeneral">Register your
+                                            account </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-12 secFooter">
+                <div class="container">
+                    <div class="row">
+                        <div class="footerSection">
+                            <hr class="horizontalLineWhiteColor">
+                            <div class="footerFlexContent">
+                                <p class="copyRightCompany">Copyright © 2023 All 4 Pet Sdn. Bhd. </p>
+                                <div class="socialMediaPlugin">
+                                    <span class="followUsFooter">Follow Us: &nbsp;</span>
+                                    <a href="https://www.facebook.com/all4petsssss">
+                                        <img src="images/icons8-facebook-100.png" alt=""
+                                            class="img-fluid logoSocialMedia">
+                                    </a>
+                                    <a href="https://www.facebook.com/all4petsssss">
+                                        <img src="images/icons8-instagram-100.png" alt=""
+                                            class="img-fluid logoSocialMedia">
+                                    </a>
+                                    <a href="mailto:info@example.com">
+                                        <img src="images/icons8-mail-100.png" alt="" class="img-fluid logoSocialMedia">
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Link to 'register.js' file -->
+    <script src="javascript/register.js"> </script>
+
+    <script>
+        // Check if the user is logged in
+        var isLoggedIn = sessionStorage.getItem("IsLoggedIn");
+        var storedName = sessionStorage.getItem("User Name");
+
+        if (isLoggedIn === "true" && storedName) {
+            // User is logged in, so display the username
+            showUserName(storedName);
+        } else {
+            // User is not logged in, so hide the username
+            hideUserName();
+        }
+    </script>
+
+</body>
+
+</html>
