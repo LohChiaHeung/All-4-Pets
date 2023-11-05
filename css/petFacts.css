@@ -1,0 +1,175 @@
+body {
+    background-color: rgb(244, 185, 185, 0.3);
+}
+
+.sectionPetNews .displayFlex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.sectionPetNews .DogFactsTitle {
+    font-size: 42px;
+    color: #9d7373;
+}
+
+.sectionPetNews .imgDog {
+    height: 40px;
+    padding-left: 10px;
+    padding-bottom: 5px;
+}
+
+.sectionPetNews .dogFactsContainer {
+    padding: 25px;
+    justify-content: center;
+    font-size: 18px;
+    color: #666;
+}
+
+/* CSS for Button */
+
+.sectionPetNews .divAlignButtonCenter {
+    text-align: center;
+    display: flex;
+    margin: 0 auto;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.sectionPetNews .buttonExploreMore {
+    background-color: #d2a8a8;
+    border: 0 solid #E5E7EB;
+    box-sizing: border-box;
+    align-items: center;
+    color: #333;
+    display: flex;
+    font-size: 20px;
+    font-weight: 700;
+    justify-content: center;
+    line-height: 1.75rem;
+    padding: .9rem 1.65rem;
+    position: relative;
+    text-align: center;
+    text-decoration: none #333 solid;
+    text-decoration-thickness: auto;
+    width: 100%;
+    max-width: 300px;
+    cursor: pointer;
+    transform: rotate(-2deg);
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    margin-top: 25px;
+}
+
+.sectionPetNews .buttonExploreMorefocus {
+    outline: 0;
+}
+
+.sectionPetNews .buttonExploreMore:after {
+    content: '';
+    position: absolute;
+    border: 1px solid #333;
+    bottom: 4px;
+    left: 4px;
+    width: calc(100% - 1px);
+    height: calc(100% - 1px);
+}
+
+.sectionPetNews .buttonExploreMore:hover:after {
+    bottom: 5px;
+    left: 10px;
+}
+
+.sectionPetNews .buttonExploreMore:hover {
+    background-color: #ffacac;
+}
+
+.sectionPetNews .fact-number {
+    font-weight: 600;
+    color: #ad7676;
+    font-size: 22px;
+}
+
+.sectionBorder {
+    border: 3px solid white;
+    border-radius: 20px;
+    box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+    background-color: rgba(250, 236, 236, 0.2);
+    transition: all 0.3s ease-in;
+}
+
+.sectionBorder:hover {
+    transform: scale(1.01);
+}
+
+.sectionPetNews .catFactsContainer {
+    padding: 28px;
+    justify-content: center;
+    font-size: 18px;
+    color: #666;
+}
+
+/*Animation for Dog Facts*/
+.dog-fact {
+    opacity: 0;
+    transition: opacity 0.3s ease-in;
+    padding: 5px;
+}
+
+.dog-fact.show {
+    opacity: 1;
+}
+
+/*Animation for Cat Facts*/
+.cat-fact {
+    opacity: 0;
+    transition: opacity 0.3s ease-in;
+    padding: 5px;
+}
+
+.cat-fact.show {
+    opacity: 1;
+}
+
+.sectionPetNews .imgCat {
+    height: 65px;
+    padding-left: 10px;
+    padding-bottom: 15px;
+}
+
+@media only screen and (max-width:768px) {
+    .sectionPetNews .displayFlex {
+        display: block;
+        text-align: center;
+    }
+
+    .sectionPetNews .imgDog {
+        height: 55px;
+    }
+
+    .sectionBorder {
+        max-width: 100%;
+        border: 0px white solid;
+        box-shadow: 0px 0px 0px white;
+        padding-left: 5px;
+    }
+
+    .sectionBorder:hover {
+        transform: scale(1.0);
+    }
+
+    .sectionPetNews .imgCat {
+        height: 80px;
+        padding-bottom: unset;
+    }
+
+    .alignCenterButton {
+        text-align: center;
+        display: flex;
+        margin: 0 auto;
+        align-items: center;
+        justify-content: center;
+    }
+}

@@ -1,0 +1,153 @@
+/* Import Google Fonts: Single Day */
+@import url('https://fonts.googleapis.com/css2?family=Single+Day&display=swap');
+
+* {
+    scroll-behavior: smooth;
+    font-family: 'Single Day', cursive;
+    font-size:18px;
+    line-height:1.6em;
+    color:#333;
+}
+
+body {
+    background-color: #fdeeef;
+}
+
+.sectionRegLogin {
+   position:relative;
+   margin-top:5%;
+}
+
+.sectionRegLogin .boxSectionReg {
+    margin:0 auto;
+    padding:0;
+    border:1px #7b7b7b solid;
+    box-shadow:3px 5px 10px lightgrey;
+    min-height:100%;
+    border-radius:50px;
+}
+
+.sectionRegLogin .boxSectionReg .sectionImage {
+    border-right:2px solid #9E7A7A;
+}
+
+.sectionRegLogin .boxSectionReg .sectionRegisterLogin {
+    padding:20px;
+}
+
+.sectionRegisterLogin .titleName {
+    color:#fc9aa0;
+    font-size:42px;
+    text-shadow:1px 1px 5px whitesmoke;
+}
+
+.sectionRegisterLogin .titleRegister {
+    color:#9E7A7A;
+    font-size:28px;
+    text-shadow:1px 1px 5px whitesmoke;
+}
+
+.labelClass {
+    font-size:20px;
+    color:#9E7A7A;
+    font-weight:400;
+    margin-top:10px;
+}
+
+.inputBox {
+    margin-top:5px;
+    padding:5px;
+    background-color:rgb(245, 245, 245,0.2);
+    border:1.5px solid rgb(253, 189, 189);
+    border-radius:5px;
+    width:45%;
+}
+
+.inputBox:focus {
+    outline: none !important;
+    border-color:#fb616b;
+}
+
+.descriptionPassword {
+    font-size:18px;
+    color:#666;
+    margin-top:5px;
+}
+
+.buttonGeneral {
+    background-color:transparent;
+    border-radius:40px;
+    border:1px solid #9E7A7A !important;
+    padding:10px;
+    transition: all 0.4s ease-in;
+}
+
+.buttonGeneral:hover {
+    transform: translateY(3px);
+    background-color:#ff99a0;
+    color:white;
+}
+
+.fafaColor {
+    font-size:35px;
+    color:#9E7A7A;
+    margin-top:10px;
+    padding-left:5px;
+}
+
+.hrClassHorizontal {
+    width:100%;
+    height:3px;
+}
+
+
+#registerButton,
+#showLoginSection {
+    display: none;
+}
+
+.button-container {
+    text-align: left; 
+}
+
+.sectionImage {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.logoPets {
+    border-radius:10%;
+    filter:drop-shadow(-5px 5px 10px lightgrey);
+}
+
+@media only screen and (max-width:768px){
+    .logoPets {
+        width:280px;
+        height:auto;
+    }
+
+    .logoImageSection {
+        padding-top:10px;
+    }
+
+    .sectionRegLogin .boxSectionReg .sectionRegisterLogin {
+        text-align:center;
+    }
+
+    .sectionRegisterLogin .titleName {
+        font-size:28px;
+    }
+
+    .sectionRegisterLogin .titleRegister {
+        font-size:20px;
+    }
+
+    .descriptionPassword {
+        font-size:14px;
+    }
+
+    .button-container {
+        text-align:center;
+    }
+}

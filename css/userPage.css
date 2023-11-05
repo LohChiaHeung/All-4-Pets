@@ -1,0 +1,745 @@
+/* Banner and Its Text */
+.secBanner {
+    padding: 0px;
+    position: relative;
+    min-width: 100%;
+}
+
+.secBanner .secBannerImage .hp_banner_image {
+    min-width: 100%;
+}
+
+.secBanner .secBannerImage .secBannerTextContent {
+    position: absolute;
+    top: 13%;
+    left: 50%;
+    min-width: 100%;
+    max-width: 100%;
+    transform: translate(-50%, -50%);
+    z-index: 3;
+    padding: 50px;
+    text-align: center;
+}
+
+.secBanner .secBannerImage .secBannerTextContent .secBannerContentCenter .titleBanner {
+    font-size: 100px;
+    color: #9E7A7A;
+    line-height: 1.6em;
+    /* text-shadow: 2px 2px 10px grey; */
+}
+
+.secBannerContentCenter {
+    text-align: center;
+    margin: 0 auto;
+    align-items: center;
+}
+
+/* What is Pet Grooming */
+
+
+.sectionWelcomeUser .titleWelcomeUser {
+    color: #9E7A7A;
+    padding-top: 20px;
+    font-size: 48px;
+}
+
+.sectionWelcomeUser .WelcomeUsertitleDisplayFlex {
+    display: flex;
+    align-items: center;
+}
+
+.sectionWelcomeUser .WelcomeUsertitleSubImage {
+    height: 50px;
+    margin-top: 10px;
+    padding-left: 10px;
+}
+
+/* What is Pet Grooming Boxes */
+.sectionServicesWelcomeUser .WelcomeUserborder-box {
+    padding: 15px 15px 25px;
+    margin: 40px auto 0;
+    text-align: center;
+    border-radius: 5px;
+    background: white;
+    border: 1px solid white;
+    position: relative;
+    min-height: 100px;
+    max-height: 550px;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 10px 10px 20px rgb(255, 255, 255);
+}
+
+.welcomeuser_img {
+    min-width: 100%;
+}
+
+
+.welcomeuserTextContent {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    min-width: 50%;
+    max-width: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 3;
+    padding: 50px;
+    text-align: center;
+}
+
+.welcomeuserContentCenter .titleBanner {
+    font-size: 30px;
+    color: #9E7A7A;
+    line-height: 1.6em;
+    /* text-shadow: 2px 2px 10px grey; */
+}
+
+.welcomeuserContentCenter {
+    text-align: center;
+    margin: 0 auto;
+    align-items: center;
+}
+
+/* Pet Boarding Pacakges */
+.sectionServices .titleDisplayFlex {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.sectionServices .titleSubImage {
+    height: 50px;
+    margin-top: 10px;
+    padding-left: 10px;
+}
+
+.sectionServices .titleServices {
+    color: #9E7A7A;
+    padding-top: 20px;
+    font-size: 48px;
+}
+
+
+/* CSS for Button */
+
+.divAlignButtonCenter {
+    text-align: center;
+    display: flex;
+    margin: 0 auto;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Basic Trimming & Spa Treatment Boxes */
+.sectionServices .TrimmingSpatitleBox {
+    color: #9E7A7A;
+}
+
+.sectionServices .TrimmingSpadesAbout {
+    color: #9E7A7A;
+    line-height: 1.6em;
+    font-size: 20px;
+}
+
+.sectionServices .TrimmingSpaborder-box {
+    padding: 15px 15px 25px;
+    margin: 40px auto 0;
+    text-align: center;
+    border-radius: 5px;
+    background: #FEDFE1;
+    border: 1px solid black;
+    position: relative;
+    min-height: 580px;
+    max-height: auto;
+
+
+    transition: all 0.3s ease-in-out;
+    box-shadow: 5px 3px 10px lightgrey;
+}
+
+.TrimmingPrice {
+    color: #9E7A7A;
+}
+
+.SpaPrice {
+    color: #9E7A7A;
+}
+
+/* CSS for BasicTrimming & Spa Treatment Button */
+.buttonTrimmingSpa {
+    background-color: #be9999;
+    border: 0 solid #000000;
+    box-sizing: border-box;
+    align-items: center;
+    color: #FEDFE1;
+    display: flex;
+    font-size: 20px;
+    font-weight: 700;
+    justify-content: center;
+    line-height: 1.75rem;
+    padding: .9rem 1.65rem;
+    position: relative;
+    text-align: center;
+    text-decoration: none #000000 solid;
+    text-decoration-thickness: auto;
+    width: 100%;
+    max-width: 300px;
+    cursor: pointer;
+    transform: rotate(-2deg);
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    margin-top: 25px;
+}
+
+.buttonTrimmingSpafocus {
+    outline: 0;
+}
+
+.buttonTrimmingSpa:after {
+    content: '';
+    position: absolute;
+    border: 1px solid #000000;
+    bottom: 4px;
+    left: 4px;
+    width: calc(100% - 1px);
+    height: calc(100% - 1px);
+}
+
+.buttonTrimmingSpa:hover:after {
+    bottom: 5px;
+    left: 10px;
+}
+
+
+
+/* Basic Bathing & Luxury Grooming Boxes */
+.sectionServices .BathGroomborder-box .box-icon {
+    width: 80px;
+    height: 80px;
+    line-height: 80px;
+    border-radius: 50%;
+    background: #fcc2c2;
+    color: white;
+    margin: -48px auto 20px;
+    text-align: center;
+}
+
+.sectionServices .BathGroomtitleBox {
+    color: #FEDFE1;
+}
+
+.sectionServices .BathGroomdesAbout {
+    color: #FEDFE1;
+    line-height: 1.6em;
+    font-size: 20px;
+}
+
+.sectionServices .BathGroomborder-box {
+    padding: 15px 15px 25px;
+    margin: 40px auto 0;
+    text-align: center;
+    border-radius: 5px;
+    background-color: #be9999;
+    border: 1px solid #000000;
+    position: relative;
+    min-height: 580px;
+    max-height: auto;
+    transition: all 0.3s ease-in-out;
+    /* box-shadow: 10px 10px 20px grey; */
+    box-shadow: 5px 3px 10px lightgrey;
+}
+
+.BathPrice {
+    color: #FEDFE1;
+}
+
+.GroomPrice {
+    color: #FEDFE1;
+}
+
+/* CSS for /* Basic Bathing & Luxury Grooming Button */
+.buttonBathGroom {
+    background-color: #FEDFE1;
+    border: 0 solid #000000;
+    box-sizing: border-box;
+    align-items: center;
+    color: #9E7A7A;
+    display: flex;
+    font-size: 20px;
+    font-weight: 700;
+    justify-content: center;
+    line-height: 1.75rem;
+    padding: .9rem 1.65rem;
+    position: relative;
+    text-align: center;
+    text-decoration: none #000000 solid;
+    text-decoration-thickness: auto;
+    width: 100%;
+    max-width: 300px;
+    cursor: pointer;
+    transform: rotate(-2deg);
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    margin-top: 25px;
+}
+
+.buttonBathGroomfocus {
+    outline: 0;
+}
+
+.buttonBathGroom:after {
+    content: '';
+    position: absolute;
+    border: 1px solid #000000;
+    bottom: 4px;
+    left: 4px;
+    width: calc(100% - 1px);
+    height: calc(100% - 1px);
+}
+
+.buttonBathGroom:hover:after {
+    bottom: 5px;
+    left: 10px;
+}
+
+/* Pet Grooming Pacakges */
+/* .sectionServices .titleDisplayFlex {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+} */
+
+.sectionServices .titleSubImage {
+    height: 50px;
+    margin-top: 10px;
+    padding-left: 10px;
+}
+
+.sectionServices .titleServices {
+    color: #9E7A7A;
+    padding-top: 20px;
+    font-size: 48px;
+}
+
+
+/* CSS for Button */
+
+.divAlignButtonCenter {
+    text-align: center;
+    display: flex;
+    margin: 0 auto;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Standard Suite & Luxury Villa Boxes */
+.sectionServices .StandardLuxurytitleBox {
+    color: #9E7A7A;
+}
+
+.sectionServices .StandardLuxurydesAbout {
+    color: #9E7A7A;
+    line-height: 1.6em;
+    font-size: 18px;
+}
+
+.sectionServices .StandardLuxuryborder-box {
+    padding: 15px 15px 25px;
+    margin: 40px auto 0;
+    text-align: center;
+    border-radius: 5px;
+    background: #FEDFE1;
+    border: 1px solid black;
+    position: relative;
+    min-height: 580px;
+    max-height: auto;
+
+
+    transition: all 0.3s ease-in-out;
+    box-shadow:10px 10px 20px grey;
+}
+.StandardPrice{
+    color: #9E7A7A;
+}
+.VillaPrice{
+    color: #9E7A7A;
+}
+
+/* CSS for Standard Suite & Luxury Villa Button */
+.buttonStandardLuxury {
+    background-color: #9E7A7A;
+    border: 0 solid #000000;
+    box-sizing: border-box;
+    align-items: center;
+    color: #FEDFE1;
+    display: flex;
+    font-size: 20px;
+    font-weight: 700;
+    justify-content: center;
+    line-height: 1.75rem;
+    padding: .9rem 1.65rem;
+    position: relative;
+    text-align: center;
+    text-decoration: none #000000 solid;
+    text-decoration-thickness: auto;
+    width: 100%;
+    max-width: 300px;
+    cursor: pointer;
+    transform: rotate(-2deg);
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    margin-top: 25px;
+}
+
+.buttonStandardLuxuryfocus {
+    outline: 0;
+}
+
+.buttonStandardLuxury:after {
+    content: '';
+    position: absolute;
+    border: 1px solid #000000;
+    bottom: 4px;
+    left: 4px;
+    width: calc(100% - 1px);
+    height: calc(100% - 1px);
+}
+
+.buttonStandardLuxury:hover:after {
+    bottom: 5px;
+    left: 10px;
+}
+
+
+
+/* Deluxe Suite & Feline Paradise Boxes */
+.sectionServices .DeluxeFelineborder-box .box-icon {
+    width: 80px;
+    height: 80px;
+    line-height: 80px;
+    border-radius: 50%;
+    background: #fcc2c2;
+    color: white;
+    margin: -48px auto 20px;
+    text-align: center;
+}
+
+.sectionServices .DeluxeFelinetitleBox {
+    color: #FEDFE1;
+}
+
+.sectionServices .DeluxeFelinedesAbout {
+    color: #FEDFE1;
+    line-height: 1.6em;
+    font-size: 18px;
+}
+
+.sectionServices .DeluxeFelineborder-box {
+    padding: 15px 15px 25px;
+    margin: 40px auto 0;
+    text-align: center;
+    border-radius: 5px;
+    background: #9E7A7A;
+    border: 1px solid #000000;
+    position: relative;
+    min-height: 580px;
+    max-height: auto;
+    transition: all 0.3s ease-in-out;
+    box-shadow:10px 10px 20px grey;
+}
+
+.DeluxePrice{
+    color: #FEDFE1;
+}
+.FelineParadisePrice{
+    color: #FEDFE1;
+}
+
+/* CSS for Deluxe Suite & Feline Paradise Button */
+.buttonDeluxeFeline {
+    background-color: #FEDFE1;
+    border: 0 solid #000000;
+    box-sizing: border-box;
+    align-items: center;
+    color: #9E7A7A;
+    display: flex;
+    font-size: 20px;
+    font-weight: 700;
+    justify-content: center;
+    line-height: 1.75rem;
+    padding: .9rem 1.65rem;
+    position: relative;
+    text-align: center;
+    text-decoration: none #000000 solid;
+    text-decoration-thickness: auto;
+    width: 100%;
+    max-width: 300px;
+    cursor: pointer;
+    transform: rotate(-2deg);
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    margin-top: 25px;
+}
+
+.buttonDeluxeFelinefocus {
+    outline: 0;
+}
+
+.buttonDeluxeFeline:after {
+    content: '';
+    position: absolute;
+    border: 1px solid #000000;
+    bottom: 4px;
+    left: 4px;
+    width: calc(100% - 1px);
+    height: calc(100% - 1px);
+}
+
+.buttonDeluxeFeline:hover:after {
+    bottom: 5px;
+    left: 10px;
+}
+
+/* Pet Grooming Pacakges */
+/* .sectionServices .titleDisplayFlex {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+} */
+
+.sectionServices .titleSubImage {
+    height: 50px;
+    margin-top: 10px;
+    padding-left: 10px;
+}
+
+.sectionServices .titleServices {
+    color: #9E7A7A;
+    padding-top: 20px;
+    font-size: 48px;
+}
+
+
+/* Pet Training Pacakges */
+/* .sectionServices .titleDisplayFlex {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+} */
+
+.sectionServices .titleSubImage {
+    height: 50px;
+    margin-top: 10px;
+    padding-left: 10px;
+}
+
+.sectionServices .titleServices {
+    color: #9E7A7A;
+    padding-top: 20px;
+    font-size: 48px;
+}
+
+
+/* CSS for Button */
+
+.divAlignButtonCenter {
+    text-align: center;
+    display: flex;
+    margin: 0 auto;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Basic Obedience & Behavior Modification Boxes */
+.sectionServices .ObedienceBehaviortitleBox {
+    color: #9E7A7A;
+}
+
+.sectionServices .ObedienceBehaviordesAbout {
+    color: #9E7A7A;
+    line-height: 1.6em;
+    font-size: 18px;
+}
+
+.sectionServices .ObedienceBehaviorborder-box {
+    padding: 15px 15px 25px;
+    margin: 40px auto 0;
+    text-align: center;
+    border-radius: 5px;
+    background: #FEDFE1;
+    border: 1px solid black;
+    position: relative;
+    min-height: 580px;
+    max-height: auto;
+
+
+    transition: all 0.3s ease-in-out;
+    box-shadow:10px 10px 20px grey;
+}
+.ObedienceDuration{
+    color: #9E7A7A;
+}
+.ObediencePrice{
+    color: #9E7A7A;
+}
+.BehaviorDuration{
+    color: #9E7A7A;
+}
+.BehaviorPrice{
+    color: #9E7A7A;
+}
+
+/* CSS for Basic Obedience & Behavior Modification Button */
+.buttonObedienceBehavior {
+    background-color: #9E7A7A;
+    border: 0 solid #000000;
+    box-sizing: border-box;
+    align-items: center;
+    color: #FEDFE1;
+    display: flex;
+    font-size: 20px;
+    font-weight: 700;
+    justify-content: center;
+    line-height: 1.75rem;
+    padding: .9rem 1.65rem;
+    position: relative;
+    text-align: center;
+    text-decoration: none #000000 solid;
+    text-decoration-thickness: auto;
+    width: 100%;
+    max-width: 300px;
+    cursor: pointer;
+    transform: rotate(-2deg);
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    margin-top: 25px;
+}
+
+.buttonObedienceBehaviorfocus {
+    outline: 0;
+}
+
+.buttonObedienceBehavior:after {
+    content: '';
+    position: absolute;
+    border: 1px solid #000000;
+    bottom: 4px;
+    left: 4px;
+    width: calc(100% - 1px);
+    height: calc(100% - 1px);
+}
+
+.buttonObedienceBehavior:hover:after {
+    bottom: 5px;
+    left: 10px;
+}
+
+
+
+/* Puppy Socialization & Board Train Boxes */
+.sectionServices .PuppyBoardborder-box .box-icon {
+    width: 80px;
+    height: 80px;
+    line-height: 80px;
+    border-radius: 50%;
+    background: #fcc2c2;
+    color: white;
+    margin: -48px auto 20px;
+    text-align: center;
+}
+
+.sectionServices .PuppyBoardtitleBox {
+    color: #FEDFE1;
+}
+
+.sectionServices .PuppyBoarddesAbout {
+    color: #FEDFE1;
+    line-height: 1.6em;
+    font-size: 18px;
+}
+
+.sectionServices .PuppyBoardborder-box {
+    padding: 15px 15px 25px;
+    margin: 40px auto 0;
+    text-align: center;
+    border-radius: 5px;
+    background: #9E7A7A;
+    border: 1px solid #000000;
+    position: relative;
+    min-height: 580px;
+    max-height: auto;
+    transition: all 0.3s ease-in-out;
+    box-shadow:10px 10px 20px grey;
+}
+.SocializationDuration
+{
+    color: #FEDFE1;
+}
+.SocializationPrice{
+    color: #FEDFE1;
+}
+.BoardTrainDuration{
+    color: #FEDFE1;
+}
+.BoardTrainPrice{
+    color: #FEDFE1;
+}
+
+/* CSS for Puppy Socialization & Board Train Button */
+.buttonPuppyBoard {
+    background-color: #FEDFE1;
+    border: 0 solid #000000;
+    box-sizing: border-box;
+    align-items: center;
+    color: #9E7A7A;
+    display: flex;
+    font-size: 20px;
+    font-weight: 700;
+    justify-content: center;
+    line-height: 1.75rem;
+    padding: .9rem 1.65rem;
+    position: relative;
+    text-align: center;
+    text-decoration: none #000000 solid;
+    text-decoration-thickness: auto;
+    width: 100%;
+    max-width: 300px;
+    cursor: pointer;
+    transform: rotate(-2deg);
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    margin-top: 25px;
+}
+
+.buttonPuppyBoardfocus {
+    outline: 0;
+}
+
+.buttonPuppyBoard:after {
+    content: '';
+    position: absolute;
+    border: 1px solid #000000;
+    bottom: 4px;
+    left: 4px;
+    width: calc(100% - 1px);
+    height: calc(100% - 1px);
+}
+
+.buttonPuppyBoard:hover:after {
+    bottom: 5px;
+    left: 10px;
+}
+
+@media only screen and (max-width:767px){
+    .secBanner .secBannerImage .secBannerTextContent .secBannerContentCenter .titleBanner {
+        font-size:40px;
+        line-height:1.6rem;
+        margin-top:30px;
+        color:#a37070;
+    }
+}

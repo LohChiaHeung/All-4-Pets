@@ -1,0 +1,388 @@
+/* Import Google Fonts: Single Day */
+@import url('https://fonts.googleapis.com/css2?family=Single+Day&display=swap');
+
+* {
+    scroll-behavior: smooth;
+    font-family: 'Single Day', cursive;
+}
+
+body {
+    min-height: 100%;
+    height: 100%;
+}
+
+/* Navigation Bar */
+.secNavBar {
+    font-family: 'Single Day', cursive;
+    padding: 0;
+    z-index: 100;
+}
+
+.secNavBar .navigationBarInnerContent {
+    /* position: fixed; */
+    display: flex;
+    background-color: #FEDFE1;
+    width: 100%;
+    height: 80px;
+    z-index: 100;
+}
+
+.secNavBar .navigationBarInnerContent .nav_tab {
+    flex: 0 1 100%;
+    display: flex;
+    justify-content: flex-start;
+    padding-left: 15px;
+    padding-right: 65px;
+    /* flex-wrap: wrap; */
+    text-align: center;
+}
+
+.secNavBar .navigationBarInnerContent .Logo_All4Pet {
+    flex: 0 1 15%;
+    overflow: hidden;
+    position: relative;
+    margin-left: 5px;
+}
+
+.secNavBar .navigationBarInnerContent .Logo_All4Pet img {
+    position: absolute;
+    left: 0px;
+    width: 180px;
+    height: 100%;
+    object-fit: contain;
+    padding: 5px;
+}
+
+.secNavBar .navigationBarInnerContent .nav_tab .nav_item {
+    align-self: center;
+    color: white;
+    text-decoration: none;
+    text-transform: capitalize;
+    position: relative;
+    margin: 15px;
+    padding: 10px;
+}
+
+.secNavBar .navigationBarInnerContent .nav_tab .nav_item:nth-child(3):hover .nav_dropdownContent {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    background-color: rgb(251, 243, 243);
+    padding: 6px;
+}
+
+.secNavBar .navigationBarInnerContent .nav_tab .nav_dropdownContent .nav_dropdownContentList {
+    text-decoration: none;
+    color: #666;
+    font-size: 16px;
+    padding: 10px;
+}
+
+.secNavBar .navigationBarInnerContent .nav_tab .nav_dropdownContent .nav_dropdownContentList:hover {
+    background-color: #FEDFE1;
+}
+
+
+.secNavBar .navigationBarInnerContent .nav_tab .nav_item .nav_dropdownContent {
+    display: none;
+}
+
+
+.secNavBar .navigationBarInnerContent .nav_tab .nav_item .navBarLinkClass {
+    color: #666;
+    text-decoration: none;
+    font-size: 17px;
+}
+
+.secNavBar .navigationBarInnerContent .nav_tab .nav_item:hover {
+    color: #9E7A7A;
+    background-color: rgb(255, 245, 245);
+    border-radius: 5px;
+    box-shadow: -1px 1px 5px #d9d9d9, -1px 1px 5px #fff;
+}
+
+.secNavBar .navigationBarInnerContent .nav_login {
+    flex: 0 1 25%;
+    display: flex;
+    justify-content: flex-start;
+    padding-left: 15px;
+    /* flex-wrap: wrap; */
+    text-align: center;
+}
+
+.secNavBar .navigationBarInnerContent .nav_login .nav_item {
+    align-self: center;
+    color: white;
+    text-decoration: none;
+    text-transform: capitalize;
+    position: relative;
+    margin: 15px;
+    padding: 10px;
+}
+
+.secNavBar .navigationBarInnerContent .nav_login .nav_item .navBarLinkClass {
+    color: #666;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+.secNavBar .navigationBarInnerContent .nav_login .nav_item:hover {
+    color: #9E7A7A;
+    background-color: rgb(255, 245, 245);
+    border-radius: 5px;
+    box-shadow: -1px 1px 5px #d9d9d9, -1px 1px 5px #fff;
+}
+
+.nav_username {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#navUserName {
+    color: #666;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+.navBarUserName {
+    color: #666;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+#logoutLink {
+    color: #666;
+    text-decoration: none;
+    font-size: 18px;
+    padding: 12px;
+}
+
+#logoutLink:hover {
+    color: #9E7A7A;
+    background-color: rgb(255, 245, 245);
+    border-radius: 5px;
+    box-shadow: -1px 1px 5px #d9d9d9, -1px 1px 5px #fff;
+}
+
+.falogOutColor {
+    color: #666;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+/* Navigation Bar (Mobile Version) */
+.secNavBarMobileVersion {
+    display: none;
+}
+
+.secNavBarMobileVersion .nav_tab {
+    background-color: #FEDFE1;
+    height: 100%;
+    position: fixed;
+    z-index: 100;
+    top: 0;
+    left: 0;
+    overflow-x: hidden;
+    padding-top: 20px;
+    width: 100%;
+    text-align: center;
+    border: 1px #333 solid;
+    display: none;
+}
+
+.secNavBarMobileVersion .nav_tab .dropdown {
+    padding: 20px;
+
+}
+
+.secNavBarMobileVersion .nav_tab .nav_item .navBarLinkClass {
+    text-decoration: none;
+    color: #666;
+    font-size: 24px;
+    padding: 10px;
+}
+
+.secNavBarMobileVersion .nav_tab .nav_dropdownContent .nav_dropdownContentList {
+    text-decoration: none;
+    color: #666;
+    font-size: 16px;
+    padding: 10px;
+}
+
+.secNavBarMobileVersion .nav_dropdownContent .nav_dropdownContentList {
+    display: block;
+}
+
+.secNavBarMobileVersion .nav_tab .nav_item .nav_dropdownContent {
+    display: none;
+}
+
+.secNavBarMobileVersion .nav_tab .nav_item:nth-child(4):hover .nav_dropdownContent {
+    display: block;
+    border-radius: 5px;
+}
+
+.secNavBarMobileVersion .nav_tab .nav_item:nth-child(4) .nav_dropdownContent .nav_dropdownContentList:hover {
+    color: #f29797;
+}
+
+.secNavBarMobileVersion .mobileVersion_Logo {
+    width: 50px;
+    height: 50px;
+}
+
+.secNavBarMobileVersion .nav_tab .nav_item:hover {
+    background-color: rgb(255, 245, 245);
+    border-radius: 5px;
+    box-shadow: -1px 1px 5px #d9d9d9, -1px 1px 5px #fff;
+}
+
+.secNavBarMobileVersion .nav_tab .nav_item:hover .navBarLinkClass {
+    color: #804747;
+    font-weight: bold;
+}
+
+.secNavBarMobileVersion .navBarDisplayFlex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #FEDFE1;
+}
+
+.secNavBarMobileVersion .hamburgerMenuSection {
+    flex-basis: 45%;
+    padding-left: 20px;
+}
+
+.secNavBarMobileVersion .hamburgerMenuSection .designForMenuButton {
+    border: 1px #9E7A7A solid;
+    padding: 8px;
+    border-radius: 10%;
+}
+
+.secNavBarMobileVersion .hamburgerMenuSection .designForMenuButton:hover {
+    cursor: pointer;
+    color: #9E7A7A;
+    border-color: #fcabb0;
+}
+
+.secNavBarMobileVersion .logoSecion {
+    flex-basis: 50%;
+}
+
+.secNavBarMobileVersion .nav_tab .closebtn {
+    text-decoration: none;
+    font-size: 28px;
+    color: #333;
+    border: 1px #999 solid;
+    padding: 10px;
+    border-radius: 50px;
+}
+
+.secNavBarMobileVersion .nav_tab .closebtn:hover {
+    color: #804747;
+    font-weight: bold;
+    background-color: white;
+    border-color: #333;
+}
+
+/* Footer Class (CSS) */
+.secFooter {
+    padding: 0px;
+    background-color: rgb(171, 136, 136);
+    width: 100%;
+    height: 80px;
+    /* bottom: 0; */
+    position: absolute;
+}
+
+.secFooter .footerSection {
+    color: #333;
+}
+
+.secFooter .horizontalLineWhiteColor {
+    border: 1.5px solid whitesmoke;
+}
+
+.secFooter .footerSection .copyRightCompany {
+    color: whitesmoke;
+    font-size: 18px;
+}
+
+.secFooter .footerFlexContent {
+    display: flex;
+    justify-content: space-between;
+}
+
+.secFooter .footerFlexContent .socialMediaPlugin {
+    display: flex;
+    align-items: center;
+}
+
+.secFooter .footerFlexContent .followUsFooter {
+    color: whitesmoke;
+    font-size: 18px;
+}
+
+.secFooter .footerFlexContent .socialMediaPlugin .logoSocialMedia {
+    width: 40px;
+    height: 35px;
+}
+
+.secFooter .footerFlexContent .socialMediaPlugin a {
+    text-decoration: none;
+}
+
+.hrefName {
+    text-decoration: underline;
+    color: #666;
+    cursor: pointer;
+    transition: all 0.2s ease-in;
+}
+
+.hrefName:hover {
+    color:#f29797;
+    transform: translateY(2px);
+}
+
+/* Mobile Version CSS */
+@media only screen and (max-width:993px) {
+    .secNavBar {
+        display: none;
+    }
+
+    .secNavBarMobileVersion {
+        display: block;
+    }
+
+    .secFooter .footerSection .copyRightCompany {
+        font-size: 16px;
+    }
+
+    .secFooter .footerFlexContent {
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+
+    .secFooter .footerFlexContent .followUsFooter {
+        color: whitesmoke;
+        font-size: 14px;
+    }
+
+    .secFooter {
+        height: 120px;
+    }
+
+    #navUserName {
+        font-size: 24px;
+    }
+    
+    .navBarUserName {
+        font-size: 24px;
+    }
+    
+    #logoutLink {
+        font-size: 24px;
+    }
+}  
