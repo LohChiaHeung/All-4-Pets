@@ -1,0 +1,759 @@
+/* HP - Banner and Its Text */
+.secBanner {
+    padding: 0px;
+    position: relative;
+    min-width: 100%;
+}
+
+.secBanner .secBannerImage .hp_banner_image {
+    min-width: 100%;
+}
+
+.secBanner .secBannerImage .secBannerTextContent {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    max-width: 100%;
+    transform: translate(-50%, -50%);
+    z-index: 3;
+    padding: 50px;
+    text-align: center;
+}
+
+.secBanner .secBannerImage .secBannerTextContent .secBannerContentCenter .titleBanner {
+    font-size: 50px;
+    color: #9E7A7A;
+    line-height: 1.6em;
+    text-shadow: 2px 2px 10px lightgrey;
+}
+
+.secBanner .secBannerImage .secBannerTextContent .secBannerContentCenter .subTitleBanner {
+    font-size: 30px;
+    color: #fea1a1;
+    line-height: 1.6em;
+}
+
+.secBanner .secBannerImage .secBannerTextContent .contentBanner_hp {
+    font-size: 18px;
+    line-height: 1.6em;
+    color: #555;
+    width: 40%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.secBannerContentCenter {
+    text-align: center;
+    margin: 0 auto;
+    align-items: center;
+}
+
+
+/* CSS for Button */
+
+.divAlignButtonCenter {
+    text-align: center;
+    display: flex;
+    margin: 0 auto;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.buttonExploreMore {
+    background-color: #f1d1d1;
+    border: 0 solid #E5E7EB;
+    box-sizing: border-box;
+    align-items: center;
+    color: #333;
+    display: flex;
+    font-size: 20px;
+    font-weight: 700;
+    justify-content: center;
+    line-height: 1.75rem;
+    padding: .9rem 1.65rem;
+    position: relative;
+    text-align: center;
+    text-decoration: none #333 solid;
+    text-decoration-thickness: auto;
+    width: 100%;
+    max-width: 300px;
+    cursor: pointer;
+    transform: rotate(-2deg);
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    margin-top: 25px;
+}
+
+.buttonExploreMorefocus {
+    outline: 0;
+}
+
+.buttonExploreMore:after {
+    content: '';
+    position: absolute;
+    border: 1px solid #333;
+    bottom: 4px;
+    left: 4px;
+    width: calc(100% - 1px);
+    height: calc(100% - 1px);
+}
+
+.buttonExploreMore:hover:after {
+    bottom: 5px;
+    left: 10px;
+}
+
+
+/* HP - About Us Section */
+.sectionAboutUs .titleAboutUs {
+    color: #9E7A7A;
+    padding-top: 20px;
+    font-size: 48px;
+}
+
+.sectionAboutUs .titleDisplayFlex {
+    display: flex;
+    align-items: center;
+}
+
+.sectionAboutUs .titleSubImage {
+    height: 50px;
+    margin-top: 10px;
+    padding-left: 10px;
+}
+
+.sectionAboutUs .imgAboutUs {
+    transition: all 0.3s ease-in;
+}
+
+.sectionAboutUs .imgAboutUs:hover {
+    transform: scale(1.02);
+}
+
+.sectionAboutUs .desDescription {
+    font-size: 18px;
+    line-height: 1.6rem;
+    color: #666;
+}
+
+.sectionAboutUs .aboutUsTextSec {
+    padding-top: 80px;
+}
+
+/* HP- Why Choose Us Section */
+.sectionWhyChooseUs {
+    padding: 50px 50px 50px 50px;
+}
+
+.sectionWhyChooseUs .titleWhyChoosingUs {
+    color: #9E7A7A;
+    padding-top: 20px;
+    font-size: 48px;
+}
+
+.sectionWhyChooseUs .titleDisplayFlex {
+    display: flex;
+    align-items: center;
+}
+
+.sectionWhyChooseUs .titleSubImage {
+    height: 50px;
+    margin-top: 10px;
+    padding-left: 10px;
+}
+
+.sectionWhyChooseUs .whyChooseUsContent .subTitleForChoosingUs {
+    font-size: 24px;
+    color: #a37272;
+    line-height: 1.6em;
+    text-shadow: 1px 1px 1px lightgrey;
+    font-weight: 500;
+}
+
+.sectionWhyChooseUs .whyChooseUsContent .desWhyChooseUs {
+    font-size: 18px;
+    line-height: 1.6rem;
+    color: #666;
+}
+
+.sectionWhyChooseUs .paddingTopSectionWhyUs {
+    padding-top: 100px;
+}
+
+.sectionWhyChooseUs .imgWhyUs {
+    width: 75px;
+}
+
+.sectionWhyChooseUs .order-md-6 {
+    order: 6 !important;
+}
+
+/* HP- Product Section*/
+
+/* Slider CSS (Import From Slick.js Library)*/
+
+/* Arrows */
+.slick-prev,
+.slick-next {
+    font-size: 0;
+    line-height: 0;
+    position: absolute;
+    top: 50%;
+    display: block;
+    width: 20px;
+    height: 20px;
+    margin-top: -10px;
+    padding: 0;
+    cursor: pointer;
+    color: transparent;
+    border: none;
+    outline: none;
+    background: transparent;
+}
+
+.slick-prev:hover,
+.slick-prev:focus,
+.slick-next:hover,
+.slick-next:focus {
+    color: transparent;
+    outline: none;
+    background: transparent;
+}
+
+.slick-prev:hover:before,
+.slick-prev:focus:before,
+.slick-next:hover:before,
+.slick-next:focus:before {
+    opacity: 1;
+}
+
+.slick-prev.slick-disabled:before,
+.slick-next.slick-disabled:before {
+    opacity: .25;
+}
+
+.slick-prev:before,
+.slick-next:before {
+    font-family: 'slick';
+    font-size: 20px;
+    line-height: 1;
+    opacity: .75;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.slick-prev {
+    left: -25px;
+}
+
+[dir='rtl'] .slick-prev {
+    right: -25px;
+    left: auto;
+}
+
+.slick-prev:before {
+    content: url("icons8-arrow-left-25.png");
+}
+
+[dir='rtl'] .slick-prev:before {
+    content: url("icons8-arrow-left-25.png");
+}
+
+.slick-next {
+    right: -25px;
+}
+
+[dir='rtl'] .slick-next {
+    right: auto;
+    left: -25px;
+}
+
+.slick-next:before {
+    content: url("icons8-arrow-right-25.png");
+}
+
+[dir='rtl'] .slick-next:before {
+    content: url("icons8-arrow-right-25.png");
+}
+
+/* Dots */
+.slick-slider {
+    margin-bottom: 30px;
+}
+
+.slick-dots {
+    position: absolute;
+    bottom: -45px;
+    display: block;
+    width: 100%;
+    padding: 0;
+    list-style: none;
+    text-align: center;
+}
+
+.slick-dots li {
+    position: relative;
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    margin: 0 5px;
+    padding: 0;
+    cursor: pointer;
+}
+
+.slick-dots li button {
+    font-size: 0;
+    line-height: 0;
+    display: block;
+    width: 20px;
+    height: 20px;
+    padding: 5px;
+    cursor: pointer;
+    color: transparent;
+    border: 0;
+    outline: none;
+    background: transparent;
+}
+
+.slick-dots li button:hover,
+.slick-dots li button:focus {
+    outline: none;
+}
+
+.slick-dots li button:hover:before,
+.slick-dots li button:focus:before {
+    opacity: 1;
+}
+
+.slick-dots li button:before {
+    font-family: 'slick';
+    font-size: 6px;
+    line-height: 20px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 20px;
+    height: 20px;
+    content: url("images/icons8-arrow-right-25.png");
+    text-align: center;
+    opacity: .25;
+    color: black;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.slick-dots li.slick-active button:before {
+    opacity: .75;
+    color: black;
+}
+
+/* Title CSS for Product */
+.secOurProduct .imgProduct {
+    width: 380px;
+    height: 380px;
+    margin: 0 auto;
+}
+
+.secOurProduct {
+    padding: 50px 50px 50px 50px;
+}
+
+.secOurProduct .titleDisplayFlex {
+    display: flex;
+    align-items: center;
+}
+
+.secOurProduct .titleSubImage {
+    height: 50px;
+    margin-top: 10px;
+    padding-left: 10px;
+}
+
+.secOurProduct .titleProducts {
+    color: #9E7A7A;
+    padding-top: 20px;
+    font-size: 48px;
+}
+
+/* HP - Our Services Section */
+.sectionServices .titleDisplayFlex {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.sectionServices .titleSubImage {
+    height: 50px;
+    margin-top: 10px;
+    padding-left: 10px;
+}
+
+.sectionServices .titleServices {
+    color: #9E7A7A;
+    padding-top: 20px;
+    font-size: 48px;
+}
+
+.sectionServices .titleBoxServices {
+    color: #f29797;
+}
+
+.sectionServices .desAbout {
+    color: #333;
+    line-height: 1.6em;
+    font-size: 18px;
+}
+
+.sectionServices .border-box {
+    padding: 15px 15px 25px;
+    margin: 40px auto 0;
+    text-align: center;
+    border-radius: 5px;
+    background: transparent;
+    border: 1px solid #9E7A7A;
+    position: relative;
+    min-height: 340px;
+    max-height: auto;
+    transition: all 0.4s ease-in-out;
+    box-shadow: 3px 4px 10px lightgrey;
+}
+
+.sectionServices .border-box:hover {
+    transform: scale(1.05);
+    background-color: #ae9c9c;
+    border-color: white;
+}
+
+.sectionServices .border-box:hover .desAbout {
+    color: whitesmoke;
+}
+
+.sectionServices .border-box:hover .titleBoxServices {
+    color: whitesmoke;
+}
+
+.sectionServices .border-box .box-icon {
+    width: 80px;
+    height: 80px;
+    line-height: 80px;
+    border-radius: 50%;
+    background: #fcc2c2;
+    color: white;
+    margin: -48px auto 20px;
+    text-align: center;
+}
+
+.sectionServices .border-box .box-icon .fafaColor {
+    color: black;
+    font-size: 24px;
+    text-align: center;
+    padding-left: 2px;
+}
+
+.sectionServices .border-box .box-icon .imgAlignCenter {
+    padding-right: 5px;
+}
+
+/* .sectionServices .col-md-4:nth-child(5) {
+    margin:0 auto;
+}
+
+.sectionServices .col-md-4:nth-child(6) {
+    margin:0 auto;
+} */
+
+/* .sectionServices .marginToCenter {
+    text-align:center;
+} */
+
+/* HP - User's Feedback Section */
+.feedbackBox {
+    /* border:0.5px rgb(246, 175, 175) solid; */
+    min-width: 100%;
+    height: 250px;
+    padding: 30px;
+    border-radius: 30px;
+    box-shadow: 3px 5px 10px lightgrey;
+    background-color: rgb(252, 194, 194, 0.5);
+}
+
+.bgColorFeedback {
+    background-color: rgb(252, 194, 194, 0.4);
+}
+
+.sectionFeedback .boxFeedback {
+    padding: 30px;
+    background-color:#fec4c4;
+    border-radius:50px;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+    transition: 500ms linear; 
+    text-align:center;
+    height:370px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* border:1px solid #999; */
+}
+
+.sectionFeedback .boxFeedback:hover {
+    transform:scale(1.03);
+}
+
+.sectionFeedback #feedbackBox2 .imgProfilePic {
+    content: url("userProfile1.png");
+}
+
+.sectionFeedback #feedbackBox2 {
+    background-color:#c5b0b0;
+}
+
+.sectionFeedback #feedbackBox3 {
+    background-color:#fde5e5;
+}
+
+.sectionFeedback #feedbackBox3 .imgProfilePic {
+    content: url("userProfile3.png");
+}
+
+.sectionFeedback .textFont {
+    font-size:18px;
+    color:#333;
+}
+
+.sectionFeedback .titleFont {
+    font-size:28px;
+    font-weight:500;
+}
+
+.sectionFeedback .titleServices {
+    color: #9E7A7A;
+    padding-top: 20px;
+    font-size: 48px;
+}
+
+.sectionFeedback .titleDisplayFlex {
+    display: flex;
+    align-items: center;
+    float: right;
+}
+
+.sectionFeedback .titleSubImage {
+    height: 50px;
+    margin-top: 10px;
+    padding-left: 10px;
+}
+
+.sectionFeedback .imgProfilePic {
+    width:100px;
+    height:100px;
+}
+
+/* HP - Section Visit Us */
+.sectionVisitUs .titleDisplayFlex {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.sectionVisitUs .titleVisit {
+    color: #9E7A7A;
+    padding-top: 20px;
+    font-size: 48px;
+}
+
+.sectionVisitUs .titleSubImage {
+    height: 50px;
+    margin-top: 10px;
+    padding-left: 10px;
+}
+
+.sectionVisitUs .contact_map iframe {
+    display: block;
+}
+
+
+/* Mobile Version CSS */
+
+@media (max-width: 768px) {
+
+    /* HP - Banner */
+    /* .buttonExploreMore {
+        /* padding: 12px 2px;
+        font-size: 16px; 
+    } */
+
+    .secBanner .secBannerImage {
+        position: relative;
+    }
+
+    .secBanner .secBannerImage .hp_banner_image {
+        /* content: url("hp_banner1600x1000_latest.png"); */
+        content: url("hp_banner_1800px.png");
+    }
+
+    .secBanner .secBannerImage .secBannerTextContent {
+        top: 50%;
+        left: 50%;
+        position: absolute;
+        padding: 20px;
+        /* background-color:rgb(169, 169, 169,0.3); */
+    }
+
+    .secBanner .secBannerImage .secBannerTextContent .secBannerContentCenter .titleBanner {
+        font-size: 36px;
+        text-shadow: 1px 1px 1px white;
+        color: #a37272;
+    }
+
+    .secBanner .secBannerImage .secBannerTextContent .secBannerContentCenter .subTitleBanner {
+        font-size: 18px;
+        color: #ff7979;
+        line-height: 1.6rem;
+    }
+
+    .secBanner .secBannerImage .secBannerTextContent .contentBanner_hp {
+        font-size: 16px;
+        width: 100%;
+        color: #333;
+    }
+
+    .secBanner .divAlignButtonCenter {
+        display: none;
+    }
+
+    /* HP - About Us */
+    .sectionAboutUs .aboutUsTextSec {
+        padding-top: 10px;
+    }
+
+    .sectionAboutUs .titleAboutUs {
+        font-size: 35px;
+    }
+
+    .sectionAboutUs .titleSubImage {
+        height: 35px;
+    }
+
+    /* HP - Why Choosing Us */
+    .sectionWhyChooseUs .titleDisplayFlex {
+        display: block;
+        align-items: center;
+        text-align: center;
+    }
+
+    .sectionWhyChooseUs .titleWhyChoosingUs {
+        font-size: 35px;
+    }
+
+    .sectionWhyChooseUs .titleDisplayFlex .titleSubImage {
+        display: none;
+    }
+
+    .sectionWhyChooseUs .whyChooseUsContent .whyUsBox {
+        text-align: center;
+    }
+
+    .sectionServices .border-box:hover {
+        transform: scale(1.04);
+    }
+
+    .sectionServices .titleDisplayFlex {
+        text-align: center;
+        justify-content: center;
+    }
+
+    .sectionServices .titleDisplayFlex .titleServices {
+        font-size: 35px;
+    }
+
+    /* HP - Product */
+    .secOurProduct .titleProducts {
+        font-size: 40px;
+        text-align: center;
+    }
+
+    .secOurProduct .titleSubImage {
+        display: none;
+    }
+
+    .secOurProduct .imgProduct {
+        min-width: 100%;
+        height: auto;
+    }
+
+    /* HP - Product */
+    .sectionFeedback .titleServices {
+        font-size: 35px;
+        text-align: center;
+    }
+
+    .sectionFeedback .titleDisplayFlex {
+        float: unset;
+        justify-content: center;
+    }
+
+    /* .sectionFeedback .titleSubImage {
+        display: none;
+    } */
+
+    .sectionFeedback .imgProduct {
+        min-width: 100%;
+        height: auto;
+    }
+
+    /* HP - Feedback Box */
+    .feedbackBox {
+        padding: 0px;
+        width: 100%;
+        height: 185px;
+        margin-bottom: 10px;
+    }
+
+    /* HP - Visit Us Section */
+
+    /* .sectionVisitUs .titleDisplayFlex {
+        display: block;
+        align-items: center;
+        text-align: center;
+    } */
+
+    .sectionVisitUs .titleVisit {
+        font-size: 35px;
+    }
+}
+
+@media only screen and (max-width:993px) {
+    .secNavBar {
+        display: none;
+    }
+
+    .secNavBarMobileVersion {
+        display: block;
+    }
+
+    .secFooter .footerSection .copyRightCompany {
+        font-size: 16px;
+    }
+
+    .secFooter .footerFlexContent {
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+
+    .secFooter .footerFlexContent .followUsFooter {
+        color: whitesmoke;
+        font-size: 14px;
+    }
+
+    .secFooter {
+        height: 120px;
+    }
+
+    .sectionServices .border-box:hover {
+        transform: scale(1.03);
+    }
+
+}

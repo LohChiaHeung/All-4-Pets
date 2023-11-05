@@ -1,0 +1,104 @@
+.titleAboutUs_about {
+    font-size: 48px;
+    color: #9E7A7A;
+    text-shadow: 1px 1px 1px #fea1a1;
+}
+
+.textDescription {
+    font-size: 18px;
+    line-height: 1.6em;
+    color: #666;
+}
+
+.subSlogan {
+    color: #fea1a1;
+    font-size: 24px;
+}
+
+.break-down {
+    border-top: 2px solid #a28f8f;
+    width: 80px;
+}
+
+.imgEffect {
+    transition: all 0.3s ease-in-out;
+}
+
+.imgEffect:hover {
+    cursor: pointer;
+    transform: scale(1.02);
+}
+
+.flexBoxContainer {
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    padding:20px;
+}
+
+.flexBoxContainer .textDescription {
+    color:whitesmoke;
+    font-size:22px;
+    line-height:1.8em;
+    background-color:rgb(158, 122, 122,0.6);
+    padding:30px;
+    border-radius:5px;
+    box-shadow:5px 5px 10px #d9d9d9, -5px -5px 10px #fff;
+    transition:all 0.3s ease-in;
+}
+
+.flexBoxContainer .textDescription:hover {
+    background-color:rgba(255, 200, 200, 0.6); 
+    color:rgb(132, 123, 123);
+    transform:scale(1.03);
+}
+
+.titleSloganMission {
+    font-weight:800;
+    text-align:center;
+}
+
+.flexBoxContainer2 {
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.flexBoxContainer2 .textDescription {
+    color:rgb(132, 123, 123);
+    font-size:22px;
+    line-height:1.6em;
+    background-color:rgba(255, 200, 200, 0.6);
+    padding:50px;
+    border-radius:5px;
+    box-shadow:-5px 5px 10px #d9d9d9, -5px -5px 10px #fff;
+    transition: all 0.4s ease-in;
+}
+
+.flexBoxContainer2 .textDescription:hover {
+    background-color:rgb(158, 122, 122,0.6);
+    color:whitesmoke;
+    transform:scale(1.03) ;
+}
+
+
+@media only screen and (max-width:993px) {
+    #mobileMission {
+        content:url("mobileVersion_Mission.png")
+    }
+
+    #mobileVision {
+        content:url("mobileVersion_Vision.png")
+    }
+
+    .flexBoxContainer .textDescription {
+        padding:15px;
+        font-size:16px;
+    }
+
+    .flexBoxContainer2 .textDescription {
+        padding:15px;
+        font-size:18px;
+    }
+}
+

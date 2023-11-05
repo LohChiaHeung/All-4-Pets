@@ -1,0 +1,888 @@
+/* Banner and Its Text */
+.secBanner {
+    padding: 0px;
+    position: relative;
+    min-width: 100%;
+}
+
+.secBanner .secBannerImage .hp_banner_image {
+    min-width: 100%;
+}
+
+.secBanner .secBannerImage .secBannerTextContent {
+    position: absolute;
+    top: 13%;
+    left: 50%;
+    min-width: 100%;
+    max-width: 100%;
+    transform: translate(-50%, -50%);
+    z-index: 3;
+    padding: 50px;
+    text-align: center;
+}
+
+.secBanner .secBannerImage .secBannerTextContent .secBannerContentCenter .titleBanner {
+    font-size: 100px;
+    color: #9E7A7A;
+    line-height: 1.6em;
+    text-shadow: 2px 2px 10px lightgrey;
+}
+
+.secBannerContentCenter {
+    text-align: center;
+    margin: 0 auto;
+    align-items: center;
+}
+
+/* What is PetBoarding */
+.sectionWhatIsPetAdoption {
+    padding: 50px 50px 50px 50px;
+}
+
+.sectionWhatIsPetAdoption .titleWhatIsPetAdoption {
+    color: #9E7A7A;
+    padding-top: 20px;
+    font-size: 48px;
+    text-align:center;
+}
+
+.sectionWhatIsPetAdoption .WhatIsPetAdoptiontitleDisplayFlex {
+    display: flex;
+    align-items: center;
+}
+
+.sectionWhatIsPetAdoption .WhatIsPetAdoptiontitleSubImage {
+    height: 50px;
+    margin-top: 10px;
+    padding-left: 10px;
+}
+
+/* What is PetBoarding Boxes */
+.sectionServicesWhatIsPetAdoption .WhatIsPetAdoptionborder-box {
+    padding: 15px 15px 25px;
+    margin: 40px auto 0;
+    text-align: center;
+    border-radius: 5px;
+    background: white;
+    border: 1px solid white;
+    position: relative;
+    min-height: 100px;
+    max-height: 550px;
+    transition: all 0.3s ease-in-out;
+    box-shadow:10px 10px 20px rgb(255, 255, 255);
+}
+
+.whatispetAdoption_img{
+    min-width: 100%;
+}
+
+
+.whatispetAdoptionTextContent {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    min-width: 50%;
+    max-width: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 3;
+    padding: 50px;
+    text-align: center;
+}
+
+.whatispetAdoptionContentCenter .titleBanner {
+    font-size:25px;
+    color: #9E7A7A;
+    line-height: 1.6em;
+    text-shadow: 2px 2px 10px white;
+}
+
+.whatispetAdoptionContentCenter {
+    text-align: center;
+    margin: 0 auto;
+    align-items: center;
+}
+
+/* Our Serives Provided in Pet Grooming */
+.sectionServicessProvidedPG .sProvidedPGborder-box {
+    padding: 15px 15px 25px;
+    margin: 40px auto 0;
+    text-align: center;
+    border-radius: 5px;
+    background: white;
+    border: 1px solid white;
+    position: relative;
+    min-height: 100px;
+    max-height: 550px;
+    transition: all 0.3s ease-in-out;
+    box-shadow:10px 10px 20px rgb(255, 255, 255);
+}
+
+.sProvidedPG_img{
+    min-width: 50%;
+    padding-right: 50%;
+}
+
+
+.sProvidedPGTextContent {
+    position: absolute;
+    top: 50%;
+    left: 58%;
+    min-width: 85%;
+    transform: translate(-50%, -50%);
+    z-index: 3;
+    padding: 50px;
+    text-align: center;
+}
+
+.sProvidedPGContentCenter .titleBanner {
+    font-size:30px;
+    color: #9E7A7A;
+    line-height: 1.6em;
+    text-shadow: 2px 2px 10px white;
+}
+
+.sProvidedPGContentCenter {
+    text-align: center;
+    margin: 0 auto;
+    align-items: center;
+}
+
+/* Our Serives Provided in Pet Grooming BrownBox */
+.sectionServicessProvidedPG .BrowntitleBox {
+    color: #FEDFE1;
+}
+
+.sectionServicessProvidedPG .BrowndesAbout {
+    color: #FEDFE1;
+    line-height: 1.6em;
+    font-size: 20px;
+}
+
+.sectionServicessProvidedPG .Brownborder-box {
+    padding: 15px 15px 25px;
+    margin: 40px auto 0;
+    text-align: center;
+    border-radius: 5px;
+    background: #9E7A7A;
+    border: 1px solid #000000;
+    position: relative;
+    min-height: 610px;
+    max-height: auto;
+    transition: all 0.3s ease-in-out;
+    box-shadow:10px 10px 20px lightgrey;
+}
+
+/* Our Serives Provided in Pet Grooming PinkBox*/
+.sectionServicessProvidedPG .PinktitleBox {
+    color: #9E7A7A;
+}
+
+.sectionServicessProvidedPG .PinkdesAbout {
+    color: #9E7A7A;
+    line-height: 1.6em;
+    font-size: 20px;
+}
+
+.sectionServicessProvidedPG .Pinkborder-box {
+    padding: 15px 15px 25px;
+    margin: 40px auto 0;
+    text-align: center;
+    border-radius: 5px;
+    background: #FEDFE1;
+    border: 1px solid #000000;
+    position: relative;
+    min-height: 610px;
+    max-height: auto;
+    transition: all 0.3s ease-in-out;
+    box-shadow:10px 10px 20px lightgrey;
+}
+
+/* HP - Our Services Section */
+.sectionServices .titleDisplayFlex {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.sectionServices .titleSubImage {
+    height: 50px;
+    margin-top: 10px;
+    padding-left: 10px;
+}
+
+.sectionServices .titleServices {
+    color: #9E7A7A;
+    padding-top: 20px;
+    font-size: 48px;
+}
+
+.box-textPink{
+    color: #9E7A7A;
+    font-size: 20px;
+}
+
+.box-textBrown{
+    color: #FEDFE1;
+    font-size: 20px;
+}
+
+.sectionServices .desAboutPink {
+    color: #333;
+    line-height: 1em;
+}
+.sectionServices .desAboutBrown {
+    color: #333;
+    line-height: 1em;
+}
+
+.sectionServices .border-boxPink {
+    padding: 15px 15px 25px;
+    margin: 40px auto 0;
+    text-align: center;
+    border-radius: 5px;
+    background: #FEDFE1;
+    border: 1px solid #000000;
+    position: relative;
+    min-height: 361px;
+    max-height: auto;
+    transition: all 0.4s ease-in-out;
+    box-shadow: 3px 4px 10px lightgrey;
+}
+
+.sectionServices .border-boxBrown {
+    padding: 15px 15px 25px;
+    margin: 40px auto 0;
+    text-align: center;
+    border-radius: 5px;
+    background: #9E7A7A;
+    border: 1px solid #000000;
+    position: relative;
+    min-height: 361px;
+    max-height: auto;
+    transition: all 0.4s ease-in-out;
+    box-shadow: 3px 4px 10px lightgrey;
+}
+
+
+
+
+
+/* Pet Grooming Pacakges */
+.sectionServices .titleDisplayFlex {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.sectionServices .titleSubImage {
+    height: 50px;
+    margin-top: 10px;
+    padding-left: 10px;
+}
+
+.sectionServices .titleServices {
+    color: #9E7A7A;
+    padding-top: 20px;
+    font-size: 48px;
+}
+
+
+/* Pet Grooming Pacakges */
+.sectionServices .titleDisplayFlex {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.sectionServices .titleSubImage {
+    height: 50px;
+    margin-top: 10px;
+    padding-left: 10px;
+}
+
+.sectionServices .titleServices {
+    color: #9E7A7A;
+    padding-top: 20px;
+    font-size: 48px;
+}
+
+
+/* CSS for Button */
+
+.divAlignButtonCenter {
+    text-align: center;
+    display: flex;
+    margin: 0 auto;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Standard Suite & Luxury Villa Boxes */
+.sectionServices .StandardLuxurytitleBox {
+    color: #9E7A7A;
+}
+
+.sectionServices .StandardLuxurydesAbout {
+    color: #9E7A7A;
+    line-height: 1em;
+    font-size: 25px;
+}
+
+.sectionServices .StandardLuxuryborder-box {
+    padding: 15px 15px 25px;
+    margin: 40px auto 0;
+    text-align: center;
+    border-radius: 5px;
+    background: #FEDFE1;
+    border: 1px solid black;
+    position: relative;
+    min-height: 610px;
+    max-height: auto;
+
+
+    transition: all 0.3s ease-in-out;
+    box-shadow:10px 10px 20px lightgrey;
+}
+.StandardPrice{
+    color: #9E7A7A;
+}
+.VillaPrice{
+    color: #9E7A7A;
+}
+
+/* CSS for Standard Suite & Luxury Villa Button */
+.buttonStandardLuxury {
+    background-color: #9E7A7A;
+    border: 0 solid #000000;
+    box-sizing: border-box;
+    align-items: center;
+    color: #FEDFE1;
+    display: flex;
+    font-size: 20px;
+    font-weight: 700;
+    justify-content: center;
+    line-height: 1.75rem;
+    padding: .9rem 1.65rem;
+    position: relative;
+    text-align: center;
+    text-decoration: none #000000 solid;
+    text-decoration-thickness: auto;
+    width: 100%;
+    max-width: 300px;
+    cursor: pointer;
+    transform: rotate(-2deg);
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    margin-top: 25px;
+}
+
+.buttonStandardLuxuryfocus {
+    outline: 0;
+}
+
+.buttonStandardLuxury:after {
+    content: '';
+    position: absolute;
+    border: 1px solid #000000;
+    bottom: 4px;
+    left: 4px;
+    width: calc(100% - 1px);
+    height: calc(100% - 1px);
+}
+
+.buttonStandardLuxury:hover:after {
+    bottom: 5px;
+    left: 10px;
+}
+
+
+
+/* Deluxe Suite & Feline Paradise Boxes */
+.sectionServices .DeluxeFelineborder-box .box-icon {
+    width: 80px;
+    height: 80px;
+    line-height: 80px;
+    border-radius: 50%;
+    background: #fcc2c2;
+    color: white;
+    margin: -48px auto 20px;
+    text-align: center;
+}
+
+.sectionServices .DeluxeFelinetitleBox {
+    color: #FEDFE1;
+}
+
+.sectionServices .DeluxeFelinedesAbout {
+    color: #FEDFE1;
+    line-height: 1em;
+    font-size: 25px;
+}
+
+.sectionServices .DeluxeFelineborder-box {
+    padding: 15px 15px 25px;
+    margin: 40px auto 0;
+    text-align: center;
+    border-radius: 5px;
+    background: #9E7A7A;
+    border: 1px solid #000000;
+    position: relative;
+    min-height: 610px;
+    max-height: auto;
+    transition: all 0.3s ease-in-out;
+    box-shadow:10px 10px 20px lightgrey;
+}
+
+.DeluxePrice{
+    color: #FEDFE1;
+}
+.FelineParadisePrice{
+    color: #FEDFE1;
+}
+
+/* CSS for Deluxe Suite & Feline Paradise Button */
+.buttonDeluxeFeline {
+    background-color: #FEDFE1;
+    border: 0 solid #000000;
+    box-sizing: border-box;
+    align-items: center;
+    color: #9E7A7A;
+    display: flex;
+    font-size: 20px;
+    font-weight: 700;
+    justify-content: center;
+    line-height: 1.75rem;
+    padding: .9rem 1.65rem;
+    position: relative;
+    text-align: center;
+    text-decoration: none #000000 solid;
+    text-decoration-thickness: auto;
+    width: 100%;
+    max-width: 300px;
+    cursor: pointer;
+    transform: rotate(-2deg);
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    margin-top: 25px;
+}
+
+.buttonDeluxeFelinefocus {
+    outline: 0;
+}
+
+.buttonDeluxeFeline:after {
+    content: '';
+    position: absolute;
+    border: 1px solid #000000;
+    bottom: 4px;
+    left: 4px;
+    width: calc(100% - 1px);
+    height: calc(100% - 1px);
+}
+
+.buttonDeluxeFeline:hover:after {
+    bottom: 5px;
+    left: 10px;
+}
+
+/*Success Stories*/
+/* Pink Box*/
+.sectionSuccessStories {
+    padding: 50px 50px 50px 50px;
+}
+
+.sectionSuccessStories .titleSuccessStories {
+    color: #9E7A7A;
+    padding-top: 20px;
+    font-size: 48px;
+}
+
+.sectionSuccessStories .SuccessStoriestitleDisplayFlex {
+    display: flex;
+    align-items: center;
+}
+
+.sectionSuccessStories .SuccessStoriestitleSubImage {
+    height: 50px;
+    margin-top: 10px;
+    padding-left: 10px;
+}
+
+/* Success Stories Boxes */
+.sectionServicesSuccessStories .SuccessStoriesborder-box {
+    padding: 15px 15px 25px;
+    margin: 40px auto 0;
+    text-align: center;
+    border-radius: 5px;
+    background: #FEDFE1;
+    border: 1px solid rgb(0, 0, 0);
+    position: relative;
+    min-height: 200px;
+    transition: all 0.3s ease-in-out;
+    box-shadow:10px 10px 20px rgb(255, 255, 255);
+}
+
+.SuccessStoriesTextContent {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    transform: translate(-50%, -50%);
+    z-index: 3;
+    padding: 50px;
+    text-align: center;
+}
+
+.SuccessStoriesContentCenter .titleBanner {
+    font-size:30px;
+    color: #9E7A7A;
+    line-height: 1.6em;
+    text-shadow: 2px 2px 10px lightgrey;
+}
+
+.SuccessStoriesContentCenter {
+    text-align: center;
+    margin: 0 auto;
+    align-items: center;
+}
+
+.SuccessStoriestitleBoxServices{
+    color: #9E7A7A;
+}
+
+.SuccessStoriesdesAbout{
+    color: #9E7A7A;
+    font-size: 20px;
+}
+
+/* Brown Box*/
+.sectionSuccessStories {
+    padding: 50px 50px 50px 50px;
+}
+
+.sectionSuccessStories .titleSuccessStories {
+    color: #9E7A7A;
+    padding-top: 20px;
+    font-size: 48px;
+}
+
+.sectionSuccessStories .SuccessStoriestitleDisplayFlex {
+    display: flex;
+    align-items: center;
+}
+
+.sectionSuccessStories .SuccessStoriestitleSubImage {
+    height: 50px;
+    margin-top: 10px;
+    padding-left: 10px;
+}
+
+/* Success Stories Brown Boxes */
+.sectionServicesSuccessStories .SuccessStoriesborder-boxBrown {
+    padding: 15px 15px 25px;
+    margin: 40px auto 0;
+    text-align: center;
+    border-radius: 5px;
+    background: #9E7A7A;
+    border: 1px solid rgb(0, 0, 0);
+    position: relative;
+    min-height: 200px;
+    max-height: 200px;
+    transition: all 0.3s ease-in-out;
+    box-shadow:10px 10px 20px rgb(255, 255, 255);
+}
+
+.SuccessStoriesTextContentBrown {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    transform: translate(-50%, -50%);
+    z-index: 3;
+    padding: 50px;
+    text-align: center;
+}
+
+.SuccessStoriesContentCenter .titleBanner {
+    font-size:30px;
+    color: #9E7A7A;
+    line-height: 1.6em;
+    text-shadow: 2px 2px 10px lightgrey;
+}
+
+.SuccessStoriesContentCenter {
+    text-align: center;
+    margin: 0 auto;
+    align-items: center;
+}
+
+.SuccessStoriestitleBoxServicesBrown{
+    color: #FEDFE1;
+}
+
+.SuccessStoriesdesAboutBrown{
+    color: #FEDFE1;
+    font-size: 20px;
+}
+
+/*Success Stories Slider css*/
+#SuccessStoriesSlider {
+    position: relative;
+    overflow: hidden;
+}
+
+.slide {
+    display: none;
+    position: relative;
+    width: 100%;
+    transition: opacity 0.3s;
+}
+
+.slide.active-slide {
+    display: block;
+}
+
+/* HP - User's Feedback Section */
+.feedbackBox {
+    /* border:0.5px rgb(246, 175, 175) solid; */
+    min-width: 100%;
+    height: 300px;
+    padding: 30px;
+    border-radius: 30px;
+}
+
+
+.sectionFeedback .titleServices {
+    color: #9E7A7A;
+    padding-top: 20px;
+    font-size: 48px;
+}
+
+.sectionFeedback .titleDisplayFlex {
+    display: flex;
+    align-items: center;
+    float: right;
+}
+
+.sectionFeedback .titleSubImage {
+    height: 50px;
+    margin-top: 10px;
+    padding-left: 10px;
+}
+
+/* HP - Section Visit Us */
+.sectionVisitUs .titleDisplayFlex {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.sectionVisitUs .titleVisit {
+    color: #9E7A7A;
+    padding-top: 20px;
+    font-size: 48px;
+}
+
+.sectionVisitUs .titleSubImage {
+    height: 50px;
+    margin-top: 10px;
+    padding-left: 10px;
+}
+
+.sectionVisitUs .contact_map iframe {
+    display:block;
+}
+
+/* Mobile Version CSS */
+
+@media (max-width: 768px) {
+
+    /* HP - Banner */
+    .secBanner .secBannerImage {
+        position: relative;
+    }
+
+    .whatispetAdoption_img {
+        content:url("whatispetgrooming.jpg");
+    }
+
+
+    .sectionWhatIsPetAdoption {
+        padding: 10px 10px 10px 10px;
+    }
+
+    .sectionServicesWhatIsPetAdoption .WhatIsPetAdoptionborder-box {
+        min-height: unset;
+        padding: 0px 0px 0px 0px;
+    }
+
+    .sProvidedPGContentCenter .titleBanner {
+        font-size: 16px;
+    }
+
+    .whatispetAdoptionTextContent {
+        top: 50%;
+        left: 50%;
+        position: absolute;
+        padding: 20px;
+        width:80%;
+        max-width:unset;
+    }
+
+    .whatispetAdoptionContentCenter .titleBanner {
+        font-size:14px;
+        /* background-color:rgba(255, 252, 252, 0.4); */
+        /* color:#333; */
+        border-radius:20px;
+        /* line-height:1.2rem; */
+    }
+
+    #sProvidedPG {
+        content:url("sprovidedPG1.jpg");
+    }
+
+    .sectionWhatIsPetAdoption .titleWhatIsPetAdoption {
+        font-size:38px;
+    }
+
+    .secBanner .secBannerImage .secBannerTextContent {
+        top: 25%;
+        left: 50%;
+        position: absolute;
+        padding: 20px;
+        /* background-color:rgb(169, 169, 169,0.3); */
+    }
+
+    .secBanner .secBannerImage .secBannerTextContent .secBannerContentCenter .titleBanner {
+        font-size: 36px;
+        text-shadow: 1px 1px 1px white;
+        color: #a37272;
+    }
+
+    .secBanner .secBannerImage .secBannerTextContent .secBannerContentCenter .subTitleBanner {
+        font-size: 18px;
+        color: #ff7979;
+        line-height: 1.6rem;
+    }
+
+    .secBanner .secBannerImage .secBannerTextContent .contentBanner_hp {
+        font-size: 16px;
+        width: 100%;
+        color: #333;
+    }
+
+    .secBanner .divAlignButtonCenter {
+        display: none;
+    }
+
+    .sProvidedPGTextContent {
+        min-width:100%;
+        padding:10px;
+        left:50%;
+        padding-top:30px;
+        /* background-image:url("Frame\ 13\ \(1\).png"); */
+        background-color:rgb(255, 245, 245,0.4);
+    }
+
+    .sProvidedPG_img {
+        padding-right:unset;
+    }
+    
+    .sectionServicessProvidedPG .sProvidedPGborder-box {
+        margin-bottom:20px;
+    }
+
+    .sectionServices .titleServices {
+        font-size:38px;
+        text-align:center;
+    }
+
+    .CurrentPromotionsContentCenter .titleBanner {font-size:16px}
+    .SuccessStoriesdesAbout{font-size:16px}
+    .SuccessStoriesdesAboutBrown{font-size:16px}
+    .sectionAboutUs .aboutUsTextSec {
+        padding-top: 10px;
+    }
+
+    .sectionAboutUs .titleAboutUs {
+        font-size: 40px;
+    }
+
+    .sectionAboutUs .titleSubImage {
+        height: 40px;
+    }
+
+    /* HP - Why Choosing Us */
+    .sectionWhyChooseUs .titleDisplayFlex {
+        display: block;
+        align-items: center;
+        text-align: center;
+    }
+
+    .sectionWhyChooseUs .titleWhyChoosingUs {
+        font-size: 38px;
+    }
+
+    .sectionWhyChooseUs .titleDisplayFlex .titleSubImage {
+        display: none;
+    }
+
+    .sectionWhyChooseUs .whyChooseUsContent .whyUsBox {
+        text-align: center;
+    }
+
+    /* HP - Product */
+    .secOurProduct .titleProducts {
+        font-size: 40px;
+    }
+
+    .secOurProduct .titleSubImage {
+        display: none;
+    }
+
+    .secOurProduct .imgProduct {
+        min-width: 100%;
+        height: auto;
+    }
+
+    .sectionServicesSuccessStories .SuccessStoriesborder-box {
+        min-height:450px;
+    }
+
+    .sectionServicesSuccessStories  .SuccessStoriesborder-boxBrown {
+        min-height:450px;
+    }
+}
+
+@media only screen and (max-width:993px) {
+    .secNavBar {
+        display: none;
+    }
+
+    .secNavBarMobileVersion {
+        display: block;
+    }
+
+    .secFooter .footerSection .copyRightCompany {
+        font-size: 16px;
+    }
+
+    .secFooter .footerFlexContent {
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+
+    .secFooter .footerFlexContent .followUsFooter {
+        color: whitesmoke;
+        font-size: 14px;
+    }
+
+    .secFooter {
+        height: 120px;
+    }
+
+
+
+}
